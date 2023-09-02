@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Science Concepts / Data Science Tools - About</title>
+<title>Data Science Concepts / Data Science Tools – benford-</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page">
+    <a class="nav-link" href="./about.html">
  <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">About</h1>
+      <h1 class="quarto-secondary-nav-title"></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -118,40 +118,40 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about"><span class="toc-section-number">1</span>  About</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title d-none d-lg-block">About</h1>
-</div>
 
 
+<p>This is an excersise combining knowledge about logarithms and probability distributions and a statistical test.</p>
+<p>Exercise: Analyzing Data with Benford’s Law in R</p>
+<p>Background: Benford’s Law, also known as the First-Digit Law, is a phenomenon where in many naturally occurring datasets, the leading digit (i.e., the first digit) is more likely to be small, such as 1, 2, or 3, than it is to be large, such as 8 or 9. This law has applications in fraud detection, financial auditing, and data integrity verification.</p>
+<p>Task: You are given a dataset in a CSV file named data.csv. Your task is to perform the following steps using R and data analytics libraries to determine if the dataset follows Benford’s Law:</p>
+<pre><code>Data Loading: Read the data from data.csv into a data frame using read.csv().
 
-<div class="quarto-title-meta">
+Data Exploration: Explore the dataset to understand its structure and contents. Display summary statistics, and visualize the distribution of the first digits in the dataset using a histogram.
 
-    
-  
-    
-  </div>
-  
+Calculate Expected Benford's Law Frequencies: Calculate the expected frequency of each first digit (1 through 9) according to Benford's Law. You can use the formula:
 
-</header>
+P(d)=log⁡10(d+1)−log⁡10(d)P(d)=log10​(d+1)−log10​(d)
 
-<p>https://forms.office.com/e/fraU0w0gQq</p>
-<section id="about" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="about"><span class="header-section-number">1</span> About</h2>
+Where P(d)P(d) is the expected proportion of numbers starting with digit dd.
+
+Compare Observed vs. Expected Frequencies: Calculate the observed frequency of each first digit in the dataset. Compare the observed frequencies with the expected frequencies from Benford's Law. Create a bar chart or similar visualization to illustrate the comparison.
+
+Hypothesis Testing: Perform a statistical hypothesis test to determine if the dataset significantly deviates from Benford's Law. You can use a chi-squared goodness-of-fit test to assess the deviation.
+
+Conclusion: Based on the results of your analysis, draw conclusions about whether the dataset follows or deviates from Benford's Law. Explain your findings and their implications.</code></pre>
+<p>Note:</p>
+<pre><code>You may assume that the dataset contains numerical values.
+You can use R packages like readr for data reading, and ggplot2 for data visualization.
+Include comments in your code to explain your approach and calculations.
+Provide clear visualizations and explanations in your final report.</code></pre>
+<p>Bonus (Optional): If you’d like to extend this exercise, you can consider applying Benford’s Law to more complex datasets or exploring other variations of the law, such as the Second-Digit Law or the Benford’s Law for Two-Digit Numbers using R.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

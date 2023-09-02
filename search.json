@@ -4,13 +4,76 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site"
+    "text": "https://forms.office.com/e/fraU0w0gQq"
+  },
+  {
+    "objectID": "about.html#about",
+    "href": "about.html#about",
+    "title": "About",
+    "section": "1 About",
+    "text": "1 About"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Data Science Concepts and Tools",
+    "title": "Data Science Concepts / Data Science Tools",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Developing Syllabus\n\n\n\n\n\nThis syllabus is not final yet."
+  },
+  {
+    "objectID": "index.html#module-names",
+    "href": "index.html#module-names",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "1 Module Names",
+    "text": "1 Module Names\nThis syllabus is for two modules which require each other.\n\nMDSSSB-DSOC-02 Data Science Concepts (Core area, 5 credits)\nMDSSSB-MET-01 Data Science Tools (Methods area, 5 credits)\n\nOffered in the Master program: Data Science for Society and Business (DSSB). See the module description in the DSSB Handbook."
+  },
+  {
+    "objectID": "index.html#module-components",
+    "href": "index.html#module-components",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "2 Module Components",
+    "text": "2 Module Components\n\nData Science Concepts (5 Credits)\nData Science Tools in R (2.5 credits)\nData Science Tools in python (2.5 credits)\n\nAll are courses offered in the Fall term and have no entry requirement.\nData Science Concepts and Data Science Tools are co-requirements.\nThe Concepts treated in the lectures are applied in exercises and homework in the Tools course."
+  },
+  {
+    "objectID": "index.html#class-meeting-information",
+    "href": "index.html#class-meeting-information",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "3 Class Meeting Information",
+    "text": "3 Class Meeting Information\nData Science Concepts:\nMonday 09:45-11:00 and 11:15-12:30\nLocation: East Hall Room 1 in-person\nVideo streaming in Teams provided for late-arriving students: Team F23_MDSSB-DSOC-02_Data Science Concepts, General Channel\nData Science Tools:\nThursday 09:45-11:00 and 11:15-12:30\nLocation: East Hall Room 2 in-person\nVideo streaming in Teams provided for late-arriving students: Teams F23_MDSSB-MET-01-A_Data Science Tools in R and F23_MDSSB-MET-01-B_Data Science Tools in python, General Channel\nNote: The R and python courses are provided in the same time slot. Details in the schedule."
+  },
+  {
+    "objectID": "index.html#instructors",
+    "href": "index.html#instructors",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "4 Instructors",
+    "text": "4 Instructors\nConcepts: Jan Lorenz jlorenz@constructor.univeristy\nTools in R: Armin Müller armmueller@constructor.university\nTools in python: Peter Steiglechner psteiglechner@constructor.university"
+  },
+  {
+    "objectID": "index.html#format-and-workload",
+    "href": "index.html#format-and-workload",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "5 Format and Workload",
+    "text": "5 Format and Workload\nConcepts: Lectures, sometimes with aspects of Tutorials (35 hours in presence, total expected workload 125 hours)\nTools: Tutorials, sometimes with aspects of Lectures (35 hours in presence, total expected workload 125 hours)\nBesides homework, both modules require a decent amount of self-study.\nWorkload homework and self-study is expect to be 90/125 = 72% of the total workload.\nHomework assignments are given along the concepts treated in Concepts to be solved with the tools treated in Tools."
+  },
+  {
+    "objectID": "index.html#intended-learning-outcomes",
+    "href": "index.html#intended-learning-outcomes",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "6 Intended Learning Outcomes",
+    "text": "6 Intended Learning Outcomes\nThe module descriptions can be found in the DSSB Handbook\n\n6.1 From the handbook\nBy the end of the Concepts module, you will be able to:\n\nunderstand and use the mathematical foundations of statistical learning algorithms\nexplain and classify data science problems\nexplain and classify data-driven approaches\nunderstand the application of data science techniques to typical situations and tasks in business and societal research, including the search, retrieval, preparation, and statistical analysis of data\ninterpret complexity analysis and performance evaluation of data science problems and algorithms\n\nBy the end of the Tools module, you will be able to:\n\nexplain basic concepts of imperative and object-oriented programming\nwrite, test, and debug programs\nperform data handling and data manipulation tasks in R and Python\napply your knowledge to implement own functions in R and Python\neffectively use core packages and libraries of R and Python for data analysis\nknow about the typical applications of R and Python in data science\nimplement and apply advanced data mining methods with appropriate tools\nperform a full cycle of data analysis\n\n\n\n6.2 Main Learning Goal\nOur main goal to help you build a good basis for your more and more independent work in the whole study program. That means you\n\ncreate and maintain a digital working environment on your computer to do data science\nlearn core concepts in data science, that means\n\nlearn concepts to explore data (visualize, import, wrangle)\nlearn or refresh some mathematics and statistics concepts through the data science lens\nlearn concepts to model and draw conclusions from data (model, infer, predict)\n\nlearn to program in the data science languages R and python, and become able to learn new skills in these independently\ndo a data science project of your own interest"
+  },
+  {
+    "objectID": "index.html#examination-and-assessment",
+    "href": "index.html#examination-and-assessment",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "7 Examination and Assessment",
+    "text": "7 Examination and Assessment\n\n7.1 Concepts Module\nAssessment Type: Written Examination\nDuration: 120 min\nWeight: 100%\nScope: All intended learning outcomes of the module.\nCompletion: to pass this module, the examination has to be passed with at least 45%\nAn exam will take place after all lectures in December. The date will be published by the university adminstration later.\nThere are no additional achievements necessary and there are no bonus options.\n\n\n7.2 Tools Module\nModule achievement: 50% of the assignments correctly solved\nProgramming and analysis assignments will appear step by step during the courses.\nTo pass the module you have to solve half of them by the end of the semester.\nAssessment Type: Project Report\nLength: 4000 - 5000 words Weight: 100% Scope: All intended learning outcomes of the module.\nMore information of project formats and a rubric for the grading will be provided later.\nBonus option: Students receive 0.33 points grade improvements on their project grade (on the numerical grade as specified here https://constructor.university/sites/default/files/2023-02/Grading_Table_2023.pdf) when all assignments are solved by the end of the semester. (Note, the bonus is not necessary to reach the best grade in the module.)\nAll assignments and the final project must be delivered in personalized repositories in the GitHub organization https://github.com/CU-F23-MDSSB-01-Concepts-Tools.\nLITERATURE / READING LIST Please describe required texts, computer software, and module materials and their cost estimates (if applicable). You may also provide advice on cost-effective means of obtaining module materials, such as through the library or other open-source materials. \nCOURSE SCHEDULE\nWeek Topic* Literature Class Activity (if applicable) 1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n\nPlease ensure that the table includes not only the topics to be covered but also includes formal and organizational instructions for students. This can include guidance on examination preparation and other relevant instructions.\n\nASSESSMENT DESCRIPTION (Optional) If you include any ongoing assessments/practice, please explain here how students are assessed (pass/fail), relevant description of the activities, and expectations of student engagement. If the activity includes group work, explain the expectations for responsible participation.\nMODULE POLICIES (Optional) Please add any policies unique to this module, such as attendance and active participation. Describe in what ways you provide flexibility for your students and recommendations for preparation from the handbook.\nACADEMIC INTEGRITY All involved parties (professors and lecturers, instructors and students) are expected to abide by the word and spirit of the “Code of Academic Integrity”, which may be reviewed here: https://constructor.university/student-life/student-services/university-policies/academic-policies/code-of-academic-integrity. Violations of the Code might be brought to the attention of the Academic Integrity Committee.\nARTIFICIAL INTELLIGENCE (AI) USE POLICY Please change the policy to reflect your own policy. This policy covers any generative AI tool, such as ChatGPT, Elicit, etc. This includes text, slides, artwork/graphics/video/audio and other products. 1. You are discouraged from using AI tools UNLESS under direct instruction from your instructor to do so. Please contact your instructor if you are unsure or have questions BEFORE using AI for any assignment. 2. If AI is permitted to be used, you must clearly state how AI was used in completing the assignments. No more than 25% of an assignment should be created with AI if the instructor gives permission for its use. If you are not sure whether a certain usage of AI is permitted for doing your assignments, contact the course instructor. 3. Note that the material generated by these programs may be inaccurate, incomplete, or otherwise problematic.  Their use may also stifle your own independent thinking and creativity. Accordingly, reduction in the grade is likely when using AI.\nIf any part of this AI policy is confusing or uncertain, please reach out to your instructor for a conversation before submitting your work.\nFEEDBACK FROM STUDENTS We are eager to constantly improve the quality of our teaching. We would be glad to obtain your feedback at any time of the course to improve your learning experience."
+  },
+  {
+    "objectID": "benford .html",
+    "href": "benford .html",
+    "title": "Data Science Concepts / Data Science Tools",
+    "section": "",
+    "text": "This is an excersise combining knowledge about logarithms and probability distributions and a statistical test.\nExercise: Analyzing Data with Benford’s Law in R\nBackground: Benford’s Law, also known as the First-Digit Law, is a phenomenon where in many naturally occurring datasets, the leading digit (i.e., the first digit) is more likely to be small, such as 1, 2, or 3, than it is to be large, such as 8 or 9. This law has applications in fraud detection, financial auditing, and data integrity verification.\nTask: You are given a dataset in a CSV file named data.csv. Your task is to perform the following steps using R and data analytics libraries to determine if the dataset follows Benford’s Law:\nData Loading: Read the data from data.csv into a data frame using read.csv().\n\nData Exploration: Explore the dataset to understand its structure and contents. Display summary statistics, and visualize the distribution of the first digits in the dataset using a histogram.\n\nCalculate Expected Benford's Law Frequencies: Calculate the expected frequency of each first digit (1 through 9) according to Benford's Law. You can use the formula:\n\nP(d)=log⁡10(d+1)−log⁡10(d)P(d)=log10​(d+1)−log10​(d)\n\nWhere P(d)P(d) is the expected proportion of numbers starting with digit dd.\n\nCompare Observed vs. Expected Frequencies: Calculate the observed frequency of each first digit in the dataset. Compare the observed frequencies with the expected frequencies from Benford's Law. Create a bar chart or similar visualization to illustrate the comparison.\n\nHypothesis Testing: Perform a statistical hypothesis test to determine if the dataset significantly deviates from Benford's Law. You can use a chi-squared goodness-of-fit test to assess the deviation.\n\nConclusion: Based on the results of your analysis, draw conclusions about whether the dataset follows or deviates from Benford's Law. Explain your findings and their implications.\nNote:\nYou may assume that the dataset contains numerical values.\nYou can use R packages like readr for data reading, and ggplot2 for data visualization.\nInclude comments in your code to explain your approach and calculations.\nProvide clear visualizations and explanations in your final report.\nBonus (Optional): If you’d like to extend this exercise, you can consider applying Benford’s Law to more complex datasets or exploring other variations of the law, such as the Second-Digit Law or the Benford’s Law for Two-Digit Numbers using R."
   }
 ]
