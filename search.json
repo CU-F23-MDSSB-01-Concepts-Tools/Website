@@ -14,6 +14,13 @@
     "text": "1 About"
   },
   {
+    "objectID": "literature.html",
+    "href": "literature.html",
+    "title": "Literature and Learning Resources",
+    "section": "",
+    "text": "A large part of the course will build on or be inspired by material in Data Science in the Box https://datasciencebox.org/ by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics.\nA core resource for self-learning data science with R is R for Data Science https://r4ds.had.co.nz/ by Hadley Wickham and the R data science community around. This is a valuable resource for self-studying particular topics using tidyverse tools. Just out: Tidy Modeling with R https://www.tmwr.org/ by Max Kuhn and Julia Silge on using tidymodels.\nA core resource for data science basics with python is the Python Data Science Handbook https://jakevdp.github.io/PythonDataScienceHandbook/ by Jake VanderPlas. Also there is a good video playlist https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23 and a 4-hour “full-course” video https://youtu.be/rfscVS0vtbw.\n\n\n\nSome helpful YouTube videos for those recaping maths:\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk\n\n\n\nggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org is a resource on understanding the logic of ggplot better.\nWebsites on how to decide for what visualization to choose:\nhttps://www.data-to-viz.com/\nhttps://datavizcatalogue.com/search.html\nThe number of freely available learning resources is increasing rapidly.\nEveryone has a different learning style and a different background. Thus, different material may be most helpful.\nThis list shall be extended. Good self-study resources for data science with python, mathematics, statistics, data visualization, etc. shall be added here. Contact me if you find something useful to share. Ideally, with a short description when it may be most helpful."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Data Science Concepts / Data Science Tools",

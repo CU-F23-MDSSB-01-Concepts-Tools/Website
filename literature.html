@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Science Concepts / Data Science Tools – benford-</title>
+<title>Data Science Concepts / Data Science Tools - Literature and Learning Resources</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"></h1>
+      <h1 class="quarto-secondary-nav-title">Literature and Learning Resources</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./literature.html" class="sidebar-item-text sidebar-link">Literature and Learning Resources</a>
+  <a href="./literature.html" class="sidebar-item-text sidebar-link active">Literature and Learning Resources</a>
   </div>
 </li>
     </ul>
@@ -123,40 +123,65 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-resources" id="toc-learning-resources" class="nav-link active" data-scroll-target="#learning-resources"><span class="toc-section-number">1</span>  Learning Resources</a>
+  <ul class="collapse">
+  <li><a href="#core-resources" id="toc-core-resources" class="nav-link" data-scroll-target="#core-resources"><span class="toc-section-number">1.1</span>  Core resources</a></li>
+  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="toc-section-number">1.2</span>  Mathematics</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">1.3</span>  Data Visualization</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Literature and Learning Resources</h1>
+</div>
 
 
-<p>This is an excersise combining knowledge about logarithms and probability distributions and a statistical test.</p>
-<p>Exercise: Analyzing Data with Benford’s Law in R</p>
-<p>Background: Benford’s Law, also known as the First-Digit Law, is a phenomenon where in many naturally occurring datasets, the leading digit (i.e., the first digit) is more likely to be small, such as 1, 2, or 3, than it is to be large, such as 8 or 9. This law has applications in fraud detection, financial auditing, and data integrity verification.</p>
-<p>Task: You are given a dataset in a CSV file named data.csv. Your task is to perform the following steps using R and data analytics libraries to determine if the dataset follows Benford’s Law:</p>
-<pre><code>Data Loading: Read the data from data.csv into a data frame using read.csv().
 
-Data Exploration: Explore the dataset to understand its structure and contents. Display summary statistics, and visualize the distribution of the first digits in the dataset using a histogram.
+<div class="quarto-title-meta">
 
-Calculate Expected Benford's Law Frequencies: Calculate the expected frequency of each first digit (1 through 9) according to Benford's Law. You can use the formula:
+    
+  
+    
+  </div>
+  
 
-P(d)=log⁡10(d+1)−log⁡10(d)P(d)=log10​(d+1)−log10​(d)
+</header>
 
-Where P(d)P(d) is the expected proportion of numbers starting with digit dd.
+<section id="learning-resources" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Learning Resources</h1>
+<section id="core-resources" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="core-resources"><span class="header-section-number">1.1</span> Core resources</h2>
+<p>A large part of the course will build on or be inspired by material in <strong>Data Science in the Box</strong> <a href="https://datasciencebox.org/" class="uri">https://datasciencebox.org/</a> by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics.</p>
+<p>A core resource for self-learning data science with R is <strong>R for Data Science</strong> <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a> by Hadley Wickham and the R data science community around. This is a valuable resource for self-studying particular topics using <code>tidyverse</code> tools. Just out: <strong>Tidy Modeling with R</strong> <a href="https://www.tmwr.org/" class="uri">https://www.tmwr.org/</a> by Max Kuhn and Julia Silge on using <code>tidymodels</code>.</p>
+<p>A core resource for data science basics with python is the <strong>Python Data Science Handbook</strong> <a href="https://jakevdp.github.io/PythonDataScienceHandbook/" class="uri">https://jakevdp.github.io/PythonDataScienceHandbook/</a> by Jake VanderPlas. Also there is a good video playlist <a href="https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23" class="uri">https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23</a> and a 4-hour “full-course” video <a href="https://youtu.be/rfscVS0vtbw" class="uri">https://youtu.be/rfscVS0vtbw</a>.</p>
+</section>
+<section id="mathematics" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="mathematics"><span class="header-section-number">1.2</span> Mathematics</h2>
+<p>Some helpful YouTube videos for those recaping maths:</p>
+<p>How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk</p>
+</section>
+<section id="data-visualization" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">1.3</span> Data Visualization</h2>
+<p><em>ggplot2: Elegant Graphics for Data Analysis</em> <a href="https://ggplot2-book.org" class="uri">https://ggplot2-book.org</a> is a resource on understanding the logic of ggplot better.</p>
+<p>Websites on how to decide for what visualization to choose:<br>
+<a href="https://www.data-to-viz.com/" class="uri">https://www.data-to-viz.com/</a><br>
+<a href="https://datavizcatalogue.com/search.html" class="uri">https://datavizcatalogue.com/search.html</a></p>
+<p><em>The number of freely available learning resources is increasing rapidly.</em></p>
+<p><em>Everyone has a different learning style and a different background. Thus, different material may be most helpful.</em></p>
+<p><em>This list shall be extended. Good self-study resources for data science with python, mathematics, statistics, data visualization, etc. shall be added here. Contact me if you find something useful to share. Ideally, with a short description when it may be most helpful.</em></p>
 
-Compare Observed vs. Expected Frequencies: Calculate the observed frequency of each first digit in the dataset. Compare the observed frequencies with the expected frequencies from Benford's Law. Create a bar chart or similar visualization to illustrate the comparison.
 
-Hypothesis Testing: Perform a statistical hypothesis test to determine if the dataset significantly deviates from Benford's Law. You can use a chi-squared goodness-of-fit test to assess the deviation.
-
-Conclusion: Based on the results of your analysis, draw conclusions about whether the dataset follows or deviates from Benford's Law. Explain your findings and their implications.</code></pre>
-<p>Note:</p>
-<pre><code>You may assume that the dataset contains numerical values.
-You can use R packages like readr for data reading, and ggplot2 for data visualization.
-Include comments in your code to explain your approach and calculations.
-Provide clear visualizations and explanations in your final report.</code></pre>
-<p>Bonus (Optional): If you’d like to extend this exercise, you can consider applying Benford’s Law to more complex datasets or exploring other variations of the law, such as the Second-Digit Law or the Benford’s Law for Two-Digit Numbers using R.</p>
-
-
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
