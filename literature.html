@@ -115,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">Schedule</a>
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link"><strong>Schedule</strong></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -123,6 +123,21 @@ ul.task-list li input[type="checkbox"] {
   <a href="./literature.html" class="sidebar-item-text sidebar-link active">Learning Resources</a>
   </div>
 </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Homework</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw-01.html" class="sidebar-item-text sidebar-link">Homework 01</a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -132,9 +147,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#core-resources" id="toc-core-resources" class="nav-link active" data-scroll-target="#core-resources"><span class="toc-section-number">1</span>  Core resources</a></li>
-  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="toc-section-number">2</span>  Mathematics</a></li>
-  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">3</span>  Data Visualization</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r"><span class="toc-section-number">1</span>  R</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="toc-section-number">2</span>  Data Visualization</a></li>
+  <li><a href="#mathematics" id="toc-mathematics" class="nav-link" data-scroll-target="#mathematics"><span class="toc-section-number">3</span>  Mathematics</a></li>
   </ul>
 </nav>
     </div>
@@ -160,26 +175,28 @@ ul.task-list li input[type="checkbox"] {
 
 <!-- LITERATURE / READING LIST -->
 <!-- Please describe required texts, computer software, and module materials and their cost estimates (if applicable). You may also provide advice on cost-effective means of obtaining module materials, such as through the library or other open-source materials.  -->
-<section id="core-resources" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="core-resources"><span class="header-section-number">1</span> Core resources</h2>
-<p>A large part of the course will build on or be inspired by material in <strong>Data Science in the Box</strong> <a href="https://datasciencebox.org/" class="uri">https://datasciencebox.org/</a> by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics.</p>
-<p>A core resource for self-learning data science with R is <strong>R for Data Science</strong> <a href="https://r4ds.had.co.nz/" class="uri">https://r4ds.had.co.nz/</a> by Hadley Wickham and the R data science community around. This is a valuable resource for self-studying particular topics using <code>tidyverse</code> tools. Just out: <strong>Tidy Modeling with R</strong> <a href="https://www.tmwr.org/" class="uri">https://www.tmwr.org/</a> by Max Kuhn and Julia Silge on using <code>tidymodels</code>.</p>
-<p>A core resource for data science basics with python is the <strong>Python Data Science Handbook</strong> <a href="https://jakevdp.github.io/PythonDataScienceHandbook/" class="uri">https://jakevdp.github.io/PythonDataScienceHandbook/</a> by Jake VanderPlas. Also there is a good video playlist <a href="https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23" class="uri">https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23</a> and a 4-hour “full-course” video <a href="https://youtu.be/rfscVS0vtbw" class="uri">https://youtu.be/rfscVS0vtbw</a>.</p>
+<p>All the materials here are freely accessible, many are community standards. The <a href="./schedule.html">Schedule</a> might refer to specific sections in these materials.</p>
+<section id="r" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="r"><span class="header-section-number">1</span> R</h2>
+<ul>
+<li><p><strong>R for Data Science (2nd Edition)</strong> <a href="https://r4ds.hadley.nz//" class="uri">https://r4ds.hadley.nz//</a> by Hadley Wickham, Garrett Grolemand, Mine Çetinkaya-Rundel and the R data science community around is our core resource for self-learning data science with R using <code>tidyverse</code> tools.</p></li>
+<li><p><strong>Tidy Modeling with R</strong> <a href="https://www.tmwr.org/" class="uri">https://www.tmwr.org/</a> by Max Kuhn and Julia Silge is the resource for learning to work with <code>tidymodels</code> building upon the <code>tidyverse</code> tools.</p></li>
+<li><p>Part of the course builds on or be inspired by material in <strong>Data Science in the Box</strong> <a href="https://datasciencebox.org/" class="uri">https://datasciencebox.org/</a> by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics. ## python</p></li>
+<li><p><strong>Python Data Science Handbook</strong> <a href="https://jakevdp.github.io/PythonDataScienceHandbook/" class="uri">https://jakevdp.github.io/PythonDataScienceHandbook/</a> by Jake VanderPlas is a core resource for data science with python. Also there is a good video playlist <a href="https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23" class="uri">https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23</a> and a 4-hour “full-course” video <a href="https://youtu.be/rfscVS0vtbw" class="uri">https://youtu.be/rfscVS0vtbw</a>.</p></li>
+</ul>
 </section>
-<section id="mathematics" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="mathematics"><span class="header-section-number">2</span> Mathematics</h2>
-<p>Some helpful YouTube videos for those recaping maths:</p>
-<p>How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk</p>
-</section>
-<section id="data-visualization" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">3</span> Data Visualization</h2>
+<section id="data-visualization" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="data-visualization"><span class="header-section-number">2</span> Data Visualization</h2>
 <p><em>ggplot2: Elegant Graphics for Data Analysis</em> <a href="https://ggplot2-book.org" class="uri">https://ggplot2-book.org</a> is a resource on understanding the logic of ggplot better.</p>
 <p>Websites on how to decide for what visualization to choose:<br>
 <a href="https://www.data-to-viz.com/" class="uri">https://www.data-to-viz.com/</a><br>
 <a href="https://datavizcatalogue.com/search.html" class="uri">https://datavizcatalogue.com/search.html</a></p>
-<p><em>The number of freely available learning resources is increasing rapidly.</em></p>
-<p><em>Everyone has a different learning style and a different background. Thus, different material may be most helpful.</em></p>
-<p><em>This list shall be extended. Good self-study resources for data science with python, mathematics, statistics, data visualization, etc. shall be added here. Contact me if you find something useful to share. Ideally, with a short description when it may be most helpful.</em></p>
+</section>
+<section id="mathematics" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="mathematics"><span class="header-section-number">3</span> Mathematics</h2>
+<ul>
+<li>How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk</li>
+</ul>
 
 
 </section>

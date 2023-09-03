@@ -4,42 +4,112 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings and homework.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our toolkit What is Data Science? Course Organization, Our toolkit\nR\n\n\n2\n09-11, 09-14\nIntroduction\nR\n\n\n3\n09-18, 09-21\nIntroduction\npython\n\n\n4\n09-25, 09-28\nIntroduction\npython\n\n\n5\n10-02, 10-05\nIntroduction\nR\n\n\n6\n10-09, 10-12\nIntroduction\npython\n\n\n7\n10-16, 10-19\nIntroduction\nR\n\n\n8\n10-23, 10-26\nIntroduction\npython\n\n\n9\n10-30, 11-02\nIntroduction\nR\n\n\n10\n11-06, 11-09\nIntroduction\npython\n\n\n11\n11-13, 11-16\nIntroduction\nR\n\n\n12\n11-20, 11-23\nIntroduction\npython\n\n\n13\n11-27, 11-30\nIntroduction\nR / python\n\n\n14\n12-04, 12-07\nIntroduction\nPresentations"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "https://forms.office.com/e/fraU0w0gQq"
-  },
-  {
-    "objectID": "about.html#about",
-    "href": "about.html#about",
-    "title": "About",
-    "section": "1 About",
-    "text": "1 About"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings and homework.\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit\nR\n\n\n2\n09-11, 09-14\nData import, Data Visualization, Data formats\nR\n\n\n3\n09-18, 09-21\nData Wrangling, Relational Data, Exploratory Data Analysis, Data Science Projects\npython\n\n\n4\n09-25, 09-28\nFunctions, Descriptive Statistics, Principle Component Analysis, Matrices\npython\n\n\n5\n10-02, 10-05\nModeling, Linear Model, Calculus\nR\n\n\n6\n10-09, 10-12\nClassification Problems, Logistic Regression, Prediction\npython\n\n\n7\n10-16, 10-19\nProbability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics , Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative."
   },
   {
     "objectID": "literature.html",
     "href": "literature.html",
     "title": "Learning Resources",
     "section": "",
-    "text": "A large part of the course will build on or be inspired by material in Data Science in the Box https://datasciencebox.org/ by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics.\nA core resource for self-learning data science with R is R for Data Science https://r4ds.had.co.nz/ by Hadley Wickham and the R data science community around. This is a valuable resource for self-studying particular topics using tidyverse tools. Just out: Tidy Modeling with R https://www.tmwr.org/ by Max Kuhn and Julia Silge on using tidymodels.\nA core resource for data science basics with python is the Python Data Science Handbook https://jakevdp.github.io/PythonDataScienceHandbook/ by Jake VanderPlas. Also there is a good video playlist https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23 and a 4-hour “full-course” video https://youtu.be/rfscVS0vtbw."
+    "text": "All the materials here are freely accessible, many are community standards. The Schedule might refer to specific sections in these materials."
   },
   {
-    "objectID": "literature.html#mathematics",
-    "href": "literature.html#mathematics",
+    "objectID": "literature.html#r",
+    "href": "literature.html#r",
     "title": "Learning Resources",
-    "section": "2 Mathematics",
-    "text": "2 Mathematics\nSome helpful YouTube videos for those recaping maths:\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
+    "section": "1 R",
+    "text": "1 R\n\nR for Data Science (2nd Edition) https://r4ds.hadley.nz// by Hadley Wickham, Garrett Grolemand, Mine Çetinkaya-Rundel and the R data science community around is our core resource for self-learning data science with R using tidyverse tools.\nTidy Modeling with R https://www.tmwr.org/ by Max Kuhn and Julia Silge is the resource for learning to work with tidymodels building upon the tidyverse tools.\nPart of the course builds on or be inspired by material in Data Science in the Box https://datasciencebox.org/ by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics. ## python\nPython Data Science Handbook https://jakevdp.github.io/PythonDataScienceHandbook/ by Jake VanderPlas is a core resource for data science with python. Also there is a good video playlist https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23 and a 4-hour “full-course” video https://youtu.be/rfscVS0vtbw."
   },
   {
     "objectID": "literature.html#data-visualization",
     "href": "literature.html#data-visualization",
     "title": "Learning Resources",
-    "section": "3 Data Visualization",
-    "text": "3 Data Visualization\nggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org is a resource on understanding the logic of ggplot better.\nWebsites on how to decide for what visualization to choose:\nhttps://www.data-to-viz.com/\nhttps://datavizcatalogue.com/search.html\nThe number of freely available learning resources is increasing rapidly.\nEveryone has a different learning style and a different background. Thus, different material may be most helpful.\nThis list shall be extended. Good self-study resources for data science with python, mathematics, statistics, data visualization, etc. shall be added here. Contact me if you find something useful to share. Ideally, with a short description when it may be most helpful."
+    "section": "2 Data Visualization",
+    "text": "2 Data Visualization\nggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org is a resource on understanding the logic of ggplot better.\nWebsites on how to decide for what visualization to choose:\nhttps://www.data-to-viz.com/\nhttps://datavizcatalogue.com/search.html"
+  },
+  {
+    "objectID": "literature.html#mathematics",
+    "href": "literature.html#mathematics",
+    "title": "Learning Resources",
+    "section": "3 Mathematics",
+    "text": "3 Mathematics\n\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
+  },
+  {
+    "objectID": "hw-01.html",
+    "href": "hw-01.html",
+    "title": "Homework 01",
+    "section": "",
+    "text": "The goal of this assignment is to introduce you to R, RStudio, Git, and GitHub, and quarto which you’ll be using throughout the courses both to learn the data science concepts discussed in the course and to analyze real data and come to informed conclusions."
+  },
+  {
+    "objectID": "hw-01.html#prerequisites",
+    "href": "hw-01.html#prerequisites",
+    "title": "Homework 01",
+    "section": "1.1 Prerequisites",
+    "text": "1.1 Prerequisites\nFirst, you need to achieve the following\n\nReview the Lecture of Week 1\nRead Happy Git with R: Why Git? Why GitHub? (It is OK do a fast read only. You may reconsider later.)\nYou have a GitHub account to become a member of the GitHub organization. If you do not have an account follow the instructions on the front page of https://github.com/CU-F23-MDSSB-01-Concepts-Tools.\nYou have provided your GitHub username in this form https://forms.office.com/e/fraU0w0gQq (If you provided your name wrongly, write an email to the instructor.)\nSoftware installations on your computer:\n\nRead Happy Git with R: Install or upgrade R and RStudio\nFollow the instructions to install R and RStudio\nRead Happy Git with R: Install Git\nFollow the instructions (choose the highly recommended) to install Git SCM (= Source Control Managment)\nInstall quarto CLI (= Command Line Interface) https://quarto.org/docs/get-started/.\nNote: In the following you will do similar things as described in Tutorial: Hello, Quarto and the following two tutorials.\n\nIn R, install some packages from the following list. You can use the command install.packages(\"tidyverse\",\"gitcreds\",\"usethis\")\nNotes: tidyverse is a collection of many packages it can take some time to install. usethis an gitcreds provide convenient functions to tell your git-installation your GitHub-credentials to push your work back to github via a Personal Access Token (PAT). Read Happy Git with R: Personal access token for HTTPS.\nCheck if your RStudio offers Quarto rendering options, a git\nMore software installations on your computer"
+  },
+  {
+    "objectID": "hw-01.html#terminology",
+    "href": "hw-01.html#terminology",
+    "title": "Homework 01",
+    "section": "1.2 Terminology",
+    "text": "1.2 Terminology\nWe’ve already thrown around a few new terms, so let’s define them before we proceed.\n\nR and python: Names of the programming language we will be using throughout the course.\nRStudio: An integrated development environment developed for R, which can also work with python. In other words, a convenient interface for writing and running code.\nGit: A version control system.\nGitHub: A web platform for hosting version controlled files and facilitating collaboration among users.\nRepository: A Git repository contains all of your project’s files and stores each file’s revision history.\n\nIt’s common to refer to a repository as a repo.\n\nIn this course, each assignment you work on will be contained in a Git repo.\nFor individual assignments, only you will have access to the repo. For team assignments, all team members will have access to a single repo where they work collaboratively.\nAll repos associated with this course are housed in the course GitHub organization. The organization is set up such that students can only see repos they have access to, but the course instructors can see all of them."
+  },
+  {
+    "objectID": "hw-01.html#starting-slowly-step-by-step",
+    "href": "hw-01.html#starting-slowly-step-by-step",
+    "title": "Homework 01",
+    "section": "1.3 Starting slowly step by step",
+    "text": "1.3 Starting slowly step by step\nAs the course progresses, you are encouraged to explore beyond what the assignments dictate; a willingness to experiment will make you a much better programmer! Before we get to that stage, however, you need to build some basic fluency in the tools and the workflow we use. First, we will explore the fundamental building blocks of all of these tools.\nBefore you can get started with the analysis, you need to make sure you:\n\nhave a GitHub account\nare a member of the course GitHub organization https://github.com/JU-F22-MDSSB-MET-01\nhave the needed software stack installation on your local machine (see the Prerequisites Checklist in the slides of the Week 1 lectures.)\n\nIf you failed to confirm any of these, it means you have not yet completed the prerequisites for this assignment. Please go back to Prerequisites and complete them before continuing the assignment."
+  },
+  {
+    "objectID": "hw-01.html#step-0.-authenticate-git-to-access-your-github-content",
+    "href": "hw-01.html#step-0.-authenticate-git-to-access-your-github-content",
+    "title": "Homework 01",
+    "section": "2.1 Step 0. Authenticate git to access your GitHub content",
+    "text": "2.1 Step 0. Authenticate git to access your GitHub content\nBefore you can clone your repository you need to tell GitHub that you are authorized to do this, and to that end you need to make a Personal Access Token (PAT) in your GitHub account and make this available to git and RStudio on your local machine.\nThere are several ways to do this (e.g. from the command line) but as we will use RStudio anyway, we can use a convenient way provided there.\nRead more about PATs and how to use them in “Happy Git with R” Chapter 9 https://happygitwithr.com/https-pat.html (in particular the TL;DR which describes what we use).\nOpen RStudio and install the packages usethis and gitcreds if you haven’t done already: Go to the “Console” pane at the bottom left. Type in\ninstall.packages(c(\"usethis\",\"gitcreds\"))\nand hit Enter. Now the packages should be installed.\nNow, use two commands. Copy them to the console and click Enter:\nusethis::create_github_token()\nThis opens http://github.com and you may need to log in. Then you can make the PAT (read more details in “Happy Git with R”). For today, you can go the fast way and do not think about the options and click “Generate token”. Use the clipboard icon 📋 to copy the PAT. Go back to RStudio and do in the console:\ngitcreds::gitcreds_set()\nIn the dialog in the console paste your PAT from the clipboard and press Enter. That should be it and you do not need to repeat these steps until the PAT expires. (If the PAT expires you have to make a new one in the same way.)"
+  },
+  {
+    "objectID": "hw-01.html#step-1.-get-url-of-repo-to-be-cloned",
+    "href": "hw-01.html#step-1.-get-url-of-repo-to-be-cloned",
+    "title": "Homework 01",
+    "section": "2.2 Step 1. Get URL of repo to be cloned",
+    "text": "2.2 Step 1. Get URL of repo to be cloned\nOn GitHub https://github.com/JU-F22-MDSSB-MET-01, open your repository for Homework 1.\n\nOn GitHub, click on the green Code button, select HTTPS (this might already be selected by default, and if it is, you’ll see the text Use Git or checkout with SVN using the web URL). Click on the clipboard icon 📋 to copy the repo URL."
+  },
+  {
+    "objectID": "hw-01.html#step-2.-go-to-rstudio",
+    "href": "hw-01.html#step-2.-go-to-rstudio",
+    "title": "Homework 01",
+    "section": "2.3 Step 2. Go to RStudio",
+    "text": "2.3 Step 2. Go to RStudio\nGo to your RStudio. Select “New Project…” either from the File menu or from the special project menu on the top right of the RStudio window.\n\nIn the New Project Wizard, click on “Version Control” and then “Git”.\n\n\n\n\n\n\nImportant\n\n\n\nIf “Version Control” or “Git” is not available in your RStudio, then either you haven’t installed git on you computer or your RStudio installation has not recognized it properly. In a correct installation RStudio would recognize git on your machine when started and makes the options available automatically. You have to solve this issue first to continue.\n\n\nThen paste the repositories URL (which should still be in your clipboard) into the “Repository URL:” field. Leave directory name as it is automatically chosen, but make sure that you create the directory in a the folder where you want to store the course material on your computer via the “Browse …” button.\nWhen you click “Create Project”\n\ngit will create a new directory in the folder, copies all the files from github to it, and initializes your git repository locally\nRStudio will switch to that the new project"
+  },
+  {
+    "objectID": "hw-01.html#step-1.-update-the-yaml",
+    "href": "hw-01.html#step-1.-update-the-yaml",
+    "title": "Homework 01",
+    "section": "4.1 Step 1. Update the YAML",
+    "text": "4.1 Step 1. Update the YAML\nOpen the quarto (qmd) file in your project, change the author name to your name, and “Render” the document.\n This calls quarto, and quarto renders the document. In this case, that means, quarto creates a new file “hw-01-R.md” in the gfm format as specified in the YAML. GFM stands for GitHub Flavored Markdown which is a markdown document which can be nicely shown on https://github.com.\nWhen the file was rendered successfully, RStudio shows it in the “Viewer” pane at the bottom right. At the same place you can look in the “Files” pane you can check if the file is there.\n\nIf you do not find the “Render” button in your RStudio installation, then either quarto is not installed or RStudio has not recognized. You have to fix this issue first before you can continue. Another source of error while rendering could be that you haven’t installed the tidyverse package."
+  },
+  {
+    "objectID": "hw-01.html#step-2-commit",
+    "href": "hw-01.html#step-2-commit",
+    "title": "Homework 01",
+    "section": "4.2 Step 2: Commit",
+    "text": "4.2 Step 2: Commit\nGo to the Git pane in your RStudio (top right corner).\nYou should see that your qmd (quarto) file and its output, your md file (Markdown), are listed there as recently changed files.\nNext, click on Diff. This will pop open a new window that shows you the difference between the last committed state of the document and its current state that includes your changes. (Click on the file “hw-01-R.qmd”.) If you’re happy with these changes, click on the checkboxes of all files in the list, and type “Update author name” in the Commit message box and hit Commit and then close the window.\n\nYou don’t have to commit after every change, this would get quite cumbersome. You should consider committing states that are meaningful to you for inspection, comparison, or restoration. In the first few assignments we may tell you exactly when to commit and what commit message to use. As the semester progresses we will let you make these decisions."
+  },
+  {
+    "objectID": "hw-01.html#step-3.-push",
+    "href": "hw-01.html#step-3.-push",
+    "title": "Homework 01",
+    "section": "4.3 Step 3. Push",
+    "text": "4.3 Step 3. Push\nNow that you have made an update and committed this change, it’s time to push these changes to the web! Or more specifically, to your repo on GitHub. Why? So that others can see your changes. And by others, we mean the course instructors (your repos in this course are private to you and us, only).\nGo the Git pane and click on Push.\nThought exercise: Which of the steps “updating the YAML”, “committing”, and “pushing” involves talking to GitHub?1"
+  },
+  {
+    "objectID": "hw-01.html#check-what-you-did",
+    "href": "hw-01.html#check-what-you-did",
+    "title": "Homework 01",
+    "section": "4.4 Check what you did",
+    "text": "4.4 Check what you did\nGo to your repository on https://github.com/JU-F22-MDSSB-MET-01 and click on the file “hw-01-R.md”. You should see a nicely rendered version with your name in the header."
   },
   {
     "objectID": "index.html",
