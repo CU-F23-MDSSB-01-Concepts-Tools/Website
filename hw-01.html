@@ -265,11 +265,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 data-link="Prerequisites" data-number="1.1" class="anchored" data-anchor-id="prerequisites"><span class="header-section-number">1.1</span> Prerequisites</h2>
 <p>First, you need to achieve the following</p>
 <ul>
-<li><p>Review the Lecture of Week 1</p></li>
-<li><p>Read <a href="https://happygitwithr.com/big-picture">Happy Git with R: Why Git? Why GitHub?</a> (It is OK do a <em>fast read</em> only. You may reconsider later.)</p></li>
-<li><p>You have a <a href="https://github.com">GitHub</a> account to become a member of the GitHub organization. If you do not have an account follow the instructions on the front page of <a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools" class="uri">https://github.com/CU-F23-MDSSB-01-Concepts-Tools</a>.</p></li>
-<li><p>You have provided your GitHub username in this form <a href="https://forms.office.com/e/fraU0w0gQq" class="uri">https://forms.office.com/e/fraU0w0gQq</a> (If you provided your name wrongly, write an email to the instructor.)</p></li>
-<li><p>Software installations on your computer:</p>
+<li>Review the Lecture of Week 1</li>
+<li>Read <a href="https://happygitwithr.com/big-picture">Happy Git with R: Why Git? Why GitHub?</a> (It is OK do a <em>fast read</em> only. You may reconsider later.)</li>
+<li>You have a <a href="https://github.com">GitHub</a> account to become a member of the GitHub organization. If you do not have an account follow the instructions on the front page of <a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools" class="uri">https://github.com/CU-F23-MDSSB-01-Concepts-Tools</a>.</li>
+<li>You have provided your GitHub username in this form <a href="https://forms.office.com/e/fraU0w0gQq" class="uri">https://forms.office.com/e/fraU0w0gQq</a> (If you provided your name wrongly, write an email to the instructor.)</li>
+<li>Software installations on your computer:
 <ul>
 <li>Read <a href="https://happygitwithr.com/install-r-rstudio.html">Happy Git with R: Install or upgrade R and RStudio</a><br>
 Follow the instructions to install <strong>R</strong> and <strong>RStudio</strong></li>
@@ -278,27 +278,41 @@ Follow the instructions (choose the highly recommended) to install <strong>Git</
 <li>Install <strong>quarto</strong> CLI (= Command Line Interface) <a href="https://quarto.org/docs/get-started/" class="uri">https://quarto.org/docs/get-started/</a>.<br>
 Note: In the following you will do similar things as described in <a href="https://quarto.org/docs/get-started/hello/rstudio.html">Tutorial: Hello, Quarto</a> and the following two tutorials.</li>
 </ul></li>
-<li><p>In R, install some packages from the following list. You can use the command <code>install.packages("tidyverse","gitcreds","usethis")</code><br>
-Notes: <strong>tidyverse</strong> is a collection of many packages it can take some time to install. <em>usethis</em> an <em>gitcreds</em> provide convenient functions to tell your git-installation your GitHub-credentials to push your work back to github via a Personal Access Token (PAT). Read <a href="https://happygitwithr.com/https-pat.html">Happy Git with R: Personal access token for HTTPS</a>.</p></li>
-<li><p>Check if your RStudio offers Quarto rendering options, a git</p></li>
-<li><p>More software installations on your computer</p></li>
+<li>In R, install some packages from the following list. You can use the command <code>install.packages("tidyverse","gitcreds","usethis")</code><br>
+Notes: <strong>tidyverse</strong> is a collection of many packages it can take some time to install. <em>usethis</em> an <em>gitcreds</em> provide convenient functions to tell your git-installation your GitHub-credentials to push your work back to github via a Personal Access Token (PAT). Read <a href="https://happygitwithr.com/https-pat.html">Happy Git with R: Personal access token for HTTPS</a> for how PATs are used similar but not identical to passwords.</li>
 </ul>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+More software
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Soon, we will need more software: <strong>python</strong> using the IDE (integrated development environment) <strong>Visual Studio Code</strong>.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="terminology" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="terminology"><span class="header-section-number">1.2</span> Terminology</h2>
 <p>We’ve already thrown around a few new terms, so let’s define them before we proceed.</p>
 <ul>
 <li><p><strong>R</strong> and <strong>python</strong>: Names of the programming language we will be using throughout the course.</p></li>
-<li><p><strong>RStudio:</strong> An integrated development environment developed for R, which can also work with python. In other words, a convenient interface for writing and running code.</p></li>
+<li><p><strong>RStudio:</strong> An integrated development environment developed for R. In other words, a convenient interface for writing and running code.</p></li>
 <li><p><strong>Git:</strong> A version control system.</p></li>
 <li><p><strong>GitHub:</strong> A web platform for hosting version controlled files and facilitating collaboration among users.</p></li>
-<li><p><strong>Repository:</strong> A Git repository contains all of your project’s files and stores each file’s revision history.<br>
-</p>
+<li><p><strong>quarto:</strong> A command line tool which can render (among other things) qmd-files (with text and code chunks) to nice looking html</p></li>
+<li><p><strong>Repository:</strong> A Git repository contains all of your project’s files and stores each file’s revision history.</p>
 <p>It’s common to refer to a repository as a <em>repo</em>.</p>
 <ul>
-<li>In this course, each assignment you work on will be contained in a Git repo.</li>
+<li>In this course, assignment you work on will be contained in a personalized git repo.</li>
 <li>For individual assignments, only you will have access to the repo. For team assignments, all team members will have access to a single repo where they work collaboratively.</li>
-<li>All repos associated with this course are housed in the course GitHub organization. The organization is set up such that students can only see repos they have access to, but the course instructors can see all of them.</li>
+<li>All repos associated with this course are housed in the GitHub organization <a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools" class="uri">https://github.com/CU-F23-MDSSB-01-Concepts-Tools</a>. The organization is set up such that students can only see repos they have access to, but the course instructors can see all of them.</li>
 </ul></li>
 </ul>
 </section>
@@ -308,8 +322,8 @@ Notes: <strong>tidyverse</strong> is a collection of many packages it can take s
 <p>Before you can get started with the analysis, you need to make sure you:</p>
 <ul>
 <li><p>have a GitHub account</p></li>
-<li><p>are a member of the course GitHub organization <a href="https://github.com/JU-F22-MDSSB-MET-01" class="uri">https://github.com/JU-F22-MDSSB-MET-01</a></p></li>
-<li><p>have the needed software stack installation on your local machine (see the Prerequisites Checklist in the slides of the Week 1 lectures.)</p></li>
+<li><p>are a member of the course GitHub organization <a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools" class="uri">https://github.com/CU-F23-MDSSB-01-Concepts-Tools</a></p></li>
+<li><p>have the needed software stack installation on your local machine (see the Prerequisites Checklist above)</p></li>
 </ul>
 <p>If you failed to confirm any of these, it means you have not yet completed the prerequisites for this assignment. Please go back to <a href="#prerequisites">Prerequisites</a> and complete them before continuing the assignment.</p>
 </section>
@@ -329,26 +343,26 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If there is no GitHub repo created for you for this assignment, it means I didn’t have your GitHub username as of when I assigned the homework. Please let me know your GitHub username asap, and I can create your repo.</p>
+<p>If there is no GitHub repo created for you for this assignment, it means the instructors have not yet created onew. Let us know know your GitHub username asap, and we create your repo.</p>
 </div>
 </div>
 <section id="step-0.-authenticate-git-to-access-your-github-content" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="step-0.-authenticate-git-to-access-your-github-content"><span class="header-section-number">2.1</span> Step 0. Authenticate git to access your GitHub content</h2>
 <p>Before you can clone your repository you need to tell GitHub that you are authorized to do this, and to that end you need to make a Personal Access Token (PAT) in your GitHub account and make this available to git and RStudio on your local machine.</p>
-<p>There are several ways to do this (e.g.&nbsp;from the command line) but as we will use RStudio anyway, we can use a convenient way provided there.</p>
-<p>Read more about PATs and how to use them in “Happy Git with R” Chapter 9 <a href="https://happygitwithr.com/https-pat.html" class="uri">https://happygitwithr.com/https-pat.html</a> (in particular the TL;DR which describes what we use).</p>
+<p>There are several ways to do this (e.g.&nbsp;from the command line) but as we will use RStudio anyway, we can use a convenient way provided there. Read more about PATs and how to use them in <a href="https://happygitwithr.com/https-pat.html">Happy Git with R: Personal access token for HTTPS</a> (in particular the TL;DR which describes what we use).</p>
 <p>Open RStudio and install the packages <code>usethis</code> and <code>gitcreds</code> if you haven’t done already: Go to the “Console” pane at the bottom left. Type in</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"usethis"</span>,<span class="st">"gitcreds"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>and hit Enter. Now the packages should be installed.</p>
 <p>Now, use two commands. Copy them to the console and click Enter:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This opens <a href="http://github.com" class="uri">http://github.com</a> and you may need to log in. Then you can make the PAT (read more details in “Happy Git with R”). For today, you can go the fast way and do not think about the options and click “Generate token”. Use the clipboard icon 📋 to copy the PAT. Go back to RStudio and do in the console:</p>
+<p>This opens <a href="http://github.com" class="uri">http://github.com</a> and you may need to log in. Then you can make the PAT (read more details in “Happy Git with R”). For today, you can go the fast way and do not think about the options and click “Generate token”. (If you feel safe enough you can also go for a token without an expiration day against advise from GitHub, if not you just have to do the “dance” again when the PAT expires.)<br>
+Use the clipboard icon 📋 to copy the PAT. Go back to RStudio and do in the console:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>In the dialog in the console paste your PAT from the clipboard and press Enter. That should be it and you do not need to repeat these steps until the PAT expires. (If the PAT expires you have to make a new one in the same way.)</p>
 </section>
 <section id="step-1.-get-url-of-repo-to-be-cloned" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="step-1.-get-url-of-repo-to-be-cloned"><span class="header-section-number">2.2</span> Step 1. Get URL of repo to be cloned</h2>
-<p>On GitHub <a href="https://github.com/JU-F22-MDSSB-MET-01" class="uri">https://github.com/JU-F22-MDSSB-MET-01</a>, open your repository for Homework 1.</p>
+<p>On GitHub <a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools" class="uri">https://github.com/CU-F23-MDSSB-01-Concepts-Tools</a>, open your repository for Homework 1.</p>
 <p><img src="img/clone-repo-link.png" class="img-fluid"></p>
 <p>On GitHub, click on the green <strong>Code</strong> button, select <strong>HTTPS</strong> (this might already be selected by default, and if it is, you’ll see the text <em>Use Git or checkout with SVN using the web URL</em>). Click on the clipboard icon 📋 to copy the repo URL.</p>
 </section>
@@ -367,14 +381,33 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If “Version Control” or “Git” is not available in your RStudio, then either you haven’t installed git on you computer or your RStudio installation has not recognized it properly. In a correct installation RStudio would recognize git on your machine when started and makes the options available automatically. You have to solve this issue first to continue.</p>
+<p>If “Version Control” or “Git” is not available in your RStudio, then either you haven’t installed git on you computer or your RStudio installation has not recognized it properly. In a correct installation RStudio would recognize git on your machine automatically when started. You have to solve this issue first to continue.</p>
 </div>
 </div>
 <p>Then paste the repositories URL (which should still be in your clipboard) into the “Repository URL:” field. Leave directory name as it is automatically chosen, but make sure that you create the directory in a the folder where you want to store the course material on your computer via the “Browse …” button.</p>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Organize your Computer for your Studies!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li>Create a folder for Data Science Concepts and Tools</li>
+<li>Put all repos there</li>
+</ul>
+</div>
+</div>
+</div>
 <p>When you click “Create Project”</p>
 <ul>
 <li>git will create a new directory in the folder, copies all the files from github to it, and initializes your git repository locally</li>
-<li>RStudio will switch to that the new project</li>
+<li>RStudio will switch to that as the new project</li>
 </ul>
 </section>
 </section>
@@ -383,7 +416,7 @@ Important
 <p>RStudio is comprised of four panes.</p>
 <p><img src="img/rstudio-anatomy.png" class="img-fluid"></p>
 <ul>
-<li>On the bottom left is the Console which we already used, this is where you can write code that will be evaluated. Try typing <code>2 + 2</code> here and hit enter, what do you get?</li>
+<li>On the bottom left is the Console which we already used, this is where you can write code that will be evaluated (REPL in a CLI = Read–eval–print loop in a Command Line Interface). Try typing <code>2 + 2</code> here and hit enter, what do you get?</li>
 <li>On the bottom right is the Files pane, as well as other panes that will come handy as we start our analysis.</li>
 <li>If you click on a file, it will open in the editor, on the top left pane.</li>
 <li>Finally, the top right pane shows your Environment. If you define a variable it would show up there. Try typing <code>x &lt;- 2</code> in the Console and hit enter, what do you get in the <strong>Environment</strong> pane? Importantly, this pane is also where the <strong>Git</strong> interface lives. We will be using that regularly throughout this assignment.</li>
@@ -402,14 +435,15 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The top portion of your R Markdown file (between the three dashed lines) is called <strong>YAML</strong>. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.</p>
+<p>The top portion of your quarto file (between the three dashed lines) is called <strong>YAML</strong>. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.</p>
 </div>
 </div>
 <section id="step-1.-update-the-yaml" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="step-1.-update-the-yaml"><span class="header-section-number">4.1</span> Step 1. Update the YAML</h2>
-<p>Open the quarto (qmd) file in your project, change the author name to your name, and “Render” the document.</p>
-<p><img src="img/quarto-render.png" class="img-fluid"> This calls <code>quarto</code>, and quarto renders the document. In this case, that means, quarto creates a new file “hw-01-R.md” in the gfm format as specified in the YAML. GFM stands for <em>GitHub Flavored Markdown</em> which is a markdown document which can be nicely shown on <a href="https://github.com" class="uri">https://github.com</a>.</p>
-<p>When the file was rendered successfully, RStudio shows it in the “Viewer” pane at the bottom right. At the same place you can look in the “Files” pane you can check if the file is there.</p>
+<p>Open the quarto (qmd) file in your project. In the YAML change the <code>author</code> name to your name, and “Render” the document.</p>
+<p><img src="img/quarto-render.png" class="img-fluid"> This calls <code>quarto</code>, and quarto renders the document. In this case, that means, quarto creates a new file “hw-01-R.md” in the html format as specified in the YAML.</p>
+<p>When the file was rendered successfully, RStudio shows it in the “Viewer” pane at the bottom right. At the same place you can look in the “Files” pane you can check if the file is there. You can click on it an select to show it in your Brwoser.</p>
+<p><em>Now you see a nice html-page in the Browser! You made a page like every ordinary site on the internet. So you made an important step towards publishing you data science work on the internet.</em> However now the html page is only locally on your computer.</p>
 <div class="callout.important">
 <p>If you do not find the “Render” button in your RStudio installation, then either quarto is not installed or RStudio has not recognized. You have to fix this issue first before you can continue. Another source of error while rendering could be that you haven’t installed the <code>tidyverse</code> package.</p>
 </div>
@@ -417,20 +451,45 @@ Note
 <section id="step-2-commit" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="step-2-commit"><span class="header-section-number">4.2</span> Step 2: Commit</h2>
 <p>Go to the <strong>Git pane</strong> in your RStudio (top right corner).</p>
-<p>You should see that your qmd (quarto) file and its output, your md file (Markdown), are listed there as recently changed files.</p>
+<p>You should see that your qmd (quarto) file and its output, your html-file, are listed there as recently changed files.</p>
 <p>Next, click on <strong>Diff</strong>. This will pop open a new window that shows you the <strong>diff</strong>erence between the last committed state of the document and its current state that includes your changes. (Click on the file “hw-01-R.qmd”.) If you’re happy with these changes, click on the checkboxes of all files in the list, and type <em>“Update author name”</em> in the <strong>Commit message</strong> box and hit <strong>Commit</strong> and then close the window.</p>
 <p><img src="img/commit-window.png" class="img-fluid"></p>
 <p>You don’t have to commit after every change, this would get quite cumbersome. You should consider committing states that are <em>meaningful to you</em> for inspection, comparison, or restoration. In the first few assignments we may tell you exactly when to commit and what commit message to use. As the semester progresses we will let you make these decisions.</p>
 </section>
 <section id="step-3.-push" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="step-3.-push"><span class="header-section-number">4.3</span> Step 3. Push</h2>
-<p>Now that you have made an update and committed this change, it’s time to push these changes to the web! Or more specifically, to your repo on GitHub. Why? So that others can see your changes. And by others, we mean the course instructors (your repos in this course are private to you and us, only).</p>
+<p>Now that you have made an update and committed this change, it’s time to push these changes to the web! Or more specifically, to your repo on GitHub.<br>
+Why?<br>
+So that others can see your changes.<br>
+And by others, we mean the course instructors (your repos in this course are private to you and us, only).</p>
 <p>Go the Git pane and click on <strong>Push</strong>.</p>
 <p><strong>Thought exercise:</strong> Which of the steps “updating the YAML”, “committing”, and “pushing” involves talking to GitHub?<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 </section>
 <section id="check-what-you-did" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="check-what-you-did"><span class="header-section-number">4.4</span> Check what you did</h2>
-<p>Go to your repository on <a href="https://github.com/JU-F22-MDSSB-MET-01" class="uri">https://github.com/JU-F22-MDSSB-MET-01</a> and click on the file “hw-01-R.md”. You should see a nicely rendered version with your name in the header.</p>
+<p>Go to your repository on <a href="https://github.com/JU-F22-MDSSB-MET-01" class="uri">https://github.com/JU-F22-MDSSB-MET-01</a> and check if the files appear there as in you local folder.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li>You may wonder why clicking on the the html-file does not show the page as you saw it locally in your browser.</li>
+<li>The reason is, that GitHub is essentially a code editor. So, it shows you the html-code. This code was created by rendering. DO not touch it “by hand”. It will be overwritten every time you render again.</li>
+<li>Viewing the html as in the browser is not possible here. The instructor will clone you repository and can then look at your html locally on their machines.</li>
+<li>Context Information: It is possible to publish webpages from GitHub. You can learn this later.</li>
+<li>Context Information: GitHub provides its own <em>gfm</em> = GitHub Flavoured Markdown. The README.md files are written in this. gfm is very similar to the Markdown language we use.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="packages" class="level1" data-number="5">
@@ -442,6 +501,28 @@ Note
 <p>In your R Markdown document you should see an R chunk labelled <code>load-packages-and-data</code> which has the necessary code for loading packages and data.</p>
 <p>You should also load these packages in your Console, which you can do by sending the code to your Console by clicking on the <strong>Run Current Chunk</strong> icon (small green triangle pointing right icon).</p>
 <p><img src="img/run-chunk.png" class="img-fluid"></p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Difference between working and rendering environment!
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<ul>
+<li>This is a typical source of <strong>confusion</strong>.</li>
+<li>When you execute code in the Console objects will be created in your working environment. See the Environment Tab.</li>
+<li>When you render the qmd-file to html, quarto creates a new environment and goes through all the code in the code chunks step by step in an own rendering environment. It can not access, and does not know what you created in the working environment!</li>
+<li>How to use it properly: When you develop code you send code lines to the console repeatedly to workout how your code works. However you have to take care that the code writte there is complete in the right order, that quarto can then do the necessary steps to reproduce what you want it to do.</li>
+<li>You will get used to this workflow.</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="data" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Data</h1>
@@ -490,7 +571,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you haven’t entered your data during class, then use the name of another person in the dataset. If you want to have your data included then you can still fill out the survey (find the link on jMoodle). You can also fill out the survey once again, if you are totally unhappy with yooour data. I will update the dataset later and inform you when it is ready. For now you have to choose another name.</p>
+<p>If you haven’t entered your data during class, then use the name of another person in the dataset. If you want to have your data included then you can still fill out the survey <a href="https://forms.office.com/e/Uz84tQVNWQ" class="uri">https://forms.office.com/e/Uz84tQVNWQ</a>. We will update the dataset later and inform you when it is ready. For now you have to choose another name.</p>
 </div>
 </div>
 <ol start="2" type="1">
@@ -550,21 +631,9 @@ Tip
 </div>
 </div>
 <ol start="5" type="1">
-<li>Make a new quarto document called “hw-01-python.qmd”. Copy the content from the file “hw-01-R.md” into it. In all four chunks replace <code>{r</code> with <code>{python</code> (this makes the chunks python chunks). Remove the code in the chunk and write python-code which achieves essentially the same results. Commit and push this document, too. (Commit message: “Completed.”)</li>
+<li>How is the experience with AI Tools in the group?</li>
 </ol>
-<div class="callout-tip callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>This is a translation exercise. You will get an introduction in the course “Data Science with python”.</em></p>
-</div>
-</div>
+<p><em>This is a more open exercise. Think about how you would like to view this data and try to produce a graphic for each of the three question. Each question would have a new chunk. Try to draft a graphic. Try the <code>geom_bar</code> aesthetic.</em></p>
 
 
 </section>
