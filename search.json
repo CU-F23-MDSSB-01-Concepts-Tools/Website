@@ -39,7 +39,7 @@
     "href": "hw-01.html",
     "title": "Homework 01",
     "section": "",
-    "text": "The goal of this assignment is to refresh the workflow with R, RStudio, quarto, Git, and GitHub. You can replace R, RStudio with python, visual code studio. Then follow"
+    "text": "The goal of this assignment is to introduce you to R, RStudio, Git, and GitHub, which you’ll be using throughout the course both to learn the data science concepts discussed in the course and to analyze real data and come to informed conclusions."
   },
   {
     "objectID": "hw-01.html#prerequisites",
