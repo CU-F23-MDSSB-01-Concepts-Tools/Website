@@ -1,0 +1,30 @@
+---
+title: "Learning Resources"
+---
+
+<!-- LITERATURE / READING LIST -->
+<!-- Please describe required texts, computer software, and module materials and their cost estimates (if applicable). You may also provide advice on cost-effective means of obtaining module materials, such as through the library or other open-source materials.  -->
+
+All the materials here are freely accessible, many are community standards. The [Schedule](schedule.qmd) might refer to specific sections in these materials. 
+
+## R
+
+- **R for Data Science (2nd Edition)** <https://r4ds.hadley.nz//> by Hadley Wickham, Garrett Grolemand, Mine Çetinkaya-Rundel and the R data science community around is our core resource for self-learning data science with R using `tidyverse` tools. 
+- **Tidy Modeling with R** <https://www.tmwr.org/> by Max Kuhn and Julia Silge is the resource for learning to work with `tidymodels` building upon the `tidyverse` tools.
+- Part of the course builds on or be inspired by material in **Data Science in the Box** <https://datasciencebox.org/> by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics. 
+## python
+
+- **Python Data Science Handbook** <https://jakevdp.github.io/PythonDataScienceHandbook/> by Jake VanderPlas is a core resource for data science with python. Also there is a good video playlist <https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23> and a 4-hour "full-course" video <https://youtu.be/rfscVS0vtbw>.
+
+## Data Visualization
+
+*ggplot2: Elegant Graphics for Data Analysis* <https://ggplot2-book.org> is a resource on understanding the logic of ggplot better. 
+
+Websites on how to decide for what visualization to choose:   
+<https://www.data-to-viz.com/>   
+<https://datavizcatalogue.com/search.html>
+
+## Mathematics
+
+- How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk
+
