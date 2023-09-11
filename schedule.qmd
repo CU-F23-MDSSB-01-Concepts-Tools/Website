@@ -13,7 +13,7 @@ The schedule is tentative it will be continuously updated also with readings/vie
 Week | Dates        | Topic                  | Tools Course   | 
 -----|--------------|------------------------|:--------------:|
 1    | 09-04, 09-07 | What is Data Science? Course Organization, Our software toolkit <br> [Slides Week 1](https://docs.google.com/presentation/d/1NxFoVf7I0wccp5LDLR4wfwclvO61-pSRAscsr1Wzzok/edit?usp=sharing), Achievements [Week -@sec-week1] | R              |
-2    | 09-11, 09-14 | Data Visualization, Data Formats  <br> [Slides Week 2 Intro](W02.qmd), [Slides Week 2 Main Part](https://docs.google.com/presentation/d/1NxFoVf7I0wccp5LDLR4wfwclvO61-pSRAscsr1Wzzok/edit?usp=sharing), [Repo with Example Visualization of our data science profiles](https://github.com/CU-F23-MDSSB-01-Concepts-Tools/hw1-janlorenz) Achievements [Week -@sec-week2] | R              |
+2    | 09-11, 09-14 | Data Visualization, Data Formats  <br> [Slides Week 2 Intro](W02.qmd), [Slides Week 2 Main Part](https://docs.google.com/presentation/d/1j3mOeb84NXHv-5__HCvIVM1r1Q8ha67cSAx5nrxl-SM/edit?usp=sharing), [Repo with Example Visualization of our data science profiles](https://github.com/CU-F23-MDSSB-01-Concepts-Tools/hw1-janlorenz) Achievements [Week -@sec-week2] | R              |
 3    | 09-18, 09-21 | Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis, Data Science Projects | python         |
 4    | 09-25, 09-28 | Functions, Descriptive Statistics, Principle Component Analysis, Matrices  | python         |
 5    | 10-02, 10-05 | Modeling, Linear Model, Calculus  | R              |
