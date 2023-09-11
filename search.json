@@ -25,21 +25,28 @@
     "href": "literature.html#r",
     "title": "Learning Resources",
     "section": "1 R",
-    "text": "1 R\n\nR for Data Science (2nd Edition) https://r4ds.hadley.nz// by Hadley Wickham, Garrett Grolemand, Mine Çetinkaya-Rundel and the R data science community around is our core resource for self-learning data science with R using tidyverse tools.\nTidy Modeling with R https://www.tmwr.org/ by Max Kuhn and Julia Silge is the resource for learning to work with tidymodels building upon the tidyverse tools.\nPart of the course builds on or be inspired by material in Data Science in the Box https://datasciencebox.org/ by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics. ## python\nPython Data Science Handbook https://jakevdp.github.io/PythonDataScienceHandbook/ by Jake VanderPlas is a core resource for data science with python. Also there is a good video playlist https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23 and a 4-hour “full-course” video https://youtu.be/rfscVS0vtbw."
+    "text": "1 R\n\nR for Data Science (2nd Edition) https://r4ds.hadley.nz// by Hadley Wickham, Garrett Grolemand, Mine Çetinkaya-Rundel and the R data science community around is our core resource for self-learning data science with R using tidyverse tools.\nTidy Modeling with R https://www.tmwr.org/ by Max Kuhn and Julia Silge is the resource for learning to work with tidymodels building upon the tidyverse tools.\nPart of the course builds on or be inspired by material in Data Science in the Box https://datasciencebox.org/ by Mine Çetinkaya-Rundel and the data science education community around. You can also use the website for accompanying self-study on selected topics."
+  },
+  {
+    "objectID": "literature.html#python",
+    "href": "literature.html#python",
+    "title": "Learning Resources",
+    "section": "2 python",
+    "text": "2 python\n\nPython Data Science Handbook https://jakevdp.github.io/PythonDataScienceHandbook/ by Jake VanderPlas is a core resource for data science with python. Also there is a good video playlist https://www.youtube.com/playlist?list=PLWKjhJtqVAbkmRvnFmOd4KhDdlK1oIq23 and a 4-hour “full-course” video https://youtu.be/rfscVS0vtbw."
   },
   {
     "objectID": "literature.html#data-visualization",
     "href": "literature.html#data-visualization",
     "title": "Learning Resources",
-    "section": "2 Data Visualization",
-    "text": "2 Data Visualization\nggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org is a resource on understanding the logic of ggplot better.\nWebsites on how to decide for what visualization to choose:\nhttps://www.data-to-viz.com/\nhttps://datavizcatalogue.com/search.html"
+    "section": "3 Data Visualization",
+    "text": "3 Data Visualization\nggplot2: Elegant Graphics for Data Analysis https://ggplot2-book.org is a resource on understanding the logic of ggplot better.\nWebsites on how to decide for what visualization to choose:\nhttps://www.data-to-viz.com/\nhttps://datavizcatalogue.com/search.html"
   },
   {
     "objectID": "literature.html#mathematics",
     "href": "literature.html#mathematics",
     "title": "Learning Resources",
-    "section": "3 Mathematics",
-    "text": "3 Mathematics\n\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
+    "section": "4 Mathematics",
+    "text": "4 Mathematics\n\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
   },
   {
     "objectID": "help.html",
@@ -221,7 +228,7 @@
     "href": "W04.html#function-as-objects-in-r",
     "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x564cf1f07620>\n<environment: namespace:stats>\n\nc  \n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot \n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x564cee169658>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x55f20f637980>\n<environment: namespace:stats>\n\nc  \n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot \n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x55f20b892438>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#functions-in-r",
@@ -900,7 +907,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#5 More under the hood, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1503749778"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1503749901"
   },
   {
     "objectID": "W03.html#more-about",
