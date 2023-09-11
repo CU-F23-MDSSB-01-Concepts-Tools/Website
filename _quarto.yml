@@ -20,6 +20,8 @@ website:
       - section: "Homework"
         contents:
         - hw-01.qmd
+        - hw-02.qmd
+        - help.qmd
       
 format:
   html:

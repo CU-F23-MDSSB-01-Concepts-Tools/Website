@@ -1,17 +1,20 @@
 ---
 title: "Schedule"
+
 ---
 
 :::{.callout-important collapse=false appearance='default' icon=true}
 ## Developing Schedule
-The schedule is tentative it will be continuously updated also with readings and homework.
+The schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.
 :::
 
-Week | Dates        | Topic                  | Tools          | 
+# Tabular Schedule  {.unnumbered  .unlisted}
+
+Week | Dates        | Topic                  | Tools Course   | 
 -----|--------------|------------------------|:--------------:|
-1    | 09-04, 09-07 | What is Data Science? Course Organization, Our software toolkit <br> [Slides Week 1](https://docs.google.com/presentation/d/1NxFoVf7I0wccp5LDLR4wfwclvO61-pSRAscsr1Wzzok/edit?usp=sharing) | R              |
-2    | 09-11, 09-14 | Data import, Data Visualization, Data formats  | R              |
-3    | 09-18, 09-21 | Data Wrangling, Relational Data, Exploratory Data Analysis, Data Science Projects | python         |
+1    | 09-04, 09-07 | What is Data Science? Course Organization, Our software toolkit <br> [Slides Week 1](https://docs.google.com/presentation/d/1NxFoVf7I0wccp5LDLR4wfwclvO61-pSRAscsr1Wzzok/edit?usp=sharing), Achievements [Week -@sec-week1] | R              |
+2    | 09-11, 09-14 | Data Visualization, Data Formats  <br> [Slides Week 2 Intro](W02.qmd), [Slides Week 2 Main Part](https://docs.google.com/presentation/d/1NxFoVf7I0wccp5LDLR4wfwclvO61-pSRAscsr1Wzzok/edit?usp=sharing), [Repo with Example Visualization of our data science profiles](https://github.com/CU-F23-MDSSB-01-Concepts-Tools/hw1-janlorenz) Achievements [Week -@sec-week2] | R              |
+3    | 09-18, 09-21 | Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis, Data Science Projects | python         |
 4    | 09-25, 09-28 | Functions, Descriptive Statistics, Principle Component Analysis, Matrices  | python         |
 5    | 10-02, 10-05 | Modeling, Linear Model, Calculus  | R              |
 6    | 10-09, 10-12 | *Classification Problems, Logistic Regression, Prediction*  | python         |
@@ -29,3 +32,34 @@ Week | Dates        | Topic                  | Tools          |
 :::{.callout-note collapse=false appearance='default' icon=true}
 All topics in the future are subject to change and adaptation to student needs. *Topics in italics are tentative.*
 :::
+
+# Achievements Week 1 {#sec-week1}
+
+You have 
+
+- a running R with RStudio installation an you computer
+- done the *git-GitHub dance* and know what the tools are in principle
+- rendered quarto documents and understood its idea
+- made your first steps with R
+- finished [Homework 01](hw-01.qmd) (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)
+
+Additional material: 
+
+- Quarto: Watch <https://www.youtube.com/watch?v=_f3latmOhew> from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox). 
+- R: Read the following sections in [R for Data Science](http://r4ds.hadley.nz) 
+    - [Ch 1:Introduction](https://r4ds.hadley.nz/intro)
+    - [Whole Game (the outline of the part)](https://r4ds.hadley.nz/whole-game)
+    
+# Achievements Week 2 {#sec-week2}
+
+You have 
+
+[To be completed]{style='color:red;'}
+
+Additional material: 
+
+- ggplot: Read the following sections in [R for Data Science](http://r4ds.hadley.nz) 
+    - [Ch 2: Data Visualization](https://r4ds.hadley.nz/data-visualize)
+    - If you want to go deeper already now, read the chapter [Ch 10: Layers](https://r4ds.hadley.nz/layers)
+    
+[To be completed]{style='color:red;'}

@@ -26,5 +26,5 @@ Websites on how to decide for what visualization to choose:
 
 ## Mathematics
 
-- How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk
+- How to read math <https://www.youtube.com/watch?v=Kp2bYWRQylk>
 
