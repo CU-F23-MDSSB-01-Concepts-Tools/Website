@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.269">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Data Science Concepts / Data Science Tools - Data Science on the Internet and in Social Media</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Data Science Concepts / Data Science Tools</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Data Science on the Internet and in Social Media</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Syllabus</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link"><strong>Schedule</strong></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./literature.html" class="sidebar-item-text sidebar-link">Learning Resources</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Homework</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw-01.html" class="sidebar-item-text sidebar-link">Homework 01</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./hw-02.html" class="sidebar-item-text sidebar-link">Homework 02</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./help.html" class="sidebar-item-text sidebar-link">Need help for Homework?</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-science-on-social-media" id="toc-data-science-on-social-media" class="nav-link active" data-scroll-target="#data-science-on-social-media"><span class="toc-section-number">1</span>  Data Science on Social Media</a></li>
+  <li><a href="#should-you-follow-data-science-on-social-media" id="toc-should-you-follow-data-science-on-social-media" class="nav-link" data-scroll-target="#should-you-follow-data-science-on-social-media"><span class="toc-section-number">2</span>  Should you follow data science on social media?</a></li>
+  <li><a href="#which-social-media-and-how-to-follow-data-science" id="toc-which-social-media-and-how-to-follow-data-science" class="nav-link" data-scroll-target="#which-social-media-and-how-to-follow-data-science"><span class="toc-section-number">3</span>  Which social media and how to follow data science?</a></li>
+  <li><a href="#some-entry-points" id="toc-some-entry-points" class="nav-link" data-scroll-target="#some-entry-points"><span class="toc-section-number">4</span>  Some “entry points”</a>
+  <ul class="collapse">
+  <li><a href="#people" id="toc-people" class="nav-link" data-scroll-target="#people"><span class="toc-section-number">4.1</span>  People</a></li>
+  <li><a href="#other-things" id="toc-other-things" class="nav-link" data-scroll-target="#other-things"><span class="toc-section-number">4.2</span>  Other things</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Data Science on the Internet and in Social Media</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="data-science-on-social-media" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="data-science-on-social-media"><span class="header-section-number">1</span> Data Science on Social Media</h2>
+<p>Many people talk data science and related things on social media. Some people even make a business publishing short snippets because they love communicating about data science but also trying to attract you to their newsletters or courses. Also many developers of R or python packages are on social media occasionally posting new releases, ideas, or reacting.</p>
+</section>
+<section id="should-you-follow-data-science-on-social-media" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="should-you-follow-data-science-on-social-media"><span class="header-section-number">2</span> Should you follow data science on social media?</h2>
+<p><em>Yes, you should!</em> Because</p>
+<ul>
+<li>you can get a feeling of how the field develops.</li>
+<li>you can find nice snippets to learn things, when lucky they are exactly on your level.</li>
+<li>many people learn data science things on social media, you react with a questions and may be lucky to get a response.</li>
+<li>there may sometimes be release for your confused mind through data science memes, cartoons, or jokes.</li>
+</ul>
+<p><em>No, you should not!</em> Because</p>
+<ul>
+<li>all social media is disctraction from focused learning and concentrated working.</li>
+<li>you may develop <a href="https://en.wikipedia.org/wiki/Impostor_syndrome">imposter syndrome</a> symptoms. There is so much stuff out and you may think everybody else knows so much more and you will never catch up. (Hint, the reality is more like this: No one knows everything, you already have your own perspective and own unique set of skills, every good data scientist is constantly learning and is constantly able to rethink and also sometimes has similar feelings, what gets pushed on social media tends to be more opinionated and overstated.)</li>
+<li>you may fall into hype topics where people overstate the importance, risks, dangers, or opportunities a lot.</li>
+</ul>
+<p><strong>Final answer:</strong> You decide. If you do, learn to stop when it feels bad, learn to detect hype, and do more other data science learning like real exercises, tutorials or your projects. Just assume you are in the blue region on the graph in <a href="https://www.smbc-comics.com/comic/gifted">this cartoon</a> 😉.</p>
+</section>
+<section id="which-social-media-and-how-to-follow-data-science" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="which-social-media-and-how-to-follow-data-science"><span class="header-section-number">3</span> Which social media and how to follow data science?</h2>
+<p>The following is not intended to be complete or balanced in anyway. If you find something interesting let me know and I may add it to the lists.</p>
+<p>For following Data Science in social media you often need platform accounts, otherwise most platform do not even let you see things. Anyway, accounts help you by selecting who to follow. You do not need to post or like things, you can start just looking around and following.</p>
+<p>The general ways to access content is by <strong>following</strong> interesting people, <strong>searching</strong> for words or <strong>hashtags</strong>, or use the <strong>explore</strong> options the platforms offer.</p>
+<p>For sure data science is a common topic on 𝕏 (which I still call <a href="https://twitter.com">Twitter</a> which is still the URL), <a href="https://www.reddit.com/">Reddit</a> <img src="https://b.thumbs.redditmedia.com/S6FTc5IJqEbgR3rTXD5boslU49bEYpLWOlh8-CMyjTY.png" height="30" alt="reddit">, and <a href="https://joinmastodon.org/">Mastodon</a> <img src="https://joinmastodon.org/logos/logo-purple.svg" height="30">.</p>
+<p>On Mastodon: It is not a unique service, it is mainly offering a joint open source protocol which different independent servers can use to run something like a decentralized twitter. Some people call it Twitter with an open protocol like email. I think, this is a very good development! When you want to have a mastodon account, you need to decide for a server where to live. In the end it is not so important and you can also move with your account later. I am in the community <a href="https://datasci.social" class="uri">https://datasci.social</a> but you could take anythings and you can easily follow people on other servers.</p>
+<p>After Elon Musk’s twitter take over microblogging people are a but puzzled where to go and many maintain more than one plattform like twitter/X, bluesky, threads, or (what I support most) mastodon. So, you may find the same people at different places.</p>
+</section>
+<section id="some-entry-points" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="some-entry-points"><span class="header-section-number">4</span> Some “entry points”</h2>
+<section id="people" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="people"><span class="header-section-number">4.1</span> People</h3>
+<p>https://twitter.com/kareem_carr</p>
+<p>https://fosstodon.org/<span class="citation" data-cites="juliasilge">@juliasilge</span></p>
+<p>Allison Horst Chelsea</p>
+<p>Christoph Molnar https://twitter.com/ChristophMolnar Albert Rapp https://twitter.com/rappa753 Daniël Lakens https://twitter.com/lakens</p>
+<p>Hadley wickham</p>
+</section>
+<section id="other-things" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="other-things"><span class="header-section-number">4.2</span> Other things</h3>
+<p>Subreddits and the like</p>
+<p>Youtube, and podcasts</p>
+<p>A reddit thread <a href="https://www.reddit.com/r/datascience/comments/16dk5b6/r_vs_python_detailed_examples_from_proficient/" class="uri">https://www.reddit.com/r/datascience/comments/16dk5b6/r_vs_python_detailed_examples_from_proficient/</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
