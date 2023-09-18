@@ -4,7 +4,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data, Exploratory Data Analysis  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nFunctions, Descriptive Statistics, Principle Component Analysis, Matrices\npython\n\n\n5\n10-02, 10-05\nModeling, Linear Model, Calculus\nR\n\n\n6\n10-09, 10-12\nClassification Problems, Logistic Regression, Prediction\npython\n\n\n7\n10-16, 10-19\nProbability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics , Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nAdditional material:\nRead the following sections in R for Data Science\n- [Ch 6: Tidy Data](https://r4ds.hadley.nz/data-tidy)\n- [Ch 8: Data Import](https://r4ds.hadley.nz/data-import)\n- [Ch 13: Relational Data](https://r4ds.hadley.nz/relational-data.html)"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data, Exploratory Data Analysis  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nFunctions, Descriptive Statistics, Principle Component Analysis, Matrices\npython\n\n\n5\n10-02, 10-05\nModeling, Linear Model, Calculus\nR\n\n\n6\n10-09, 10-12\nClassification Problems, Logistic Regression, Prediction\npython\n\n\n7\n10-16, 10-19\nProbability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics , Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 13: Relational Data"
   },
   {
     "objectID": "hw-02.html",
@@ -133,380 +133,485 @@
     "text": "4.4 Check what you did\nGo to your repository on https://github.com/JU-F22-MDSSB-MET-01 and check if the files appear there as in you local folder.\n\n\n\n\n\n\nNote\n\n\n\n\n\n\nYou may wonder why clicking on the the html-file does not show the page as you saw it locally in your browser.\nThe reason is, that GitHub is essentially a code editor. So, it shows you the html-code. This code was created by rendering. DO not touch it “by hand”. It will be overwritten every time you render again.\nViewing the html as in the browser is not possible here. The instructor will clone you repository and can then look at your html locally on their machines.\nContext Information: It is possible to publish webpages from GitHub. You can learn this later.\nContext Information: GitHub provides its own gfm = GitHub Flavoured Markdown. The README.md files are written in this. gfm is very similar to the Markdown language we use."
   },
   {
+    "objectID": "W04.html#definition-sets-and-vectors",
+    "href": "W04.html#definition-sets-and-vectors",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Definition: Sets and vectors",
+    "text": "Definition: Sets and vectors\nA set is mathematical model for the collection of different things.\nExamples\n\n\\(\\{3, \\text{Hi}, 😀, 🖖 \\}\\)\n\\(\\{1,3,5\\}\\)\nThe natural numbers \\(\\mathbb{N} = \\{1, 2, 3, \\dots\\}\\) (infinite!)\n\\(\\{\\mathtt{\"EWR\"} \\mathtt{\"LGA\"} \\mathtt{\"JFK\"}\\}\\)\nthese are origin airports in flights"
+  },
+  {
+    "objectID": "W04.html#math-sets-and-vectors-1",
+    "href": "W04.html#math-sets-and-vectors-1",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Math: Sets and vectors",
+    "text": "Math: Sets and vectors\nA vector is an ordered collection of things (elements) of the same type.\nIn a set each thing can only be once and the order does not matter!\n\\(\\{1,3,5\\} = \\{3,5,1\\} = \\{1,1,1,3,5,5\\}\\)\nFor vectors:\n\\([1\\ 3\\ 5] \\neq [3\\ 5\\ 1]\\) because we compare component-wise, so we cannot even compare with = \\([1\\ 1\\ 1\\ 3\\ 5\\ 5]\\)"
+  },
+  {
+    "objectID": "W04.html#math-set-operations",
+    "href": "W04.html#math-set-operations",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Math: Set operations",
+    "text": "Math: Set operations\nFor sets \\(A = \\{🐺, 🦊, 🐶\\}\\) and \\(B = \\{🐶, 🐷, 🐹\\}\\):\n\nSet union \\(A \\cup B\\) = {🐺, 🦊, 🐶, 🐷, 🐹}\nSet intersection \\(A \\cap B\\) = {🐶}\nSet different \\(A \\setminus B\\) = {🐺, 🦊}$, \\(B \\setminus A\\) = {🐷, 🐹}"
+  },
+  {
+    "objectID": "W04.html#set-operations-in-r",
+    "href": "W04.html#set-operations-in-r",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Set operations in R",
+    "text": "Set operations in R\nunique shows the set of elements in a vector\n\nunique(flights$origin)\n\n[1] \"EWR\" \"LGA\" \"JFK\"\n\n\nsetequal tests for set equality\n\nsetequal(c(\"EWR\",\"LGA\",\"JFK\"), c(\"EWR\",\"EWR\",\"LGA\",\"JFK\"))\n\n[1] TRUE\n\n\nunion, intersect, setdiff treat vectors as sets and operate as expected\n\nunion(1:5,3:7)\n\n[1] 1 2 3 4 5 6 7\n\nintersect(1:5,3:7)\n\n[1] 3 4 5\n\nsetdiff(1:5,3:7)\n\n[1] 1 2"
+  },
+  {
+    "objectID": "W04.html#exploratory-data-analysis-1",
+    "href": "W04.html#exploratory-data-analysis-1",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Exploratory Data Analysis",
+    "text": "Exploratory Data Analysis\n\nEDA is the systematic exploration of data using\n\nvisualization\ntransformation\ncomputation of characteristic values\nmodeling\n\n\n\nWe haven’t talked much about the latter two, but will do soon.\nComputation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range\nModeling: Operations like linear regression or dimensionality reduction"
+  },
+  {
+    "objectID": "W04.html#systematic-but-no-standard-routine",
+    "href": "W04.html#systematic-but-no-standard-routine",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Systematic but no standard routine",
+    "text": "Systematic but no standard routine\n\n“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox\n\n\n“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey"
+  },
+  {
+    "objectID": "W04.html#systematic-but-no-standard-routine-1",
+    "href": "W04.html#systematic-but-no-standard-routine-1",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Systematic but no standard routine",
+    "text": "Systematic but no standard routine\n\nGoal of EDA: Develop understanding of your data.\nEDA’s iterative cycle\n\nGenerate questions about your data.\nSearch for answers by visualizing, transforming, and modelling your data.\nUse what you learn to refine your questions and/or generate new questions.\n\nEDA is fundamentally a creative process."
+  },
+  {
+    "objectID": "W04.html#questions",
+    "href": "W04.html#questions",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Questions",
+    "text": "Questions\n\nThe way to ask quality questions:\n\nGenerate many questions!\nYou cannot come up with most interesting questions when you start.\n\nThere is no rule which questions to ask. These are useful\n\nWhat type of variation occurs within my variables?\n(Barplots, Histograms,…)\nWhat type of covariation occurs between my variables?\n(Scatterplots, Timelines,…)"
+  },
+  {
+    "objectID": "W04.html#eda-embedded-in-a-statistical-data-science-project",
+    "href": "W04.html#eda-embedded-in-a-statistical-data-science-project",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "EDA embedded in a statistical data science project",
+    "text": "EDA embedded in a statistical data science project\n\nStating and refining the question\nExploring the data\nBuilding formal statistical models\nInterpreting the results\nCommunicating the results\n\n\n\nRoger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015)."
+  },
+  {
+    "objectID": "W04.html#six-types-of-questions",
+    "href": "W04.html#six-types-of-questions",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Six types of questions",
+    "text": "Six types of questions\n\nDescriptive: summarize a characteristic of a set of data\nExploratory: analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)\nInferential: analyze patterns, trends, or relationships in representative data from a population\nPredictive: make predictions for individuals or groups of individuals\nCausal: whether changing one factor will change another factor, on average, in a population\nMechanistic: explore “how” as opposed to whether\n\n\n\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146."
+  },
+  {
+    "objectID": "W04.html#descriptive-projects",
+    "href": "W04.html#descriptive-projects",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Descriptive Projects",
+    "text": "Descriptive Projects\n\n\n\nDescriptive Projects\n\n\n\n\nDubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models"
+  },
+  {
+    "objectID": "W04.html#data-analysis-flowchart",
+    "href": "W04.html#data-analysis-flowchart",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Data Analysis Flowchart",
+    "text": "Data Analysis Flowchart"
+  },
+  {
+    "objectID": "W04.html#example-covid-19-and-vitamin-d",
+    "href": "W04.html#example-covid-19-and-vitamin-d",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Example: COVID-19 and Vitamin D",
+    "text": "Example: COVID-19 and Vitamin D\n\nDescriptive: frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals\nExploratory: examine relationships between a range of dietary factors and COVID-19 hospitalisations\nInferential: examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large\nPredictive: what types of people will take Vitamin D supplements during the next year\nCausal: whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised\nMechanistic: how increased vitamin D intake leads to a reduction in the number of viral illnesses"
+  },
+  {
+    "objectID": "W04.html#questions-to-your-questions",
+    "href": "W04.html#questions-to-your-questions",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Questions to your questions!",
+    "text": "Questions to your questions!\n\nDo you have appropriate data to answer your question?\nDo you have information on confounding variables?\nWas the data you’re working with collected in a way that introduces bias?\n\n\n\nExample\nI want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.\n\nIs this a biased or an unbiased estimate of the number of children in households in Bremen?\nIf biased, will the value be an overestimate or underestimate?"
+  },
+  {
+    "objectID": "W04.html#context-information-is-important",
+    "href": "W04.html#context-information-is-important",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "section": "Context Information is important!",
+    "text": "Context Information is important!\n\nNot all information is in the data!\nPotential confounding variables you infer from general knowledge\nInformation about data collection you may receive from an accompanying report\nInformation about computed variables you may need to look up in accompanying documentation\nInformation about certain variables you may find in an accompanying codebook. For example the exact wording of questions in survey data."
+  },
+  {
     "objectID": "W04.html#functions-mathematically",
     "href": "W04.html#functions-mathematically",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Functions mathematically",
     "text": "Functions mathematically\nConsider two sets: The domain \\(X\\) and the codomain \\(Y\\).\nA function \\(f\\) assigns each element of \\(X\\) to exactly one element of \\(Y\\).\n\n\nWe write \\(f : X \\to Y\\)\n“\\(f\\) maps from \\(X\\) to \\(Y\\)”\nand \\(x \\mapsto f(x)\\)\n“\\(x\\) maps to \\(f(x)\\)”\nThe yellow set is called the image of \\(f\\).\n\n\n\n\n\n\nPicture from wikipedia."
   },
   {
     "objectID": "W04.html#conventions-in-mathematical-text",
     "href": "W04.html#conventions-in-mathematical-text",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Conventions in mathematical text",
     "text": "Conventions in mathematical text\n\nSets are denoted with capital letters.\nTheir elements with (corresponding) small letters.\nFunctions are often called \\(f\\), \\(g\\), or \\(h\\).\nOther terminology can be used!\n\nResponsibility of the mathematical writer: Define objects.\nResponsibility of the mathematical reader: Keep track of what objects are."
   },
   {
     "objectID": "W04.html#is-this-a-function",
     "href": "W04.html#is-this-a-function",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Is this a function?",
     "text": "Is this a function?\nInput from \\(X = \\{\\text{A picture where a face can be recognized}\\}\\).\nFunction: Upload input at https://funny.pho.to/lion/ and download output.\n \\(\\ \\mapsto\\ \\) \nOutput from \\(Y = \\{\\text{Set of pictures with a specific format.}\\}\\)\n\nYes, it is a function. Important: Output is the same for the same input!"
   },
   {
     "objectID": "W04.html#is-this-a-function-1",
     "href": "W04.html#is-this-a-function-1",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Is this a function?",
     "text": "Is this a function?\nInput a text snippet. Function: Enter text at https://www.craiyon.com. Output a picture.\n\n\n\n\nOther examples:\n\n“Nuclear explosion broccoli”\n“The Eye of Sauron reading a newspaper”\n“The legendary attack of Hamster Godzilla wearing a tiny Sombrero”\n\n  \n\n\n\nNo, it is not a function. It has nine outcomes and these change when run again."
   },
   {
     "objectID": "W04.html#graphs-of-functions",
     "href": "W04.html#graphs-of-functions",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Graphs of functions",
     "text": "Graphs of functions\n\nA function is characterized by the set all possible pairs \\((x,f(x))\\).\nThis is called its graph. Note, this can be infinitely many.\nWhen domain and codomain are real numbers then the graph can be shown in a Cartesian coordinate system. Example \\(f(x) = x^3 - x^2\\)"
   },
   {
     "objectID": "W04.html#some-functions-f-mathbbr-to-mathbbr",
     "href": "W04.html#some-functions-f-mathbbr-to-mathbbr",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Some functions \\(f: \\mathbb{R} \\to \\mathbb{R}\\)",
     "text": "Some functions \\(f: \\mathbb{R} \\to \\mathbb{R}\\)\n\n\n\\(f(x) = x\\) identity function\n\\(f(x) = x^2\\) square function\n\\(f(x) = \\sqrt{x}\\) square root function\n\\(f(x) = e^x\\) exponential function\n\\(f(x) = \\log(x)\\) natural logarithm\n\nSquare function and square root function are the inverse of each other. Exponential and natural logarithm, too.\n\n\\(\\sqrt[2]{x}^2 = \\sqrt[2]{x^2} = x\\), \\(\\log(e^x) = e^{\\log(x)} = x\\)\n\nTheir graphs reflect each other with identity function graph as mirror axis.\n\n\n\n\n\n\n\n\n\n\n\n\\(e\\) is Euler’s number \\(2.71828\\dots\\). The natural logarithm is also often called \\(\\ln\\). The square root function is \\(\\mathbb{R}_{\\geq 0} \\to \\mathbb{R}\\), the logarithm \\(\\mathbb{R}_{>0} \\to \\mathbb{R}\\)."
   },
   {
     "objectID": "W04.html#shifts-and-scales",
     "href": "W04.html#shifts-and-scales",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Shifts and scales",
     "text": "Shifts and scales\nHow can we shift, stretch, or shrink a graph vertically and horizontally?\n\n\n\\(y\\)-shift\\(x\\)-shift\\(y\\)-scale\\(x\\)-scale\n\n\n\n\nAdd a constant to the function.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = x^3 - x^2 + a\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\n\n\n\n\n\n\n\n\n\n\n\n\nSubtract a constant from all \\(x\\) within the function definition.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = (x - a)^3 - (x - a)^2\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nAttention:\nShifting as you think needs subtracting \\(a\\)!\nYou can think of the coordinate system being shifted in direction \\(a\\) while the graph stays.\n\n\n\n\n\n\n\n\n\n\n\n\nMultiply a constant to all \\(x\\) within the function definition.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = a(x^3 - x^2)\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nNegative numbers flip the graph around the \\(x\\)-axis.\n\n\n\n\n\n\n\n\n\n\n\n\nDivide all \\(x\\) within the function definition by a constant.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = (x/a)^3 - (x/a)^2\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nNegative numbers flip the graph around the \\(y\\)-axis.\nAttention: Stretching needs a division by \\(a\\)!\nYou can think of the coordinate system being stretched multiplicatively by \\(a\\) while the graph stays."
   },
   {
     "objectID": "W04.html#polynomials-and-exponentials",
     "href": "W04.html#polynomials-and-exponentials",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Polynomials and exponentials",
     "text": "Polynomials and exponentials\nA polynomial is a function which is composed of (many) addends of the form \\(ax^n\\) for different values of \\(a\\) and \\(n\\).\nIn an exponential the \\(x\\) appears in the exponent.\n\\(f(x) = x^3\\) vs. \\(f(x) = e^x\\)\n\nFor \\(x\\to\\infty\\), any exponential will finally “overtake” any polynomial."
   },
   {
     "objectID": "W04.html#rules-for-exponentiation",
     "href": "W04.html#rules-for-exponentiation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Rules for exponentiation",
     "text": "Rules for exponentiation\n\n\n\\(x^0\\)\n\\(0^x\\)\n\\(0^0\\)\n\\((x\\cdot y)^a\\)\n\\(x^{-a}\\), \\(x^{-1}\\)\n\\(x^\\frac{a}{b}\\), \\(x^\\frac{1}{2}\\)\n\\((x^a)^b\\)\n\n\n\\(x^0 = 1\\)\n\n\n\\(0^x = 0\\) for \\(x\\neq 0\\)\n\n\n\\(0^0 = 1\\) (discontinuity in \\(0^x\\))\n\n\n\\((x\\cdot y)^a = x^a\\cdot x^b\\)\n\n\n\\(x^{-a} = \\frac{1}{x^a}\\), \\(x^{-1} = \\frac{1}{x}\\)\n\n\n\\(x^\\frac{a}{b} = \\sqrt[b]{x^a} = (\\sqrt[b]{x})^a,\\ x^\\frac{1}{2} = \\sqrt{x}\\)\n\n\n\\((x^a)^b = x^{a\\cdot b} = (x^b)^a \\neq x^{a^b} = x^{(a^b)}\\)\nExample: \\((4^3)^2 = 64^2 = 4096 \\qquad 4^{3^2} = 4^9 = 262144\\)"
   },
   {
     "objectID": "W04.html#more-rules-for-exponentiation",
     "href": "W04.html#more-rules-for-exponentiation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "More rules for exponentiation",
     "text": "More rules for exponentiation\n\n\n\\(x^a\\cdot x^b\\)\n\n\n\\(x^a\\cdot x^b = x^{a+b}\\) Multiplication of powers (with same base \\(x\\)) becomes addition of exponents.\n\n\n\n\n\n\n\\((x+y)^a\\)\n\n\nNo “simple” form! For \\(a\\) integer use binomial expansion. \\((x+y)^2 = x^2 + 2xy + y^2\\)\n\\((x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3\\)\n\\((x+y)^n = \\sum_{k=0}^n {n \\choose k} x^{n-k}y^k\\)\n\n\n\nPascal’s triangle\n\n\n\n\n\n\n\n\n\n\n\n\nFrom wikipedia\n\n\n\nWe meet it again in Probability. (Binomial distribution, Central Limit Theorem)"
   },
   {
     "objectID": "W04.html#logarithms",
     "href": "W04.html#logarithms",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Logarithms",
     "text": "Logarithms\nDefinition: A logarithm of \\(a\\) for some base \\(b\\) is the value of the exponent which brings \\(b\\) to \\(a\\): \\(\\log_b(a) = x\\) means that \\(b^x =a\\)\nMost common:\n\n\\(\\log_{10}\\) for logarithmic axes in plots\n\\(\\log_{e}\\) natural logarithm (also \\(\\log\\) or \\(\\ln\\))\n\n\n\n\n\\(\\log_{10}(100) =\\)\n\n\n\\(2\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(1) =\\)\n\n\n\\(0\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(6590) =\\)\n\n\n\\(3.818885\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(0.02) =\\)\n\n\n\\(-1.69897\\)"
   },
   {
     "objectID": "W04.html#rules-for-logarithms",
     "href": "W04.html#rules-for-logarithms",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Rules for logarithms",
     "text": "Rules for logarithms\nUsually only one base is used in the same context, because changing base is easy:\n\\(\\log_c(x) = \\frac{log_b(x)}{\\log_b(c)} = \\frac{\\log(x)}{\\log(c)}\\)\n\n\n\\(\\log(x\\cdot y)\\)\n\n\n\\(= \\log(x) + \\log(y)\\) Multiplication \\(\\to\\) addition.\n\n\n\n\n\n\n\\(\\log(x^y)\\)\n\n\n\\(= y\\cdot\\log(x)\\)\n\n\n\n\n\n\\(\\log(x+y)\\)\n\n\ncomplicated!\n\n\n\n\n\nAlso changing bases for powers is easy: \\(x^y = (e^{\\log(x)})^y = e^{y\\cdot\\log(x)}\\)"
   },
   {
     "objectID": "W04.html#input-to-output",
     "href": "W04.html#input-to-output",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Input \\(\\to\\) output",
     "text": "Input \\(\\to\\) output\n\n\nMetaphorically, a function is a machine or a blackbox that for each input yields and output.\nThe inputs of a function are also called arguments.\n\n\n\nPicture from wikipedia."
   },
   {
     "objectID": "W04.html#function-as-objects-in-r",
     "href": "W04.html#function-as-objects-in-r",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x5615c58ff018>\n<environment: namespace:stats>\n\nc  \n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot \n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x5615c1bb76a8>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x56257050d390>\n<environment: namespace:stats>\n\nc  \n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot \n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x5625697d5828>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#functions-in-r",
     "href": "W04.html#functions-in-r",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Functions in R",
     "text": "Functions in R\nDefine your own functions like this\n\nadd_one <- function(x) {\n  x + 1 \n}\n# Test it\nadd_one(10)\n\n[1] 11\n\n\nThe skeleton for a function definition is\nfunction_name <- function(input){\n  # do something with the input(s)\n  # return something as output\n}\n\nfunction_name should be a short but evocative verb.\nThe input can be empty or one or more name or name=expression terms as arguments.\nThe last evaluated expression is returned as output.\nWhen the body or the function is only one line {} can be omitted. For example\nadd_one <- function(x) x + 1"
   },
   {
     "objectID": "W04.html#flexibility-of-inputs-and-outputs",
     "href": "W04.html#flexibility-of-inputs-and-outputs",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Flexibility of inputs and outputs",
     "text": "Flexibility of inputs and outputs\n\nArguments can be specified by name=expression or just expression (then they are taken as the next argument)\nDefault values for arguments can be provided. Useful when an argument is a parameter.\n\n\n\nmymult <- function(x = 2, y = 3) x * (y - 1)\nmymult(3,4)\n\n\n[1] 9\n\n\n\n\n\nmymult()\n\n\n[1] 4\n\n\n\n\n\nmymult(y = 3,4)\n\n\n[1] 8\n\n\n\n\n\nmymult(5)\n\n\n[1] 10\n\n\n\n\n\nmymult(y = 2)\n\n\n[1] 2\n\n\n\n\nFor complex output use a list\n\n\nmymult <- function(x = 2, y = 3) \n  list(out1 = x * (y - 1), out2 = x * (y - 2))\nmymult()\n\n\n$out1\n[1] 4\n\n$out2\n[1] 2"
   },
   {
     "objectID": "W04.html#vectorized-functions",
     "href": "W04.html#vectorized-functions",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Vectorized functions",
     "text": "Vectorized functions\nMathematical functions in programming are often “vectorized”:\n\nOperations on a single value are applied to each component of the vector.\nOperations on two values are applied “component-wise” (for vectors of the same length)\n\n\nlog10(c(1,10,100,1000,10000))\n\n[1] 0 1 2 3 4\n\nc(1,1,2) + c(3,1,0)\n\n[1] 4 2 2\n\n(0:5)^2\n\n[1]  0  1  4  9 16 25"
   },
   {
     "objectID": "W04.html#vector-creation-functions",
     "href": "W04.html#vector-creation-functions",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Vector creation functions",
     "text": "Vector creation functions\n\n1:10\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nseq(from=-0.5, to=1.5, by=0.1)\n\n [1] -0.5 -0.4 -0.3 -0.2 -0.1  0.0  0.1  0.2  0.3  0.4  0.5  0.6  0.7  0.8  0.9\n[16]  1.0  1.1  1.2  1.3  1.4  1.5\n\nseq(from=0, to=1, length.out=10)\n\n [1] 0.0000000 0.1111111 0.2222222 0.3333333 0.4444444 0.5555556 0.6666667\n [8] 0.7777778 0.8888889 1.0000000\n\nrep(1:3, times=3)\n\n[1] 1 2 3 1 2 3 1 2 3\n\nrep(1:3, each=3)\n\n[1] 1 1 1 2 2 2 3 3 3"
   },
   {
     "objectID": "W04.html#plotting-and-transformation",
     "href": "W04.html#plotting-and-transformation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Plotting and transformation",
     "text": "Plotting and transformation\nVector creation and vectorized functions are key for plotting and transformation.\n\nfunc <- function(x) x^3 - x^2    # Create a vectorized function\ndata <- tibble(x = seq(-0.5,1.5,by =0.01)) |>    # Vector creation\n    mutate(y = func(x))        # Vectorized transformation using the function\ndata |> ggplot(aes(x,y)) + geom_line()"
   },
   {
     "objectID": "W04.html#convenient-function-ggploting",
     "href": "W04.html#convenient-function-ggploting",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Convenient function ggploting",
     "text": "Convenient function ggploting\n\nggplot() +\n    geom_function(fun = log) +\n    geom_function(fun = function(x) 3*x - 4, color = \"red\")"
   },
   {
     "objectID": "W04.html#purpose-of-modeling",
     "href": "W04.html#purpose-of-modeling",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Purpose of modeling",
     "text": "Purpose of modeling\nWe use models to\n\nexplain relations between variables\nmake predictions\n\nFirst, we focus on linear models."
   },
   {
     "objectID": "W04.html#palmer-penguins",
     "href": "W04.html#palmer-penguins",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Palmer Penguins",
     "text": "Palmer Penguins\nWe use the dataset Palmer Penguins\nChinstrap, Gentoo, and Adélie Penguins\n  \n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   <fct>   <fct>              <dbl>         <dbl>             <int>       <int>\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex <fct>, year <int>"
   },
   {
     "objectID": "W04.html#body-mass-in-grams",
     "href": "W04.html#body-mass-in-grams",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Body mass in grams",
     "text": "Body mass in grams\n\npenguins |>\n  ggplot(aes(body_mass_g)) +\n  geom_histogram()"
   },
   {
     "objectID": "W04.html#flipper-length-in-millimeters",
     "href": "W04.html#flipper-length-in-millimeters",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Flipper length in millimeters",
     "text": "Flipper length in millimeters\n\npenguins |>\n  ggplot(aes(flipper_length_mm)) +\n  geom_histogram()"
   },
   {
     "objectID": "W04.html#relate-variables-as-a-line",
     "href": "W04.html#relate-variables-as-a-line",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Relate variables as a line",
     "text": "Relate variables as a line\nA line is a shift-scale transformation of the identity function usually written in the form\n\\[f(x) = a\\cdot x + b\\]\nwhere \\(a\\) is the slope, \\(b\\) is the intercept.1\n\n\na <- 0.5\nb <- 1\nfunc <- function(x) a*x + b\nggplot() + geom_function(fun = func, size = 2) + \n    xlim(c(0,2)) + ylim(c(0,2)) + coord_fixed() + # Set axis limits and make axis equal\n    # intercept line:\n    geom_line(data=tibble(x=c(0,0),y=c(0,1)), mapping = aes(x,y), color = \"blue\") +\n    # slope:\n    geom_line(data=tibble(x=c(1.5,1.5),y=c(1.25,1.75)), mapping = aes(x,y), color = \"red\") +\n    # x-interval of length one:\n    geom_line(data=tibble(x=c(0.5,1.5),y=c(1.25,1.25)), mapping = aes(x,y), color = \"gray\") +\n    theme_classic(base_size = 24)\n\n\n\n\n\n\nThis a scale and a shift in the \\(y\\) direction. Note: For lines there are always an analog transformations on the \\(x\\) direction."
   },
   {
     "objectID": "W04.html#penguins-linear-model",
     "href": "W04.html#penguins-linear-model",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Penguins: Linear model",
     "text": "Penguins: Linear model\nFlipper length as a function of body mass.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm)) +\n geom_point() +\n geom_smooth(method = \"lm\", \n             se = FALSE) + \n theme_classic(base_size = 24)"
   },
   {
     "objectID": "W04.html#penguins-other-smoothing-method",
     "href": "W04.html#penguins-other-smoothing-method",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Penguins: Other smoothing method",
     "text": "Penguins: Other smoothing method\nFlipper length as a function of body mass with loess1 smoothing.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm)) +\n geom_point() +\n geom_smooth(method = \"loess\") + \n theme_classic(base_size = 24)\n\n\n\n\n\n\nThis is a less theory-driven and more data-driven model. Why? We don’t have a simple mathematical form of the function.\nloess = locally estimated scatterplot smoothing"
   },
   {
     "objectID": "W04.html#terminology",
     "href": "W04.html#terminology",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Terminology",
     "text": "Terminology\n\nResponse variable:1 Variable whose behavior or variation you are trying to understand, on the y-axis\nExplanatory variable(s):2 Other variable(s) that you want to use to explain the variation in the response, on the x-axis\nPredicted value: Output of the model function.\n\nThe model function gives the typical (expected) value of the response variable conditioning on the explanatory variables\nResidual(s): A measure of how far away a case is from its predicted value (based on a particular model)\nResidual = Observed value - Predicted value\nThe residual tells how far above/below the expected value each case is\n\n\nAlso dependent variable in statistics or empirical social sciences.Also independent variable(s) in statistics or empirical social sciences."
   },
   {
     "objectID": "W04.html#more-explanatory-variables",
     "href": "W04.html#more-explanatory-variables",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "More explanatory variables",
     "text": "More explanatory variables\nHow does the relation between flipper length and body mass change with different species?\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm, \n            color = species)) +\n geom_point() +\n geom_smooth(method = \"lm\",\n             se = FALSE) + \n theme_classic(base_size = 24)"
   },
   {
     "objectID": "W04.html#technical-how-to-color-penguins-but-keep-one-model",
     "href": "W04.html#technical-how-to-color-penguins-but-keep-one-model",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Technical: How to color penguins but keep one model?",
     "text": "Technical: How to color penguins but keep one model?\nPut the mapping of the color aesthetic into the geom_point command.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n                                                y = flipper_length_mm)) +\n geom_point(aes(color = species)) +\n geom_smooth(method = \"lm\",\n                                                    se = FALSE) + \n theme_classic(base_size = 24)"
   },
   {
     "objectID": "W04.html#models---upsides-and-downsides",
     "href": "W04.html#models---upsides-and-downsides",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Models - upsides and downsides",
     "text": "Models - upsides and downsides\n\nModels can reveal patterns that are not evident in a graph of the data. This is an advantage of modeling over simple visual inspection of data.\nThe risk is that a model is imposing structure that is not really there in the real world data.\n\nPeople imagined animal shapes in the stars. This is maybe a good model to detect and memorize shapes, but it has nothing to do with these animals.\nEvery model is a simplification of the real world, but there are good and bad models (for particular purposes).\nA skeptical (but constructive) approach to a model is always advisable."
   },
   {
     "objectID": "W04.html#variation-around-a-model",
     "href": "W04.html#variation-around-a-model",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Variation around a model",
     "text": "Variation around a model\nis as interesting and important as the model!\nStatistics is the explanation of uncertainty of variation in the context of what remains unexplained.\n\nThe scattered data of flipper length and body mass suggests that there maybe other factors that account for some parts of the variability.\nOr is it randomness?\nAdding more explanatory variables can help (but need not)"
   },
   {
     "objectID": "W04.html#all-models-are-wrong",
     "href": "W04.html#all-models-are-wrong",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "All models are wrong …",
     "text": "All models are wrong …\n… but some are useful. (George Box)\nExtending the range of the model:\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm)) +\n geom_point() +\n geom_smooth(method = \"lm\", \n             se = FALSE, \n                                                fullrange = TRUE) +\n    xlim(c(0,7000)) + ylim(c(0,230)) +\n theme_classic(base_size = 24)\n\n\n\n\n\n\n\nThe model predicts that penguins with zero weight still have flippers of about 140 mm on average.\nIs the model useless?"
   },
   {
     "objectID": "W04.html#two-model-purposes",
     "href": "W04.html#two-model-purposes",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Two model purposes",
     "text": "Two model purposes\nModels can be used for:\n\nExplanation: Understand the relations hip of variables in a quantitative way.\nFor the linear model, interpret slope and intercept.\nPrediction: Plug in new values for the explanatory variable(s) and receive the expected response value.\nFor the linear model, predict the flipper length of new penguins by their body mass."
   },
   {
     "objectID": "W04.html#in-r-tidymodels",
     "href": "W04.html#in-r-tidymodels",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "In R: tidymodels",
     "text": "In R: tidymodels\n\n\n\nFrom https://datasciencebox.org"
   },
   {
     "objectID": "W04.html#our-goal",
     "href": "W04.html#our-goal",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Our goal",
     "text": "Our goal\nPredict flipper length from body mass\naverage flipper_length_mm \\(= \\beta_0 + \\beta_1\\cdot\\) body_mass_g"
   },
   {
     "objectID": "W04.html#step-1-specify-model",
     "href": "W04.html#step-1-specify-model",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Step 1: Specify model",
     "text": "Step 1: Specify model\n\nlibrary(tidymodels)\nlinear_reg()\n\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
   },
   {
     "objectID": "W04.html#step-2-set-the-model-fitting-engine",
     "href": "W04.html#step-2-set-the-model-fitting-engine",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Step 2: Set the model fitting engine",
     "text": "Step 2: Set the model fitting engine\n\nlinear_reg() |> \n    set_engine(\"lm\")\n\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
   },
   {
     "objectID": "W04.html#step-3-fit-model-and-estimate-parameters",
     "href": "W04.html#step-3-fit-model-and-estimate-parameters",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Step 3: Fit model and estimate parameters",
     "text": "Step 3: Fit model and estimate parameters\nOnly now, the data and the variable selection comes in.\nUse of formula syntax\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\n\nNote: The fit command does not follow the tidyverse principle the the data comes first. Instead, the formula comes first. This is to relate to existing traditions of a much older established way of modeling in R."
   },
   {
     "objectID": "W04.html#what-does-the-output-say",
     "href": "W04.html#what-does-the-output-say",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "What does the output say?",
     "text": "What does the output say?\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\naverage flipper_length_mm \\(= 136.72956 + 0.01528\\cdot\\) body_mass_g\n\n\nInterpretation:\nThe penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted …"
   },
   {
     "objectID": "W04.html#show-output-in-tidy-form",
     "href": "W04.html#show-output-in-tidy-form",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Show output in tidy form",
     "text": "Show output in tidy form\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n    tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept) 137.      2.00          68.5 5.71e-201\n2 body_mass_g   0.0153  0.000467      32.7 4.37e-107"
   },
   {
     "objectID": "W04.html#parameter-estimation",
     "href": "W04.html#parameter-estimation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Parameter estimation",
     "text": "Parameter estimation\nNotation from statistics: \\(\\beta\\)’s for the population parameters and \\(b\\)’s for the parameters estimated from the sample statistics.\n\\[\\hat y = \\beta_0 + \\beta_1 x\\]\nIs what we cannot have. (\\(\\hat y\\) stands for predicted value of \\(y\\). )\n\nWe estimate \\(b_0\\) and \\(b_1\\) in\n\\[\\hat y = b_0 + b_1 x\\]\n\nA typical follow-up data analysis question is what the fitted values \\(b_0\\) and \\(b_1\\) tell us about the population-wide values \\(\\beta_0\\) and \\(\\beta_1\\)?\nWhat type of question is it?\nDescriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic\n\n\n\n\nA typical inferential question."
   },
   {
     "objectID": "W04.html#fitting-method-least-squares-regression",
     "href": "W04.html#fitting-method-least-squares-regression",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Fitting method: Least squares regression",
     "text": "Fitting method: Least squares regression\n\nThe regression line shall minimize the sum of the squared residuals (or, identically, their mean).\nMathematically: The residual for case \\(i\\) is \\(e_i = \\hat y_i - y_i\\).\nNow we want to minimize \\(\\sum_{i=1}^n e_i^2\\)\n(or equivalently \\(\\frac{1}{n}\\sum_{i=1}^n e_i^2\\) the the mean of squared errors, which we will look at later)."
   },
   {
     "objectID": "W04.html#visualization-of-residuals",
     "href": "W04.html#visualization-of-residuals",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Visualization of residuals",
     "text": "Visualization of residuals\nThe residuals are the gray lines between predictid values on the regression line and the actual values."
   },
   {
     "objectID": "W04.html#proporties-of-least-squares-regression",
     "href": "W04.html#proporties-of-least-squares-regression",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Proporties of least squares regression",
     "text": "Proporties of least squares regression\nThe regression lines goes through the point (mean(x), mean(y)).\n\nmean(penguins$body_mass_g, na.rm = TRUE)\n\n[1] 4201.754\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152"
   },
   {
     "objectID": "W04.html#proporties-of-least-squares-regression-1",
     "href": "W04.html#proporties-of-least-squares-regression-1",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Proporties of least squares regression",
     "text": "Proporties of least squares regression\nResiduals sum up to zero\n\npengmod <- linear_reg() |>  set_engine(\"lm\") |> fit(flipper_length_mm ~ body_mass_g, data = penguins)\npengmod$fit$residuals |> sum()\n\n[1] -3.765044e-14\n\n\nThere is no correlation between residuals and the explanatory variable\n\ncor(pengmod$fit$residuals, na.omit(penguins$body_mass_g))\n\n[1] -1.353445e-16\n\n\nThe correlation of \\(x\\) and \\(y\\) is the slope \\(b_1\\) corrected by their standard deviations.\n\ncorrelation <- cor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\nsd_flipper <- sd(penguins$flipper_length_mm, na.rm = T)\nsd_mass <- sd(penguins$body_mass_g, na.rm = T)\nc(correlation, sd_flipper, sd_mass)\n\n[1]   0.8712018  14.0617137 801.9545357\n\ncorrelation * sd_flipper / sd_mass\n\n[1] 0.01527592\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592"
   },
   {
     "objectID": "W04.html#linear-model-when-explanatory-variables-are-categorical",
     "href": "W04.html#linear-model-when-explanatory-variables-are-categorical",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Linear model when explanatory variables are categorical",
     "text": "Linear model when explanatory variables are categorical\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\nWhat happened? Two of the three species categories appear as variables now.\n\nCategorical variables are automatically encoded to dummy variables\nEach coefficient describes the expected difference between flipper length of that particular species compared to the baseline level\nWhat is the baseline level?\n\n\n\nThe first category! (Here alphabetically \"Adelie\")"
   },
   {
     "objectID": "W04.html#how-do-dummy-variables-look",
     "href": "W04.html#how-do-dummy-variables-look",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "How do dummy variables look",
     "text": "How do dummy variables look\n\n\n\nspecies\nspeciesChinstrap\nspeciesGentoo\n\n\n\n\nAdelie\n0\n0\n\n\nChinstrap\n1\n0\n\n\nGentoo\n0\n1\n\n\n\nThen the computation is as usual with the zero-one variables."
   },
   {
     "objectID": "W04.html#interpretation",
     "href": "W04.html#interpretation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Interpretation",
     "text": "Interpretation\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nFlipper length of the baseline species is the intercept.\nFlipper length of the two other species add their coefficient"
   },
   {
     "objectID": "W04.html#compare-to-a-visualization",
     "href": "W04.html#compare-to-a-visualization",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Compare to a visualization",
     "text": "Compare to a visualization\n\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nThe red dots are the average values for species.\nThe rest is a boxplot. More on these later."
   },
   {
     "objectID": "W04.html#where-a-linear-model-is-bad",
     "href": "W04.html#where-a-linear-model-is-bad",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "Where a linear model is bad",
     "text": "Where a linear model is bad\nTotal corona cases in Germany in the first wave 2020."
   },
   {
     "objectID": "W04.html#log-transformation",
     "href": "W04.html#log-transformation",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "\\(\\log\\) transformation",
     "text": "\\(\\log\\) transformation\nInstead of Cumulative_cases we look at \\(\\log(\\)Cumulative_cases\\()\\)\n\nAlmost perfect fit of a linear model.\nThe model is \\(y=\\beta_0 e^{\\beta_1\\cdot x}\\) (\\(y=\\) Cumulative cases, \\(x=\\) Days).\n\\(\\log(y)=\\log(\\beta_0) + \\beta_1\\cdot x\\) (A linear model!)"
   },
   {
     "objectID": "W04.html#log-transformation-1",
     "href": "W04.html#log-transformation-1",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "\\(\\log\\) transformation",
     "text": "\\(\\log\\) transformation\n\nWhat is the difference to the penguin model?\n\n\n\\(x\\) has an ordered structure and no duplicates\n\nThe fit looks so good. Why?\n\n\nThis shows exponential growth (more later).\nMaybe we can go after a mechanistic explanation here."
   },
   {
     "objectID": "W04.html#however-it-works-only-in-a-certain-range",
     "href": "W04.html#however-it-works-only-in-a-certain-range",
-    "title": "W#6: Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
+    "title": "W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model",
     "section": "However, it works only in a certain range …",
     "text": "However, it works only in a certain range …"
   },
@@ -942,7 +1047,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1504386516"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1504423556"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
@@ -1120,111 +1225,6 @@
     "text": "left_join with reversed data frames\n\ndim(airports)\n\n[1] 1458    8\n\ndim(flights)\n\n[1] 336776     19\n\nairports |> \n  left_join(flights, by = c(\"faa\" = \"dest\"))\n\n# A tibble: 330,531 × 26\n   faa   name      lat    lon   alt    tz dst   tzone  year month   day dep_time\n   <chr> <chr>   <dbl>  <dbl> <dbl> <dbl> <chr> <chr> <int> <int> <int>    <int>\n 1 04G   Lansdo…  41.1  -80.6  1044    -5 A     Amer…    NA    NA    NA       NA\n 2 06A   Moton …  32.5  -85.7   264    -6 A     Amer…    NA    NA    NA       NA\n 3 06C   Schaum…  42.0  -88.1   801    -6 A     Amer…    NA    NA    NA       NA\n 4 06N   Randal…  41.4  -74.4   523    -5 A     Amer…    NA    NA    NA       NA\n 5 09J   Jekyll…  31.1  -81.4    11    -5 A     Amer…    NA    NA    NA       NA\n 6 0A9   Elizab…  36.4  -82.2  1593    -5 A     Amer…    NA    NA    NA       NA\n 7 0G6   Willia…  41.5  -84.5   730    -5 A     Amer…    NA    NA    NA       NA\n 8 0G7   Finger…  42.9  -76.8   492    -5 A     Amer…    NA    NA    NA       NA\n 9 0P2   Shoest…  39.8  -76.6  1000    -5 U     Amer…    NA    NA    NA       NA\n10 0S9   Jeffer…  48.1 -123.    108    -8 A     Amer…    NA    NA    NA       NA\n# ℹ 330,521 more rows\n# ℹ 14 more variables: sched_dep_time <int>, dep_delay <dbl>, arr_time <int>,\n#   sched_arr_time <int>, arr_delay <dbl>, carrier <chr>, flight <int>,\n#   tailnum <chr>, origin <chr>, air_time <dbl>, distance <dbl>, hour <dbl>,\n#   minute <dbl>, time_hour <dttm>\n\n\nWhy does the number of rows changes after joining?\ndest is not a primary key in flights. There are more flights with the same destination so rows of airports get duplicated.\nWhy is the number of rows then less than the number of rows in flights?\nLet us do some checks:\n\nlength(unique(airports$faa)) # Unique turns out to be redundant because faa is a primary key\n\n[1] 1458\n\nlength(unique(flights$dest))\n\n[1] 105\n\n# There are much more airports then destinations in flights!\n# ... but the rows of airports prevail when it is the first in a left_join.\n# So, the data frame should even increase because \n# we get several rows of airports without flights\n# Let us dig deeper.\n\nsetdiff( unique(airports$faa), unique(flights$dest)) |> length()\n\n[1] 1357\n\n# 1,357 airports have no flights. But also:\nsetdiff( unique(flights$dest), unique(airports$faa)) |> length()\n\n[1] 4\n\n# There are four destinations in flights, which are not in the airports list!\n\n# How many flights are to these?\nflights |> \n  filter(dest %in% setdiff( unique(flights$dest), unique(airports$faa))) |> \n  nrow()\n\n[1] 7602\n\n# 7,602 flights go to destinations not listed as airport\n\n# Check\nnrow(airports |> left_join(flights, by = c(\"faa\" = \"dest\"))) == nrow(flights) - 7602 + 1357\n\n[1] TRUE\n\n# OK, now we have a clear picture\n# airport with left_joined flights duplicates the rows an airports for each flight flying to it\n# So the total number of rows is the number of flights plus the number of airport which do not \n# appear as a destination minus the flights which go to destinations which are not listed in airports\n\nLearning: The new number of observation after a join can be a complex combination of duplication and dropping. It is your responsibility to understand what is happening."
   },
   {
-    "objectID": "W03.html#definition-sets-and-vectors",
-    "href": "W03.html#definition-sets-and-vectors",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Definition: Sets and vectors",
-    "text": "Definition: Sets and vectors\nA set is mathematical model for the collection of different things.\nExamples\n\n\\(\\{3, \\text{Hi}, 😀, 🖖 \\}\\)\n\\(\\{1,3,5\\}\\)\nThe natural numbers \\(\\mathbb{N} = \\{1, 2, 3, \\dots\\}\\) (infinite!)\n\\(\\{\\mathtt{\"EWR\"} \\mathtt{\"LGA\"} \\mathtt{\"JFK\"}\\}\\)\nthese are origin airports in flights"
-  },
-  {
-    "objectID": "W03.html#math-sets-and-vectors-1",
-    "href": "W03.html#math-sets-and-vectors-1",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Math: Sets and vectors",
-    "text": "Math: Sets and vectors\nA vector is an ordered collection of things (elements) of the same type.\nIn a set each thing can only be once and the order does not matter!\n\\(\\{1,3,5\\} = \\{3,5,1\\} = \\{1,1,1,3,5,5\\}\\)\nFor vectors:\n\\([1\\ 3\\ 5] \\neq [3\\ 5\\ 1]\\) because we compare component-wise, so we cannot even compare with = \\([1\\ 1\\ 1\\ 3\\ 5\\ 5]\\)"
-  },
-  {
-    "objectID": "W03.html#math-set-operations",
-    "href": "W03.html#math-set-operations",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Math: Set operations",
-    "text": "Math: Set operations\nFor sets \\(A = \\{🐺, 🦊, 🐶\\}\\) and \\(B = \\{🐶, 🐷, 🐹\\}\\):\n\nSet union \\(A \\cup B\\) = {🐺, 🦊, 🐶, 🐷, 🐹}\nSet intersection \\(A \\cap B\\) = {🐶}\nSet different \\(A \\setminus B\\) = {🐺, 🦊}$, \\(B \\setminus A\\) = {🐷, 🐹}"
-  },
-  {
-    "objectID": "W03.html#set-operations-in-r",
-    "href": "W03.html#set-operations-in-r",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Set operations in R",
-    "text": "Set operations in R\nunique shows the set of elements in a vector\n\nunique(flights$origin)\n\n[1] \"EWR\" \"LGA\" \"JFK\"\n\n\nsetequal tests for set equality\n\nsetequal(c(\"EWR\",\"LGA\",\"JFK\"), c(\"EWR\",\"EWR\",\"LGA\",\"JFK\"))\n\n[1] TRUE\n\n\nunion, intersect, setdiff treat vectors as sets and operate as expected\n\nunion(1:5,3:7)\n\n[1] 1 2 3 4 5 6 7\n\nintersect(1:5,3:7)\n\n[1] 3 4 5\n\nsetdiff(1:5,3:7)\n\n[1] 1 2"
-  },
-  {
-    "objectID": "W03.html#exploratory-data-analysis-1",
-    "href": "W03.html#exploratory-data-analysis-1",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Exploratory Data Analysis",
-    "text": "Exploratory Data Analysis\n\nEDA is the systematic exploration of data using\n\nvisualization\ntransformation\ncomputation of characteristic values\nmodeling\n\n\n\nWe haven’t talked much about the latter two, but will do soon.\nComputation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range\nModeling: Operations like linear regression or dimensionality reduction"
-  },
-  {
-    "objectID": "W03.html#systematic-but-no-standard-routine",
-    "href": "W03.html#systematic-but-no-standard-routine",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Systematic but no standard routine",
-    "text": "Systematic but no standard routine\n\n“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox\n\n\n“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey"
-  },
-  {
-    "objectID": "W03.html#systematic-but-no-standard-routine-1",
-    "href": "W03.html#systematic-but-no-standard-routine-1",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Systematic but no standard routine",
-    "text": "Systematic but no standard routine\n\nGoal of EDA: Develop understanding of your data.\nEDA’s iterative cycle\n\nGenerate questions about your data.\nSearch for answers by visualizing, transforming, and modelling your data.\nUse what you learn to refine your questions and/or generate new questions.\n\nEDA is fundamentally a creative process."
-  },
-  {
-    "objectID": "W03.html#questions",
-    "href": "W03.html#questions",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Questions",
-    "text": "Questions\n\nThe way to ask quality questions:\n\nGenerate many questions!\nYou cannot come up with most interesting questions when you start.\n\nThere is no rule which questions to ask. These are useful\n\nWhat type of variation occurs within my variables?\n(Barplots, Histograms,…)\nWhat type of covariation occurs between my variables?\n(Scatterplots, Timelines,…)"
-  },
-  {
-    "objectID": "W03.html#eda-embedded-in-a-statistical-data-science-project",
-    "href": "W03.html#eda-embedded-in-a-statistical-data-science-project",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "EDA embedded in a statistical data science project",
-    "text": "EDA embedded in a statistical data science project\n\nStating and refining the question\nExploring the data\nBuilding formal statistical models\nInterpreting the results\nCommunicating the results\n\n\n\nRoger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015)."
-  },
-  {
-    "objectID": "W03.html#six-types-of-questions",
-    "href": "W03.html#six-types-of-questions",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Six types of questions",
-    "text": "Six types of questions\n\nDescriptive: summarize a characteristic of a set of data\nExploratory: analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)\nInferential: analyze patterns, trends, or relationships in representative data from a population\nPredictive: make predictions for individuals or groups of individuals\nCausal: whether changing one factor will change another factor, on average, in a population\nMechanistic: explore “how” as opposed to whether\n\n\n\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146."
-  },
-  {
-    "objectID": "W03.html#descriptive-projects",
-    "href": "W03.html#descriptive-projects",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Descriptive Projects",
-    "text": "Descriptive Projects\n\n\n\nDescriptive Projects\n\n\n\n\nDubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models"
-  },
-  {
-    "objectID": "W03.html#data-analysis-flowchart",
-    "href": "W03.html#data-analysis-flowchart",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Data Analysis Flowchart",
-    "text": "Data Analysis Flowchart"
-  },
-  {
-    "objectID": "W03.html#example-covid-19-and-vitamin-d",
-    "href": "W03.html#example-covid-19-and-vitamin-d",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Example: COVID-19 and Vitamin D",
-    "text": "Example: COVID-19 and Vitamin D\n\nDescriptive: frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals\nExploratory: examine relationships between a range of dietary factors and COVID-19 hospitalisations\nInferential: examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large\nPredictive: what types of people will take Vitamin D supplements during the next year\nCausal: whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised\nMechanistic: how increased vitamin D intake leads to a reduction in the number of viral illnesses"
-  },
-  {
-    "objectID": "W03.html#questions-to-your-questions",
-    "href": "W03.html#questions-to-your-questions",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Questions to your questions!",
-    "text": "Questions to your questions!\n\nDo you have appropriate data to answer your question?\nDo you have information on confounding variables?\nWas the data you’re working with collected in a way that introduces bias?\n\n\n\nExample\nI want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.\n\nIs this a biased or an unbiased estimate of the number of children in households in Bremen?\nIf biased, will the value be an overestimate or underestimate?"
-  },
-  {
-    "objectID": "W03.html#context-information-is-important",
-    "href": "W03.html#context-information-is-important",
-    "title": "W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
-    "section": "Context Information is important!",
-    "text": "Context Information is important!\n\nNot all information is in the data!\nPotential confounding variables you infer from general knowledge\nInformation about data collection you may receive from an accompanying report\nInformation about computed variables you may need to look up in accompanying documentation\nInformation about certain variables you may find in an accompanying codebook. For example the exact wording of questions in survey data."
-  },
-  {
     "objectID": "W02.html#git-and-github",
     "href": "W02.html#git-and-github",
     "title": "W#2 Data Visualization, Data Formats",
@@ -1306,21 +1306,21 @@
     "href": "socialmedia.html#should-you-follow-data-science-on-social-media",
     "title": "Data Science on the Internet and in Social Media",
     "section": "2 Should you follow data science on social media?",
-    "text": "2 Should you follow data science on social media?\nYes, you should! Because\n\nyou can get a feeling of how the field develops.\nyou can find nice snippets to learn things, when lucky they are exactly on your level.\nmany people learn data science things on social media, you react with a questions and may be lucky to get a response.\nthere may sometimes be release for your confused mind through data science memes, cartoons, or jokes.\n\nNo, you should not! Because\n\nall social media is disctraction from focused learning and concentrated working.\nyou may develop imposter syndrome symptoms. There is so much stuff out and you may think everybody else knows so much more and you will never catch up. (Hint, the reality is more like this: No one knows everything, you already have your own perspective and own unique set of skills, every good data scientist is constantly learning and is constantly able to rethink and also sometimes has similar feelings, what gets pushed on social media tends to be more opinionated and overstated.)\nyou may fall into hype topics where people overstate the importance, risks, dangers, or opportunities a lot.\n\nFinal answer: You decide. If you do, learn to stop when it feels bad, learn to detect hype, and do more other data science learning like real exercises, tutorials or your projects. Just assume you are in the blue region on the graph in this cartoon 😉."
+    "text": "2 Should you follow data science on social media?\nYes, you should! Because\n\nyou can get a feeling of how the field develops.\nyou can find nice snippets to learn things, when lucky they are exactly on your level.\nmany people learn data science things on social media, you react with a questions and may be lucky to get a response.\nthere may sometimes be release for your confused mind through data science memes, cartoons, or jokes.\n\nNo, you should not! Because\n\nall social media is disctraction from focused learning and concentrated working.\nyou may develop imposter syndrome symptoms. There is so much stuff out and you may think everybody else knows so much more and you will never catch up. (Hint, the reality is more like this: No one knows everything, you already have your own perspective and own unique set of skills, every good data scientist is constantly learning and is constantly able to rethink and also sometimes has similar feelings, what gets pushed on social media tends to be more opinionated and overstated.)\nyou may fall into hype topics where people overstate the importance, risks, dangers, or opportunities a lot.\n\nFinal answer: You decide. If you do, learn to stop when it feels bad, learn to detect hype, and do more other data science learning: real exercises, tutorials or your projects. Just assume you are in the blue region on the graph in this cartoon 😉."
   },
   {
     "objectID": "socialmedia.html#which-social-media-and-how-to-follow-data-science",
     "href": "socialmedia.html#which-social-media-and-how-to-follow-data-science",
     "title": "Data Science on the Internet and in Social Media",
     "section": "3 Which social media and how to follow data science?",
-    "text": "3 Which social media and how to follow data science?\nThe following is not intended to be complete or balanced in anyway. If you find something interesting let me know and I may add it to the lists.\nFor following Data Science in social media you often need platform accounts, otherwise most platform do not even let you see things. Anyway, accounts help you by selecting who to follow. You do not need to post or like things, you can start just looking around and following.\nThe general ways to access content is by following interesting people, searching for words or hashtags, or use the explore options the platforms offer.\nFor sure data science is a common topic on 𝕏 (which I still call Twitter which is still the URL), Reddit , and Mastodon .\nOn Mastodon: It is not a unique service, it is mainly offering a joint open source protocol which different independent servers can use to run something like a decentralized twitter. Some people call it Twitter with an open protocol like email. I think, this is a very good development! When you want to have a mastodon account, you need to decide for a server where to live. In the end it is not so important and you can also move with your account later. I am in the community https://datasci.social but you could take anythings and you can easily follow people on other servers.\nAfter Elon Musk’s twitter take over microblogging people are a but puzzled where to go and many maintain more than one plattform like twitter/X, bluesky, threads, or (what I support most) mastodon. So, you may find the same people at different places."
+    "text": "3 Which social media and how to follow data science?\nThe following is not intended to be complete or balanced in anyway. If you find something interesting let me know and I may add it to the lists.\nFor following Data Science in social media you often need platform accounts, otherwise most platform do not even let you see things. Anyway, accounts help you by selecting who to follow. You do not need to post or like things, you can start just looking around and following.\nThe general ways to access content is by following interesting people, searching for words or hashtags, or use the explore options the platforms offer.\nFor sure data science is a common topic on 𝕏 (which I still call Twitter which is still the URL), Reddit , and Mastodon .\nOn Mastodon: It is not a propriatary service, it is offering a joint open source protocol which different independent servers can use to run something like a decentralized twitter. Some people call it Twitter with an open protocol like email. I think, this is a very good development! When you want to have a mastodon account, you need to decide for a server where to live. In the end it is not so important because you can follow people on all servers and you can also move with your account later. I am in the community https://datasci.social but you could take anythings.\nAfter Elon Musk’s twitter take over microblogging people are a but puzzled where to go and many maintain more than one plattform like twitter/X, bluesky, threads, or mastodon (which I support most). So, you may find the same people at different places."
   },
   {
     "objectID": "socialmedia.html#some-entry-points",
     "href": "socialmedia.html#some-entry-points",
     "title": "Data Science on the Internet and in Social Media",
     "section": "4 Some “entry points”",
-    "text": "4 Some “entry points”\n\n4.1 People\nhttps://twitter.com/kareem_carr\nhttps://fosstodon.org/@juliasilge\nAllison Horst Chelsea\nChristoph Molnar https://twitter.com/ChristophMolnar Albert Rapp https://twitter.com/rappa753 Daniël Lakens https://twitter.com/lakens\nHadley wickham\n\n\n4.2 Other things\nSubreddits and the like\nYoutube, and podcasts\nA reddit thread https://www.reddit.com/r/datascience/comments/16dk5b6/r_vs_python_detailed_examples_from_proficient/"
+    "text": "4 Some “entry points”\n\n4.1 People\nA cool statistician: https://twitter.com/kareem_carr\nhttps://fosstodon.org/@juliasilge\nAllison Horst Chelsea\nChristoph Molnar https://twitter.com/ChristophMolnar Albert Rapp https://twitter.com/rappa753 Daniël Lakens https://twitter.com/lakens\nHadley wickham\n\n\n4.2 Other things\nSubreddits and the like\nYoutube, and podcasts\nA reddit thread https://www.reddit.com/r/datascience/comments/16dk5b6/r_vs_python_detailed_examples_from_proficient/"
   },
   {
     "objectID": "benford .html",
