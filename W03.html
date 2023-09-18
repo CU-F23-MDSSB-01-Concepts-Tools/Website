@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#3 More under the hood, Relational Data, Exploratory Data Analysis</title>
+  <title>Data Science Concepts / Data Science Tools - W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#3 More under the hood, Relational Data, Exploratory Data Analysis</h1>
+  <h1 class="title">W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</h1>
   <p class="subtitle">With material adopted from <a href="https://datasciencebox.org">Data Science in a Box</a> and <a href="https://r4ds.hadley.nz">R4DS</a></p>
 
 <div class="quarto-title-authors">
@@ -546,7 +546,7 @@ date  (1): reservation_status_date
 <li>all columns are how they should</li>
 <li>you consider it not necessary to document the specifications</li>
 </ul>
-<p>Then use show_col_types = FALSE` to quiet the reading message.</p>
+<p>Then use <code>show_col_types = FALSE</code> to quiet the reading message.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>hotels <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/hotels.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1108,7 +1108,7 @@ This is identical to the logical AND <code>&amp;</code>.<br>
 </tr>
 <tr class="odd">
 <td><code>is.na(x)</code></td>
-<td>test if <code>x</code> is <code>NA</code> (misssing data)</td>
+<td>test if <code>x</code> is <code>NA</code> (missing data)</td>
 </tr>
 <tr class="even">
 <td><code>!is.na(x)</code></td>
@@ -1959,7 +1959,7 @@ POSIXct: Portable Operating System Interface, calendar time. Stores date and tim
 <div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a><span class="fu">as.double</span>(lubridate<span class="sc">::</span><span class="fu">now</span>()) <span class="sc">-</span> </span>
 <span id="cb118-2"><a href="#cb118-2"></a> <span class="fu">as.double</span>(lubridate<span class="sc">::</span><span class="fu">ymd_hm</span>(<span class="st">"1976-01-16_12:04"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1504355161</code></pre>
+<pre><code>[1] 1504386294</code></pre>
 </div>
 </div>
 </section>
@@ -2110,8 +2110,13 @@ POSIXct: Portable Operating System Interface, calendar time. Stores date and tim
 </div>
 </div>
 <p>Regular expressions are useful because strings usually contain unstructured or semi-structured data, and regexps are a concise language for describing patterns in strings. When you first look at a regexp, you’ll think a cat walked across your keyboard, but as your understanding improves they will start to make sense.</p>
-<p>“<sup>1</sup>+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$”</p>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>a-zA-Z0-9_.+-</p></li></ol></aside></section>
+<p><code>"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"</code></p>
+<p><code>"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"</code></p>
+<p><code>""^[[:alnum:].-_]+@[[:alnum:].-]+$""</code></p>
+<div class="fragment">
+<p>These are all regular expressions for email addresses.</p>
+</div>
+</section>
 <section id="special-values" class="slide level2 smaller">
 <h2>Special values</h2>
 <ul>
@@ -2394,7 +2399,7 @@ NULL
 <li><code>inner_join()</code>: all rows from x where there are matching values in y, return all combination of multiple matches in the case of multiple matches</li>
 <li>…</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>The notion <em>join</em> comes from SQL database. In other data manipulation frameworks joining is called <em>merging</em>.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>The notion <em>join</em> comes from SQL database. In other data manipulation frameworks joining is called <em>merging</em>.</p></li></ol></aside></section>
 <section id="simple-setup-for-x-and-y" class="slide level2 smaller">
 <h2>Simple setup for <code>x</code> and <code>y</code></h2>
 <div class="cell">
@@ -3003,8 +3008,8 @@ Modeling: Operations like linear regression or dimensionality reduction</p>
 </ol></li>
 </ul>
 </section>
-<section id="eda-embedded-in-a-data-science-project" class="slide level2" data-background-color="yellow">
-<h2>EDA embedded in a data science project</h2>
+<section id="eda-embedded-in-a-statistical-data-science-project" class="slide level2" data-background-color="yellow">
+<h2>EDA embedded in a <em>statistical</em> data science project</h2>
 <ol type="1">
 <li>Stating and refining the question</li>
 <li><strong>Exploring the data</strong></li>
@@ -3019,7 +3024,7 @@ Modeling: Operations like linear regression or dimensionality reduction</p>
 <section>
 <section id="data-science-projects" class="title-slide slide level1 center" data-background-color="yellow">
 <h1>Data science projects</h1>
-
+<p>Getting into question-driven data work</p>
 </section>
 <section id="six-types-of-questions" class="slide level2 smaller" data-background-color="yellow">
 <h2>Six types of questions</h2>
@@ -3034,6 +3039,18 @@ Modeling: Operations like linear regression or dimensionality reduction</p>
 
 <aside><div>
 <p>Leek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
+</div></aside></section>
+<section id="descriptive-projects" class="slide level2" data-background-color="yellow">
+<h2>Descriptive Projects</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DescripitiveResearch_Dubin1969.png"></p>
+<p></p><figcaption>Descriptive Projects</figcaption><p></p>
+</figure>
+</div>
+
+<aside><div>
+<p>Dubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models</p>
 </div></aside></section>
 <section id="data-analysis-flowchart" class="slide level2" data-background-color="yellow">
 <h2>Data Analysis Flowchart</h2>
@@ -3054,8 +3071,8 @@ Modeling: Operations like linear regression or dimensionality reduction</p>
 <li><strong>Mechanistic:</strong> how increased vitamin D intake leads to a reduction in the number of viral illnesses</li>
 </ol>
 </section>
-<section id="questions-to-data-science-problems" class="slide level2" data-background-color="yellow">
-<h2>Questions to data science problems</h2>
+<section id="questions-to-your-questions" class="slide level2" data-background-color="yellow">
+<h2>Questions to your questions!</h2>
 <ul>
 <li>Do you have appropriate data to answer your question?</li>
 <li>Do you have information on confounding variables?</li>
@@ -3070,8 +3087,8 @@ I want to estimate the average number of children in households in Bremen. I con
 <li>If biased, will the value be an overestimate or underestimate?</li>
 </ul>
 </div></aside></section>
-<section id="context-information-and-codebooks" class="slide level2 smaller" data-background-color="yellow">
-<h2>Context Information and Codebooks</h2>
+<section id="context-information-is-important" class="slide level2 smaller" data-background-color="yellow">
+<h2>Context Information is important!</h2>
 <ul>
 <li>Not all information is in the data!</li>
 <li>Potential confounding variables you infer from general knowledge</li>
@@ -3079,12 +3096,21 @@ I want to estimate the average number of children in households in Bremen. I con
 <li>Information about computed variables you may need to look up in accompanying documentation</li>
 <li>Information about certain variables you may find in an accompanying <strong>codebook</strong>. For example the exact wording of questions in survey data.</li>
 </ul>
+</section></section>
+<section id="next-steps" class="title-slide slide level1 center">
+<h1>Next Steps</h1>
+<ul>
+<li><p>This and next week: Introduction to <code>python</code></p></li>
+<li><p>Then you should be able to do wrangle, transform, and basically visualize data how you want. (Usually some self-study is necessary when new problems pop up. )</p></li>
+<li><p>Expect and update of a few questions in Homework 2 for exploratory data analysis.</p></li>
+</ul>
 
 
 <img src="img/ConstructorUniversity.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools">CU-F23-MDSSB-DSCO-02: Data Science Concepts</a></p>
 </div>
-</section></section>
+</section>
+
 
     </div>
   </div>
