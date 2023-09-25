@@ -263,7 +263,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nPrinciple Component Analysis, Matrices, Calculus\nR\n\n\n6\n10-09, 10-12\nModeling, Linear Model, Classification Problems, Logistic Regression, Prediction\npython\n\n\n7\n10-16, 10-19\nProbability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics , Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nPrinciple Component Analysis, Matrices, Calculus\nR\n\n\n6\n10-09, 10-12\nModeling, Linear Model, Classification Problems, Logistic Regression, Prediction\npython\n\n\n7\n10-16, 10-19\nProbability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics , Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
   },
   {
     "objectID": "W7.html#epidemic-modeling",
@@ -723,511 +723,511 @@
   {
     "objectID": "W04.html#definition-sets-and-vectors",
     "href": "W04.html#definition-sets-and-vectors",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Definition: Sets and vectors",
     "text": "Definition: Sets and vectors\nA set is mathematical model for the collection of different things.\nExamples\n\n\\(\\{3, \\text{Hi}, 😀, 🖖 \\}\\)\n\\(\\{1,3,5\\}\\)\nThe natural numbers \\(\\mathbb{N} = \\{1, 2, 3, \\dots\\}\\) (infinite!)\n\\(\\{\\mathtt{\"EWR\"}, \\mathtt{\"LGA\"}, \\mathtt{\"JFK\"}\\}\\)\nthese are origin airports in flights"
   },
   {
     "objectID": "W04.html#math-sets-and-vectors-1",
     "href": "W04.html#math-sets-and-vectors-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Math: Sets and vectors",
     "text": "Math: Sets and vectors\nA vector is an ordered collection of things (elements) of the same type.\nIn a set each thing can only be once and the order does not matter!\n\\(\\{1,3,5\\} = \\{3,5,1\\} = \\{1,1,1,3,5,5\\}\\)\nFor vectors:\n\\([1\\ 3\\ 5] \\neq [3\\ 5\\ 1]\\) because we compare component-wise, so we cannot even compare with those with the vector \\([1\\ 1\\ 1\\ 3\\ 5\\ 5]\\)"
   },
   {
     "objectID": "W04.html#math-set-operations",
     "href": "W04.html#math-set-operations",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Math: Set operations",
     "text": "Math: Set operations\nSets \\(A = \\{🐺, 🦊, 🐶\\}\\) and \\(B = \\{🐶, 🐷, 🐹\\}\\), \\(C = \\{🐶, 🐷\\}\\):\n\n\nSet union \\(A \\cup B\\) = {🐺, 🦊, 🐶, 🐷, 🐹}\n\\(x \\in A \\cup B\\) when \\(x \\in A\\) | (or) \\(x\\in B\\)\nSet intersection \\(A \\cap B\\) = {🐶}\n\\(x \\in A \\cap B\\) when \\(x \\in A\\) & (and) \\(x\\in B\\)\nSet difference \\(A \\setminus B = \\{🐺, 🦊\\}\\), \\(B \\setminus A\\) = {🐷, 🐹}\nSubset: \\(C \\subset B\\) but \\(C \\not\\subset A\\)\n\n\n\nSee the analogy of set operations and logical operations."
   },
   {
     "objectID": "W04.html#set-operations-in-r",
     "href": "W04.html#set-operations-in-r",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Set operations in R",
     "text": "Set operations in R\nunique shows the set of elements in a vector\n\nunique(flights$origin)\n\n[1] \"EWR\" \"LGA\" \"JFK\"\n\n\n\nsetequal tests for set equality\n\nsetequal(c(\"EWR\",\"LGA\",\"JFK\"), c(\"EWR\",\"EWR\",\"LGA\",\"JFK\"))\n\n[1] TRUE\n\n\n\n\nunion, intersect, setdiff treat vectors as sets and operate as expected\n\nunion(1:5,3:7)\n\n[1] 1 2 3 4 5 6 7\n\nintersect(1:5,3:7)\n\n[1] 3 4 5\n\nsetdiff(1:5,3:7)\n\n[1] 1 2"
   },
   {
     "objectID": "W04.html#sets-take-away",
     "href": "W04.html#sets-take-away",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Sets: Take-away",
     "text": "Sets: Take-away\n\nSet operations are not a daily business in data science\nHowever, they are useful for data exploration!\nKnowing set operations is key to understand probability:\n\nA sample space is the set of all atomic events.\nAn event is a subset of the sample\nA probability function assigns probabilities to all events."
   },
   {
     "objectID": "W04.html#functions-mathematically",
     "href": "W04.html#functions-mathematically",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Functions mathematically",
     "text": "Functions mathematically\nConsider two sets: The domain \\(X\\) and the codomain \\(Y\\).\nA function \\(f\\) assigns each element of \\(X\\) to exactly one element of \\(Y\\).\n\n\nWe write \\(f : X \\to Y\\)\n“\\(f\\) maps from \\(X\\) to \\(Y\\)”\nand \\(x \\mapsto f(x)\\)\n“\\(x\\) maps to \\(f(x)\\)”\nThe khaki set is called the image of \\(f\\).\n\n\n\n\n\n\nPicture from wikipedia."
   },
   {
     "objectID": "W04.html#conventions-in-mathematical-text",
     "href": "W04.html#conventions-in-mathematical-text",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Conventions in mathematical text",
     "text": "Conventions in mathematical text\n\nSets are denoted with capital letters.\nTheir elements with (corresponding) small letters.\nFunctions are often called \\(f\\), \\(g\\), or \\(h\\).\nOther terminology can be used!\n\n\nImportant in math\n\nWhen you read math:\nKeep track of what objects are! What are functions, what are sets, what are numbers, …1\nWhen you write math: Define what objects are.\n\n\nWatch: How to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
   },
   {
     "objectID": "W04.html#is-this-a-mathematical-function",
     "href": "W04.html#is-this-a-mathematical-function",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Is this a mathematical function?",
     "text": "Is this a mathematical function?\n \\(\\ \\mapsto\\ \\) \nInput from \\(X = \\{\\text{A picture where a face can be recognized}\\}\\).\nFunction: Upload input at https://funny.pho.to/lion/ and download output.\nOutput from \\(Y = \\{\\text{Set of pictures with a specific format.}\\}\\)\n\nYes, it is a function. Important: Output is the same for the same input!"
   },
   {
     "objectID": "W04.html#is-this-a-mathematical-function-1",
     "href": "W04.html#is-this-a-mathematical-function-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Is this a mathematical function?",
     "text": "Is this a mathematical function?\nInput a text snippet. Function: Enter text at https://www.craiyon.com. Output a picture.\n\n\n\n\nOther examples:\n\n“Nuclear explosion broccoli”\n“The Eye of Sauron reading a newspaper”\n“The legendary attack of Hamster Godzilla wearing a tiny Sombrero”\n\n  \n\n\n\nNo, it is not a function. It has nine outcomes and these change when run again."
   },
   {
     "objectID": "W04.html#graphs-of-functions",
     "href": "W04.html#graphs-of-functions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Graphs of functions",
     "text": "Graphs of functions\n\nA function is characterized by the set all possible pairs \\((x,f(x))\\).\nThis is called its graph.\nWhen domain and codomain are real numbers then the graph can be shown in a Cartesian coordinate system. Example \\(f(x) = x^3 - x^2\\)"
   },
   {
     "objectID": "W04.html#some-functions-f-mathbbr-to-mathbbr",
     "href": "W04.html#some-functions-f-mathbbr-to-mathbbr",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Some functions \\(f: \\mathbb{R} \\to \\mathbb{R}\\)",
     "text": "Some functions \\(f: \\mathbb{R} \\to \\mathbb{R}\\)\n\n\n\\(f(x) = x\\) identity function\n\\(f(x) = x^2\\) square function\n\\(f(x) = \\sqrt{x}\\) square root function\n\\(f(x) = e^x\\) exponential function\n\\(f(x) = \\log(x)\\) natural logarithm\n\nSquare function and square root function are the inverse of each other. Exponential and natural logarithm, too.\n\n\\(\\sqrt[2]{x}^2 = \\sqrt[2]{x^2} = x\\), \\(\\log(e^x) = e^{\\log(x)} = x\\)\n\nTheir graphs reflect each other with identity function graph as mirror axis.\n\n\n\n\n\n\n\n\n\n\n\n\\(e\\) is Euler’s number \\(2.71828\\dots\\). The natural logarithm is also often called \\(\\ln\\). The square root function is \\(\\mathbb{R}_{\\geq 0} \\to \\mathbb{R}\\), the logarithm \\(\\mathbb{R}_{>0} \\to \\mathbb{R}\\)."
   },
   {
     "objectID": "W04.html#shifts-and-scales",
     "href": "W04.html#shifts-and-scales",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Shifts and scales",
     "text": "Shifts and scales\nHow can we shift, stretch, or shrink a graph vertically and horizontally?\n\n\n\\(y\\)-shift\\(x\\)-shift\\(y\\)-scale\\(x\\)-scale\n\n\n\n\nAdd a constant to the function.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = x^3 - x^2 + a\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\n\n\n\n\n\n\n\n\n\n\n\n\nSubtract a constant from all \\(x\\) within the function definition.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = (x - a)^3 - (x - a)^2\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nAttention:\nShifting \\(a\\) units to the right needs subtracting \\(a\\)!\nYou can think of the coordinate system being shifted in direction \\(a\\) while the graph stays.\n\n\n\n\n\n\n\n\n\n\n\n\nMultiply a constant to all \\(x\\) within the function definition.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = a(x^3 - x^2)\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nNegative numbers flip the graph around the \\(x\\)-axis.\n\n\n\n\n\n\n\n\n\n\n\n\nDivide all \\(x\\) within the function definition by a constant.\n\\(f(x) = x^3 - x^2 \\leadsto\\)\n\\(\\quad f(x) = (x/a)^3 - (x/a)^2\\)\nFor \\(a =\\) -2, -0.5, 0.5, 2\nNegative numbers flip the graph around the \\(y\\)-axis.\nAttention: Stretching needs a division by \\(a\\)!\nYou can think of the coordinate system being stretched multiplicatively by \\(a\\) while the graph stays."
   },
   {
     "objectID": "W04.html#math-polynomials-and-exponentials",
     "href": "W04.html#math-polynomials-and-exponentials",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Math: Polynomials and exponentials",
     "text": "Math: Polynomials and exponentials\nA polynomial is a function which is composed of (many) addends of the form \\(ax^n\\) for different values of \\(a\\) and \\(n\\).\nIn an exponential the \\(x\\) appears in the exponent.\n\\(f(x) = x^3\\) vs. \\(f(x) = e^x\\)\n\nFor \\(x\\to\\infty\\), any exponential will finally “overtake” any polynomial."
   },
   {
     "objectID": "W04.html#rules-for-exponentiation",
     "href": "W04.html#rules-for-exponentiation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Rules for exponentiation",
     "text": "Rules for exponentiation\n\n\n\\(x^0\\)\n\\(0^x\\)\n\\(0^0\\)\n\\((x\\cdot y)^a\\)\n\\(x^{-a}\\), \\(x^{-1}\\)\n\\(x^\\frac{a}{b}\\), \\(x^\\frac{1}{2}\\)\n\\((x^a)^b\\)\n\n\n\\(x^0 = 1\\)\n\n\n\\(0^x = 0\\) for \\(x\\neq 0\\)\n\n\n\\(0^0 = 1\\) (discontinuity in \\(0^x\\))\n\n\n\\((x\\cdot y)^a = x^a\\cdot x^b\\)\n\n\n\\(x^{-a} = \\frac{1}{x^a}\\), \\(x^{-1} = \\frac{1}{x}\\)\n\n\n\\(x^\\frac{a}{b} = \\sqrt[b]{x^a} = (\\sqrt[b]{x})^a,\\ x^\\frac{1}{2} = \\sqrt{x}\\)\n\n\n\\((x^a)^b = x^{a\\cdot b} = (x^b)^a \\neq x^{a^b} = x^{(a^b)}\\)\nExample: \\((4^3)^2 = 64^2 = 4096 \\qquad 4^{3^2} = 4^9 = 262144\\)"
   },
   {
     "objectID": "W04.html#more-rules-for-exponentiation",
     "href": "W04.html#more-rules-for-exponentiation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "More rules for exponentiation",
     "text": "More rules for exponentiation\n\n\n\\(x^a\\cdot x^b\\)\n\n\n\\(x^a\\cdot x^b = x^{a+b}\\) Multiplication of powers (with same base \\(x\\)) becomes addition of exponents.\n\n\n\n\n\n\n\\((x+y)^a\\)\n\n\nNo “simple” form! For \\(a\\) integer use binomial expansion. \\((x+y)^2 = x^2 + 2xy + y^2\\)\n\\((x+y)^3 = x^3 + 3x^2y + 3xy^2 + y^3\\)\n\\((x+y)^n = \\sum_{k=0}^n {n \\choose k} x^{n-k}y^k\\)\n\n\n\n\n\nPascal’s triangle\n\n\n\n\n\nFrom wikipedia\n\n\n\nWe meet it again in Probability:\nA row represents a binomial distribution\nWhich tends to mimics the normal distribution more and more\nand is related to the central limit theorem"
   },
   {
     "objectID": "W04.html#logarithms",
     "href": "W04.html#logarithms",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Logarithms",
     "text": "Logarithms\nDefinition: A logarithm of \\(a\\) for some base \\(b\\) is the value of the exponent which brings \\(b\\) to \\(a\\): \\(\\log_b(a) = x\\) means that \\(b^x =a\\)\nMost common:\n\n\\(\\log_{10}\\) for logarithmic axes in plots\n\\(\\log_{e}\\) natural logarithm (also \\(\\log\\) or \\(\\ln\\))\n\n\n\n\n\\(\\log_{10}(100) =\\)\n\n\n\\(2\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(1) =\\)\n\n\n\\(0\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(6590) =\\)\n\n\n\\(3.818885\\)\n\n\n\n\n\n\n\n\\(\\log_{10}(0.02) =\\)\n\n\n\\(-1.69897\\)"
   },
   {
     "objectID": "W04.html#rules-for-logarithms",
     "href": "W04.html#rules-for-logarithms",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Rules for logarithms",
     "text": "Rules for logarithms\nUsually only one base is used in the same context, because changing base is easy:\n\\(\\log_c(x) = \\frac{log_b(x)}{\\log_b(c)} = \\frac{\\log(x)}{\\log(c)}\\)\n\n\n\\(\\log(x\\cdot y)\\)\n\n\n\\(= \\log(x) + \\log(y)\\) Multiplication \\(\\to\\) addition.\n\n\n\n\n\n\n\\(\\log(x^y)\\)\n\n\n\\(= y\\cdot\\log(x)\\)\n\n\n\n\n\n\\(\\log(x+y)\\)\n\n\ncomplicated!\n\n\n\n\n\nAlso changing bases for powers is easy: \\(x^y = (e^{\\log(x)})^y = e^{y\\cdot\\log(x)}\\)"
   },
   {
     "objectID": "W04.html#input-to-output",
     "href": "W04.html#input-to-output",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Input \\(\\to\\) output",
     "text": "Input \\(\\to\\) output\n\n\nMetaphorically, a function is a machine or a blackbox that for each input yields an output.\nThe inputs of a function are also called arguments.\n\n\nDifference to math terminolgy:\nThe output need not be the same for the same input.\n\n\n\nPicture from wikipedia."
   },
   {
     "objectID": "W04.html#function-as-objects-in-r",
     "href": "W04.html#function-as-objects-in-r",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x5622e4712f48>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x5622dd1c2848>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x55cbddbb6930>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x55cbd66ef7f8>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#define-your-own-functions-in-r",
     "href": "W04.html#define-your-own-functions-in-r",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Define your own functions! (in R)",
     "text": "Define your own functions! (in R)\n\nadd_one <- function(x) {\n  x + 1 \n}\n# Test it\nadd_one(10)\n\n[1] 11\n\n\nThe skeleton for a function definition is\nfunction_name <- function(input){\n  # do something with the input(s)\n  # return something as output\n}\n\nfunction_name should be a short but evocative verb.\nThe input can be empty or one or more name or name=expression terms as arguments.\nThe last evaluated expression is returned as output.\nWhen the body or the function is only one line {} can be omitted. For example\nadd_one <- function(x) x + 1"
   },
   {
     "objectID": "W04.html#flexibility-of-inputs-and-outputs",
     "href": "W04.html#flexibility-of-inputs-and-outputs",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Flexibility of inputs and outputs",
     "text": "Flexibility of inputs and outputs\n\nArguments can be specified by name=expression or just expression (then they are taken as the next argument)\nDefault values for arguments can be provided. Useful when an argument is a parameter.\n\n\n\nmymult <- function(x = 2, y = 3) x * (y - 1)\nmymult(3,4)\n\n\n[1] 9\n\n\n\n\n\nmymult()\n\n\n[1] 4\n\n\n\n\n\nmymult(y = 3,4)\n\n\n[1] 8\n\n\n\n\n\nmymult(5)\n\n\n[1] 10\n\n\n\n\n\nmymult(y = 2)\n\n\n[1] 2\n\n\n\n\nFor complex output use a list\n\n\nmymult <- function(x = 2, y = 3) \n  list(out1 = x * (y - 1), out2 = x * (y - 2))\nmymult()\n\n\n$out1\n[1] 4\n\n$out2\n[1] 2"
   },
   {
     "objectID": "W04.html#vectorized-functions",
     "href": "W04.html#vectorized-functions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Vectorized functions",
     "text": "Vectorized functions\nMathematical functions in programming are often “vectorized”:\n\nOperations on a single value are applied to each component of the vector.\nOperations on two values are applied “component-wise” (for vectors of the same length)\n\n\nlog10(c(1,10,100,1000,10000))\n\n[1] 0 1 2 3 4\n\nc(1,1,2) + c(3,1,0)\n\n[1] 4 2 2\n\n(0:5)^2\n\n[1]  0  1  4  9 16 25"
   },
   {
     "objectID": "W04.html#recall-vector-creation-functions",
     "href": "W04.html#recall-vector-creation-functions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Recall: Vector creation functions",
     "text": "Recall: Vector creation functions\n\n1:10\n\n [1]  1  2  3  4  5  6  7  8  9 10\n\nseq(from=-0.5, to=1.5, by=0.1)\n\n [1] -0.5 -0.4 -0.3 -0.2 -0.1  0.0  0.1  0.2  0.3  0.4  0.5  0.6  0.7  0.8  0.9\n[16]  1.0  1.1  1.2  1.3  1.4  1.5\n\nseq(from=0, to=1, length.out=10)\n\n [1] 0.0000000 0.1111111 0.2222222 0.3333333 0.4444444 0.5555556 0.6666667\n [8] 0.7777778 0.8888889 1.0000000\n\nrep(1:3, times=3)\n\n[1] 1 2 3 1 2 3 1 2 3\n\nrep(1:3, each=3)\n\n[1] 1 1 1 2 2 2 3 3 3"
   },
   {
     "objectID": "W04.html#plotting-and-transformation",
     "href": "W04.html#plotting-and-transformation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Plotting and transformation",
     "text": "Plotting and transformation\nVector creation and vectorized functions are key for plotting and transformation.\n\nfunc <- function(x) x^3 - x^2    # Create a vectorized function\ndata <- tibble(x = seq(-0.5,1.5,by =0.01)) |>    # Vector creation\n    mutate(y = func(x))        # Vectorized transformation using the function\ndata |> ggplot(aes(x,y)) + geom_line() + theme_minimal(base_size = 20)"
   },
   {
     "objectID": "W04.html#conveniently-ggploting-functions",
     "href": "W04.html#conveniently-ggploting-functions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Conveniently ggploting functions",
     "text": "Conveniently ggploting functions\n\nggplot() +\n geom_function(fun = log) +\n geom_function(fun = function(x) 3*x - 4, color = \"red\") +\n theme_minimal(base_size = 20)\n\n\n\n\n\n\nLine 3 shows another important concept: anonymous functions. The function function(x) 3*x - 4 is defined on the fly without a name."
   },
   {
     "objectID": "W04.html#conditional-statements",
     "href": "W04.html#conditional-statements",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Conditional statements",
     "text": "Conditional statements\n\nif executes a code block if a condition is TRUE\nelse executes a code block if the condition is FALSE\n\nSkeleton\nif (condition) {\n  # code block\n} else {\n  # code block\n}\nExample: A piece-wise defined function\n\n\n\npiecewise <- function(x) {\n  if (x < 2) {\n    0.5 * x\n  } else {\n    x - 1\n  }\n}\n\n\n\npiecewise(1)\n\n[1] 0.5\n\npiecewise(2)\n\n[1] 1\n\npiecewise(3)\n\n[1] 2\n\n\n\n\n\nProblem: piecewise is not vectorized. piecewise(c(1,2,3)) does not work."
   },
   {
     "objectID": "W04.html#vectorized-operations-with-map",
     "href": "W04.html#vectorized-operations-with-map",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Vectorized operations with map",
     "text": "Vectorized operations with map\n\nmap functions apply a function to each element of a vector.1\nmap(.x, .f, ...) applies the function .f to each element of the vector of .x and returns a list.\nmap_dbl returns a double vector (other variants exist)\n\n\n\n\nmap(c(1,2,3), piecewise) \n\n[[1]]\n[1] 0.5\n\n[[2]]\n[1] 1\n\n[[3]]\n[1] 2\n\nmap_dbl(c(1,2,3), piecewise) \n\n[1] 0.5 1.0 2.0\n\npiecewise_vectorized <- \n function(x) map_dbl(x, piecewise) \n\n\n\npiecewise_vectorized(seq(0,3,by = 0.5))\n\n[1] 0.00 0.25 0.50 0.75 1.00 1.50 2.00\n\ntibble(x = seq(0,3,by = 0.5)) |> \n  mutate(y = piecewise_vectorized(x)) |> \n  ggplot(aes(x,y)) + geom_line() + theme_minimal(base_size = 20)\n\n\n\n\n\n\nIn tidyverse they are provided in the package purrr"
   },
   {
     "objectID": "W04.html#map-and-reduce",
     "href": "W04.html#map-and-reduce",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "map and reduce",
     "text": "map and reduce\nInstead of a list or a vector reduce returns a single value.\nTo that end it needs a function with two arguments. It applies it to the first two elements of the vector, then to the result and the third element, then the result and the fourth element, and so on.\n\n1:10 |> reduce(\\(x,y) x + y)\n\n[1] 55\n\n\nNote: \\(x) is a short way to write an anonymous function as function(x).\n\nExample: Reading multiple files\n\n\nInstead of\na <-read_csv(\"a.csv\")\nb <-read_csv(\"b.csv\")\nc <-read_csv(\"c.csv\")\nd <-read_csv(\"d.csv\")\ne <-read_csv(\"e.csv\")\nf <-read_csv(\"f.csv\")\ng <-read_csv(\"g.csv\")\n\nbind_rows(a,b,c,d,e,f,g)\n\nWrite\nletter[1:7] |> \n map(\\(x) read_csv(paste0(x,\".csv\"))) |> \n reduce(bind_rows)"
   },
   {
     "objectID": "W04.html#function-programming-take-away",
     "href": "W04.html#function-programming-take-away",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Function programming: Take away",
     "text": "Function programming: Take away\n\nFunctions are the most important building blocks of programming.\nFunctions can and often should be vectorized.\nVectorized functions are the basis for plotting and transformation.\nmap functions are powerful tools for iterative tasks!\nExpect to not get the idea first but to love them later."
   },
   {
     "objectID": "W04.html#descriptive-vs.-inferential-statistics",
     "href": "W04.html#descriptive-vs.-inferential-statistics",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Descriptive vs. Inferential Statistics",
     "text": "Descriptive vs. Inferential Statistics\n\nThe process of using and analyzing summary statistics\n\nSolely concerned with properties of the observed data.\n\nDistinct from inferential statistics:\n\nInference of properties of an underlying distribution given sampled observations from a larger population.\n\n\nSummary Statistics are used to summarize a set of observations to communicate the largest amount of information as simple as possible."
   },
   {
     "objectID": "W04.html#summary-statistics",
     "href": "W04.html#summary-statistics",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Summary statistics",
     "text": "Summary statistics\nUnivariate (for one variable)\n\nMeasures of location, or central tendency\nMeasures of statistical dispersion\nMeasure of the shape of the distribution like skewness or kurtosis\n\nBivariate (for two variables)\n\nMeasures of statistical dependence or correlation"
   },
   {
     "objectID": "W04.html#measures-of-central-tendency-1",
     "href": "W04.html#measures-of-central-tendency-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Measures of central tendency",
     "text": "Measures of central tendency\nGoal: For a sequence of numerical observations \\(x_1,\\dots,x_n\\) we want to measure\n\nthe “typical” value.\na value summarizing the location of values on the numerical axis.\n\nThree different ways:\n\nArithmetic mean (also mean, average): Sum of the all observations divided by the number of observations \\(\\frac{1}{n}\\sum_{i=1}^n x_i\\)\nMedian: Assume \\(x_1 \\leq x_2 \\leq\\dots\\leq x_n\\). Then the median is middlemost values in the sequence \\(x_\\frac{n+1}{2}\\) when \\(n\\) odd. For \\(n\\) even there are two middlemost values and the median is \\(\\frac{x_\\frac{n}{2} + x_\\frac{n+1}{2}}{2}\\)\nMode: The value that appears most often in the sequence."
   },
   {
     "objectID": "W04.html#philosophy-of-aggregation",
     "href": "W04.html#philosophy-of-aggregation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Philosophy of aggregation",
     "text": "Philosophy of aggregation\n\n\nThe mean represents total value per value.\nExample: per capita income in a town is the total income per individual\nThe median represents the value such that half of the values are lower and higher.\nIn a democracy where each value is represented by one voter preferring it, the median is the value which is unbeatable by an absolute majority. Half of the people prefer higher the other half lower values. (Median voter model)\nThe mode represents the most common value.\nIn a democracy, the mode represents the winner of a plurality vote where each value runs as a candidate and the winner is the one with the most votes."
   },
   {
     "objectID": "W04.html#mean-median-mode-properties",
     "href": "W04.html#mean-median-mode-properties",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Mean, Median, Mode properties",
     "text": "Mean, Median, Mode properties\nDo they deliver one unambiguous answer for any sequence?\n\nMean and median, yes.\nThe mode has no rules for a tie.\n\n\nCan they by generalized to variables with ordered or even unordered categories?\n\n\nMean: No.\nMedian: For ordered categories.\nMode: For any categorical variable.\n\n\nIs the measure always also in the data sequence?\n\n\nMean: No.\nMedian: Yes, for sequences of odd length.\nMode: Yes."
   },
   {
     "objectID": "W04.html#generalized-means",
     "href": "W04.html#generalized-means",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Generalized means1",
     "text": "Generalized means1\nFor \\(x_1, \\dots, x_n > 0\\) and \\(p\\in \\mathbb{R}_{\\neq 0}\\) the generalized mean is\n\\[M_p(x_1, \\dots, x_n) = (\\frac{1}{n}\\sum_{i=1}^n x_i^p)^\\frac{1}{p}\\]\nFor \\(p = 0\\) it is \\(M_0(x_1, \\dots, x_n) = (\\prod_{i=1}^n x_i)^\\frac{1}{n}\\).\n\\(M_1\\) is the arithmetic mean. \\(M_0\\) is called the geometric mean. \\(M_{-1}\\) the harmonic mean.\nNote: Generalized means are often only reasonable when all values are positive \\(x_i > 0\\).\n\n\n\\(M_0\\) can also be expressed as the exponential (\\(\\exp(x) = e^x\\)) of the mean of the the \\(\\log\\)’s of the \\(x_i\\)’s: \\(\\exp(\\log((\\prod_{i=1}^n x_i)^\\frac{1}{n})) = \\exp(\\frac{1}{n}\\sum_{i=1}^n\\log(x_i))\\).\nAlso called power mean or \\(p\\)-mean."
   },
   {
     "objectID": "W04.html#box-cox-transformation-function",
     "href": "W04.html#box-cox-transformation-function",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Box-Cox transformation function1",
     "text": "Box-Cox transformation function1\nFor \\(p \\in \\mathbb{R}\\): \\(f(x) = \\begin{cases}\\frac{x^p - 1}{p} & \\text{for $p\\neq 0$} \\\\ \\log(x) & \\text{for $p= 0$}\\end{cases}\\)\n\n\nThe \\(p\\)-mean is\n\\[M_p(x) = f^{-1}(\\frac{1}{n}\\sum_{i=1}^n f(x_i))\\]\nwith \\(x = [x_1, \\dots, x_n]\\). \\(f^{-1}\\) is the inverse2 of \\(f\\).\n\n\n\n\n\n\n\n\nAlso a common transformation to pre-process data to make it closer to a normal distribution.That means \\(f^-1(f(x)) = x =f(f^-1(x))\\)."
   },
   {
     "objectID": "W04.html#application-the-wisdom-of-the-crowd",
     "href": "W04.html#application-the-wisdom-of-the-crowd",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Application: The Wisdom of the Crowd",
     "text": "Application: The Wisdom of the Crowd\n\n\n\nThe collective opinion of a diverse group of independent individuals rather than that of a single expert.\nThe classical wisdom-of-the-crowds finding is about point estimation of a continuous quantity.\nPopularized by James Surowiecki (2004).\nThe opening anecdote is about Francis Galton’s1 surprise in 1907 that the crowd at a county fair accurately guessed the weight of an ox’s meat when their individual guesses were averaged.\n\n\n\n\n\n\nGalton (1822-1911) was a half-cousin to Charles Darwin and one of the founding fathers of statistics. He also was a scientific racist, see https://twitter.com/kareem_carr/status/1575506343401775104?s=20&t=8T5TzrayAWNShmOSzJgCJQ.."
   },
   {
     "objectID": "W04.html#galtons-data",
     "href": "W04.html#galtons-data",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Galton’s data1",
     "text": "Galton’s data1\nWhat is the weight of the meat of this ox?\n\n\n\n\nlibrary(readxl)\ngalton <- read_excel(\"data/galton_data.xlsx\")\ngalton |> ggplot(aes(Estimate)) + geom_histogram(binwidth = 5) + geom_vline(xintercept = 1198, color = \"green\") + \n geom_vline(xintercept = mean(galton$Estimate), color = \"red\") + geom_vline(xintercept = median(galton$Estimate), color = \"blue\") + geom_vline(xintercept = Mode(galton$Estimate), color = \"purple\")\n\n\n\n\n787 estimates, true value 1198, mean 1196.7, median 1208, mode 1218\nKenneth Wallis dug out the data from Galton’s notebook and put it here https://warwick.ac.uk/fac/soc/economics/staff/kfwallis/publications/galton_data.xlsx"
   },
   {
     "objectID": "W04.html#viertelfest-bremen-2008",
     "href": "W04.html#viertelfest-bremen-2008",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Viertelfest Bremen 20081",
     "text": "Viertelfest Bremen 20081\nHow many lots will be sold by the end of the festival?\n\nviertel <- read_csv(\"data/Viertelfest.csv\")\nviertel |> ggplot(aes(`Schätzung`)) + geom_histogram() + geom_vline(xintercept = 10788, color = \"green\") + \n geom_vline(xintercept = mean(viertel$Schätzung), color = \"red\") + geom_vline(xintercept = median(viertel$Schätzung), color = \"blue\") + geom_vline(xintercept = Mode(viertel$Schätzung), color = \"purple\")\n\n\n\n\n1226 estimates, the maximal value is 29530000!\nWe should filter out the highest values for the histogram…\nData collected as additional guessing game at the Lottery “Haste mal ’nen Euro?”, data provided by Jan Lorenz https://docs.google.com/spreadsheets/d/1HiYhUrYrsbeybJ10mwsae_hQCawZlUQFOOZzcugXzgA/edit#gid=0"
   },
   {
     "objectID": "W04.html#viertelfest-bremen-2008-1",
     "href": "W04.html#viertelfest-bremen-2008-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Viertelfest Bremen 2008",
     "text": "Viertelfest Bremen 2008\nHow many lots will be sold by the end of the festival?\n\nviertel <- read_csv(\"data/Viertelfest.csv\")\nviertel |> filter(Schätzung<100000) |> ggplot(aes(`Schätzung`)) + geom_histogram(binwidth = 500) + geom_vline(xintercept = 10788, color = \"green\") + \n geom_vline(xintercept = mean(viertel$Schätzung), color = \"red\") + geom_vline(xintercept = median(viertel$Schätzung), color = \"blue\") + geom_vline(xintercept = Mode(viertel$Schätzung), color = \"purple\") + geom_vline(xintercept = exp(mean(log(viertel$Schätzung))), color = \"orange\")\n\n\n1226 estimates, true value 10788, mean 53163.9, median 9843, mode 10000,\ngeometric mean 10510.1"
   },
   {
     "objectID": "W04.html#log_10-transformation-viertelfest",
     "href": "W04.html#log_10-transformation-viertelfest",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "\\(\\log_{10}\\) transformation Viertelfest",
     "text": "\\(\\log_{10}\\) transformation Viertelfest\n\nviertel |> mutate(log10Est = log10(Schätzung)) |> ggplot(aes(log10Est)) + geom_histogram(binwidth = 0.05) + geom_vline(xintercept = log10(10788), color = \"green\") + \n geom_vline(xintercept = log10(mean(viertel$Schätzung)), color = \"red\") + geom_vline(xintercept = log10(median(viertel$Schätzung)), color = \"blue\") + geom_vline(xintercept = log10(Mode(viertel$Schätzung)), color = \"purple\") + geom_vline(xintercept = mean(log10(viertel$Schätzung)), color = \"orange\")\n\n\n1226 estimates, true value 10788, mean 53163.9, median 9843, mode 10000,\ngeometric mean 10510.1"
   },
   {
     "objectID": "W04.html#wisdom-of-the-crowd-insights",
     "href": "W04.html#wisdom-of-the-crowd-insights",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Wisdom of the crowd insights",
     "text": "Wisdom of the crowd insights\n\n\nIn Galton’s sample the different measures do not make a big difference\nIn the Viertelfest data the arithmetic mean performs very bad!\nThe mean is vulnerable to extreme values.\nQuoting Galton on the mean as a democratic aggregation function:\n“The mean gives voting power to the cranks in proportion to their crankiness.”\nThe mode tends to be on focal values as round numbers (10,000). In Galton’s data this is not so pronounced beause estimators used several units which Galton had to convert.\nHow to choose a measure to aggreagte the wisdom?\n\nBy the nature of the estimate problem? Is the scale mostly clear? (Are we in the hundreds, thousands, ten thousands, …)\nBy the nature of the distribution?\nThere is no real insurance against a systematic bias in the population."
   },
   {
     "objectID": "W04.html#measures-of-dispersion-1",
     "href": "W04.html#measures-of-dispersion-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Measures of dispersion1",
     "text": "Measures of dispersion1\nGoal: We want to measure\n\nhow spread out values are around the central tendency.\nHow stretched or squeezed is the distribution?\n\nVariance is the mean of the squared deviation from the mean: \\(\\text{Var}(x) = \\frac{1}{n}\\sum_{i=1}^n(x_i - \\mu)^2\\) where \\(\\mu\\) (mu) is the mean.\nStandard deviation is the square root of the variance \\(\\text{SD}(x) = \\sqrt{\\text{Var}(x)}\\).\nThe standard deviation is often denoted \\(\\sigma\\) (sigma) and the variance \\(\\sigma^2\\).\nMean absolute deviation (MAD) is the mean of the absolute deviation from the mean: \\(\\text{MAD}(x) = \\frac{1}{n}\\sum_{i=1}^n|x_i - \\mu|\\).\nRange is the difference of the maximal and the minimal value \\(\\max(x) - \\min(x)\\).\nAlso called variability, scatter, or spread."
   },
   {
     "objectID": "W04.html#examples-of-measures-of-dispersion",
     "href": "W04.html#examples-of-measures-of-dispersion",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Examples of measures of dispersion",
     "text": "Examples of measures of dispersion\n\n\n\nvar(galton$Estimate)\n\n[1] 5415.013\n\nsd(galton$Estimate)\n\n[1] 73.58677\n\nmad(galton$Estimate)\n\n[1] 51.891\n\nrange(galton$Estimate)\n\n[1]  896 1516\n\ndiff(range(galton$Estimate))\n\n[1] 620\n\n\n\n\nvar(viertel$Schätzung)\n\n[1] 719774887849\n\nsd(viertel$Schätzung)\n\n[1] 848395.5\n\nmad(viertel$Schätzung)\n\n[1] 8771.803\n\nrange(viertel$Schätzung)\n\n[1]      120 29530000\n\ndiff(range(viertel$Schätzung))\n\n[1] 29529880\n\n\n\n\n\n\nVariance (and standard deviation) in statistics is usually computed with \\(\\frac{1}{n-1}\\) instead of \\(\\frac{1}{n}\\) to provide an unbiased estimator of the potentially underlying population variance. We omit more detail here."
   },
   {
     "objectID": "W04.html#standardization",
     "href": "W04.html#standardization",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Standardization",
     "text": "Standardization\nVariables are standardized by subtracting their mean and then dividing by their standard deviations.\nA value from a standardized variable is called a standard score or z-score.\n\\(z_i = \\frac{x_i - \\mu}{\\sigma}\\)\nwhere \\(\\mu\\) is the mean and \\(\\sigma\\) the standard deviation of the vector \\(x\\).\n\nThis is a shift-scale transformation. We shift by the mean and scale by the standard deviation.\nA standard score \\(z_i\\) shows how mean standard deviations \\(x_i\\) is away from the mean of \\(x\\)."
   },
   {
     "objectID": "W04.html#quantiles",
     "href": "W04.html#quantiles",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Quantiles",
     "text": "Quantiles\nCut points specifying intervals which contain equal amounts of values of the distribution.\n\\(q\\)-quantiles divide into \\(q\\) intervals covering all values.\nThe quantiles are the cut points: For \\(q\\) intervals there are \\(q-1\\) cut points of interest.\n\nThe one 2-quantile is the median.\nThe three 4-quantiles are called quartiles. The second quartile is the median.\n100-quantiles are called percentiles\n\n\n\nWe omit problems of estimating quantiles from a sample where the number of estimates does not fit to a desired partion of equal size here."
   },
   {
     "objectID": "W04.html#examples-of-quantiles",
     "href": "W04.html#examples-of-quantiles",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Examples of quantiles",
     "text": "Examples of quantiles\n\n# Min, 3 Quartiles, Max\nquantile(galton$Estimate, prob = seq(0, 1, by = 0.25))\n\n    0%    25%    50%    75%   100% \n 896.0 1162.5 1208.0 1236.0 1516.0 \n\nquantile(viertel$Schätzung, prob = seq(0, 1, by = 0.25))\n\n      0%      25%      50%      75%     100% \n     120     5000     9843    20000 29530000 \n\n\nInterpretation: What does the value at 25% mean?\n\nThe 25% of all values are lower than the value. 75% are larger."
   },
   {
     "objectID": "W04.html#interquartile-range-iqr",
     "href": "W04.html#interquartile-range-iqr",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Interquartile range (IQR)",
     "text": "Interquartile range (IQR)\nThe difference between the 1st and the 3rd quartile.\n\nA very common measure of dispersion.\n\nExamples:\n\n# Min, 3 Quartiles, Max\nIQR(galton$Estimate)\n\n[1] 73.5\n\nsd(galton$Estimate) # for comparison\n\n[1] 73.58677\n\nIQR(viertel$Schätzung)\n\n[1] 15000\n\nsd(viertel$Schätzung)\n\n[1] 848395.5"
   },
   {
     "objectID": "W04.html#summary-of-numerical-vectors-in-r",
     "href": "W04.html#summary-of-numerical-vectors-in-r",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Summary of numerical vectors in R",
     "text": "Summary of numerical vectors in R\n\nsummary(galton$Estimate)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n    896    1162    1208    1197    1236    1516 \n\n\n\nsummary(viertel$Schätzung)\n\n    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. \n     120     5000     9843    53164    20000 29530000"
   },
   {
     "objectID": "W04.html#introducing-palmer-penguins",
     "href": "W04.html#introducing-palmer-penguins",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Introducing Palmer Penguins",
     "text": "Introducing Palmer Penguins\nPalmer Penguins\nChinstrap, Gentoo, and Adélie Penguins\n   \n\n\n# A tibble: 344 × 8\n   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n   <fct>   <fct>              <dbl>         <dbl>             <int>       <int>\n 1 Adelie  Torgersen           39.1          18.7               181        3750\n 2 Adelie  Torgersen           39.5          17.4               186        3800\n 3 Adelie  Torgersen           40.3          18                 195        3250\n 4 Adelie  Torgersen           NA            NA                  NA          NA\n 5 Adelie  Torgersen           36.7          19.3               193        3450\n 6 Adelie  Torgersen           39.3          20.6               190        3650\n 7 Adelie  Torgersen           38.9          17.8               181        3625\n 8 Adelie  Torgersen           39.2          19.6               195        4675\n 9 Adelie  Torgersen           34.1          18.1               193        3475\n10 Adelie  Torgersen           42            20.2               190        4250\n# ℹ 334 more rows\n# ℹ 2 more variables: sex <fct>, year <int>"
   },
   {
     "objectID": "W04.html#summary-also-works-for-data-frames",
     "href": "W04.html#summary-also-works-for-data-frames",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Summary also works for data frames",
     "text": "Summary also works for data frames\n\nsummary(penguins)\n\n      species          island    bill_length_mm  bill_depth_mm  \n Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  \n Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  \n Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  \n                                 Mean   :43.92   Mean   :17.15  \n                                 3rd Qu.:48.50   3rd Qu.:18.70  \n                                 Max.   :59.60   Max.   :21.50  \n                                 NA's   :2       NA's   :2      \n flipper_length_mm  body_mass_g       sex           year     \n Min.   :172.0     Min.   :2700   female:165   Min.   :2007  \n 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  \n Median :197.0     Median :4050   NA's  : 11   Median :2008  \n Mean   :200.9     Mean   :4202                Mean   :2008  \n 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  \n Max.   :231.0     Max.   :6300                Max.   :2009  \n NA's   :2         NA's   :2"
   },
   {
     "objectID": "W04.html#boxplots",
     "href": "W04.html#boxplots",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Boxplots",
     "text": "Boxplots\nA condensed visualization of a distribution showing location, spread, skewness and outliers.\n\ngalton |> ggplot(aes(x = Estimate)) + geom_boxplot()\n\n\n\nThe box shows the median in the middle and the other two quartiles as their borders.\nWhiskers: From above the upper quartile, a distance of 1.5 times the IQR is measured out and a whisker is drawn up to the largest observed data point from the dataset that falls within this distance. Similarly, for the lower quartile.\nWhiskers must end at an observed data point! (So lengths can differ.)\nAll other values outside of box and whiskers are shown as points and often called outliers. (There may be none.)"
   },
   {
     "objectID": "W04.html#boxplots-vs.-histograms",
     "href": "W04.html#boxplots-vs.-histograms",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Boxplots vs. histograms",
     "text": "Boxplots vs. histograms\n\nHistograms can show the shape of the distribution well, but not the summary statistics like the median.\n\n\ngalton |> ggplot(aes(x = Estimate)) + geom_boxplot()\n\n\n\n\n\ngalton |> ggplot(aes(x = Estimate)) + geom_histogram(binwidth = 5)"
   },
   {
     "objectID": "W04.html#boxplots-vs.-histograms-1",
     "href": "W04.html#boxplots-vs.-histograms-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Boxplots vs. histograms",
     "text": "Boxplots vs. histograms\n\nBoxplots can not show the patterns of bimodal or multimodal distributions.\n\n\npalmerpenguins::penguins |> ggplot(aes(x = flipper_length_mm)) + geom_boxplot()\n\n\n\n\n\npalmerpenguins::penguins |> ggplot(aes(x = flipper_length_mm)) + geom_histogram(binwidth = 1)"
   },
   {
     "objectID": "W04.html#minimizing-proporties-of-mean-and-median",
     "href": "W04.html#minimizing-proporties-of-mean-and-median",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Minimizing proporties of Mean and Median",
     "text": "Minimizing proporties of Mean and Median\nMean minimizes the mean of squared deviations from it. No other value \\(a\\) has a lower mean of square distances from the data points. \\(\\frac{1}{n}\\sum_{i=1}^n(x_i - a)^2\\).\n\nMedian minimizes the sum of the absolute deviation. No other value \\(a\\) has a lower mean of absolute distances from the data points. \\(\\frac{1}{n}\\sum_{i=1}^n|x_i - a|\\)."
   },
   {
     "objectID": "W04.html#two-families-of-summary-statistics",
     "href": "W04.html#two-families-of-summary-statistics",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Two families of summary statistics",
     "text": "Two families of summary statistics\n\nMeasures based on sums (related to mathematical moments)\n\nMean\nStandard deviation\n\nMeasures based on the ordered sequence of these observations (order statistics)\n\nMedian (and all quantiles)\nInterquartile range"
   },
   {
     "objectID": "W04.html#covariance",
     "href": "W04.html#covariance",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Covariance",
     "text": "Covariance\nGoal: We want to measure the joint variation in a sequences of numerical observations of two variables \\(x_1,\\dots,x_n\\) and \\(y_1, \\dots, y_n\\).\nCovariance \\(\\text{cov}(x,y) = \\frac{1}{n}\\sum_{i=1}^n(x_i - \\mu_x)(y_i - \\mu_y)\\)\nwhere \\(\\mu_x\\) and \\(\\mu_y\\) are the arithmetic means of \\(x\\) and \\(y\\).\nNote: \\(\\text{cov}(x,x) = \\text{Var}(x)\\)"
   },
   {
     "objectID": "W04.html#correlation",
     "href": "W04.html#correlation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Correlation",
     "text": "Correlation\nGoal: We want to measure the linear correlation in a sequences of numerical observations of two variables \\(x_1,\\dots,x_n\\) and \\(y_1, \\dots, y_n\\).\nPearson correlation coefficient \\(r_{xy} = \\frac{\\sum_{i=1}^n(x_i - \\mu_x)(y_i - \\mu_y)}{\\sqrt{\\sum_{i=1}^n(x_i - \\mu_x)^2}\\sqrt{\\sum_{i=1}^n(y_i - \\mu_y)^2}}\\)\nNote, \\(r_{xy} = \\frac{\\text{cov}(x,y)}{\\sigma_x\\sigma_y}\\)\nwhere \\(\\sigma_x\\) and \\(\\sigma_y\\) are the standard deviations of \\(x\\) and \\(y\\).\nNote, when \\(x\\) and \\(y\\) are standard scores (each with mean zero and standard deviation one), then \\(\\text{cov}(x,y) = r_{xy}\\).\n\n\nThere are other correlation coefficients which we omit hear."
   },
   {
     "objectID": "W04.html#interpretation-of-correlation",
     "href": "W04.html#interpretation-of-correlation",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Interpretation of correlation",
     "text": "Interpretation of correlation\nCorrelation between two vectors \\(x\\) and \\(y\\) is “normalized”.\n\nThe maximal possible values is \\(r_{xy} = 1\\)\n\n\\(x\\) and \\(y\\) are fully correlated\n\nThe minimal values is \\(r_{xy} = -1\\)\n\n\\(x\\) and \\(y\\) are anticorrelated\n\nWhen \\(r_{xy} \\approx 0\\) the variables are uncorrelated\n\\(r_{xy} = r_{yx}\\)"
   },
   {
     "objectID": "W04.html#correlation-matrix",
     "href": "W04.html#correlation-matrix",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Correlation matrix",
     "text": "Correlation matrix\nUsing corrr from the packagestidymodels\n\nlibrary(corrr)\npalmerpenguins::penguins |> select(-species, -island, -sex) |> \n correlate()\n\n# A tibble: 5 × 6\n  term        bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    year\n  <chr>                <dbl>         <dbl>             <dbl>       <dbl>   <dbl>\n1 bill_lengt…        NA            -0.235              0.656      0.595   0.0545\n2 bill_depth…        -0.235        NA                 -0.584     -0.472  -0.0604\n3 flipper_le…         0.656        -0.584             NA          0.871   0.170 \n4 body_mass_g         0.595        -0.472              0.871     NA       0.0422\n5 year                0.0545       -0.0604             0.170      0.0422 NA"
   },
   {
     "objectID": "W04.html#correlation-visualization",
     "href": "W04.html#correlation-visualization",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Correlation visualization",
     "text": "Correlation visualization\nUsing correlate and see from easystats\n\nlibrary(correlation)\nlibrary(see)\nresults <- palmerpenguins::penguins |> select(-species, -island, -sex) |> \n correlation()\nresults %>%\n  summary(redundant = TRUE) %>%\n  plot()"
   },
   {
     "objectID": "W04.html#exploratory-data-analysis-1",
     "href": "W04.html#exploratory-data-analysis-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Exploratory Data Analysis",
     "text": "Exploratory Data Analysis\n\nEDA is the systematic exploration of data using\n\nvisualization\ntransformation\ncomputation of characteristic values\nmodeling\n\n\n\nComputation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range\nModeling: Operations like linear regression or dimensionality reduction. We haven’t talked about it, but will do soon."
   },
   {
     "objectID": "W04.html#systematic-but-no-standard-routine",
     "href": "W04.html#systematic-but-no-standard-routine",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Systematic but no standard routine",
     "text": "Systematic but no standard routine\n\n“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox\n\n\n“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey"
   },
   {
     "objectID": "W04.html#systematic-but-no-standard-routine-1",
     "href": "W04.html#systematic-but-no-standard-routine-1",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Systematic but no standard routine",
     "text": "Systematic but no standard routine\n\nGoal of EDA: Develop understanding of your data.\nEDA’s iterative cycle\n\nGenerate questions about your data.\nSearch for answers by visualizing, transforming, and modelling your data.\nUse what you learn to refine your questions and/or generate new questions.\n\nEDA is fundamentally a creative process."
   },
   {
     "objectID": "W04.html#questions",
     "href": "W04.html#questions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Questions",
     "text": "Questions\n\nThe way to ask quality questions:\n\nGenerate many questions!\nYou cannot come up with most interesting questions when you start.\n\nThere is no rule which questions to ask. These are useful\n\nWhat type of variation occurs within my variables?\n(Barplots, Histograms,…)\nWhat type of covariation occurs between my variables?\n(Scatterplots, Timelines,…)"
   },
   {
     "objectID": "W04.html#eda-embedded-in-a-statistical-data-science-project",
     "href": "W04.html#eda-embedded-in-a-statistical-data-science-project",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "EDA embedded in a statistical data science project",
     "text": "EDA embedded in a statistical data science project\n\nStating and refining the question\nExploring the data\nBuilding formal statistical models\nInterpreting the results\nCommunicating the results\n\n\n\nRoger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015)."
   },
   {
     "objectID": "W04.html#six-types-of-questions",
     "href": "W04.html#six-types-of-questions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Six types of questions",
     "text": "Six types of questions\n\nDescriptive: summarize a characteristic of a set of data\nExploratory: analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)\nInferential: analyze patterns, trends, or relationships in representative data from a population\nPredictive: make predictions for individuals or groups of individuals\nCausal: whether changing one factor will change another factor, on average, in a population\nMechanistic: explore “how” as opposed to whether\n\n\nWe only did 1 and 2, so far.\n\n\n\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146."
   },
   {
     "objectID": "W04.html#descriptive-projects",
     "href": "W04.html#descriptive-projects",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Descriptive Projects",
     "text": "Descriptive Projects\n\n\n\nDubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models"
   },
   {
     "objectID": "W04.html#data-analysis-flowchart",
     "href": "W04.html#data-analysis-flowchart",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Data Analysis Flowchart",
     "text": "Data Analysis Flowchart"
   },
   {
     "objectID": "W04.html#example-covid-19-and-vitamin-d",
     "href": "W04.html#example-covid-19-and-vitamin-d",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Example: COVID-19 and Vitamin D",
     "text": "Example: COVID-19 and Vitamin D\n\n\nDescriptive: frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals\nExploratory: examine relationships between a range of dietary factors and COVID-19 hospitalisations\nInferential: examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large\nPredictive: what types of people will take Vitamin D supplements during the next year\nCausal: whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised\nMechanistic: how increased vitamin D intake leads to a reduction in the number of viral illnesses"
   },
   {
     "objectID": "W04.html#questions-to-questions",
     "href": "W04.html#questions-to-questions",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Questions to questions",
     "text": "Questions to questions\n\nDo you have appropriate data to answer your question?\nDo you have information on confounding variables?\nWas the data you’re working with collected in a way that introduces bias?\n\n\n\nExample\nI want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.\n\nIs this a biased or an unbiased estimate of the number of children in households in Bremen?\nIf biased, will the value be an overestimate or underestimate?"
   },
   {
     "objectID": "W04.html#context-information-is-important",
     "href": "W04.html#context-information-is-important",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Context Information is important!",
     "text": "Context Information is important!\n\nNot all information is in the data!\nPotential confounding variables you infer from general knowledge\nInformation about data collection you may receive from an accompanying report\nInformation about computed variables you may need to look up in accompanying documentation\nInformation about certain variables you may find in an accompanying codebook. For example the exact wording of questions in survey data."
   },
   {
     "objectID": "W04.html#achievements-and-next-steps",
     "href": "W04.html#achievements-and-next-steps",
-    "title": "W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
+    "title": "W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis",
     "section": "Achievements and next steps",
     "text": "Achievements and next steps\n\nWe have learned about the data science process\nYou made essential steps in data visualization and data wrangling with New York City Flights in the Homework\nYou can write and render reproducible reports\nWe had some math refreshment\nWe learned some data science data and programming concepts in R and in Python. Reconsider them in later homework!\n\nNext steps coming (you will receive individual repositories for this):\n\nHomework mimicking data science projects\nSome exploratory data analysis in a sandbox\nThinking about your own data science project (in groups of 2-3)\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
@@ -1663,7 +1663,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1504959534"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1504959871"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
