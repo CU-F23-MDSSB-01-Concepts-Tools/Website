@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</title>
+  <title>Data Science Concepts / Data Science Tools - W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#3 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</h1>
+  <h1 class="title">W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis</h1>
   <p class="subtitle">With material adopted from <a href="https://datasciencebox.org">Data Science in a Box</a> and <a href="https://r4ds.hadley.nz">R4DS</a></p>
 
 <div class="quarto-title-authors">
@@ -1878,7 +1878,7 @@ $class
 <div class="columns">
 <div class="column" style="width:60%;">
 <ul>
-<li>ISO 8601 standard for dates: <strong>YYYY-MM-DD</strong>. Today: 2023-09-18.</li>
+<li>ISO 8601 standard for dates: <strong>YYYY-MM-DD</strong>. Today: 2023-09-25.</li>
 <li>Dates in R are numeric vectors that represent the number of days since 1 January 1970.</li>
 </ul>
 <div class="cell">
@@ -1920,7 +1920,7 @@ $class
 <div class="cell">
 <div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1"></a><span class="fu">Sys.Date</span>() <span class="sc">-</span> <span class="fu">as.Date</span>(<span class="st">"1976-01-16"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Time difference of 17412 days</code></pre>
+<pre><code>Time difference of 17419 days</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1"></a><span class="co"># Sys.Date() gives as the current day your computer is set to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1959,7 +1959,7 @@ POSIXct: Portable Operating System Interface, calendar time. Stores date and tim
 <div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a><span class="fu">as.double</span>(lubridate<span class="sc">::</span><span class="fu">now</span>()) <span class="sc">-</span> </span>
 <span id="cb118-2"><a href="#cb118-2"></a> <span class="fu">as.double</span>(lubridate<span class="sc">::</span><span class="fu">ymd_hm</span>(<span class="st">"1976-01-16_12:04"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1504423821</code></pre>
+<pre><code>[1] 1504959534</code></pre>
 </div>
 </div>
 </section>

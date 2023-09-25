@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model</title>
+  <title>Data Science Concepts / Data Science Tools - W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#4: Exploratory Data Analysis, Functions, Logarithms and Exponentials, Modeling, Fitting a Linear Model</h1>
+  <h1 class="title">W#04: Math refreshments, Function Programming, Descriptive Statistics, Exploratory Data Analysis</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -402,7 +402,7 @@ Jan Lorenz
 
 </section>
 <section>
-<section id="math-sets-and-vectors" class="title-slide slide level1 center" data-background-color="aquamarine">
+<section id="math-sets-and-vectors" class="title-slide slide level1 center">
 <h1>Math: Sets and vectors</h1>
 
 </section>
@@ -414,7 +414,7 @@ Jan Lorenz
 <li><span class="math inline">\(\{3, \text{Hi}, 😀, 🖖 \}\)</span></li>
 <li><span class="math inline">\(\{1,3,5\}\)</span></li>
 <li>The natural numbers <span class="math inline">\(\mathbb{N} = \{1, 2, 3, \dots\}\)</span> (infinite!)</li>
-<li><span class="math inline">\(\{\mathtt{"EWR"} \mathtt{"LGA"} \mathtt{"JFK"}\}\)</span><br>
+<li><span class="math inline">\(\{\mathtt{"EWR"}, \mathtt{"LGA"}, \mathtt{"JFK"}\}\)</span><br>
 these are <code>origin</code> airports in <code>flights</code></li>
 </ul>
 </section>
@@ -424,16 +424,24 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <p>In a set each thing can only be once and the order does not matter!</p>
 <p><span class="math inline">\(\{1,3,5\} = \{3,5,1\} = \{1,1,1,3,5,5\}\)</span></p>
 <p>For vectors:</p>
-<p><span class="math inline">\([1\ 3\ 5] \neq [3\ 5\ 1]\)</span> because we compare component-wise, so we cannot even compare with = <span class="math inline">\([1\ 1\ 1\ 3\ 5\ 5]\)</span></p>
+<p><span class="math inline">\([1\ 3\ 5] \neq [3\ 5\ 1]\)</span> because we compare component-wise, so we cannot even compare with those with the vector <span class="math inline">\([1\ 1\ 1\ 3\ 5\ 5]\)</span></p>
 </section>
 <section id="math-set-operations" class="slide level2" data-background-color="aquamarine">
 <h2>Math: Set operations</h2>
-<p>For sets <span class="math inline">\(A = \{🐺, 🦊, 🐶\}\)</span> and <span class="math inline">\(B = \{🐶, 🐷, 🐹\}\)</span>:</p>
+<p>Sets <span class="math inline">\(A = \{🐺, 🦊, 🐶\}\)</span> and <span class="math inline">\(B = \{🐶, 🐷, 🐹\}\)</span>, <span class="math inline">\(C = \{🐶, 🐷\}\)</span>:</p>
+<div>
 <ul>
-<li>Set <strong>union</strong> <span class="math inline">\(A \cup B\)</span> = {🐺, 🦊, 🐶, 🐷, 🐹}</li>
-<li>Set <strong>intersection</strong> <span class="math inline">\(A \cap B\)</span> = {🐶}</li>
-<li>Set <strong>different</strong> <span class="math inline">\(A \setminus B\)</span> = {🐺, 🦊}$, <span class="math inline">\(B \setminus A\)</span> = {🐷, 🐹}</li>
+<li class="fragment">Set <strong>union</strong> <span class="math inline">\(A \cup B\)</span> = {🐺, 🦊, 🐶, 🐷, 🐹}<br>
+<span class="math inline">\(x \in A \cup B\)</span> when <span class="math inline">\(x \in A\)</span> <code>|</code> (or) <span class="math inline">\(x\in B\)</span></li>
+<li class="fragment">Set <strong>intersection</strong> <span class="math inline">\(A \cap B\)</span> = {🐶}<br>
+<span class="math inline">\(x \in A \cap B\)</span> when <span class="math inline">\(x \in A\)</span> <code>&amp;</code> (and) <span class="math inline">\(x\in B\)</span></li>
+<li class="fragment">Set <strong>difference</strong> <span class="math inline">\(A \setminus B = \{🐺, 🦊\}\)</span>, <span class="math inline">\(B \setminus A\)</span> = {🐷, 🐹}</li>
+<li class="fragment"><strong>Subset</strong>: <span class="math inline">\(C \subset B\)</span> but <span class="math inline">\(C \not\subset A\)</span></li>
 </ul>
+</div>
+<div class="fragment">
+<p>See the analogy of set operations and logical operations.</p>
+</div>
 </section>
 <section id="set-operations-in-r" class="slide level2 smaller">
 <h2>Set operations in R</h2>
@@ -444,6 +452,7 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <pre><code>[1] "EWR" "LGA" "JFK"</code></pre>
 </div>
 </div>
+<div class="fragment">
 <p><code>setequal</code> tests for set equality</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">setequal</span>(<span class="fu">c</span>(<span class="st">"EWR"</span>,<span class="st">"LGA"</span>,<span class="st">"JFK"</span>), <span class="fu">c</span>(<span class="st">"EWR"</span>,<span class="st">"EWR"</span>,<span class="st">"LGA"</span>,<span class="st">"JFK"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -451,6 +460,8 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
+</div>
+<div class="fragment">
 <p><code>union</code>, <code>intersect</code>, <code>setdiff</code> treat vectors as sets and operate as expected</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">union</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>,<span class="dv">3</span><span class="sc">:</span><span class="dv">7</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -466,162 +477,27 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <pre><code>[1] 1 2</code></pre>
 </div>
 </div>
-</section></section>
-<section>
-<section id="exploratory-data-analysis" class="title-slide slide level1 center" data-background-color="yellow">
-<h1>Exploratory Data Analysis</h1>
-
+</div>
 </section>
-<section id="exploratory-data-analysis-1" class="slide level2 smaller" data-background-color="yellow">
-<h2>Exploratory Data Analysis</h2>
-<p><img data-src="img/data-science-explore.png"></p>
-<p>EDA is the systematic exploration of data using</p>
+<section id="sets-take-away" class="slide level2">
+<h2>Sets: Take-away</h2>
 <ul>
-<li>visualization</li>
-<li>transformation</li>
-<li>computation of characteristic values</li>
-<li>modeling</li>
-</ul>
-
-<aside><div>
-<p>We haven’t talked much about the latter two, but will do soon.<br>
-Computation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range<br>
-Modeling: Operations like linear regression or dimensionality reduction</p>
-</div></aside></section>
-<section id="systematic-but-no-standard-routine" class="slide level2" data-background-color="yellow">
-<h2>Systematic but no standard routine</h2>
-<blockquote>
-<p>“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox</p>
-</blockquote>
-<blockquote>
-<p>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey</p>
-</blockquote>
-</section>
-<section id="systematic-but-no-standard-routine-1" class="slide level2" data-background-color="yellow">
-<h2>Systematic but no standard routine</h2>
+<li>Set operations are not a daily business in data science</li>
+<li>However, they are useful for data exploration!</li>
+<li>Knowing set operations is key to understand <strong>probability</strong>:
 <ul>
-<li>Goal of EDA: Develop understanding of your data.</li>
-<li>EDA’s iterative cycle
-<ol type="1">
-<li>Generate questions about your data.</li>
-<li>Search for answers by visualizing, transforming, and modelling your data.</li>
-<li>Use what you learn to refine your questions and/or generate new questions.</li>
-</ol></li>
-<li>EDA is fundamentally a creative process.</li>
-</ul>
-</section>
-<section id="questions" class="slide level2" data-background-color="yellow">
-<h2>Questions</h2>
-<ul>
-<li>The way to ask quality questions:
-<ul>
-<li>Generate many questions!</li>
-<li>You cannot come up with most interesting questions when you start.</li>
+<li>A <em>sample space</em> is the <em>set of all atomic events</em>.</li>
+<li>An <em>event</em> is a <em>subset of the sample</em></li>
+<li>A <em>probability function</em> assigns probabilities to all events.</li>
 </ul></li>
-<li>There is no rule which questions to ask. These are useful
-<ol type="1">
-<li>What type of <strong>variation</strong> occurs within my variables?<br>
-(Barplots, Histograms,…)</li>
-<li>What type of <strong>covariation</strong> occurs between my variables?<br>
-(Scatterplots, Timelines,…)</li>
-</ol></li>
-</ul>
-</section>
-<section id="eda-embedded-in-a-statistical-data-science-project" class="slide level2" data-background-color="yellow">
-<h2>EDA embedded in a <em>statistical</em> data science project</h2>
-<ol type="1">
-<li>Stating and refining the question</li>
-<li><strong>Exploring the data</strong></li>
-<li>Building formal statistical models</li>
-<li>Interpreting the results</li>
-<li>Communicating the results</li>
-</ol>
-
-<aside><div>
-<p>Roger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015).</p>
-</div></aside></section></section>
-<section>
-<section id="data-science-projects" class="title-slide slide level1 center" data-background-color="yellow">
-<h1>Data science projects</h1>
-<p>Getting into question-driven data work</p>
-</section>
-<section id="six-types-of-questions" class="slide level2 smaller" data-background-color="yellow">
-<h2>Six types of questions</h2>
-<ol type="1">
-<li><strong>Descriptive:</strong> summarize a characteristic of a set of data</li>
-<li><strong>Exploratory:</strong> analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)</li>
-<li><strong>Inferential:</strong> analyze patterns, trends, or relationships in representative data from a population</li>
-<li><strong>Predictive:</strong> make predictions for individuals or groups of individuals</li>
-<li><strong>Causal:</strong> whether changing one factor will change another factor, on average, in a population</li>
-<li><strong>Mechanistic:</strong> explore “how” as opposed to whether</li>
-</ol>
-
-<aside><div>
-<p>Leek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
-</div></aside></section>
-<section id="descriptive-projects" class="slide level2" data-background-color="yellow">
-<h2>Descriptive Projects</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DescripitiveResearch_Dubin1969.png"></p>
-<p></p><figcaption>Descriptive Projects</figcaption><p></p>
-</figure>
-</div>
-
-<aside><div>
-<p>Dubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models</p>
-</div></aside></section>
-<section id="data-analysis-flowchart" class="slide level2" data-background-color="yellow">
-<h2>Data Analysis Flowchart</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DataAnalysisFlowChart_LeekPeng.jpeg" height="550"></p>
-</figure>
-</div>
-</section>
-<section id="example-covid-19-and-vitamin-d" class="slide level2 smaller" data-background-color="yellow">
-<h2>Example: COVID-19 and Vitamin D</h2>
-<ol type="1">
-<li><strong>Descriptive:</strong> frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals</li>
-<li><strong>Exploratory:</strong> examine relationships between a range of dietary factors and COVID-19 hospitalisations</li>
-<li><strong>Inferential:</strong> examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large</li>
-<li><strong>Predictive:</strong> what types of people will take Vitamin D supplements during the next year</li>
-<li><strong>Causal:</strong> whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised</li>
-<li><strong>Mechanistic:</strong> how increased vitamin D intake leads to a reduction in the number of viral illnesses</li>
-</ol>
-</section>
-<section id="questions-to-your-questions" class="slide level2" data-background-color="yellow">
-<h2>Questions to your questions!</h2>
-<ul>
-<li>Do you have appropriate data to answer your question?</li>
-<li>Do you have information on confounding variables?</li>
-<li>Was the data you’re working with collected in a way that introduces bias?</li>
-</ul>
-
-<aside><div>
-<p><strong>Example</strong><br>
-I want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.</p>
-<ul>
-<li>Is this a biased or an unbiased estimate of the number of children in households in Bremen?</li>
-<li>If biased, will the value be an overestimate or underestimate?</li>
-</ul>
-</div></aside></section>
-<section id="context-information-is-important" class="slide level2 smaller" data-background-color="yellow">
-<h2>Context Information is important!</h2>
-<ul>
-<li>Not all information is in the data!</li>
-<li>Potential confounding variables you infer from general knowledge</li>
-<li>Information about data collection you may receive from an accompanying report</li>
-<li>Information about computed variables you may need to look up in accompanying documentation</li>
-<li>Information about certain variables you may find in an accompanying <strong>codebook</strong>. For example the exact wording of questions in survey data.</li>
 </ul>
 </section></section>
 <section>
-<section id="functions-math" class="title-slide slide level1 center" data-background-color="yellow">
-<h1>Functions (Math)</h1>
+<section id="math-functions" class="title-slide slide level1 center">
+<h1>Math: Functions</h1>
 
 </section>
-<section id="functions-mathematically" class="slide level2" data-background-color="yellow">
+<section id="functions-mathematically" class="slide level2" data-background-color="aquamarine">
 <h2>Functions mathematically</h2>
 <p>Consider two sets: The <em>domain</em> <span class="math inline">\(X\)</span> and the <em>codomain</em> <span class="math inline">\(Y\)</span>.</p>
 <p>A <em>function</em> <span class="math inline">\(f\)</span> assigns each element of <span class="math inline">\(X\)</span> to exactly one element of <span class="math inline">\(Y\)</span>.</p>
@@ -631,7 +507,7 @@ I want to estimate the average number of children in households in Bremen. I con
 <span style="color:blue;">“<span class="math inline">\(f\)</span> maps from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span>”</span></p>
 <p>and <span class="math inline">\(x \mapsto f(x)\)</span><br>
 <span style="color:blue;">“<span class="math inline">\(x\)</span> maps to <span class="math inline">\(f(x)\)</span>”</span></p>
-<p>The yellow set is called the <em>image</em> of <span class="math inline">\(f\)</span>.</p>
+<p>The khaki set is called the <em>image</em> of <span class="math inline">\(f\)</span>.</p>
 </div><div class="column">
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Codomain2.SVG/375px-Codomain2.SVG.png"></p>
 </div>
@@ -640,7 +516,7 @@ I want to estimate the average number of children in households in Bremen. I con
 <aside><div>
 <p>Picture from wikipedia.</p>
 </div></aside></section>
-<section id="conventions-in-mathematical-text" class="slide level2" data-background-color="yellow">
+<section id="conventions-in-mathematical-text" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Conventions in mathematical text</h2>
 <ul>
 <li>Sets are denoted with capital letters.</li>
@@ -648,21 +524,27 @@ I want to estimate the average number of children in households in Bremen. I con
 <li>Functions are often called <span class="math inline">\(f\)</span>, <span class="math inline">\(g\)</span>, or <span class="math inline">\(h\)</span>.</li>
 <li>Other terminology can be used!</li>
 </ul>
-<p><em>Responsibility of the mathematical writer: Define objects.</em></p>
-<p><em>Responsibility of the mathematical reader: Keep track of what objects are.</em></p>
-</section>
-<section id="is-this-a-function" class="slide level2 smaller">
-<h2>Is this a function?</h2>
+<div class="fragment">
+<p><strong>Important in math</strong></p>
+<ul>
+<li>When you read math:<br>
+<em>Keep track of what objects are! What are functions, what are sets, what are numbers, …</em><sup>1</sup></li>
+<li>When you write math: <em>Define what objects are.</em></li>
+</ul>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Watch: How to read math <a href="https://www.youtube.com/watch?v=Kp2bYWRQylk" class="uri">https://www.youtube.com/watch?v=Kp2bYWRQylk</a></p></li></ol></aside></section>
+<section id="is-this-a-mathematical-function" class="slide level2 smaller">
+<h2>Is this a mathematical function?</h2>
+<p><img data-src="img/function_lionfilter_input_Jan.jpeg" height="200"> <span class="math inline">\(\ \mapsto\ \)</span> <img data-src="img/function_lionfilter_Jan.jpg" height="200"></p>
 <p><em>Input</em> from <span class="math inline">\(X = \{\text{A picture where a face can be recognized}\}\)</span>.</p>
 <p><em>Function:</em> Upload input at <a href="https://funny.pho.to/lion/" class="uri">https://funny.pho.to/lion/</a> and download output.</p>
-<p><img data-src="img/function_lionfilter_input_Jan.jpeg" height="200"> <span class="math inline">\(\ \mapsto\ \)</span> <img data-src="img/function_lionfilter_Jan.jpg" height="200"></p>
 <p><em>Output</em> from <span class="math inline">\(Y = \{\text{Set of pictures with a specific format.}\}\)</span></p>
 <div class="fragment">
 <p>Yes, it is a function. <strong>Important: Output is the same for the same input!</strong></p>
 </div>
 </section>
-<section id="is-this-a-function-1" class="slide level2 smaller">
-<h2>Is this a function?</h2>
+<section id="is-this-a-mathematical-function-1" class="slide level2 smaller">
+<h2>Is this a mathematical function?</h2>
 <p><em>Input</em> a text snippet. <em>Function:</em> Enter text at <a href="https://www.craiyon.com" class="uri">https://www.craiyon.com</a>. <em>Output</em> a picture.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -681,18 +563,18 @@ I want to estimate the average number of children in households in Bremen. I con
 <p>No, it is not a function. It has nine outcomes and these change when run again.</p>
 </div>
 </section>
-<section id="graphs-of-functions" class="slide level2 smaller" data-background-color="yellow">
+<section id="graphs-of-functions" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Graphs of functions</h2>
 <ul>
 <li>A function is characterized by the set all possible pairs <span class="math inline">\((x,f(x))\)</span>.</li>
-<li>This is called its <em>graph</em>. Note, this can be infinitely many.</li>
+<li>This is called its <em>graph</em>.</li>
 <li>When domain and codomain are real numbers then the graph can be shown in a <em>Cartesian coordinate system</em>. Example <span class="math inline">\(f(x) = x^3 - x^2\)</span></li>
 </ul>
 
 <!-- ## Higher dimensional input and output -->
 <!-- Function can take $m$-dimensional input vectors and $n$-dimensional output vectors $f : \mathbb{R}^m \to \mathbb{R}^n$.  -->
 <img data-src="W04_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
-<section id="some-functions-f-mathbbr-to-mathbbr" class="slide level2 smaller" data-background-color="yellow">
+<section id="some-functions-f-mathbbr-to-mathbbr" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Some functions <span class="math inline">\(f: \mathbb{R} \to \mathbb{R}\)</span></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -720,7 +602,7 @@ I want to estimate the average number of children in households in Bremen. I con
 <aside><div>
 <p><span class="math inline">\(e\)</span> is <em>Euler’s number</em> <span class="math inline">\(2.71828\dots\)</span>. The natural logarithm is also often called <span class="math inline">\(\ln\)</span>. The square root function is <span class="math inline">\(\mathbb{R}_{\geq 0} \to \mathbb{R}\)</span>, the logarithm <span class="math inline">\(\mathbb{R}_{&gt;0} \to \mathbb{R}\)</span>.</p>
 </div></aside></section>
-<section id="shifts-and-scales" class="slide level2 smaller" data-background-color="yellow">
+<section id="shifts-and-scales" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Shifts and scales</h2>
 <p>How can we shift, stretch, or shrink a graph vertically and horizontally?</p>
 <div class="fragment">
@@ -751,7 +633,7 @@ I want to estimate the average number of children in households in Bremen. I con
 <p><span class="math inline">\(\quad f(x) = (x - a)^3 - (x - a)^2\)</span></p>
 <p>For <span class="math inline">\(a =\)</span> <span style="color:red;">-2</span>, <span style="color:darkred;">-0.5</span>, <span style="color:darkblue;">0.5</span>, <span style="color:blue;">2</span></p>
 <p><strong>Attention:</strong><br>
-Shifting as you think needs subtracting <span class="math inline">\(a\)</span>!<br>
+Shifting <span class="math inline">\(a\)</span> units to the right needs subtracting <span class="math inline">\(a\)</span>!<br>
 You can think of the <em>coordinate system being shifted</em> in direction <span class="math inline">\(a\)</span> while the graph stays.</p>
 </div><div class="column">
 <div class="cell">
@@ -802,8 +684,8 @@ You can think of the <em>coordinate system being stretched</em> multiplicatively
 </div>
 </div>
 </section>
-<section id="polynomials-and-exponentials" class="slide level2 smaller" data-background-color="yellow">
-<h2>Polynomials and exponentials</h2>
+<section id="math-polynomials-and-exponentials" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Math: Polynomials and exponentials</h2>
 <p>A <em>polynomial</em> is a function which is composed of (many) addends of the form <span class="math inline">\(ax^n\)</span> for different values of <span class="math inline">\(a\)</span> and <span class="math inline">\(n\)</span>.</p>
 <p>In an <em>exponential</em> the <span class="math inline">\(x\)</span> appears in the exponent.</p>
 <p><span class="math inline">\(f(x) = x^3\)</span> vs.&nbsp;<span style="color:red;"><span class="math inline">\(f(x) = e^x\)</span></span></p>
@@ -811,11 +693,11 @@ You can think of the <em>coordinate system being stretched</em> multiplicatively
 <img data-src="W04_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"><p><strong>For <span class="math inline">\(x\to\infty\)</span>, any exponential will finally “overtake” any polynomial.</strong></p>
 </section></section>
 <section>
-<section id="exponentiations-and-logarithms" class="title-slide slide level1 center" data-background-color="yellow">
-<h1>Exponentiations and logarithms</h1>
+<section id="math-exponentiations-and-logarithms" class="title-slide slide level1 center">
+<h1>Math: Exponentiations and logarithms</h1>
 
 </section>
-<section id="rules-for-exponentiation" class="slide level2" data-background-color="yellow">
+<section id="rules-for-exponentiation" class="slide level2" data-background-color="aquamarine">
 <h2>Rules for exponentiation</h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -852,7 +734,7 @@ Example: <span class="math inline">\((4^3)^2 = 64^2 = 4096 \qquad 4^{3^2} = 4^9 
 </div>
 </div>
 </section>
-<section id="more-rules-for-exponentiation" class="slide level2 smaller" data-background-color="yellow">
+<section id="more-rules-for-exponentiation" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>More rules for exponentiation</h2>
 <div class="columns">
 <div class="column" style="width:20%;">
@@ -875,29 +757,27 @@ Example: <span class="math inline">\((4^3)^2 = 64^2 = 4096 \qquad 4^{3^2} = 4^9 
 </div>
 </div>
 </div>
+</div>
+<div class="fragment">
 <p><strong>Pascal’s triangle</strong></p>
-<!-- $n$| ${n \choose 0}$ | ${n \choose 1}$ | ${n \choose 2}$ | ${n \choose 3}$ | ${n \choose 4}$ | ${n \choose 5}$  -->
-<!-- ---|-----------------|-----------------|-----------------|-----------------|-----------------|---------------- -->
-<!-- 1  |              1  |              1  |                 |                 |                 |      -->
-<!-- 2  |              1  |              2  |               1 |                 |                 |      -->
-<!-- 3  |              1  |              3  |               3 |               1 |                 |      -->
-<!-- 4  |              1  |              4  |               6 |               4 |              1  |      -->
-<!-- 5  |              1  |              5  |              10 |              10 |              5  |  1   -->
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif"></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" height="200"></p>
 <p></p><figcaption>From wikipedia</figcaption><p></p>
 </figure>
 </div>
 </div><div class="column">
-<p>We meet it again in Probability. (Binomial distribution, Central Limit Theorem)</p>
+<p>We meet it again in <strong>Probability</strong>:<br>
+A row represents a <em>binomial distribution</em><br>
+Which tends to mimics the <em>normal distribution</em> more and more<br>
+and is related to the <em>central limit theorem</em></p>
 </div>
 </div>
 </div>
 </section>
-<section id="logarithms" class="slide level2 smaller" data-background-color="yellow">
+<section id="logarithms" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Logarithms</h2>
 <p><strong>Definition:</strong> A <em>logarithm</em> of <span class="math inline">\(a\)</span> for some base <span class="math inline">\(b\)</span> is the value of the exponent which brings <span class="math inline">\(b\)</span> to <span class="math inline">\(a\)</span>: <span class="math inline">\(\log_b(a) = x\)</span> means that <span class="math inline">\(b^x =a\)</span></p>
 <p>Most common:</p>
@@ -950,7 +830,7 @@ Example: <span class="math inline">\((4^3)^2 = 64^2 = 4096 \qquad 4^{3^2} = 4^9 
 </div>
 </div>
 </section>
-<section id="rules-for-logarithms" class="slide level2" data-background-color="yellow">
+<section id="rules-for-logarithms" class="slide level2" data-background-color="aquamarine">
 <h2>Rules for logarithms</h2>
 <p>Usually only one base is used in the same context, because changing base is easy:</p>
 <p><span class="math inline">\(\log_c(x) = \frac{log_b(x)}{\log_b(c)} = \frac{\log(x)}{\log(c)}\)</span></p>
@@ -988,18 +868,22 @@ Example: <span class="math inline">\((4^3)^2 = 64^2 = 4096 \qquad 4^{3^2} = 4^9 
 </div>
 </section></section>
 <section>
-<section id="functions-programming" class="title-slide slide level1 center">
-<h1>Functions (Programming)</h1>
+<section id="functions-in-programming" class="title-slide slide level1 center">
+<h1>Functions in Programming</h1>
 
 </section>
-<section id="input-to-output" class="slide level2">
+<section id="input-to-output" class="slide level2 smaller">
 <h2>Input <span class="math inline">\(\to\)</span> output</h2>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Function_machine2.svg"></p>
 <ul>
-<li>Metaphorically, a function is a <em>machine</em> or a <em>blackbox</em> that for each input yields and output.</li>
-<li>The inputs of a function are also called <em>arguments</em>.</li>
+<li>Metaphorically, a function is a <em>machine</em> or a <em>blackbox</em> that for each input yields an output.</li>
+<li>The inputs of a function are also called <strong>arguments</strong>.</li>
 </ul>
+<div class="fragment">
+<p>Difference to math terminolgy:<br>
+<strong>The output need not be the same for the same input.</strong></p>
 
+</div>
 <aside><div>
 <p>Picture from wikipedia.</p>
 </div></aside></section>
@@ -1018,32 +902,31 @@ Example: <span class="math inline">\((4^3)^2 = 64^2 = 4096 \qquad 4^{3^2} = 4^9 
 </div>
 <p>Calling the function without brackets writes its code or some information.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>sd <span class="co"># This function is written in R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>sd <span class="co"># This function is written in R, and we see its code</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (x, na.rm = FALSE) 
 sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
     na.rm = na.rm))
-&lt;bytecode: 0x564075042778&gt;
+&lt;bytecode: 0x5622e4712f48&gt;
 &lt;environment: namespace:stats&gt;</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>c  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>c <span class="co"># This function is not written in R but is a R primitive</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (...)  .Primitive("c")</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>ggplot2<span class="sc">::</span>ggplot </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>ggplot2<span class="sc">::</span>ggplot <span class="co"># This function is not written solely in R</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>function (data = NULL, mapping = aes(), ..., environment = parent.frame()) 
 {
     UseMethod("ggplot")
 }
-&lt;bytecode: 0x56406f9ae708&gt;
+&lt;bytecode: 0x5622dd1c2848&gt;
 &lt;environment: namespace:ggplot2&gt;</code></pre>
 </div>
 </div>
 </section>
-<section id="functions-in-r" class="slide level2 smaller">
-<h2>Functions in R</h2>
-<p>Define your own functions like this</p>
+<section id="define-your-own-functions-in-r" class="slide level2 smaller">
+<h2>Define your own functions! (in R)</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>add_one <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb21-2"><a href="#cb21-2"></a>  x <span class="sc">+</span> <span class="dv">1</span> </span>
@@ -1160,8 +1043,8 @@ $out2
 </div>
 </div>
 </section>
-<section id="vector-creation-functions" class="slide level2">
-<h2>Vector creation functions</h2>
+<section id="recall-vector-creation-functions" class="slide level2">
+<h2>Recall: Vector creation functions</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -1189,43 +1072,539 @@ $out2
 </section>
 <section id="plotting-and-transformation" class="slide level2 smaller">
 <h2>Plotting and transformation</h2>
-<p>Vector creation and vectorized functions are key for plotting and transformation.</p>
+<p><strong>Vector creation and vectorized functions</strong> are key for plotting and transformation.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">2</span>    <span class="co"># Create a vectorized function</span></span>
 <span id="cb52-2"><a href="#cb52-2"></a>data <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">1.5</span>,<span class="at">by =</span><span class="fl">0.01</span>)) <span class="sc">|&gt;</span>    <span class="co"># Vector creation</span></span>
 <span id="cb52-3"><a href="#cb52-3"></a>    <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">func</span>(x))        <span class="co"># Vectorized transformation using the function</span></span>
-<span id="cb52-4"><a href="#cb52-4"></a>data <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb52-4"><a href="#cb52-4"></a>data <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="W04_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
-<section id="convenient-function-ggploting" class="slide level2">
-<h2>Convenient function <code>ggplot</code>ing</h2>
+<section id="conveniently-ggploting-functions" class="slide level2">
+<h2>Conveniently <code>ggplot</code>ing functions</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb53-2"><a href="#cb53-2"></a>    <span class="fu">geom_function</span>(<span class="at">fun =</span> log) <span class="sc">+</span></span>
-<span id="cb53-3"><a href="#cb53-3"></a>    <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb53-2"><a href="#cb53-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> log) <span class="sc">+</span></span>
+<span id="cb53-3"><a href="#cb53-3"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">3</span><span class="sc">*</span>x <span class="sc">-</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb53-4"><a href="#cb53-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-24-1.png" width="480"></p>
+</div>
+</div>
+
+<aside><div>
+<p>Line 3 shows another important concept: <strong>anonymous functions</strong>. The function <code>function(x) 3*x - 4</code> is defined <em>on the fly</em> without a name.</p>
+</div></aside></section>
+<section id="conditional-statements" class="slide level2 smaller">
+<h2>Conditional statements</h2>
+<ul>
+<li><code>if</code> executes a code block if a condition is <code>TRUE</code></li>
+<li><code>else</code> executes a code block if the condition is <code>FALSE</code></li>
+</ul>
+<p>Skeleton</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="cf">if</span> (condition) {</span>
+<span id="cb54-2"><a href="#cb54-2"></a>  <span class="co"># code block</span></span>
+<span id="cb54-3"><a href="#cb54-3"></a>} <span class="cf">else</span> {</span>
+<span id="cb54-4"><a href="#cb54-4"></a>  <span class="co"># code block</span></span>
+<span id="cb54-5"><a href="#cb54-5"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Example: A piece-wise defined function</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>piecewise <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb55-2"><a href="#cb55-2"></a>  <span class="cf">if</span> (x <span class="sc">&lt;</span> <span class="dv">2</span>) {</span>
+<span id="cb55-3"><a href="#cb55-3"></a>    <span class="fl">0.5</span> <span class="sc">*</span> x</span>
+<span id="cb55-4"><a href="#cb55-4"></a>  } <span class="cf">else</span> {</span>
+<span id="cb55-5"><a href="#cb55-5"></a>    x <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb55-6"><a href="#cb55-6"></a>  }</span>
+<span id="cb55-7"><a href="#cb55-7"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">piecewise</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">piecewise</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a><span class="fu">piecewise</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p>Problem: <code>piecewise</code> is not vectorized. <code>piecewise(c(1,2,3))</code> does not work.</p>
+</div>
+</section>
+<section id="vectorized-operations-with-map" class="slide level2 smaller">
+<h2>Vectorized operations with <code>map</code></h2>
+<ul>
+<li><code>map</code> functions apply a function to each element of a vector.<sup>1</sup></li>
+<li><code>map(.x, .f, ...)</code> applies the function <code>.f</code> to each element of the vector of <code>.x</code> and returns a <em>list</em>.</li>
+<li><code>map_dbl</code> returns a double <em>vector</em> (other variants exist)</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a><span class="fu">map</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), piecewise) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1]]
+[1] 0.5
+
+[[2]]
+[1] 1
+
+[[3]]
+[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a><span class="fu">map_dbl</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), piecewise) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5 1.0 2.0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>piecewise_vectorized <span class="ot">&lt;-</span> </span>
+<span id="cb66-2"><a href="#cb66-2"></a> <span class="cf">function</span>(x) <span class="fu">map_dbl</span>(x, piecewise) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">piecewise_vectorized</span>(<span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>,<span class="at">by =</span> <span class="fl">0.5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.00 0.25 0.50 0.75 1.00 1.50 2.00</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">3</span>,<span class="at">by =</span> <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb69-2"><a href="#cb69-2"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">piecewise_vectorized</span>(x)) <span class="sc">|&gt;</span> </span>
+<span id="cb69-3"><a href="#cb69-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x,y)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>In <code>tidyverse</code> they are provided in the package <code>purrr</code></p></li></ol></aside></section>
+<section id="map-and-reduce" class="slide level2 smaller">
+<h2><code>map</code> and <code>reduce</code></h2>
+<p>Instead of a list or a vector <code>reduce</code> returns a single value.<br>
+To that end it needs a function with two arguments. It applies it to the first two elements of the vector, then to the result and the third element, then the result and the fourth element, and so on.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">|&gt;</span> <span class="fu">reduce</span>(\(x,y) x <span class="sc">+</span> y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 55</code></pre>
+</div>
+</div>
+<p>Note: <code>\(x)</code> is a short way to write an anonymous function as <code>function(x)</code>.</p>
+<div class="fragment">
+<p>Example: Reading multiple files</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Instead of</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>a <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"a.csv"</span>)</span>
+<span id="cb72-2"><a href="#cb72-2"></a>b <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"b.csv"</span>)</span>
+<span id="cb72-3"><a href="#cb72-3"></a>c <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"c.csv"</span>)</span>
+<span id="cb72-4"><a href="#cb72-4"></a>d <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"d.csv"</span>)</span>
+<span id="cb72-5"><a href="#cb72-5"></a>e <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"e.csv"</span>)</span>
+<span id="cb72-6"><a href="#cb72-6"></a>f <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"f.csv"</span>)</span>
+<span id="cb72-7"><a href="#cb72-7"></a>g <span class="ot">&lt;-</span><span class="fu">read_csv</span>(<span class="st">"g.csv"</span>)</span>
+<span id="cb72-8"><a href="#cb72-8"></a></span>
+<span id="cb72-9"><a href="#cb72-9"></a><span class="fu">bind_rows</span>(a,b,c,d,e,f,g)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<p>Write</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a>letter[<span class="dv">1</span><span class="sc">:</span><span class="dv">7</span>] <span class="sc">|&gt;</span> </span>
+<span id="cb73-2"><a href="#cb73-2"></a> <span class="fu">map</span>(\(x) <span class="fu">read_csv</span>(<span class="fu">paste0</span>(x,<span class="st">".csv"</span>))) <span class="sc">|&gt;</span> </span>
+<span id="cb73-3"><a href="#cb73-3"></a> <span class="fu">reduce</span>(bind_rows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="function-programming-take-away" class="slide level2">
+<h2>Function programming: Take away</h2>
+<ul>
+<li>Functions are the most important building blocks of programming.</li>
+<li>Functions can and often should be vectorized.</li>
+<li>Vectorized functions are the basis for plotting and transformation.</li>
+<li><code>map</code> functions are powerful tools for iterative tasks!<br>
+<em>Expect to not get the idea first but to love them later.</em></li>
+</ul>
+</section></section>
+<section>
+<section id="descriptive-statistics" class="title-slide slide level1 center">
+<h1>Descriptive Statistics</h1>
+
+</section>
+<section id="descriptive-vs.-inferential-statistics" class="slide level2" data-background-color="khaki">
+<h2>Descriptive vs.&nbsp;Inferential Statistics</h2>
+<ul>
+<li>The process of using and analyzing <strong>summary statistics</strong>
+<ul>
+<li>Solely concerned with properties of the <strong>observed data</strong>.</li>
+</ul></li>
+<li>Distinct from <strong>inferential statistics</strong>:
+<ul>
+<li>Inference of properties of an underlying distribution given sampled observations from a larger population.</li>
+</ul></li>
+</ul>
+<p><strong>Summary Statistics</strong> are used to summarize a set of observations to communicate the largest amount of information as simple as possible.</p>
+</section>
+<section id="summary-statistics" class="slide level2" data-background-color="khaki">
+<h2>Summary statistics</h2>
+<p><em>Univariate</em> (for one variable)</p>
+<ul>
+<li>Measures of <strong>location</strong>, or <em>central tendency</em></li>
+<li>Measures of statistical <strong>dispersion</strong></li>
+<li>Measure of the <strong>shape</strong> of the distribution like skewness or kurtosis</li>
+</ul>
+<p><em>Bivariate</em> (for two variables)</p>
+<ul>
+<li>Measures of statistical dependence or <strong>correlation</strong></li>
+</ul>
+</section></section>
+<section>
+<section id="measures-of-central-tendency" class="title-slide slide level1 center">
+<h1>Measures of central tendency</h1>
+
+</section>
+<section id="measures-of-central-tendency-1" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Measures of central tendency</h2>
+<p>Goal: For a sequence of numerical observations <span class="math inline">\(x_1,\dots,x_n\)</span> we want to measure</p>
+<ul>
+<li>the “typical” value.</li>
+<li>a value summarizing the <strong>location</strong> of values on the numerical axis.</li>
+</ul>
+<p>Three different ways:</p>
+<ol type="1">
+<li><strong>Arithmetic mean</strong> (also <em>mean</em>, <em>average</em>): Sum of the all observations divided by the number of observations <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n x_i\)</span></li>
+<li><strong>Median</strong>: Assume <span class="math inline">\(x_1 \leq x_2 \leq\dots\leq x_n\)</span>. Then the median is middlemost values in the sequence <span class="math inline">\(x_\frac{n+1}{2}\)</span> when <span class="math inline">\(n\)</span> odd. For <span class="math inline">\(n\)</span> even there are two middlemost values and the median is <span class="math inline">\(\frac{x_\frac{n}{2} + x_\frac{n+1}{2}}{2}\)</span></li>
+<li><strong>Mode</strong>: The value that appears most often in the sequence.</li>
+</ol>
+</section>
+<section id="philosophy-of-aggregation" class="slide level2 smaller" data-background-color="khaki">
+<h2>Philosophy of aggregation</h2>
+<div>
+<ul>
+<li class="fragment">The <strong>mean</strong> represents <em>total value</em> per value.<br>
+<span style="color:blue;">Example: <em>per capita income</em> in a town is the total income per individual</span></li>
+<li class="fragment">The <strong>median</strong> represents the value such that half of the values are lower <em>and</em> higher.<br>
+<span style="color:blue;">In a <em>democracy</em> where each value is represented by one voter preferring it, the median is the value which is <em>unbeatable</em> by an <em>absolute majority</em>. Half of the people prefer higher the other half lower values. (<a href="https://en.wikipedia.org/wiki/Median_voter_theorem">Median voter model</a>)</span></li>
+<li class="fragment">The <strong>mode</strong> represents the most common value.<br>
+<span style="color:blue;">In a <em>democracy</em>, the mode represents the winner of a <em>plurality vote</em> where each value runs as a candidate and the winner is the one with the most votes.</span></li>
+</ul>
+</div>
+</section>
+<section id="mean-median-mode-properties" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Mean, Median, Mode properties</h2>
+<p><strong>Do they deliver one unambiguous answer for any sequence?</strong></p>
+<div class="fragment">
+<p>Mean and median, yes.<br>
+The mode has no rules for a tie.</p>
+</div>
+<div class="fragment">
+<p><strong>Can they by generalized to variables with ordered or even unordered categories?</strong></p>
+</div>
+<div class="fragment">
+<p>Mean: No.<br>
+Median: For ordered categories.<br>
+Mode: For any categorical variable.</p>
+</div>
+<div class="fragment">
+<p><strong>Is the measure always also in the data sequence?</strong></p>
+</div>
+<div class="fragment">
+<p>Mean: No.<br>
+Median: Yes, for sequences of odd length.<br>
+Mode: Yes.</p>
+</div>
+</section>
+<section id="generalized-means" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Generalized means<sup>1</sup></h2>
+<p>For <span class="math inline">\(x_1, \dots, x_n &gt; 0\)</span> and <span class="math inline">\(p\in \mathbb{R}_{\neq 0}\)</span> the generalized mean is</p>
+<p><span class="math display">\[M_p(x_1, \dots, x_n) = (\frac{1}{n}\sum_{i=1}^n x_i^p)^\frac{1}{p}\]</span></p>
+<p>For <span class="math inline">\(p = 0\)</span> it is <span class="math inline">\(M_0(x_1, \dots, x_n) = (\prod_{i=1}^n x_i)^\frac{1}{n}\)</span>.</p>
+<p><span class="math inline">\(M_1\)</span> is the arithmetic mean. <span class="math inline">\(M_0\)</span> is called the <strong>geometric mean</strong>. <span class="math inline">\(M_{-1}\)</span> the <strong>harmonic mean</strong>.</p>
+<p>Note: Generalized means are often only reasonable when all values are positive <span class="math inline">\(x_i &gt; 0\)</span>.</p>
+
+<aside><div>
+<p><span class="math inline">\(M_0\)</span> can also be expressed as the exponential (<span class="math inline">\(\exp(x) = e^x\)</span>) of the mean of the the <span class="math inline">\(\log\)</span>’s of the <span class="math inline">\(x_i\)</span>’s: <span class="math inline">\(\exp(\log((\prod_{i=1}^n x_i)^\frac{1}{n})) = \exp(\frac{1}{n}\sum_{i=1}^n\log(x_i))\)</span>.</p>
+</div><ol class="aside-footnotes"><li id="fn3"><p>Also called <em>power mean</em> or <em><span class="math inline">\(p\)</span>-mean</em>. </p></li></ol></aside></section>
+<section id="box-cox-transformation-function" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Box-Cox transformation function<sup>1</sup></h2>
+<p>For <span class="math inline">\(p \in \mathbb{R}\)</span>: <span class="math inline">\(f(x) = \begin{cases}\frac{x^p - 1}{p} &amp; \text{for $p\neq 0$} \\ \log(x) &amp; \text{for $p= 0$}\end{cases}\)</span></p>
+<div class="columns">
+<div class="column smaller" style="width:60%;">
+<p>The <span class="math inline">\(p\)</span>-mean is</p>
+<p><span class="math display">\[M_p(x) = f^{-1}(\frac{1}{n}\sum_{i=1}^n f(x_i))\]</span></p>
+<p>with <span class="math inline">\(x = [x_1, \dots, x_n]\)</span>. <span class="math inline">\(f^{-1}\)</span> is the <strong>inverse</strong><sup>2</sup> of <span class="math inline">\(f\)</span>.</p>
+</div><div class="column" style="width:40%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-30-1.png" width="384"></p>
+</div>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>Also a common transformation to pre-process data to make it closer to a normal distribution.</p></li><li id="fn5"><p>That means <span class="math inline">\(f^-1(f(x)) = x =f(f^-1(x))\)</span>.</p></li></ol></aside></section></section>
+<section>
+<section id="measures-of-central-tendency-and-the-wisdom-of-the-crowd" class="title-slide slide level1 center">
+<h1>Measures of central tendency and the Wisdom of the Crowd</h1>
+
+</section>
+<section id="application-the-wisdom-of-the-crowd" class="slide level2 smaller" data-background-color="khaki">
+<h2>Application: The Wisdom of the Crowd</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<ul>
+<li>The collective opinion of a diverse group of independent individuals rather than that of a single expert.</li>
+<li>The classical wisdom-of-the-crowds finding is about <strong>point estimation</strong> of a continuous quantity.</li>
+<li>Popularized by James Surowiecki (2004).</li>
+<li>The opening anecdote is about Francis Galton’s<sup>1</sup> surprise in 1907 that the crowd at a county fair accurately guessed the weight of an ox’s meat when their individual guesses were averaged.</li>
+</ul>
+</div><div class="column" style="width:20%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/9/95/Wisecrowds.jpg"></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Sir_Francis_Galton_by_Charles_Wellington_Furse.jpg" width="150"></p>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>Galton (1822-1911) was a half-cousin to Charles Darwin and one of the founding fathers of statistics. He also was a scientific racist, see <a href="https://twitter.com/kareem_carr/status/1575506343401775104?s=20&amp;t=8T5TzrayAWNShmOSzJgCJQ." class="uri">https://twitter.com/kareem_carr/status/1575506343401775104?s=20&amp;t=8T5TzrayAWNShmOSzJgCJQ.</a>.</p></li></ol></aside></section>
+<section id="galtons-data" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Galton’s data<sup>1</sup></h2>
+<p><em>What is the weight of the meat of this ox?</em></p>
+<div class="cell">
 
 </div>
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section></section>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb74-2"><a href="#cb74-2"></a>galton <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/galton_data.xlsx"</span>)</span>
+<span id="cb74-3"><a href="#cb74-3"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">1198</span>, <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb74-4"><a href="#cb74-4"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(galton<span class="sc">$</span>Estimate), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">median</span>(galton<span class="sc">$</span>Estimate), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">Mode</span>(galton<span class="sc">$</span>Estimate), <span class="at">color =</span> <span class="st">"purple"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+</div>
+</div>
+<p>787 estimates, <span style="color:green;">true value</span> 1198, <span style="color:red;">mean</span> 1196.7, <span style="color:blue;">median</span> 1208, <span style="color:purple;">mode</span> 1218</p>
+<aside><ol class="aside-footnotes"><li id="fn7"><p>Kenneth Wallis dug out the data from Galton’s notebook and put it here <a href="https://warwick.ac.uk/fac/soc/economics/staff/kfwallis/publications/galton_data.xlsx" class="uri">https://warwick.ac.uk/fac/soc/economics/staff/kfwallis/publications/galton_data.xlsx</a></p></li></ol></aside></section>
+<section id="viertelfest-bremen-2008" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Viertelfest Bremen 2008<sup>1</sup></h2>
+<p><em>How many lots will be sold by the end of the festival?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>viertel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Viertelfest.csv"</span>)</span>
+<span id="cb75-2"><a href="#cb75-2"></a>viertel <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">10788</span>, <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb75-3"><a href="#cb75-3"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">median</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">Mode</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"purple"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
+</div>
+</div>
+<p>1226 estimates, the maximal value is 29530000!<br>
+We should filter out the highest values for the histogram…</p>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Data collected as additional guessing game at the Lottery “Haste mal ’nen Euro?”, data provided by Jan Lorenz <a href="https://docs.google.com/spreadsheets/d/1HiYhUrYrsbeybJ10mwsae_hQCawZlUQFOOZzcugXzgA/edit#gid=0" class="uri">https://docs.google.com/spreadsheets/d/1HiYhUrYrsbeybJ10mwsae_hQCawZlUQFOOZzcugXzgA/edit#gid=0</a></p></li></ol></aside></section>
+<section id="viertelfest-bremen-2008-1" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Viertelfest Bremen 2008</h2>
+<p><em>How many lots will be sold by the end of the festival?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a>viertel <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Viertelfest.csv"</span>)</span>
+<span id="cb76-2"><a href="#cb76-2"></a>viertel <span class="sc">|&gt;</span> <span class="fu">filter</span>(Schätzung<span class="sc">&lt;</span><span class="dv">100000</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">10788</span>, <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb76-3"><a href="#cb76-3"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">median</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">Mode</span>(viertel<span class="sc">$</span>Schätzung), <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">exp</span>(<span class="fu">mean</span>(<span class="fu">log</span>(viertel<span class="sc">$</span>Schätzung))), <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W04_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"><p>1226 estimates, <span style="color:green;">true value</span> 10788, <span style="color:red;">mean</span> 53163.9, <span style="color:blue;">median</span> 9843, <span style="color:purple;">mode</span> 10000,<br>
+<span style="color:orange;">geometric mean</span> 10510.1</p>
+</section>
+<section id="log_10-transformation-viertelfest" class="slide level2 smaller" data-background-color="aquamarine">
+<h2><span class="math inline">\(\log_{10}\)</span> transformation Viertelfest</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>viertel <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">log10Est =</span> <span class="fu">log10</span>(Schätzung)) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(log10Est)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.05</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">log10</span>(<span class="dv">10788</span>), <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span> </span>
+<span id="cb77-2"><a href="#cb77-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">log10</span>(<span class="fu">mean</span>(viertel<span class="sc">$</span>Schätzung)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">log10</span>(<span class="fu">median</span>(viertel<span class="sc">$</span>Schätzung)), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">log10</span>(<span class="fu">Mode</span>(viertel<span class="sc">$</span>Schätzung)), <span class="at">color =</span> <span class="st">"purple"</span>) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(<span class="fu">log10</span>(viertel<span class="sc">$</span>Schätzung)), <span class="at">color =</span> <span class="st">"orange"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W04_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"><p>1226 estimates, <span style="color:green;">true value</span> 10788, <span style="color:red;">mean</span> 53163.9, <span style="color:blue;">median</span> 9843, <span style="color:purple;">mode</span> 10000,<br>
+<span style="color:orange;">geometric mean</span> 10510.1</p>
+</section>
+<section id="wisdom-of-the-crowd-insights" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Wisdom of the crowd insights</h2>
+<div>
+<ul>
+<li class="fragment">In Galton’s sample the different measures do not make a big difference</li>
+<li class="fragment">In the Viertelfest data the arithmetic mean performs very bad!</li>
+<li class="fragment">The mean is <em>vulnerable to extreme values</em>.<br>
+Quoting Galton on the mean as a democratic aggregation function:<br>
+<em>“The mean gives voting power to the cranks in proportion to their crankiness.”</em></li>
+<li class="fragment">The mode tends to be on <em>focal</em> values as round numbers (10,000). In Galton’s data this is not so pronounced beause estimators used several units which Galton had to convert.</li>
+<li class="fragment"><strong>How to choose a measure to aggreagte the wisdom?</strong>
+<ul>
+<li class="fragment">By the nature of the estimate problem? Is the scale mostly clear? (Are we in the hundreds, thousands, ten thousands, …)</li>
+<li class="fragment">By the nature of the distribution?</li>
+<li class="fragment">There is no real insurance against a systematic bias in the population.</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
 <section>
-<section id="modeling" class="title-slide slide level1 center">
-<h1>Modeling</h1>
+<section id="measures-of-dispersion" class="title-slide slide level1 center">
+<h1>Measures of dispersion</h1>
 
 </section>
-<section id="purpose-of-modeling" class="slide level2">
-<h2>Purpose of modeling</h2>
-<p>We use models to</p>
+<section id="measures-of-dispersion-1" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Measures of dispersion<sup>1</sup></h2>
+<p>Goal: We want to measure</p>
 <ul>
-<li><strong>explain</strong> relations between variables</li>
-<li>make <strong>predictions</strong></li>
+<li>how spread out values are around the central tendency.</li>
+<li>How stretched or squeezed is the distribution?</li>
 </ul>
-<p>First, we focus on linear models.</p>
+<p><strong>Variance</strong> is the mean of the squared deviation from the mean: <span class="math inline">\(\text{Var}(x) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu)^2\)</span> where <span class="math inline">\(\mu\)</span> (mu) is the mean.</p>
+<p><strong>Standard deviation</strong> is the square root of the variance <span class="math inline">\(\text{SD}(x) = \sqrt{\text{Var}(x)}\)</span>.</p>
+<p>The standard deviation is often denoted <span class="math inline">\(\sigma\)</span> (sigma) and the variance <span class="math inline">\(\sigma^2\)</span>.</p>
+<p><strong>Mean absolute deviation</strong> (MAD) is the mean of the absolute deviation from the mean: <span class="math inline">\(\text{MAD}(x) = \frac{1}{n}\sum_{i=1}^n|x_i - \mu|\)</span>.</p>
+<p><strong>Range</strong> is the difference of the maximal and the minimal value <span class="math inline">\(\max(x) - \min(x)\)</span>.</p>
+<aside><ol class="aside-footnotes"><li id="fn9"><p>Also called <em>variability</em>, <em>scatter</em>, or <em>spread</em>.</p></li></ol></aside></section>
+<section id="examples-of-measures-of-dispersion" class="slide level2 smaller" data-background-color="khaki">
+<h2>Examples of measures of dispersion</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a><span class="fu">var</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5415.013</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a><span class="fu">sd</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73.58677</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1"></a><span class="fu">mad</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 51.891</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a><span class="fu">range</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  896 1516</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a><span class="fu">diff</span>(<span class="fu">range</span>(galton<span class="sc">$</span>Estimate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 620</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a><span class="fu">var</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 719774887849</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1"></a><span class="fu">sd</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 848395.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a><span class="fu">mad</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8771.803</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1"></a><span class="fu">range</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]      120 29530000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1"></a><span class="fu">diff</span>(<span class="fu">range</span>(viertel<span class="sc">$</span>Schätzung))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 29529880</code></pre>
+</div>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Variance (and standard deviation) in statistics is usually computed with <span class="math inline">\(\frac{1}{n-1}\)</span> instead of <span class="math inline">\(\frac{1}{n}\)</span> to provide an unbiased estimator of the potentially underlying population variance. We omit more detail here.</p>
+</div></aside></section>
+<section id="standardization" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Standardization</h2>
+<p>Variables are <em>standardized</em> by subtracting their mean and then dividing by their standard deviations.</p>
+<p>A value from a standardized variable is called a <strong>standard score</strong> or <strong>z-score</strong>.</p>
+<p><span class="math inline">\(z_i = \frac{x_i - \mu}{\sigma}\)</span></p>
+<p>where <span class="math inline">\(\mu\)</span> is the mean and <span class="math inline">\(\sigma\)</span> the standard deviation of the vector <span class="math inline">\(x\)</span>.</p>
+<ul>
+<li>This is a <em>shift-scale transformation</em>. We shift by the mean and scale by the standard deviation.</li>
+<li>A standard score <span class="math inline">\(z_i\)</span> shows how mean standard deviations <span class="math inline">\(x_i\)</span> is away from the mean of <span class="math inline">\(x\)</span>.</li>
+</ul>
 </section>
-<section id="palmer-penguins" class="slide level2 scrollable smaller">
-<h2>Palmer Penguins</h2>
-<p>We use the dataset <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></p>
+<section id="quantiles" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Quantiles</h2>
+<p>Cut points specifying intervals which contain equal amounts of values of the distribution.</p>
+<p><strong><span class="math inline">\(q\)</span>-quantiles</strong> divide into <span class="math inline">\(q\)</span> intervals covering all values.</p>
+<p>The quantiles are the cut points: For <span class="math inline">\(q\)</span> intervals there are <span class="math inline">\(q-1\)</span> cut points of interest.</p>
+<ul>
+<li>The one 2-quantile is the median.</li>
+<li>The three 4-quantiles are called <strong>quartiles</strong>. The second quartile is the median.</li>
+<li>100-quantiles are called <strong>percentiles</strong></li>
+</ul>
+
+<aside><div>
+<p>We omit problems of estimating quantiles from a sample where the number of estimates does not fit to a desired partion of equal size here.</p>
+</div></aside></section>
+<section id="examples-of-quantiles" class="slide level2" data-background-color="khaki">
+<h2>Examples of quantiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
+<span id="cb98-2"><a href="#cb98-2"></a><span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    0%    25%    50%    75%   100% 
+ 896.0 1162.5 1208.0 1236.0 1516.0 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a><span class="fu">quantile</span>(viertel<span class="sc">$</span>Schätzung, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      0%      25%      50%      75%     100% 
+     120     5000     9843    20000 29530000 </code></pre>
+</div>
+</div>
+<p>Interpretation: What does the value at 25% mean?</p>
+<div class="fragment">
+<p>The 25% of all values are lower than the value. 75% are larger.</p>
+</div>
+</section>
+<section id="interquartile-range-iqr" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Interquartile range (IQR)</h2>
+<p>The difference between the 1st and the 3rd quartile.</p>
+<ul>
+<li>A very common measure of dispersion.</li>
+</ul>
+<p>Examples:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
+<span id="cb102-2"><a href="#cb102-2"></a><span class="fu">IQR</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a><span class="fu">sd</span>(galton<span class="sc">$</span>Estimate) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73.58677</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1"></a><span class="fu">IQR</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1"></a><span class="fu">sd</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 848395.5</code></pre>
+</div>
+</div>
+</section>
+<section id="summary-of-numerical-vectors-in-r" class="slide level2">
+<h2>Summary of numerical vectors in R</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1"></a><span class="fu">summary</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    896    1162    1208    1197    1236    1516 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a><span class="fu">summary</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+     120     5000     9843    53164    20000 29530000 </code></pre>
+</div>
+</div>
+</section>
+<section id="introducing-palmer-penguins" class="slide level2 scrollable smaller" data-background-color="khaki">
+<h2>Introducing Palmer Penguins</h2>
+<p><a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></p>
 <p>Chinstrap, Gentoo, and Adélie Penguins</p>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="200"></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="200"> <img data-src="http://r.qcbs.ca/workshop03/book-en/images/culmen_depth.png" height="200"></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 344 × 8
@@ -1246,539 +1625,348 @@ $out2
 </div>
 </div>
 </section>
-<section id="body-mass-in-grams" class="slide level2">
-<h2>Body mass in grams</h2>
+<section id="summary-also-works-for-data-frames" class="slide level2">
+<h2>Summary also works for data frames</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb55-2"><a href="#cb55-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(body_mass_g)) <span class="sc">+</span></span>
-<span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1"></a><span class="fu">summary</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      species          island    bill_length_mm  bill_depth_mm  
+ Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
+ Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
+ Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
+                                 Mean   :43.92   Mean   :17.15  
+                                 3rd Qu.:48.50   3rd Qu.:18.70  
+                                 Max.   :59.60   Max.   :21.50  
+                                 NA's   :2       NA's   :2      
+ flipper_length_mm  body_mass_g       sex           year     
+ Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
+ 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
+ Median :197.0     Median :4050   NA's  : 11   Median :2008  
+ Mean   :200.9     Mean   :4202                Mean   :2008  
+ 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
+ Max.   :231.0     Max.   :6300                Max.   :2009  
+ NA's   :2         NA's   :2                                 </code></pre>
+</div>
+</div>
+</section>
+<section id="boxplots" class="slide level2 smaller">
+<h2>Boxplots</h2>
+<p>A condensed visualization of a distribution showing location, spread, skewness and outliers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
-<section id="flipper-length-in-millimeters" class="slide level2">
-<h2>Flipper length in millimeters</h2>
+<img data-src="W04_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><ul>
+<li>The <strong>box</strong> shows the median in the middle and the other two quartiles as their borders.</li>
+<li><strong>Whiskers</strong>: From above the upper quartile, a distance of 1.5 times the IQR is measured out and a whisker is drawn up to the largest observed data point from the dataset that falls within this distance. Similarly, for the lower quartile.</li>
+<li>Whiskers must end at an observed data point! (So lengths can differ.)</li>
+<li>All other values outside of box and whiskers are shown as points and often called <strong>outliers</strong>. (There may be none.)</li>
+</ul>
+</section>
+<section id="boxplots-vs.-histograms" class="slide level2 smaller">
+<h2>Boxplots vs.&nbsp;histograms</h2>
+<ul>
+<li>Histograms can show the shape of the distribution well, but not the summary statistics like the median.</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb56-2"><a href="#cb56-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb56-3"><a href="#cb56-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
-<section id="relate-variables-as-a-line" class="slide level2 smaller">
-<h2>Relate variables as a line</h2>
-<p>A <em>line</em> is a shift-scale transformation of the identity function usually written in the form</p>
-<p><span class="math display">\[f(x) = a\cdot x + b\]</span></p>
-<p>where <span style="color:red;"><span class="math inline">\(a\)</span> is the <em>slope</em></span>, <span style="color:blue;"><span class="math inline">\(b\)</span> is the <em>intercept</em></span>.<sup>1</sup></p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>a <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb57-2"><a href="#cb57-2"></a>b <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb57-3"><a href="#cb57-3"></a>func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) a<span class="sc">*</span>x <span class="sc">+</span> b</span>
-<span id="cb57-4"><a href="#cb57-4"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_function</span>(<span class="at">fun =</span> func, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb57-5"><a href="#cb57-5"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>() <span class="sc">+</span> <span class="co"># Set axis limits and make axis equal</span></span>
-<span id="cb57-6"><a href="#cb57-6"></a>    <span class="co"># intercept line:</span></span>
-<span id="cb57-7"><a href="#cb57-7"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb57-8"><a href="#cb57-8"></a>    <span class="co"># slope:</span></span>
-<span id="cb57-9"><a href="#cb57-9"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.75</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb57-10"><a href="#cb57-10"></a>    <span class="co"># x-interval of length one:</span></span>
-<span id="cb57-11"><a href="#cb57-11"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.25</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"gray"</span>) <span class="sc">+</span></span>
-<span id="cb57-12"><a href="#cb57-12"></a>    <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
+<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-45-1.png" width="960"></p>
 </div>
 </div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>This a scale and a shift in the <span class="math inline">\(y\)</span> direction. Note: For lines there are always an analog transformations on the <span class="math inline">\(x\)</span> direction.</p></li></ol></aside></section>
-<section id="penguins-linear-model" class="slide level2">
-<h2>Penguins: Linear model</h2>
-<p><strong>Flipper length</strong> as a function of <strong>body mass</strong>.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb58-2"><a href="#cb58-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb58-3"><a href="#cb58-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb58-4"><a href="#cb58-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb58-5"><a href="#cb58-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb58-6"><a href="#cb58-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb58-7"><a href="#cb58-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
-</div>
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-46-1.png" width="960"></p>
 </div>
 </div>
 </section>
-<section id="penguins-other-smoothing-method" class="slide level2 smaller">
-<h2>Penguins: Other smoothing method</h2>
-<p><strong>Flipper length</strong> as a function of <strong>body mass</strong> with <code>loess</code><sup>1</sup> smoothing.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb59-2"><a href="#cb59-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb59-3"><a href="#cb59-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb59-4"><a href="#cb59-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb59-5"><a href="#cb59-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>) <span class="sc">+</span> </span>
-<span id="cb59-6"><a href="#cb59-6"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
+<section id="boxplots-vs.-histograms-1" class="slide level2 smaller">
+<h2>Boxplots vs.&nbsp;histograms</h2>
+<ul>
+<li>Boxplots can not show the patterns of bimodal or multimodal distributions.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-47-1.png" width="960"></p>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-48-1.png" width="960"></p>
 </div>
-<p>This is a less theory-driven and more data-driven model. Why? We don’t have a simple mathematical form of the function.</p>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>loess = locally estimated scatterplot smoothing</p></li></ol></aside></section>
-<section id="terminology" class="slide level2 smaller">
-<h2>Terminology</h2>
+</div>
+</section>
+<section id="minimizing-proporties-of-mean-and-median" class="slide level2" data-background-color="aquamarine">
+<h2>Minimizing proporties of Mean and Median</h2>
+<p><em>Mean</em> minimizes the mean of squared deviations from it. No other value <span class="math inline">\(a\)</span> has a lower mean of square distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n(x_i - a)^2\)</span>.</p>
+<div class="fragment">
+<p><em>Median</em> minimizes the sum of the absolute deviation. No other value <span class="math inline">\(a\)</span> has a lower mean of absolute distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n|x_i - a|\)</span>.</p>
+</div>
+</section>
+<section id="two-families-of-summary-statistics" class="slide level2" data-background-color="aquamarine">
+<h2>Two families of summary statistics</h2>
 <ul>
-<li><strong>Response variable:</strong><sup>1</sup> Variable whose behavior or variation you are trying to understand, on the y-axis</li>
-<li><strong>Explanatory variable(s):</strong><sup>2</sup> Other variable(s) that you want to use to explain the variation in the response, on the x-axis</li>
-<li><strong>Predicted value:</strong> Output of the model function.
+<li>Measures based on <strong>sums</strong> (related to <em>mathematical moments</em>)
 <ul>
-<li>The model function gives the typical (expected) value of the response variable conditioning on the explanatory variables</li>
-<li><strong>Residual(s):</strong> A measure of how far away a case is from its predicted value (based on a particular model)<br>
-Residual = Observed value - Predicted value<br>
-The residual tells how far above/below the expected value each case is</li>
+<li>Mean</li>
+<li>Standard deviation</li>
 </ul></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Also <strong>dependent variable</strong> in statistics or empirical social sciences.</p></li><li id="fn4"><p>Also <strong>independent variable(s)</strong> in statistics or empirical social sciences.</p></li></ol></aside></section>
-<section id="more-explanatory-variables" class="slide level2">
-<h2>More explanatory variables</h2>
-<p>How does the relation between flipper length and body mass change with different species?</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb60-2"><a href="#cb60-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb60-3"><a href="#cb60-3"></a>            <span class="at">y =</span> flipper_length_mm, </span>
-<span id="cb60-4"><a href="#cb60-4"></a>            <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb60-5"><a href="#cb60-5"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb60-6"><a href="#cb60-6"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb60-7"><a href="#cb60-7"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb60-8"><a href="#cb60-8"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="technical-how-to-color-penguins-but-keep-one-model" class="slide level2">
-<h2>Technical: How to color penguins but keep one model?</h2>
-<p>Put the mapping of the color aesthetic into the <code>geom_point</code> command.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb61-2"><a href="#cb61-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb61-3"><a href="#cb61-3"></a>                                                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb61-4"><a href="#cb61-4"></a> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb61-5"><a href="#cb61-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb61-6"><a href="#cb61-6"></a>                                                    <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb61-7"><a href="#cb61-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="models---upsides-and-downsides" class="slide level2 smaller">
-<h2>Models - upsides and downsides</h2>
+<li>Measures based on the <strong>ordered</strong> sequence of these observations (<em>order statistics</em>)
 <ul>
-<li>Models can reveal patterns that are not evident in a graph of the data. This is an advantage of modeling over simple visual inspection of data.</li>
-<li>The risk is that a model is imposing structure that is not really there in the real world data.
-<ul>
-<li>People imagined animal shapes in the stars. This is maybe a good model to detect and memorize shapes, but it has nothing to do with these animals.</li>
-<li>Every model is a simplification of the real world, but there are good and bad models (for particular purposes).</li>
-<li>A skeptical (but constructive) approach to a model is always advisable.</li>
+<li>Median (and all quantiles)</li>
+<li>Interquartile range</li>
 </ul></li>
-</ul>
-</section>
-<section id="variation-around-a-model" class="slide level2">
-<h2>Variation around a model</h2>
-<p>is as interesting and important as the model!</p>
-<p><em>Statistics is the explanation of uncertainty of variation in the context of what remains unexplained.</em></p>
-<ul>
-<li>The scattered data of flipper length and body mass suggests that there maybe other factors that account for some parts of the variability.</li>
-<li>Or is it randomness?</li>
-<li>Adding more explanatory variables can help (but need not)</li>
-</ul>
-</section>
-<section id="all-models-are-wrong" class="slide level2 smaller">
-<h2><em>All models are wrong …</em></h2>
-<p><em>… but some are useful.</em> (George Box)</p>
-<p>Extending the range of the model:</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb62-2"><a href="#cb62-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb62-3"><a href="#cb62-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb62-4"><a href="#cb62-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb62-5"><a href="#cb62-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb62-6"><a href="#cb62-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb62-7"><a href="#cb62-7"></a>                                                <span class="at">fullrange =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb62-8"><a href="#cb62-8"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">7000</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">230</span>)) <span class="sc">+</span></span>
-<span id="cb62-9"><a href="#cb62-9"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<ul>
-<li>The model predicts that penguins with zero weight still have flippers of about 140 mm on average.</li>
-<li>Is the model useless?</li>
-</ul>
-</section>
-<section id="two-model-purposes" class="slide level2">
-<h2>Two model purposes</h2>
-<p>Models can be used for:</p>
-<ul>
-<li><strong>Explanation:</strong> Understand the relations hip of variables in a quantitative way.<br>
-<em>For the linear model, interpret slope and intercept.</em></li>
-<li><strong>Prediction:</strong> Plug in new values for the explanatory variable(s) and receive the expected response value.<br>
-<em>For the linear model, predict the flipper length of new penguins by their body mass.</em></li>
 </ul>
 </section></section>
 <section>
-<section id="fitting-models" class="title-slide slide level1 center">
-<h1>Fitting Models</h1>
-<p>Today: The linear model.</p>
+<section id="bivariate-summary-statistics" class="title-slide slide level1 center">
+<h1>Bivariate Summary Statistics</h1>
+
 </section>
-<section id="in-r-tidymodels" class="slide level2">
-<h2>In R: <code>tidymodels</code></h2>
-<p><img data-src="https://datasciencebox.org/course-materials/_slides/u4-d02-fitting-interpreting-models/img/tidymodels.png"></p>
+<section id="covariance" class="slide level2" data-background-color="aquamarine">
+<h2>Covariance</h2>
+<p>Goal: We want to measure the joint variation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
+<p><em>Covariance</em> <span class="math inline">\(\text{cov}(x,y) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)\)</span></p>
+<p>where <span class="math inline">\(\mu_x\)</span> and <span class="math inline">\(\mu_y\)</span> are the arithmetic means of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p>Note: <span class="math inline">\(\text{cov}(x,x) = \text{Var}(x)\)</span></p>
+</section>
+<section id="correlation" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Correlation</h2>
+<p>Goal: We want to measure the linear correlation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
+<p><strong>Pearson correlation coefficient</strong> <span class="math inline">\(r_{xy} = \frac{\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^n(x_i - \mu_x)^2}\sqrt{\sum_{i=1}^n(y_i - \mu_y)^2}}\)</span></p>
+<p>Note, <span class="math inline">\(r_{xy} = \frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\)</span></p>
+<p>where <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_y\)</span> are the standard deviations of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
+<p>Note, when <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are standard scores (each with mean zero and standard deviation one), then <span class="math inline">\(\text{cov}(x,y) = r_{xy}\)</span>.</p>
 
 <aside><div>
-<p>From <a href="https://datasciencebox.org" class="uri">https://datasciencebox.org</a></p>
+<p>There are other correlation coefficients which we omit hear.</p>
 </div></aside></section>
-<section id="our-goal" class="slide level2">
-<h2>Our goal</h2>
-<p>Predict flipper length from body mass</p>
-<p>average <code>flipper_length_mm</code> <span class="math inline">\(= \beta_0 + \beta_1\cdot\)</span> <code>body_mass_g</code></p>
+<section id="interpretation-of-correlation" class="slide level2 smaller">
+<h2>Interpretation of correlation</h2>
+<p>Correlation between two vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is “normalized”.</p>
+<ul>
+<li><p>The maximal possible values is <span class="math inline">\(r_{xy} = 1\)</span></p>
+<ul>
+<li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>fully correlated</em></li>
+</ul></li>
+<li><p>The minimal values is <span class="math inline">\(r_{xy} = -1\)</span></p>
+<ul>
+<li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>anticorrelated</em></li>
+</ul></li>
+<li><p>When <span class="math inline">\(r_{xy} \approx 0\)</span> the variables are <em>uncorrelated</em></p></li>
+<li><p><span class="math inline">\(r_{xy} = r_{yx}\)</span></p></li>
+</ul>
 </section>
-<section id="step-1-specify-model" class="slide level2">
-<h2>Step 1: Specify model</h2>
+<section id="correlation-matrix" class="slide level2 smaller">
+<h2>Correlation matrix</h2>
+<p>Using <code>corrr</code> from the packages<code>tidymodels</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb63-2"><a href="#cb63-2"></a><span class="fu">linear_reg</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1"></a><span class="fu">library</span>(corrr)</span>
+<span id="cb122-2"><a href="#cb122-2"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
+<span id="cb122-3"><a href="#cb122-3"></a> <span class="fu">correlate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Linear Regression Model Specification (regression)
-
-Computational engine: lm </code></pre>
+<pre><code># A tibble: 5 × 6
+  term        bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    year
+  &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
+1 bill_lengt…        NA            -0.235              0.656      0.595   0.0545
+2 bill_depth…        -0.235        NA                 -0.584     -0.472  -0.0604
+3 flipper_le…         0.656        -0.584             NA          0.871   0.170 
+4 body_mass_g         0.595        -0.472              0.871     NA       0.0422
+5 year                0.0545       -0.0604             0.170      0.0422 NA     </code></pre>
 </div>
 </div>
 </section>
-<section id="step-2-set-the-model-fitting-engine" class="slide level2">
-<h2>Step 2: Set the model fitting <em>engine</em></h2>
+<section id="correlation-visualization" class="slide level2 smaller">
+<h2>Correlation visualization</h2>
+<p>Using <code>correlate</code> and <code>see</code> from <code>easystats</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb65-2"><a href="#cb65-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear Regression Model Specification (regression)
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1"></a><span class="fu">library</span>(correlation)</span>
+<span id="cb124-2"><a href="#cb124-2"></a><span class="fu">library</span>(see)</span>
+<span id="cb124-3"><a href="#cb124-3"></a>results <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
+<span id="cb124-4"><a href="#cb124-4"></a> <span class="fu">correlation</span>()</span>
+<span id="cb124-5"><a href="#cb124-5"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb124-6"><a href="#cb124-6"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb124-7"><a href="#cb124-7"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-Computational engine: lm </code></pre>
 </div>
-</div>
+<img data-src="W04_files/figure-revealjs/unnamed-chunk-50-1.png" width="960" class="r-stretch"></section></section>
+<section>
+<section id="exploratory-data-analysis" class="title-slide slide level1 center" data-background-color="khaki">
+<h1>Exploratory Data Analysis</h1>
+
 </section>
-<section id="step-3-fit-model-and-estimate-parameters" class="slide level2 smaller">
-<h2>Step 3: Fit model and estimate parameters</h2>
-<p>Only now, the data and the variable selection comes in.</p>
-<p>Use of <strong>formula syntax</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb67-2"><a href="#cb67-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb67-3"><a href="#cb67-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>parsnip model object
-
-
-Call:
-stats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)
-
-Coefficients:
-(Intercept)  body_mass_g  
-  136.72956      0.01528  </code></pre>
-</div>
-</div>
+<section id="exploratory-data-analysis-1" class="slide level2 smaller" data-background-color="khaki">
+<h2>Exploratory Data Analysis</h2>
+<p><img data-src="img/data-science-explore.png"></p>
+<p>EDA is the systematic exploration of data using</p>
+<ul>
+<li>visualization</li>
+<li>transformation</li>
+<li>computation of characteristic values</li>
+<li>modeling</li>
+</ul>
 
 <aside><div>
-<p>Note: The fit command does not follow the tidyverse principle the the data comes first. Instead, the formula comes first. This is to relate to existing traditions of a much older established way of modeling in R.</p>
+<p>Computation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range<br>
+Modeling: Operations like linear regression or dimensionality reduction. We haven’t talked about it, but will do soon.</p>
 </div></aside></section>
-<section id="what-does-the-output-say" class="slide level2 smaller">
-<h2>What does the output say?</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb69-2"><a href="#cb69-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb69-3"><a href="#cb69-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>parsnip model object
-
-
-Call:
-stats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)
-
-Coefficients:
-(Intercept)  body_mass_g  
-  136.72956      0.01528  </code></pre>
-</div>
-</div>
-<div class="fragment">
-<p>average <code>flipper_length_mm</code> <span class="math inline">\(= 136.72956 + 0.01528\cdot\)</span> <code>body_mass_g</code></p>
-</div>
-<div class="fragment">
-<p><strong>Interpretation:</strong><br>
-The penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted …</p>
-</div>
+<section id="systematic-but-no-standard-routine" class="slide level2" data-background-color="khaki">
+<h2>Systematic but no standard routine</h2>
+<blockquote>
+<p>“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox</p>
+</blockquote>
+<blockquote>
+<p>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey</p>
+</blockquote>
 </section>
-<section id="show-output-in-tidy-form" class="slide level2">
-<h2>Show output in <em>tidy</em> form</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb71-2"><a href="#cb71-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb71-3"><a href="#cb71-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb71-4"><a href="#cb71-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept) 137.      2.00          68.5 5.71e-201
-2 body_mass_g   0.0153  0.000467      32.7 4.37e-107</code></pre>
-</div>
-</div>
-</section>
-<section id="parameter-estimation" class="slide level2 smaller">
-<h2>Parameter estimation</h2>
-<p>Notation from statistics: <span class="math inline">\(\beta\)</span>’s for the population parameters and <span class="math inline">\(b\)</span>’s for the parameters estimated from the sample statistics.</p>
-<p><span class="math display">\[\hat y = \beta_0 + \beta_1 x\]</span></p>
-<p>Is what we cannot have. (<span class="math inline">\(\hat y\)</span> stands for <em>predicted value of <span class="math inline">\(y\)</span></em>. )</p>
-<div class="fragment">
-<p>We estimate <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> in</p>
-<p><span class="math display">\[\hat y = b_0 + b_1 x\]</span></p>
-<div style="background-color:aquamarine;">
-<p>A typical follow-up data analysis question is what the fitted values <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> tell us about the population-wide values <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>?</p>
-<p>What type of question is it?<br>
-Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic</p>
-</div>
-</div>
-<div class="fragment">
-<div style="background-color:aquamarine;">
-<p>A typical <strong>inferential</strong> question.</p>
-</div>
-</div>
-</section>
-<section id="fitting-method-least-squares-regression" class="slide level2">
-<h2>Fitting method: Least squares regression</h2>
+<section id="systematic-but-no-standard-routine-1" class="slide level2" data-background-color="khaki">
+<h2>Systematic but no standard routine</h2>
 <ul>
-<li>The regression line shall minimize the sum of the squared residuals (or, identically, their mean).</li>
-<li>Mathematically: The residual for case <span class="math inline">\(i\)</span> is <span class="math inline">\(e_i = \hat y_i - y_i\)</span>.</li>
-<li>Now we want to minimize <span class="math inline">\(\sum_{i=1}^n e_i^2\)</span><br>
-(or equivalently <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n e_i^2\)</span> the <em>the mean of squared errors</em>, which we will look at later).</li>
+<li>Goal of EDA: Develop understanding of your data.</li>
+<li>EDA’s iterative cycle
+<ol type="1">
+<li>Generate questions about your data.</li>
+<li>Search for answers by visualizing, transforming, and modelling your data.</li>
+<li>Use what you learn to refine your questions and/or generate new questions.</li>
+</ol></li>
+<li>EDA is fundamentally a creative process.</li>
 </ul>
 </section>
-<section id="visualization-of-residuals" class="slide level2">
-<h2>Visualization of residuals</h2>
-<p>The residuals are the gray lines between predictid values on the regression line and the actual values.</p>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
-<section id="proporties-of-least-squares-regression" class="slide level2 smaller">
-<h2>Proporties of least squares regression</h2>
-<p>The regression lines goes through the point (<code>mean(x)</code>, <code>mean(y)</code>).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4201.754</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 200.9152</code></pre>
-</div>
-</div>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
-<section id="proporties-of-least-squares-regression-1" class="slide level2 smaller">
-<h2>Proporties of least squares regression</h2>
-<p>Residuals sum up to zero</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
-<span id="cb77-2"><a href="#cb77-2"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -3.765044e-14</code></pre>
-</div>
-</div>
-<p>There is no correlation between residuals and the explanatory variable</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fu">cor</span>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals, <span class="fu">na.omit</span>(penguins<span class="sc">$</span>body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -1.353445e-16</code></pre>
-</div>
-</div>
-<p>The correlation of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is the slope <span class="math inline">\(b_1\)</span> corrected by their standard deviations.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span>
-<span id="cb81-2"><a href="#cb81-2"></a>sd_flipper <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> T)</span>
-<span id="cb81-3"><a href="#cb81-3"></a>sd_mass <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> T)</span>
-<span id="cb81-4"><a href="#cb81-4"></a><span class="fu">c</span>(correlation, sd_flipper, sd_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]   0.8712018  14.0617137 801.9545357</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a>correlation <span class="sc">*</span> sd_flipper <span class="sc">/</span> sd_mass</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.01527592</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> (Intercept)  body_mass_g 
-136.72955927   0.01527592 </code></pre>
-</div>
-</div>
-</section>
-<section id="linear-model-when-explanatory-variables-are-categorical" class="slide level2 smaller">
-<h2>Linear model when explanatory variables are categorical</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb87-2"><a href="#cb87-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb87-3"><a href="#cb87-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb87-4"><a href="#cb87-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
-</div>
-</div>
-<p>What happened? Two of the three species categories appear as variables now.</p>
+<section id="questions" class="slide level2" data-background-color="khaki">
+<h2>Questions</h2>
 <ul>
-<li>Categorical variables are automatically encoded to <strong>dummy variables</strong></li>
-<li>Each coefficient describes the expected difference between flipper length of that particular species compared to the baseline level</li>
-<li>What is the baseline level?</li>
+<li>The way to ask quality questions:
+<ul>
+<li>Generate many questions!</li>
+<li>You cannot come up with most interesting questions when you start.</li>
+</ul></li>
+<li>There is no rule which questions to ask. These are useful
+<ol type="1">
+<li>What type of <strong>variation</strong> occurs within my variables?<br>
+(Barplots, Histograms,…)</li>
+<li>What type of <strong>covariation</strong> occurs between my variables?<br>
+(Scatterplots, Timelines,…)</li>
+</ol></li>
 </ul>
+</section>
+<section id="eda-embedded-in-a-statistical-data-science-project" class="slide level2" data-background-color="khaki">
+<h2>EDA embedded in a <em>statistical</em> data science project</h2>
+<ol type="1">
+<li>Stating and refining the question</li>
+<li><strong>Exploring the data</strong></li>
+<li>Building formal statistical models</li>
+<li>Interpreting the results</li>
+<li>Communicating the results</li>
+</ol>
+
+<aside><div>
+<p>Roger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015).</p>
+</div></aside></section></section>
+<section>
+<section id="data-science-projects" class="title-slide slide level1 center" data-background-color="khaki">
+<h1>Data science projects</h1>
+<p>Getting into question-driven data work</p>
+</section>
+<section id="six-types-of-questions" class="slide level2 smaller" data-background-color="khaki">
+<h2>Six types of questions</h2>
+<ol type="1">
+<li><strong>Descriptive:</strong> summarize a characteristic of a set of data</li>
+<li><strong>Exploratory:</strong> analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)</li>
+<li><strong>Inferential:</strong> analyze patterns, trends, or relationships in representative data from a population</li>
+<li><strong>Predictive:</strong> make predictions for individuals or groups of individuals</li>
+<li><strong>Causal:</strong> whether changing one factor will change another factor, on average, in a population</li>
+<li><strong>Mechanistic:</strong> explore “how” as opposed to whether</li>
+</ol>
 <div class="fragment">
-<ul>
-<li>The first category! (Here alphabetically <code>"Adelie"</code>)</li>
-</ul>
-</div>
-</section>
-<section id="how-do-dummy-variables-look" class="slide level2">
-<h2>How do dummy variables look</h2>
-<table>
-<thead>
-<tr class="header">
-<th>species</th>
-<th>speciesChinstrap</th>
-<th>speciesGentoo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Adelie</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Chinstrap</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>Gentoo</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Then the computation is as usual with the zero-one variables.</p>
-</section>
-<section id="interpretation" class="slide level2">
-<h2>Interpretation</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb89-2"><a href="#cb89-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb89-3"><a href="#cb89-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb89-4"><a href="#cb89-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
-</div>
-</div>
-<ul>
-<li>Flipper length of the baseline species is the intercept.</li>
-<li>Flipper length of the two other species add their coefficient</li>
-</ul>
-</section>
-<section id="compare-to-a-visualization" class="slide level2 smaller">
-<h2>Compare to a visualization</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
-</div>
-</div>
+<p><em>We only did 1 and 2, so far.</em></p>
 
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-48-1.png" width="288" class="r-stretch"><p>The red dots are the average values for species.</p>
-<p>The rest is a boxplot. More on these later.</p>
+</div>
+<aside><div>
+<p>Leek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
+</div></aside></section>
+<section id="descriptive-projects" class="slide level2" data-background-color="khaki">
+<h2>Descriptive Projects</h2>
+<p><img data-src="img/DescripitiveResearch_Dubin1969.png"></p>
+
+<aside><div>
+<p>Dubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models</p>
+</div></aside></section>
+<section id="data-analysis-flowchart" class="slide level2" data-background-color="khaki">
+<h2>Data Analysis Flowchart</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="img/DataAnalysisFlowChart_LeekPeng.jpeg" height="550"></p>
+</figure>
+</div>
+</section>
+<section id="example-covid-19-and-vitamin-d" class="slide level2 smaller" data-background-color="khaki">
+<h2>Example: COVID-19 and Vitamin D</h2>
+<div>
+<ol type="1">
+<li class="fragment"><strong>Descriptive:</strong> frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals</li>
+<li class="fragment"><strong>Exploratory:</strong> examine relationships between a range of dietary factors and COVID-19 hospitalisations</li>
+<li class="fragment"><strong>Inferential:</strong> examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large</li>
+<li class="fragment"><strong>Predictive:</strong> what types of people will take Vitamin D supplements during the next year</li>
+<li class="fragment"><strong>Causal:</strong> whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised</li>
+<li class="fragment"><strong>Mechanistic:</strong> how increased vitamin D intake leads to a reduction in the number of viral illnesses</li>
+</ol>
+</div>
+</section>
+<section id="questions-to-questions" class="slide level2" data-background-color="khaki">
+<h2>Questions to questions</h2>
+<ul>
+<li>Do you have appropriate data to answer your question?</li>
+<li>Do you have information on confounding variables?</li>
+<li>Was the data you’re working with collected in a way that introduces bias?</li>
+</ul>
+
+<aside><div>
+<p><strong>Example</strong><br>
+I want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.</p>
+<ul>
+<li>Is this a biased or an unbiased estimate of the number of children in households in Bremen?</li>
+<li>If biased, will the value be an overestimate or underestimate?</li>
+</ul>
+</div></aside></section>
+<section id="context-information-is-important" class="slide level2 smaller" data-background-color="khaki">
+<h2>Context Information is important!</h2>
+<ul>
+<li>Not all information is in the data!</li>
+<li>Potential confounding variables you infer from general knowledge</li>
+<li>Information about data collection you may receive from an accompanying report</li>
+<li>Information about computed variables you may need to look up in accompanying documentation</li>
+<li>Information about certain variables you may find in an accompanying <strong>codebook</strong>. For example the exact wording of questions in survey data.</li>
+</ul>
 </section></section>
 <section>
-<section id="nonlinear-models" class="title-slide slide level1 center">
-<h1>Nonlinear Models</h1>
+<section id="review" class="title-slide slide level1 center">
+<h1>Review</h1>
 
 </section>
-<section id="where-a-linear-model-is-bad" class="slide level2">
-<h2>Where a linear model is bad</h2>
-<p>Total corona cases in Germany in the first wave 2020.</p>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-49-1.png" width="960" class="r-stretch"></section>
-<section id="log-transformation" class="slide level2 smaller">
-<h2><span class="math inline">\(\log\)</span> transformation</h2>
-<p>Instead of <code>Cumulative_cases</code> we look at <span class="math inline">\(\log(\)</span><code>Cumulative_cases</code><span class="math inline">\()\)</span></p>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-50-1.png" width="960" class="r-stretch"><p>Almost perfect fit of a linear model.</p>
-<p>The model is <span class="math inline">\(y=\beta_0 e^{\beta_1\cdot x}\)</span> (<span class="math inline">\(y=\)</span> <code>Cumulative cases</code>, <span class="math inline">\(x=\)</span> Days).</p>
-<p><span class="math inline">\(\log(y)=\log(\beta_0) + \beta_1\cdot x\)</span> (A linear model!)</p>
-</section>
-<section id="log-transformation-1" class="slide level2 smaller">
-<h2><span class="math inline">\(\log\)</span> transformation</h2>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-51-1.png" width="960" class="r-stretch"><p>What is the difference to the penguin model?</p>
-<div class="fragment">
+<section id="achievements-and-next-steps" class="slide level2">
+<h2>Achievements and next steps</h2>
 <ul>
-<li><span class="math inline">\(x\)</span> has an ordered structure and no duplicates</li>
+<li>We have learned about the data science process</li>
+<li>You made essential steps in data visualization and data wrangling with New York City Flights in the Homework</li>
+<li>You can write and render reproducible reports</li>
+<li>We had some math refreshment</li>
+<li>We learned some data science data and programming concepts in R and in Python. Reconsider them in later homework!</li>
 </ul>
-<p>The fit looks so good. Why?</p>
-</div>
-<div class="fragment">
-<p>This shows exponential growth (more later).<br>
-Maybe we can go after a <strong>mechanistic</strong> explanation here.</p>
-</div>
-</section>
-<section id="however-it-works-only-in-a-certain-range" class="slide level2">
-<h2>However, it works only in a certain range …</h2>
-
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-52-1.png" width="960" class="r-stretch"></section></section>
-<section id="next" class="title-slide slide level1 center">
-<h1>Next</h1>
+<p>Next steps coming (you will receive individual repositories for this):</p>
 <ul>
-<li><p>On demand: Q&amp;A on getting up with homework</p></li>
-<li><p>More math on summary statistics (Mean, standard deviation, correlation and others)</p></li>
-<li><p>A bit of calculus (with data)</p></li>
-<li><p>More models (and surroundings like fitting methods, preprocessing, performance measures)</p></li>
+<li>Homework mimicking data science projects</li>
+<li>Some exploratory data analysis in a sandbox</li>
+<li>Thinking about your own data science project (in groups of 2-3)</li>
 </ul>
 
 
-<img src="img/JACOBS_LOGO_RGB_Internet.jpg" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://janlorenz.github.io/JU-F22-MSDSSB-DSOC-02/">JU-F22-MDSSB-DSCO-02: Data Science Concepts</a></p>
+<img src="img/ConstructorUniversity.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools">CU-F23-MDSSB-DSCO-02: Data Science Concepts</a></p>
 </div>
-</section>
-
+</section></section>
 
     </div>
   </div>
@@ -1936,7 +2124,7 @@ Maybe we can go after a <strong>mechanistic</strong> explanation here.</p>
         hideCursorTime: 5000,
 
         // Opens links in an iframe preview overlay
-        previewLinks: false,
+        previewLinks: true,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
         transition: 'none',
