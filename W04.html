@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis</title>
+  <title>Data Science Concepts / Data Science Tools - W#04: Math refresh, Function Programming, Descriptive Statistics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#04: Math refresh, Function Programming, Descriptive Statistics, Exploratory Data Analysis</h1>
+  <h1 class="title">W#04: Math refresh, Function Programming, Descriptive Statistics</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -507,7 +507,7 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <span style="color:blue;">“<span class="math inline">\(f\)</span> maps from <span class="math inline">\(X\)</span> to <span class="math inline">\(Y\)</span>”</span></p>
 <p>and <span class="math inline">\(x \mapsto f(x)\)</span><br>
 <span style="color:blue;">“<span class="math inline">\(x\)</span> maps to <span class="math inline">\(f(x)\)</span>”</span></p>
-<p>The khaki set is called the <em>image</em> of <span class="math inline">\(f\)</span>.</p>
+<p>The yellow set is called the <em>image</em> of <span class="math inline">\(f\)</span>.</p>
 </div><div class="column">
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Codomain2.SVG/375px-Codomain2.SVG.png"></p>
 </div>
@@ -584,11 +584,11 @@ these are <code>origin</code> airports in <code>flights</code></li>
 <span style="color:red;"><span class="math inline">\(f(x) = e^x\)</span> <em>exponential function</em></span><br>
 <span style="color:green;"><span class="math inline">\(f(x) = \log(x)\)</span> <em>natural logarithm</em></span></p>
 <ul>
-<li>Square function and square root function are the <em>inverse</em> of each other. Exponential and natural logarithm, too.</li>
+<li>Square and square root function are <em>inverse</em> of each other. Exponential and natural logarithm, too.</li>
 </ul>
 <p><span class="math inline">\(\sqrt[2]{x}^2 = \sqrt[2]{x^2} = x\)</span>, <span class="math inline">\(\log(e^x) = e^{\log(x)} = x\)</span></p>
 <ul>
-<li>Their graphs reflect each other with identity function graph as mirror axis.</li>
+<li>Identity function graph as mirror axis.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <div class="cell">
@@ -833,7 +833,7 @@ and is related to the <em>central limit theorem</em></p>
 <section id="rules-for-logarithms" class="slide level2" data-background-color="aquamarine">
 <h2>Rules for logarithms</h2>
 <p>Usually only one base is used in the same context, because changing base is easy:</p>
-<p><span class="math inline">\(\log_c(x) = \frac{log_b(x)}{\log_b(c)} = \frac{\log(x)}{\log(c)}\)</span></p>
+<p><span class="math inline">\(\log_c(x) = \frac{\log_b(x)}{\log_b(c)} = \frac{\log(x)}{\log(c)}\)</span></p>
 <div class="columns">
 <div class="column" style="width:20%;">
 <p><span class="math inline">\(\log(x\cdot y)\)</span></p>
@@ -907,7 +907,7 @@ and is related to the <em>central limit theorem</em></p>
 <pre><code>function (x, na.rm = FALSE) 
 sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
     na.rm = na.rm))
-&lt;bytecode: 0x560cfdc2a2f0&gt;
+&lt;bytecode: 0x5637b0e72818&gt;
 &lt;environment: namespace:stats&gt;</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>c <span class="co"># This function is not written in R but is a R primitive</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -920,7 +920,7 @@ sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x),
 {
     UseMethod("ggplot")
 }
-&lt;bytecode: 0x560cf6a94600&gt;
+&lt;bytecode: 0x5637aa23ade8&gt;
 &lt;environment: namespace:ggplot2&gt;</code></pre>
 </div>
 </div>
@@ -977,10 +977,10 @@ sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x),
 </div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">mymult</span>(<span class="at">y =</span> <span class="dv">3</span>,<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">mymult</span>(<span class="at">y =</span> <span class="dv">3</span>, <span class="at">x =</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column fragment">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 8</code></pre>
+<pre><code>[1] 12</code></pre>
 </div>
 </div>
 </div>
@@ -1305,8 +1305,7 @@ The mode has no rules for a tie.</p>
 </div>
 <div class="fragment">
 <p>Mean: No.<br>
-Median: For ordered categories.<br>
-Mode: For any categorical variable.</p>
+Median: For ordered categories (except when even number and the two middlemost are not the same) Mode: For any categorical variable.</p>
 </div>
 <div class="fragment">
 <p><strong>Is the measure always also in the data sequence?</strong></p>
@@ -1429,7 +1428,7 @@ We should filter out the highest values for the histogram…</p>
 Quoting Galton on the mean as a democratic aggregation function:<br>
 <em>“The mean gives voting power to the cranks in proportion to their crankiness.”</em></li>
 <li class="fragment">The mode tends to be on <em>focal</em> values as round numbers (10,000). In Galton’s data this is not so pronounced beause estimators used several units which Galton had to convert.</li>
-<li class="fragment"><strong>How to choose a measure to aggreagte the wisdom?</strong>
+<li class="fragment"><strong>How to choose a measure to aggregate the wisdom?</strong>
 <ul>
 <li class="fragment">By the nature of the estimate problem? Is the scale mostly clear? (Are we in the hundreds, thousands, ten thousands, …)</li>
 <li class="fragment">By the nature of the distribution?</li>
@@ -1447,7 +1446,7 @@ Quoting Galton on the mean as a democratic aggregation function:<br>
 <h2>Measures of dispersion<sup>1</sup></h2>
 <p>Goal: We want to measure</p>
 <ul>
-<li>how spread out values are around the central tendency.</li>
+<li>How spread out values are around the central tendency.</li>
 <li>How stretched or squeezed is the distribution?</li>
 </ul>
 <p><strong>Variance</strong> is the mean of the squared deviation from the mean: <span class="math inline">\(\text{Var}(x) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu)^2\)</span> where <span class="math inline">\(\mu\)</span> (mu) is the mean.</p>
@@ -1520,425 +1519,6 @@ Quoting Galton on the mean as a democratic aggregation function:<br>
 <ul>
 <li>This is a <em>shift-scale transformation</em>. We shift by the mean and scale by the standard deviation.</li>
 <li>A standard score <span class="math inline">\(z_i\)</span> shows how mean standard deviations <span class="math inline">\(x_i\)</span> is away from the mean of <span class="math inline">\(x\)</span>.</li>
-</ul>
-</section>
-<section id="quantiles" class="slide level2 smaller" data-background-color="aquamarine">
-<h2>Quantiles</h2>
-<p>Cut points specifying intervals which contain equal amounts of values of the distribution.</p>
-<p><strong><span class="math inline">\(q\)</span>-quantiles</strong> divide into <span class="math inline">\(q\)</span> intervals covering all values.</p>
-<p>The quantiles are the cut points: For <span class="math inline">\(q\)</span> intervals there are <span class="math inline">\(q-1\)</span> cut points of interest.</p>
-<ul>
-<li>The one 2-quantile is the median.</li>
-<li>The three 4-quantiles are called <strong>quartiles</strong>. The second quartile is the median.</li>
-<li>100-quantiles are called <strong>percentiles</strong></li>
-</ul>
-
-<aside><div>
-<p>We omit problems of estimating quantiles from a sample where the number of estimates does not fit to a desired partion of equal size here.</p>
-</div></aside></section>
-<section id="examples-of-quantiles" class="slide level2" data-background-color="khaki">
-<h2>Examples of quantiles</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
-<span id="cb98-2"><a href="#cb98-2"></a><span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    0%    25%    50%    75%   100% 
- 896.0 1162.5 1208.0 1236.0 1516.0 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1"></a><span class="fu">quantile</span>(viertel<span class="sc">$</span>Schätzung, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      0%      25%      50%      75%     100% 
-     120     5000     9843    20000 29530000 </code></pre>
-</div>
-</div>
-<p>Interpretation: What does the value at 25% mean?</p>
-<div class="fragment">
-<p>The 25% of all values are lower than the value. 75% are larger.</p>
-</div>
-</section>
-<section id="interquartile-range-iqr" class="slide level2 smaller" data-background-color="aquamarine">
-<h2>Interquartile range (IQR)</h2>
-<p>The difference between the 1st and the 3rd quartile.</p>
-<ul>
-<li>A very common measure of dispersion.</li>
-</ul>
-<p>Examples:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
-<span id="cb102-2"><a href="#cb102-2"></a><span class="fu">IQR</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 73.5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1"></a><span class="fu">sd</span>(galton<span class="sc">$</span>Estimate) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 73.58677</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1"></a><span class="fu">IQR</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 15000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb108"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb108-1"><a href="#cb108-1"></a><span class="fu">sd</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 848395.5</code></pre>
-</div>
-</div>
-</section>
-<section id="summary-of-numerical-vectors-in-r" class="slide level2">
-<h2>Summary of numerical vectors in R</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb110"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb110-1"><a href="#cb110-1"></a><span class="fu">summary</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    896    1162    1208    1197    1236    1516 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a><span class="fu">summary</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-     120     5000     9843    53164    20000 29530000 </code></pre>
-</div>
-</div>
-</section>
-<section id="introducing-palmer-penguins" class="slide level2 scrollable smaller" data-background-color="khaki">
-<h2>Introducing Palmer Penguins</h2>
-<p><a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></p>
-<p>Chinstrap, Gentoo, and Adélie Penguins</p>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="200"> <img data-src="http://r.qcbs.ca/workshop03/book-en/images/culmen_depth.png" height="200"></p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 344 × 8
-   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
-   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
- 1 Adelie  Torgersen           39.1          18.7               181        3750
- 2 Adelie  Torgersen           39.5          17.4               186        3800
- 3 Adelie  Torgersen           40.3          18                 195        3250
- 4 Adelie  Torgersen           NA            NA                  NA          NA
- 5 Adelie  Torgersen           36.7          19.3               193        3450
- 6 Adelie  Torgersen           39.3          20.6               190        3650
- 7 Adelie  Torgersen           38.9          17.8               181        3625
- 8 Adelie  Torgersen           39.2          19.6               195        4675
- 9 Adelie  Torgersen           34.1          18.1               193        3475
-10 Adelie  Torgersen           42            20.2               190        4250
-# ℹ 334 more rows
-# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
-</div>
-</div>
-</section>
-<section id="summary-also-works-for-data-frames" class="slide level2">
-<h2>Summary also works for data frames</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb115"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb115-1"><a href="#cb115-1"></a><span class="fu">summary</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      species          island    bill_length_mm  bill_depth_mm  
- Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
- Chinstrap: 68   Dream    :124   1st Qu.:39.23   1st Qu.:15.60  
- Gentoo   :124   Torgersen: 52   Median :44.45   Median :17.30  
-                                 Mean   :43.92   Mean   :17.15  
-                                 3rd Qu.:48.50   3rd Qu.:18.70  
-                                 Max.   :59.60   Max.   :21.50  
-                                 NA's   :2       NA's   :2      
- flipper_length_mm  body_mass_g       sex           year     
- Min.   :172.0     Min.   :2700   female:165   Min.   :2007  
- 1st Qu.:190.0     1st Qu.:3550   male  :168   1st Qu.:2007  
- Median :197.0     Median :4050   NA's  : 11   Median :2008  
- Mean   :200.9     Mean   :4202                Mean   :2008  
- 3rd Qu.:213.0     3rd Qu.:4750                3rd Qu.:2009  
- Max.   :231.0     Max.   :6300                Max.   :2009  
- NA's   :2         NA's   :2                                 </code></pre>
-</div>
-</div>
-</section>
-<section id="boxplots" class="slide level2 smaller">
-<h2>Boxplots</h2>
-<p>A condensed visualization of a distribution showing location, spread, skewness and outliers.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><ul>
-<li>The <strong>box</strong> shows the median in the middle and the other two quartiles as their borders.</li>
-<li><strong>Whiskers</strong>: From above the upper quartile, a distance of 1.5 times the IQR is measured out and a whisker is drawn up to the largest observed data point from the dataset that falls within this distance. Similarly, for the lower quartile.</li>
-<li>Whiskers must end at an observed data point! (So lengths can differ.)</li>
-<li>All other values outside of box and whiskers are shown as points and often called <strong>outliers</strong>. (There may be none.)</li>
-</ul>
-</section>
-<section id="boxplots-vs.-histograms" class="slide level2 smaller">
-<h2>Boxplots vs.&nbsp;histograms</h2>
-<ul>
-<li>Histograms can show the shape of the distribution well, but not the summary statistics like the median.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb118"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb118-1"><a href="#cb118-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-45-1.png" width="960"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-46-1.png" width="960"></p>
-</div>
-</div>
-</section>
-<section id="boxplots-vs.-histograms-1" class="slide level2 smaller">
-<h2>Boxplots vs.&nbsp;histograms</h2>
-<ul>
-<li>Boxplots can not show the patterns of bimodal or multimodal distributions.</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb120"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb120-1"><a href="#cb120-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-47-1.png" width="960"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img data-src="W04_files/figure-revealjs/unnamed-chunk-48-1.png" width="960"></p>
-</div>
-</div>
-</section>
-<section id="minimizing-proporties-of-mean-and-median" class="slide level2" data-background-color="aquamarine">
-<h2>Minimizing proporties of Mean and Median</h2>
-<p><em>Mean</em> minimizes the mean of squared deviations from it. No other value <span class="math inline">\(a\)</span> has a lower mean of square distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n(x_i - a)^2\)</span>.</p>
-<div class="fragment">
-<p><em>Median</em> minimizes the sum of the absolute deviation. No other value <span class="math inline">\(a\)</span> has a lower mean of absolute distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n|x_i - a|\)</span>.</p>
-</div>
-</section>
-<section id="two-families-of-summary-statistics" class="slide level2" data-background-color="aquamarine">
-<h2>Two families of summary statistics</h2>
-<ul>
-<li>Measures based on <strong>sums</strong> (related to <em>mathematical moments</em>)
-<ul>
-<li>Mean</li>
-<li>Standard deviation</li>
-</ul></li>
-<li>Measures based on the <strong>ordered</strong> sequence of these observations (<em>order statistics</em>)
-<ul>
-<li>Median (and all quantiles)</li>
-<li>Interquartile range</li>
-</ul></li>
-</ul>
-</section></section>
-<section>
-<section id="bivariate-summary-statistics" class="title-slide slide level1 center">
-<h1>Bivariate Summary Statistics</h1>
-
-</section>
-<section id="covariance" class="slide level2" data-background-color="aquamarine">
-<h2>Covariance</h2>
-<p>Goal: We want to measure the joint variation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
-<p><em>Covariance</em> <span class="math inline">\(\text{cov}(x,y) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)\)</span></p>
-<p>where <span class="math inline">\(\mu_x\)</span> and <span class="math inline">\(\mu_y\)</span> are the arithmetic means of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
-<p>Note: <span class="math inline">\(\text{cov}(x,x) = \text{Var}(x)\)</span></p>
-</section>
-<section id="correlation" class="slide level2 smaller" data-background-color="aquamarine">
-<h2>Correlation</h2>
-<p>Goal: We want to measure the linear correlation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
-<p><strong>Pearson correlation coefficient</strong> <span class="math inline">\(r_{xy} = \frac{\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^n(x_i - \mu_x)^2}\sqrt{\sum_{i=1}^n(y_i - \mu_y)^2}}\)</span></p>
-<p>Note, <span class="math inline">\(r_{xy} = \frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\)</span></p>
-<p>where <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_y\)</span> are the standard deviations of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
-<p>Note, when <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are standard scores (each with mean zero and standard deviation one), then <span class="math inline">\(\text{cov}(x,y) = r_{xy}\)</span>.</p>
-
-<aside><div>
-<p>There are other correlation coefficients which we omit hear.</p>
-</div></aside></section>
-<section id="interpretation-of-correlation" class="slide level2 smaller">
-<h2>Interpretation of correlation</h2>
-<p>Correlation between two vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is “normalized”.</p>
-<ul>
-<li><p>The maximal possible values is <span class="math inline">\(r_{xy} = 1\)</span></p>
-<ul>
-<li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>fully correlated</em></li>
-</ul></li>
-<li><p>The minimal values is <span class="math inline">\(r_{xy} = -1\)</span></p>
-<ul>
-<li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>anticorrelated</em></li>
-</ul></li>
-<li><p>When <span class="math inline">\(r_{xy} \approx 0\)</span> the variables are <em>uncorrelated</em></p></li>
-<li><p><span class="math inline">\(r_{xy} = r_{yx}\)</span></p></li>
-</ul>
-</section>
-<section id="correlation-matrix" class="slide level2 smaller">
-<h2>Correlation matrix</h2>
-<p>Using <code>corrr</code> from the packages<code>tidymodels</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb122"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb122-1"><a href="#cb122-1"></a><span class="fu">library</span>(corrr)</span>
-<span id="cb122-2"><a href="#cb122-2"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
-<span id="cb122-3"><a href="#cb122-3"></a> <span class="fu">correlate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 6
-  term        bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    year
-  &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;
-1 bill_lengt…        NA            -0.235              0.656      0.595   0.0545
-2 bill_depth…        -0.235        NA                 -0.584     -0.472  -0.0604
-3 flipper_le…         0.656        -0.584             NA          0.871   0.170 
-4 body_mass_g         0.595        -0.472              0.871     NA       0.0422
-5 year                0.0545       -0.0604             0.170      0.0422 NA     </code></pre>
-</div>
-</div>
-</section>
-<section id="correlation-visualization" class="slide level2 smaller">
-<h2>Correlation visualization</h2>
-<p>Using <code>correlate</code> and <code>see</code> from <code>easystats</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1"></a><span class="fu">library</span>(correlation)</span>
-<span id="cb124-2"><a href="#cb124-2"></a><span class="fu">library</span>(see)</span>
-<span id="cb124-3"><a href="#cb124-3"></a>results <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
-<span id="cb124-4"><a href="#cb124-4"></a> <span class="fu">correlation</span>()</span>
-<span id="cb124-5"><a href="#cb124-5"></a>results <span class="sc">%&gt;%</span></span>
-<span id="cb124-6"><a href="#cb124-6"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb124-7"><a href="#cb124-7"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W04_files/figure-revealjs/unnamed-chunk-50-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="exploratory-data-analysis" class="title-slide slide level1 center" data-background-color="khaki">
-<h1>Exploratory Data Analysis</h1>
-
-</section>
-<section id="exploratory-data-analysis-1" class="slide level2 smaller" data-background-color="khaki">
-<h2>Exploratory Data Analysis</h2>
-<p><img data-src="img/data-science-explore.png"></p>
-<p>EDA is the systematic exploration of data using</p>
-<ul>
-<li>visualization</li>
-<li>transformation</li>
-<li>computation of characteristic values</li>
-<li>modeling</li>
-</ul>
-
-<aside><div>
-<p>Computation of characteristic values: Functions like mean, median, mode, standard deviation, or interquartile range<br>
-Modeling: Operations like linear regression or dimensionality reduction. We haven’t talked about it, but will do soon.</p>
-</div></aside></section>
-<section id="systematic-but-no-standard-routine" class="slide level2" data-background-color="khaki">
-<h2>Systematic but no standard routine</h2>
-<blockquote>
-<p>“There are no routine statistical questions, only questionable statistical routines.” — Sir David Cox</p>
-</blockquote>
-<blockquote>
-<p>“Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise.” — John Tukey</p>
-</blockquote>
-</section>
-<section id="systematic-but-no-standard-routine-1" class="slide level2" data-background-color="khaki">
-<h2>Systematic but no standard routine</h2>
-<ul>
-<li>Goal of EDA: Develop understanding of your data.</li>
-<li>EDA’s iterative cycle
-<ol type="1">
-<li>Generate questions about your data.</li>
-<li>Search for answers by visualizing, transforming, and modelling your data.</li>
-<li>Use what you learn to refine your questions and/or generate new questions.</li>
-</ol></li>
-<li>EDA is fundamentally a creative process.</li>
-</ul>
-</section>
-<section id="questions" class="slide level2" data-background-color="khaki">
-<h2>Questions</h2>
-<ul>
-<li>The way to ask quality questions:
-<ul>
-<li>Generate many questions!</li>
-<li>You cannot come up with most interesting questions when you start.</li>
-</ul></li>
-<li>There is no rule which questions to ask. These are useful
-<ol type="1">
-<li>What type of <strong>variation</strong> occurs within my variables?<br>
-(Barplots, Histograms,…)</li>
-<li>What type of <strong>covariation</strong> occurs between my variables?<br>
-(Scatterplots, Timelines,…)</li>
-</ol></li>
-</ul>
-</section>
-<section id="eda-embedded-in-a-statistical-data-science-project" class="slide level2" data-background-color="khaki">
-<h2>EDA embedded in a <em>statistical</em> data science project</h2>
-<ol type="1">
-<li>Stating and refining the question</li>
-<li><strong>Exploring the data</strong></li>
-<li>Building formal statistical models</li>
-<li>Interpreting the results</li>
-<li>Communicating the results</li>
-</ol>
-
-<aside><div>
-<p>Roger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015).</p>
-</div></aside></section></section>
-<section>
-<section id="data-science-projects" class="title-slide slide level1 center" data-background-color="khaki">
-<h1>Data science projects</h1>
-<p>Getting into question-driven data work</p>
-</section>
-<section id="six-types-of-questions" class="slide level2 smaller" data-background-color="khaki">
-<h2>Six types of questions</h2>
-<ol type="1">
-<li><strong>Descriptive:</strong> summarize a characteristic of a set of data</li>
-<li><strong>Exploratory:</strong> analyze to see if there are patterns, trends, or relationships between variables (hypothesis generating)</li>
-<li><strong>Inferential:</strong> analyze patterns, trends, or relationships in representative data from a population</li>
-<li><strong>Predictive:</strong> make predictions for individuals or groups of individuals</li>
-<li><strong>Causal:</strong> whether changing one factor will change another factor, on average, in a population</li>
-<li><strong>Mechanistic:</strong> explore “how” as opposed to whether</li>
-</ol>
-<div class="fragment">
-<p><em>We only did 1 and 2, so far.</em></p>
-
-</div>
-<aside><div>
-<p>Leek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
-</div></aside></section>
-<section id="descriptive-projects" class="slide level2" data-background-color="khaki">
-<h2>Descriptive Projects</h2>
-<p><img data-src="img/DescripitiveResearch_Dubin1969.png"></p>
-
-<aside><div>
-<p>Dubin (1969). Theory Building - A Practical Guide to the Construction and Testing of Theoretical Models</p>
-</div></aside></section>
-<section id="data-analysis-flowchart" class="slide level2" data-background-color="khaki">
-<h2>Data Analysis Flowchart</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/DataAnalysisFlowChart_LeekPeng.jpeg" height="550"></p>
-</figure>
-</div>
-</section>
-<section id="example-covid-19-and-vitamin-d" class="slide level2 smaller" data-background-color="khaki">
-<h2>Example: COVID-19 and Vitamin D</h2>
-<div>
-<ol type="1">
-<li class="fragment"><strong>Descriptive:</strong> frequency of hospitalisations due to COVID-19 in a set of data collected from a group of individuals</li>
-<li class="fragment"><strong>Exploratory:</strong> examine relationships between a range of dietary factors and COVID-19 hospitalisations</li>
-<li class="fragment"><strong>Inferential:</strong> examine whether any relationship between taking Vitamin D supplements and COVID-19 hospitalisations found in the sample hold for the population at large</li>
-<li class="fragment"><strong>Predictive:</strong> what types of people will take Vitamin D supplements during the next year</li>
-<li class="fragment"><strong>Causal:</strong> whether people with COVID-19 who were randomly assigned to take Vitamin D supplements or those who were not are hospitalised</li>
-<li class="fragment"><strong>Mechanistic:</strong> how increased vitamin D intake leads to a reduction in the number of viral illnesses</li>
-</ol>
-</div>
-</section>
-<section id="questions-to-questions" class="slide level2" data-background-color="khaki">
-<h2>Questions to questions</h2>
-<ul>
-<li>Do you have appropriate data to answer your question?</li>
-<li>Do you have information on confounding variables?</li>
-<li>Was the data you’re working with collected in a way that introduces bias?</li>
-</ul>
-
-<aside><div>
-<p><strong>Example</strong><br>
-I want to estimate the average number of children in households in Bremen. I conduct a survey at an elementary school and ask pupils how many children, including themselves, live in their house. Then, I take the average of the responses.</p>
-<ul>
-<li>Is this a biased or an unbiased estimate of the number of children in households in Bremen?</li>
-<li>If biased, will the value be an overestimate or underestimate?</li>
-</ul>
-</div></aside></section>
-<section id="context-information-is-important" class="slide level2 smaller" data-background-color="khaki">
-<h2>Context Information is important!</h2>
-<ul>
-<li>Not all information is in the data!</li>
-<li>Potential confounding variables you infer from general knowledge</li>
-<li>Information about data collection you may receive from an accompanying report</li>
-<li>Information about computed variables you may need to look up in accompanying documentation</li>
-<li>Information about certain variables you may find in an accompanying <strong>codebook</strong>. For example the exact wording of questions in survey data.</li>
 </ul>
 </section>
 <section id="achievements-and-next-steps" class="slide level2 smaller">
