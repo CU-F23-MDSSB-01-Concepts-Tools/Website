@@ -401,85 +401,13 @@ Jan Lorenz
 </div>
 
 </section>
-<section>
 <section id="errors-in-data" class="title-slide slide level1 center">
 <h1>Errors in data</h1>
 <div class="cell">
 
 </div>
 </section>
-<section id="strange-airports-homework-02" class="slide level2 smaller">
-<h2>Strange Airports (Homework 02)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(nycflights13)</span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> airports, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> tzone)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-</div>
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>airports <span class="sc">%&gt;%</span> <span class="fu">filter</span>(lon <span class="sc">&gt;=</span> <span class="dv">0</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 8
-  faa   name                            lat   lon   alt    tz dst   tzone       
-  &lt;chr&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
-1 DVT   Deer Valley Municipal Airport  33.4 112.   1478     8 A     Asia/Chongq…
-2 EEN   Dillant Hopkins Airport        72.3  42.9   149    -5 A     &lt;NA&gt;        
-3 MYF   Montgomery Field               32.5 118.     17     8 A     Asia/Chongq…
-4 SYA   Eareckson As                   52.7 174.     98    -9 A     America/Anc…</code></pre>
-</div>
-</div>
-</section>
-<section id="airport-errors" class="slide level2 smaller">
-<h2>Airport errors</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 8
-  faa   name                            lat   lon   alt    tz dst   tzone       
-  &lt;chr&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
-1 DVT   Deer Valley Municipal Airport  33.4 112.   1478     8 A     Asia/Chongq…
-2 EEN   Dillant Hopkins Airport        72.3  42.9   149    -5 A     &lt;NA&gt;        
-3 MYF   Montgomery Field               32.5 118.     17     8 A     Asia/Chongq…
-4 SYA   Eareckson As                   52.7 174.     98    -9 A     America/Anc…</code></pre>
-</div>
-</div>
-<p>Correct locations (internet research and location of maps):</p>
-<div class="columns">
-<div class="column" style="width:55%;">
-<ul>
-<li>Deer Valley Municipal Airport: Phoenix<br>
-33°41′N 112°05′W <span style="color:red;">Missing minus for lon (W)</span></li>
-<li>Dillant Hopkins Airport: New Hampshire<br>
-42°54′N 72°16′W <span style="color:red;">lon-lat switched, minus (W)</span></li>
-<li>Montgomery Field: San Diego<br>
-32°44′N 117°11″W <span style="color:red;">Missing minus for lon (W)</span></li>
-<li>Eareckson As: Alaska<br>
-52°42′N 174°06′E <span style="color:red;">No error: Too west,it’s east!</span></li>
-</ul>
-</div><div class="column" style="width:45%;">
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/ef/FedStats_Lat_long.svg"></p>
-</div>
-</div>
-</section>
-<section id="conclusions-on-data-errors" class="slide level2 smaller">
-<h2>Conclusions on data errors</h2>
-<ul>
-<li>In real-world datasets errors like the 3 airport are quite common.</li>
-<li>Errors of this type are often hard to detect and remain unnoticed.
-<ul>
-<li>This can (but need not) change results drastically!</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<p>Conclusions</p>
-<ul>
-<li>Always remain <strong>alert for inconsistencies</strong> and be ready to check the <strong>plausibility</strong> of results.</li>
-<li>Skills in <strong>exploratory data analysis</strong> (EDA) are essential to find errors and explore their nature and implication</li>
-<li>Errors are unpredictable, of diverse types, and often deeply related to the reality the data presents.
-<ul>
-<li>One reason why EDA can not be a fully formalized and automatized process.</li>
-</ul></li>
-</ul>
-</div>
-</section></section>
 <section>
 <section id="corona-questions-homework-03" class="title-slide slide level1 center">
 <h1>Corona questions (Homework 03)</h1>
@@ -497,7 +425,7 @@ What are the data sources of WHO and OWiD?</p>
 </div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="cell-output-display">
-<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -558,10 +486,10 @@ What are the data sources of WHO and OWiD?</p>
 <section id="smoothing-time-series" class="slide level2 smaller">
 <h2>Smoothing time series</h2>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"><div class="cell columns column-output-location">
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"><div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
-<span id="cb5-2"><a href="#cb5-2"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">0</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 5 3 0</code></pre>
@@ -570,7 +498,7 @@ What are the data sources of WHO and OWiD?</p>
 </div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>zoo<span class="sc">::</span><span class="fu">rollmean</span>(x, <span class="at">k =</span> <span class="dv">3</span>, <span class="at">na.pad =</span> <span class="cn">TRUE</span>) <span class="co"># for centered window</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>zoo<span class="sc">::</span><span class="fu">rollmean</span>(x, <span class="at">k =</span> <span class="dv">3</span>, <span class="at">na.pad =</span> <span class="cn">TRUE</span>) <span class="co"># for centered window</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]       NA 2.666667 3.333333 2.666667       NA</code></pre>
@@ -579,7 +507,7 @@ What are the data sources of WHO and OWiD?</p>
 </div>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>(x <span class="sc">+</span> <span class="fu">lag</span>(x, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(x, <span class="at">n =</span> <span class="dv">2</span>))<span class="sc">/</span><span class="dv">3</span> <span class="co"># for lagged window</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>(x <span class="sc">+</span> <span class="fu">lag</span>(x, <span class="at">n =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">lag</span>(x, <span class="at">n =</span> <span class="dv">2</span>))<span class="sc">/</span><span class="dv">3</span> <span class="co"># for lagged window</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]       NA       NA 2.666667 3.333333 2.666667</code></pre>
@@ -595,7 +523,7 @@ What are the data sources of WHO and OWiD?</p>
 <section id="total-death-per-million-and-human-development" class="slide level2">
 <h2>Total death per million and human development</h2>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"><p>What findings? Explanations?</p>
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"><p>What findings? Explanations?</p>
 </section></section>
 <section>
 <section id="ess-questions-homework-03" class="title-slide slide level1 center">
@@ -643,9 +571,9 @@ What are the data sources of WHO and OWiD?</p>
 </div>
 <p><strong>For numerical computations these must be filtered out or coded as NA!</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">select</span>(euftf) <span class="sc">|&gt;</span> </span>
-<span id="cb11-2"><a href="#cb11-2"></a> <span class="fu">mutate</span>(<span class="at">euftf_na =</span> euftf  <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb11-3"><a href="#cb11-3"></a> <span class="fu">summarize</span>(<span class="fu">across</span>(<span class="at">.fns =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">select</span>(euftf) <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a> <span class="fu">mutate</span>(<span class="at">euftf_na =</span> euftf  <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a> <span class="fu">summarize</span>(<span class="fu">across</span>(<span class="at">.fns =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 2
   euftf euftf_na
@@ -663,24 +591,24 @@ What are the data sources of WHO and OWiD?</p>
 <p>Question: What is the relation of the emotional attachment of Europeans to their <strong>own country</strong> and to <strong>Europe</strong>?</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>ess <span class="sc">|&gt;</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-3"><a href="#cb13-3"></a> <span class="fu">count</span>(atchctr, atcherp) <span class="sc">|&gt;</span> </span>
-<span id="cb13-4"><a href="#cb13-4"></a> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb13-5"><a href="#cb13-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, atcherp, </span>
-<span id="cb13-6"><a href="#cb13-6"></a>            <span class="at">size =</span> n, <span class="at">color =</span> n)) <span class="sc">+</span> </span>
-<span id="cb13-7"><a href="#cb13-7"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb13-8"><a href="#cb13-8"></a> <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">weight =</span> n), </span>
-<span id="cb13-9"><a href="#cb13-9"></a>             <span class="at">method =</span> <span class="st">'loess'</span>, </span>
-<span id="cb13-10"><a href="#cb13-10"></a>             <span class="at">formula =</span> <span class="st">'y ~ x'</span>) <span class="sc">+</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a> <span class="fu">scale_color_continuous</span>(<span class="at">type =</span> <span class="st">"viridis"</span>) <span class="sc">+</span></span>
-<span id="cb13-12"><a href="#cb13-12"></a> <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>)) <span class="sc">+</span></span>
-<span id="cb13-13"><a href="#cb13-13"></a> <span class="fu">coord_fixed</span>() <span class="sc">+</span> </span>
-<span id="cb13-14"><a href="#cb13-14"></a> <span class="fu">guides</span>(<span class="at">size =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>ess <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a> <span class="fu">count</span>(atchctr, atcherp) <span class="sc">|&gt;</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb9-5"><a href="#cb9-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, atcherp, </span>
+<span id="cb9-6"><a href="#cb9-6"></a>            <span class="at">size =</span> n, <span class="at">color =</span> n)) <span class="sc">+</span> </span>
+<span id="cb9-7"><a href="#cb9-7"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a> <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">weight =</span> n), </span>
+<span id="cb9-9"><a href="#cb9-9"></a>             <span class="at">method =</span> <span class="st">'loess'</span>, </span>
+<span id="cb9-10"><a href="#cb9-10"></a>             <span class="at">formula =</span> <span class="st">'y ~ x'</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a> <span class="fu">scale_color_continuous</span>(<span class="at">type =</span> <span class="st">"viridis"</span>) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a> <span class="fu">scale_size_area</span>(<span class="at">max_size =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>)) <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a> <span class="fu">coord_fixed</span>() <span class="sc">+</span> </span>
+<span id="cb9-14"><a href="#cb9-14"></a> <span class="fu">guides</span>(<span class="at">size =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -692,7 +620,7 @@ What are the data sources of WHO and OWiD?</p>
 <h2>Emotional attachment EU integration</h2>
 <p><strong>Question:</strong> What is the relation of the emotional <strong>attachment to the own country</strong> to <strong>attachment to Europe</strong> compared to the attitude about <strong>European integration</strong>?</p>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"><ul>
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"><ul>
 <li>Emotional attachment to the own country and Europe is positively related. (“Positive” here means the sign of the correlation. It does not mean “good”!)</li>
 <li>No compensation like “Emotion must be split between both.”</li>
 <li>Relation of country attachment to EU integration is weak but non-linear.</li>
@@ -705,7 +633,7 @@ What are the data sources of WHO and OWiD?</p>
 <p>11 times 11 = 121 (when each combination has a non-zero number of cases)</p>
 <p>How many observations (not NA) do we have in the data set?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> <span class="fu">summarize</span>(<span class="at">n =</span> <span class="fu">sum</span>(n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
       n
@@ -723,30 +651,30 @@ What are the data sources of WHO and OWiD?</p>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href="#cb16-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf)) <span class="sc">+</span> <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf)) <span class="sc">+</span> <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-17-1.png" width="288"></p>
+<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-14-1.png" width="288"></p>
 </div>
 </div>
 <p>Makes no sense because, just 121 points in a square.</p>
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb17-2"><a href="#cb17-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf, <span class="at">weight =</span> n)) <span class="sc">+</span> <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> <span class="fu">count</span>(atchctr, euftf) <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf, <span class="at">weight =</span> n)) <span class="sc">+</span> <span class="fu">geom_smooth</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-18-1.png" width="288"></p>
+<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-15-1.png" width="288"></p>
 </div>
 </div>
 <p>Makes sense weighted by the counts.</p>
 </div>
 <div id="tabset-1-3">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb18-2"><a href="#cb18-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf)) <span class="sc">+</span> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(atchctr, euftf)) <span class="sc">+</span> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-19-1.png" width="288"></p>
+<p><img data-src="W8_files/figure-revealjs/unnamed-chunk-16-1.png" width="288"></p>
 </div>
 </div>
 <p>Similar to B. Lower uncertainty! Different y-axis limits!<br>
@@ -758,7 +686,7 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="significance-of-nonlinear-relation" class="slide level2 smaller">
 <h2>Significance of nonlinear relation?</h2>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-20-1.png" width="288" class="r-stretch"><ul>
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-17-1.png" width="288" class="r-stretch"><ul>
 <li>Taking into account the real number of cases the uncertainty range indicates that the non-linear relationship is fairly certain, although small in magnitude.</li>
 <li>Note, we have not looked at uncertainty measures in detail yet.</li>
 <li>Main message here: <strong>Low uncertainty and large effect size is not the same!</strong>
@@ -777,9 +705,9 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="linear-models" class="slide level2 smaller">
 <h2>Linear models</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb19-3"><a href="#cb19-3"></a> <span class="fu">fit</span>(atcherp <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb15-3"><a href="#cb15-3"></a> <span class="fu">fit</span>(atcherp <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic p.value
@@ -795,8 +723,8 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <div class="fragment">
 <p>For EU integration attitude.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb21-2"><a href="#cb21-2"></a> <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2"></a> <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic      p.value
@@ -821,10 +749,10 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="linear-models-r-squared" class="slide level2 smaller">
 <h2>Linear models R-squared</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb23-3"><a href="#cb23-3"></a> <span class="fu">fit</span>(atcherp <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span></span>
-<span id="cb23-4"><a href="#cb23-4"></a> <span class="fu">glance</span>()  <span class="co"># glance shows summary statistics of model fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-3"><a href="#cb19-3"></a> <span class="fu">fit</span>(atcherp <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a> <span class="fu">glance</span>()  <span class="co"># glance shows summary statistics of model fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic p.value    df   logLik     AIC     BIC
@@ -840,9 +768,9 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <div class="fragment">
 <p>For EU integration attitude.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb25-2"><a href="#cb25-2"></a> <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> </span>
-<span id="cb25-3"><a href="#cb25-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a href="#cb21-2"></a> <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> </span>
+<span id="cb21-3"><a href="#cb21-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic    p.value    df  logLik    AIC    BIC
@@ -861,9 +789,9 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="linear-model-with-more-predictors" class="slide level2 smaller">
 <h2>Linear model with more predictors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb27-3"><a href="#cb27-3"></a>    <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr <span class="sc">+</span> atcherp, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb23-3"><a href="#cb23-3"></a>    <span class="fu">fit</span>(euftf <span class="sc">~</span> atchctr <span class="sc">+</span> atcherp, <span class="at">data =</span> ess) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term        estimate std.error statistic  p.value
@@ -881,16 +809,16 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="corona-deaths-vs.-human-development" class="slide level2 smaller">
 <h2>Corona deaths vs.&nbsp;Human development</h2>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"><p>Note: Not weighted by population!</p>
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"><p>Note: Not weighted by population!</p>
 </section>
 <section id="linear-model-total-deaths-vs.-hdi" class="slide level2 smaller">
 <h2>Linear model: Total deaths vs.&nbsp;HDI</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>owid_aug22 <span class="ot">&lt;-</span> owid <span class="sc">|&gt;</span> </span>
-<span id="cb29-2"><a href="#cb29-2"></a> <span class="fu">filter</span>(date <span class="sc">==</span> <span class="st">"2022-08-31"</span>, <span class="sc">!</span><span class="fu">is.na</span>(human_development_index), </span>
-<span id="cb29-3"><a href="#cb29-3"></a>        <span class="sc">!</span><span class="fu">is.na</span>(total_deaths_per_million), <span class="sc">!</span><span class="fu">is.na</span>(continent))</span>
-<span id="cb29-4"><a href="#cb29-4"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb29-5"><a href="#cb29-5"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index, <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>owid_aug22 <span class="ot">&lt;-</span> owid <span class="sc">|&gt;</span> </span>
+<span id="cb25-2"><a href="#cb25-2"></a> <span class="fu">filter</span>(date <span class="sc">==</span> <span class="st">"2022-08-31"</span>, <span class="sc">!</span><span class="fu">is.na</span>(human_development_index), </span>
+<span id="cb25-3"><a href="#cb25-3"></a>        <span class="sc">!</span><span class="fu">is.na</span>(total_deaths_per_million), <span class="sc">!</span><span class="fu">is.na</span>(continent))</span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb25-5"><a href="#cb25-5"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index, <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term                    estimate std.error statistic  p.value
@@ -903,9 +831,9 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="adding-a-main-effect-of-continents" class="slide level2 smaller">
 <h2>Adding a main effect of continents</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb31-2"><a href="#cb31-2"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index <span class="sc">+</span> continent, </span>
-<span id="cb31-3"><a href="#cb31-3"></a>        <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb27-2"><a href="#cb27-2"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index <span class="sc">+</span> continent, </span>
+<span id="cb27-3"><a href="#cb27-3"></a>        <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 5
   term                    estimate std.error statistic       p.value
@@ -924,9 +852,9 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="adding-as-interaction" class="slide level2 smaller">
 <h2>Adding as interaction</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb33-2"><a href="#cb33-2"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index <span class="sc">*</span> continent, </span>
-<span id="cb33-3"><a href="#cb33-3"></a>        <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2"></a>    <span class="fu">fit</span>(total_deaths_per_million <span class="sc">~</span> human_development_index <span class="sc">*</span> continent, </span>
+<span id="cb29-3"><a href="#cb29-3"></a>        <span class="at">data =</span> owid_aug22) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 12 × 5
    term                                    estimate std.error statistic  p.value
@@ -955,7 +883,7 @@ Note, <code>geom_smooth</code> uses <code>stats::loess</code> for less than 1,00
 <section id="regression-lines-by-continent" class="slide level2 smaller">
 <h2>Regression lines by continent</h2>
 
-<img data-src="W8_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"><p>The relation between deaths and human development is reverse in Europe.</p>
+<img data-src="W8_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"><p>The relation between deaths and human development is reverse in Europe.</p>
 </section>
 <section id="simpsons-paradox" class="slide level2">
 <h2>Simpson’s paradox</h2>

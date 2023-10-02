@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#05: Summary Statistics, Exploratory Data Analysis, Modeling, Fitting a Linear Model</title>
+  <title>Data Science Concepts / Data Science Tools - W#05: Summary Statistics, Exploratory Data Analysis, Principal Component Analysis</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#05: Summary Statistics, Exploratory Data Analysis, Modeling, Fitting a Linear Model</h1>
+  <h1 class="title">W#05: Summary Statistics, Exploratory Data Analysis, Principal Component Analysis</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -401,97 +401,30 @@ Jan Lorenz
 </div>
 
 </section>
-<section class="slide level2">
-
-<div class="cell">
-
-</div>
-</section>
 <section>
 <section id="summary-statistics-continued" class="title-slide slide level1 center">
 <h1>Summary Statistics (continued)</h1>
 
 </section>
-<section id="quantiles" class="slide level2 smaller" data-background-color="aquamarine">
-<h2>Quantiles</h2>
-<p>Cut points specifying intervals which contain equal amounts of values of the distribution.</p>
-<p><strong><span class="math inline">\(q\)</span>-quantiles</strong> divide into <span class="math inline">\(q\)</span> intervals covering all values.</p>
-<p>The quantiles are the cut points: For <span class="math inline">\(q\)</span> intervals there are <span class="math inline">\(q-1\)</span> cut points of interest.</p>
-<ul>
-<li>The one 2-quantile is the median.</li>
-<li>The three 4-quantiles are called <strong>quartiles</strong>. The second quartile is the median.</li>
-<li>100-quantiles are called <strong>percentiles</strong></li>
-</ul>
-
-<aside><div>
-<p>We omit problems of estimating quantiles from a sample where the number of estimates does not fit to a desired partion of equal size here.</p>
-</div></aside></section>
-<section id="examples-of-quantiles" class="slide level2" data-background-color="khaki">
-<h2>Examples of quantiles</h2>
+<section id="data-sets-1a-and-1b-widsom-of-crowd" class="slide level2 smaller">
+<h2>Data Sets 1a and 1b: Widsom of Crowd</h2>
+<p>1a: Ox weigh guessing competition 1907 (collected by <strong>Galton</strong>)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    0%    25%    50%    75%   100% 
- 896.0 1162.5 1208.0 1236.0 1516.0 </code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">quantile</span>(viertel<span class="sc">$</span>Schätzung, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>      0%      25%      50%      75%     100% 
-     120     5000     9843    20000 29530000 </code></pre>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </div>
 </div>
-<p>Interpretation: What does the value at 25% mean?</p>
-<div class="fragment">
-<p>The 25% of all values are lower than the value. 75% are larger.</p>
-</div>
-</section>
-<section id="interquartile-range-iqr" class="slide level2 smaller" data-background-color="aquamarine">
-<h2>Interquartile range (IQR)</h2>
-<p>The difference between the 1st and the 3rd quartile.</p>
-<ul>
-<li>A very common measure of dispersion.</li>
-</ul>
-<p>Examples:</p>
+<p>1b: <strong>Viertelfest</strong> “guess the number of sold lots”-competition 2009</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a><span class="fu">IQR</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 73.5</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">sd</span>(galton<span class="sc">$</span>Estimate) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 73.58677</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">IQR</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 15000</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">sd</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 848395.5</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>viertel <span class="sc">|&gt;</span> <span class="fu">filter</span>(Schätzung<span class="sc">&lt;</span><span class="dv">100000</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 </section>
-<section id="summary-of-numerical-vectors-in-r" class="slide level2">
-<h2>Summary of numerical vectors in R</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">summary</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    896    1162    1208    1197    1236    1516 </code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">summary</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
-     120     5000     9843    53164    20000 29530000 </code></pre>
-</div>
-</div>
-</section>
-<section id="introducing-palmer-penguins" class="slide level2 scrollable smaller" data-background-color="khaki">
-<h2>Introducing Palmer Penguins</h2>
+<section id="data-set-2-palmer-penguins" class="slide level2 scrollable smaller">
+<h2>Data Set 2: Palmer Penguins</h2>
 <p><a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></p>
 <p>Chinstrap, Gentoo, and Adélie Penguins</p>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="200"> <img data-src="http://r.qcbs.ca/workshop03/book-en/images/culmen_depth.png" height="200"></p>
@@ -515,10 +448,28 @@ Jan Lorenz
 </div>
 </div>
 </section>
-<section id="summary-also-works-for-data-frames" class="slide level2">
-<h2>Summary also works for data frames</h2>
+<section id="summary-from-base-r" class="slide level2 smaller">
+<h2><code>summary</code> from base R</h2>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p>Shows summary statistics for the values in a vector</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">summary</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">summary</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    896    1162    1208    1197    1236    1516 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">summary</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+     120     5000     9843    53164    20000 29530000 </code></pre>
+</div>
+</div>
+<p>Or for all columns in a data frame</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">summary</span>(penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      species          island    bill_length_mm  bill_depth_mm  
  Adelie   :152   Biscoe   :168   Min.   :32.10   Min.   :13.10  
@@ -538,15 +489,204 @@ Jan Lorenz
  NA's   :2         NA's   :2                                 </code></pre>
 </div>
 </div>
+</div><div class="column" style="width:35%;">
+<p><span style="color:red;">Question</span></p>
+<p>What does<br>
+<code>1st Qu.</code> and<br>
+<code>3rd Qu.</code> mean?</p>
+</div>
+</div>
+</section>
+<section id="quantiles" class="slide level2 smaller" data-background-color="khaki">
+<h2>Quantiles</h2>
+<p>Cut points specifying intervals which contain equal amounts of values of the distribution.</p>
+<p><strong><span class="math inline">\(q\)</span>-quantiles</strong> divide numbers into <span class="math inline">\(q\)</span> intervals covering all values.</p>
+<p>The quantiles are the cut points: For <span class="math inline">\(q\)</span> intervals there are <span class="math inline">\(q-1\)</span> cut points of interest.</p>
+<ul>
+<li>The one 2-quantile is the median</li>
+<li>The three 4-quantiles are called <strong>quartiles</strong>
+<ul>
+<li><code>1st Qu.</code> is the first quartile</li>
+<li>The second quartile is the median</li>
+<li><code>3rd Qu.</code> is the third quartile</li>
+</ul></li>
+<li>100-quantiles are called <strong>percentiles</strong></li>
+</ul>
+
+<aside><div>
+<p>We omit problems of estimating quantiles from a sample where the number of estimates does not fit to a desired partition of equal size here.</p>
+</div></aside></section>
+<section id="a-galton-quartiles" class="slide level2 smaller">
+<h2>1a Galton: Quartiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    0%    25%    50%    75%   100% 
+ 896.0 1162.5 1208.0 1236.0 1516.0 </code></pre>
+</div>
+</div>
+<p>Interpretation: What does the value at 25% mean?</p>
+<div class="fragment">
+<p>The 25% of all values are lower than the value. 75% are larger.</p>
+</div>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb12-2"><a href="#cb12-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="a-galton-20-quantiles" class="slide level2 smaller">
+<h2>1a Galton: 20-quantiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a><span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    0%     5%    10%    15%    20%    25%    30%    35%    40%    45%    50% 
+ 896.0 1078.3 1109.0 1126.9 1150.0 1162.5 1174.0 1181.0 1189.0 1199.0 1208.0 
+   55%    60%    65%    70%    75%    80%    85%    90%    95%   100% 
+1214.0 1219.0 1225.0 1231.0 1236.0 1243.8 1255.1 1270.0 1293.0 1516.0 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb15-2"><a href="#cb15-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(galton<span class="sc">$</span>Estimate, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="b-viertelfest-quartiles" class="slide level2 smaller">
+<h2>1b Viertelfest: Quartiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">quantile</span>(viertel<span class="sc">$</span>Schätzung, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      0%      25%      50%      75%     100% 
+     120     5000     9843    20000 29530000 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>viertel <span class="sc">|&gt;</span> <span class="fu">filter</span>(Schätzung<span class="sc">&lt;</span><span class="dv">100000</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>) <span class="sc">+</span> </span>
+<span id="cb18-2"><a href="#cb18-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(viertel<span class="sc">$</span><span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>))[<span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>], <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="b-viertelfest-20-quantiles" class="slide level2 smaller">
+<h2>1b Viertelfest: 20-quantiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">quantile</span>(viertel<span class="sc">$</span>Schätzung, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>         0%          5%         10%         15%         20%         25% 
+     120.00     1213.25     2000.00     3115.00     4012.00     5000.00 
+        30%         35%         40%         45%         50%         55% 
+    5853.50     7000.00     7821.00     8705.25     9843.00    10967.50 
+        60%         65%         70%         75%         80%         85% 
+   12374.00    14444.00    16186.00    20000.00    27500.00    38000.00 
+        90%         95%        100% 
+   63649.50    99773.50 29530000.00 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>viertel <span class="sc">|&gt;</span> <span class="fu">filter</span>(Schätzung<span class="sc">&lt;</span><span class="dv">100000</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">500</span>) <span class="sc">+</span> </span>
+<span id="cb21-2"><a href="#cb21-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(viertel<span class="sc">$</span><span class="st">`</span><span class="at">Schätzung</span><span class="st">`</span>, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>))[<span class="dv">1</span><span class="sc">:</span><span class="dv">19</span>], <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="palmer-penguins-flipper-length-quartiles" class="slide level2 smaller">
+<h2>2 Palmer Penguins Flipper Length: Quartiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">quantile</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  0%  25%  50%  75% 100% 
+ 172  190  197  213  231 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb24-2"><a href="#cb24-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.25</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="palmer-penguins-flipper-length-20-quantiles" class="slide level2 smaller">
+<h2>2 Palmer Penguins Flipper Length: 20-quantiles</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">quantile</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   0%    5%   10%   15%   20%   25%   30%   35%   40%   45%   50%   55%   60% 
+172.0 181.0 185.0 187.0 188.0 190.0 191.0 193.0 194.0 195.0 197.0 199.0 203.0 
+  65%   70%   75%   80%   85%   90%   95%  100% 
+208.0 210.0 213.0 215.0 218.0 220.9 225.0 231.0 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb27-2"><a href="#cb27-2"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">quantile</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">prob =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.05</span>), <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="interquartile-range-iqr" class="slide level2 smaller" data-background-color="khaki">
+<h2>Interquartile range (IQR)</h2>
+<p>The difference between the 1st and the 3rd quartile. Alternative <strong>dispersion measure</strong>.<br>
+The range in which the middle 50% of the values are located.</p>
+<p>Examples:</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="co"># Min, 3 Quartiles, Max</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">IQR</span>(galton<span class="sc">$</span>Estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">sd</span>(galton<span class="sc">$</span>Estimate) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73.58677</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">IQR</span>(viertel<span class="sc">$</span>Schätzung)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 15000</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">sd</span>(viertel<span class="sc">$</span>Schätzung) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 848395.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="fu">IQR</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 23</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">sd</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co"># for comparison</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14.06171</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
 </section>
 <section id="boxplots" class="slide level2 smaller">
 <h2>Boxplots</h2>
 <p>A condensed visualization of a distribution showing location, spread, skewness and outliers.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"><ul>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"><ul>
 <li>The <strong>box</strong> shows the median in the middle and the other two quartiles as their borders.</li>
 <li><strong>Whiskers</strong>: From above the upper quartile, a distance of 1.5 times the IQR is measured out and a whisker is drawn up to the largest observed data point from the dataset that falls within this distance. Similarly, for the lower quartile.</li>
 <li>Whiskers must end at an observed data point! (So lengths can differ.)</li>
@@ -559,44 +699,44 @@ Jan Lorenz
 <li>Histograms can show the shape of the distribution well, but not the summary statistics like the median.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </div>
 </div>
 </section>
 <section id="boxplots-vs.-histograms-1" class="slide level2 smaller">
 <h2>Boxplots vs.&nbsp;histograms</h2>
 <ul>
-<li>Boxplots can not show the patterns of bimodal or multimodal distributions.</li>
+<li>Boxplots <span style="color:red;">can not</span> show the patterns of <strong>bimodal or multimodal</strong> distributions.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-11-1.png" width="960"></p>
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-27-1.png" width="960"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </div>
 </div>
 </section>
-<section id="minimizing-proporties-of-mean-and-median" class="slide level2" data-background-color="aquamarine">
+<section id="minimizing-proporties-of-mean-and-median" class="slide level2" data-background-color="khaki">
 <h2>Minimizing proporties of Mean and Median</h2>
 <p><em>Mean</em> minimizes the mean of squared deviations from it. No other value <span class="math inline">\(a\)</span> has a lower mean of square distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n(x_i - a)^2\)</span>.</p>
 <div class="fragment">
 <p><em>Median</em> minimizes the sum of the absolute deviation. No other value <span class="math inline">\(a\)</span> has a lower mean of absolute distances from the data points. <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n|x_i - a|\)</span>.</p>
 </div>
 </section>
-<section id="two-families-of-summary-statistics" class="slide level2" data-background-color="aquamarine">
+<section id="two-families-of-summary-statistics" class="slide level2" data-background-color="khaki">
 <h2>Two families of summary statistics</h2>
 <ul>
 <li>Measures based on <strong>sums</strong> (related to <em>mathematical moments</em>)
@@ -616,47 +756,56 @@ Jan Lorenz
 <h1>Bivariate Summary Statistics</h1>
 
 </section>
-<section id="covariance" class="slide level2" data-background-color="aquamarine">
+<section id="covariance" class="slide level2 smaller" data-background-color="khaki">
 <h2>Covariance</h2>
-<p>Goal: We want to measure the joint variation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
-<p><em>Covariance</em> <span class="math inline">\(\text{cov}(x,y) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)\)</span></p>
+<p>Goal: We want to measure the joint variation in numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
+<p><strong>Covariance</strong></p>
+<p><span class="math inline">\(\text{cov}(x,y) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)\)</span></p>
 <p>where <span class="math inline">\(\mu_x\)</span> and <span class="math inline">\(\mu_y\)</span> are the arithmetic means of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
-<p>Note: <span class="math inline">\(\text{cov}(x,x) = \text{Var}(x)\)</span></p>
+<div class="fragment">
+<p>Note: <span class="math inline">\(\text{cov}(x,x) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)(x_i - \mu_x) = \frac{1}{n}\sum_{i=1}^n(x_i - \mu_x)^2 = \text{Var}(x)\)</span></p>
+</div>
 </section>
-<section id="correlation" class="slide level2 smaller" data-background-color="aquamarine">
+<section id="correlation" class="slide level2 smaller" data-background-color="khaki">
 <h2>Correlation</h2>
-<p>Goal: We want to measure the linear correlation in a sequences of numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
+<p>Goal: We want to measure the linear correlation in numerical observations of two variables <span class="math inline">\(x_1,\dots,x_n\)</span> and <span class="math inline">\(y_1, \dots, y_n\)</span>.</p>
 <p><strong>Pearson correlation coefficient</strong> <span class="math inline">\(r_{xy} = \frac{\sum_{i=1}^n(x_i - \mu_x)(y_i - \mu_y)}{\sqrt{\sum_{i=1}^n(x_i - \mu_x)^2}\sqrt{\sum_{i=1}^n(y_i - \mu_y)^2}}\)</span></p>
-<p>Note, <span class="math inline">\(r_{xy} = \frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\)</span></p>
+<div class="fragment">
+<p>Relation to covariance: <span class="math inline">\(r_{xy} = \frac{\text{cov}(x,y)}{\sigma_x\sigma_y}\)</span></p>
 <p>where <span class="math inline">\(\sigma_x\)</span> and <span class="math inline">\(\sigma_y\)</span> are the standard deviations of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</p>
-<p>Note, when <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are standard scores (each with mean zero and standard deviation one), then <span class="math inline">\(\text{cov}(x,y) = r_{xy}\)</span>.</p>
+<p>Relation to standard scores:<br>
+When <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are standard scores (each with mean zero and standard deviation one), then <span class="math inline">\(\text{cov}(x,y) = r_{xy}\)</span>.</p>
 
+</div>
 <aside><div>
-<p>There are other correlation coefficients which we omit hear.</p>
+<p>There are other correlation coefficients which we omit here.</p>
 </div></aside></section>
 <section id="interpretation-of-correlation" class="slide level2 smaller">
 <h2>Interpretation of correlation</h2>
 <p>Correlation between two vectors <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is “normalized”.</p>
 <ul>
-<li><p>The maximal possible values is <span class="math inline">\(r_{xy} = 1\)</span></p>
+<li>The maximal possible values is <span class="math inline">\(r_{xy} = 1\)</span>
 <ul>
 <li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>fully correlated</em></li>
 </ul></li>
-<li><p>The minimal values is <span class="math inline">\(r_{xy} = -1\)</span></p>
+<li>The minimal values is <span class="math inline">\(r_{xy} = -1\)</span>
 <ul>
 <li><span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are <em>anticorrelated</em></li>
 </ul></li>
-<li><p>When <span class="math inline">\(r_{xy} \approx 0\)</span> the variables are <em>uncorrelated</em></p></li>
-<li><p><span class="math inline">\(r_{xy} = r_{yx}\)</span></p></li>
+<li><span class="math inline">\(r_{xy} \approx 0\)</span> mean
+<ul>
+<li>the variables are <em>uncorrelated</em></li>
+</ul></li>
+<li><span class="math inline">\(r_{xy} = r_{yx}\)</span></li>
 </ul>
 </section>
 <section id="correlation-matrix" class="slide level2 smaller">
 <h2>Correlation matrix</h2>
 <p>Using <code>corrr</code> from the packages<code>tidymodels</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(corrr)</span>
-<span id="cb25-2"><a href="#cb25-2"></a>palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
-<span id="cb25-3"><a href="#cb25-3"></a> <span class="fu">correlate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">library</span>(corrr)</span>
+<span id="cb45-2"><a href="#cb45-2"></a>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
+<span id="cb45-3"><a href="#cb45-3"></a> <span class="fu">correlate</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 6
   term        bill_length_mm bill_depth_mm flipper_length_mm body_mass_g    year
@@ -669,20 +818,48 @@ Jan Lorenz
 </div>
 </div>
 </section>
+<section id="correlation-table" class="slide level2 smaller">
+<h2>Correlation table</h2>
+<p>Using <code>correlation</code> from the packages<code>correlation</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">library</span>(correlation)</span>
+<span id="cb47-2"><a href="#cb47-2"></a>results <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb47-3"><a href="#cb47-3"></a> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
+<span id="cb47-4"><a href="#cb47-4"></a> <span class="fu">correlation</span>()</span>
+<span id="cb47-5"><a href="#cb47-5"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Correlation Matrix (pearson-method)
+
+Parameter1        |        Parameter2 |     r |         95% CI | t(340) |         p
+-----------------------------------------------------------------------------------
+bill_length_mm    |     bill_depth_mm | -0.24 | [-0.33, -0.13] |  -4.46 | &lt; .001***
+bill_length_mm    | flipper_length_mm |  0.66 | [ 0.59,  0.71] |  16.03 | &lt; .001***
+bill_length_mm    |       body_mass_g |  0.60 | [ 0.52,  0.66] |  13.65 | &lt; .001***
+bill_length_mm    |              year |  0.05 | [-0.05,  0.16] |   1.01 | 0.797    
+bill_depth_mm     | flipper_length_mm | -0.58 | [-0.65, -0.51] | -13.26 | &lt; .001***
+bill_depth_mm     |       body_mass_g | -0.47 | [-0.55, -0.39] |  -9.87 | &lt; .001***
+bill_depth_mm     |              year | -0.06 | [-0.17,  0.05] |  -1.11 | 0.797    
+flipper_length_mm |       body_mass_g |  0.87 | [ 0.84,  0.89] |  32.72 | &lt; .001***
+flipper_length_mm |              year |  0.17 | [ 0.06,  0.27] |   3.17 | 0.007**  
+body_mass_g       |              year |  0.04 | [-0.06,  0.15] |   0.78 | 0.797    
+
+p-value adjustment method: Holm (1979)
+Observations: 342</code></pre>
+</div>
+</div>
+
+<aside><div>
+<p>What do the stars mean? Statistical significance automatically added by the . We treat that later.</p>
+</div></aside></section>
 <section id="correlation-visualization" class="slide level2 smaller">
 <h2>Correlation visualization</h2>
-<p>Using <code>correlate</code> and <code>see</code> from <code>easystats</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">library</span>(correlation)</span>
-<span id="cb27-2"><a href="#cb27-2"></a><span class="fu">library</span>(see)</span>
-<span id="cb27-3"><a href="#cb27-3"></a>results <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species, <span class="sc">-</span>island, <span class="sc">-</span>sex) <span class="sc">|&gt;</span> </span>
-<span id="cb27-4"><a href="#cb27-4"></a> <span class="fu">correlation</span>()</span>
-<span id="cb27-5"><a href="#cb27-5"></a>results <span class="sc">%&gt;%</span></span>
-<span id="cb27-6"><a href="#cb27-6"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb27-7"><a href="#cb27-7"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>results <span class="sc">%&gt;%</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">summary</span>(<span class="at">redundant =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">plot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section></section>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section></section>
 <section>
 <section id="exploratory-data-analysis" class="title-slide slide level1 center" data-background-color="khaki">
 <h1>Exploratory Data Analysis</h1>
@@ -754,11 +931,86 @@ Modeling: Operations like linear regression or dimensionality reduction. We have
 
 <aside><div>
 <p>Roger D. Peng and Elizabeth Matsui. “The Art of Data Science.” A Guide for Anyone Who Works with Data. Skybrude Consulting, LLC (2015).</p>
-</div></aside></section></section>
+</div></aside></section>
+<section id="example-eda-strange-airports" class="slide level2 smaller" data-background-color="khaki">
+<h2>Example EDA: Strange Airports</h2>
+<p>From Homework 02:</p>
+<div class="cell" data-fig.weight="10">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">library</span>(nycflights13)</span>
+<span id="cb50-2"><a href="#cb50-2"></a><span class="fu">ggplot</span>(<span class="at">data =</span> airports, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat)) <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> tzone)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"><div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>airports <span class="sc">%&gt;%</span> <span class="fu">filter</span>(lon <span class="sc">&gt;=</span> <span class="dv">0</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 8
+  faa   name                            lat   lon   alt    tz dst   tzone       
+  &lt;chr&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 DVT   Deer Valley Municipal Airport  33.4 112.   1478     8 A     Asia/Chongq…
+2 EEN   Dillant Hopkins Airport        72.3  42.9   149    -5 A     &lt;NA&gt;        
+3 MYF   Montgomery Field               32.5 118.     17     8 A     Asia/Chongq…
+4 SYA   Eareckson As                   52.7 174.     98    -9 A     America/Anc…</code></pre>
+</div>
+</div>
+</section>
+<section id="airport-errors" class="slide level2 smaller" data-background-color="khaki">
+<h2>Airport errors</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 8
+  faa   name                            lat   lon   alt    tz dst   tzone       
+  &lt;chr&gt; &lt;chr&gt;                         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;       
+1 DVT   Deer Valley Municipal Airport  33.4 112.   1478     8 A     Asia/Chongq…
+2 EEN   Dillant Hopkins Airport        72.3  42.9   149    -5 A     &lt;NA&gt;        
+3 MYF   Montgomery Field               32.5 118.     17     8 A     Asia/Chongq…
+4 SYA   Eareckson As                   52.7 174.     98    -9 A     America/Anc…</code></pre>
+</div>
+</div>
+<div class="fragment">
+<p>Correct locations (internet research and location of maps):</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li>Deer Valley Municipal Airport: Phoenix<br>
+33°41′N 112°05′W <span style="color:red;">Missing minus for lon (W)</span></li>
+<li>Dillant Hopkins Airport: New Hampshire<br>
+42°54′N 72°16′W <span style="color:red;">lon-lat switched, minus (W)</span></li>
+<li>Montgomery Field: San Diego<br>
+32°44′N 117°11″W <span style="color:red;">Missing minus for lon (W)</span></li>
+<li>Eareckson As: Alaska<br>
+52°42′N 174°06′E <span style="color:red;">No error: Too west,it’s east!</span></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/ef/FedStats_Lat_long.svg"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusions-on-data-errors" class="slide level2 smaller" data-background-color="khaki">
+<h2>Conclusions on data errors</h2>
+<ul>
+<li>In real-world datasets errors like the 3 airport are quite common.</li>
+<li>Errors of this type are often hard to detect and remain unnoticed.
+<ul>
+<li>This can (but need not) change results drastically!</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p>Conclusions</p>
+<ul>
+<li>Always remain <strong>alert for inconsistencies</strong> and be ready to check the <strong>plausibility</strong> of results.</li>
+<li>Skills in <strong>exploratory data analysis</strong> (EDA) are essential to find errors and explore their nature and implication</li>
+<li>Errors are unpredictable, of diverse types, and are often deeply related to the reality the data presents.
+<ul>
+<li>This is one reason why EDA can not be a fully formalized and automatized process.</li>
+</ul></li>
+</ul>
+</div>
+</section></section>
 <section>
 <section id="data-science-projects" class="title-slide slide level1 center" data-background-color="khaki">
 <h1>Data science projects</h1>
-<p>Getting into question-driven data work</p>
+<p>Outline of question-driven data work</p>
 </section>
 <section id="six-types-of-questions" class="slide level2 smaller" data-background-color="khaki">
 <h2>Six types of questions</h2>
@@ -830,636 +1082,989 @@ I want to estimate the average number of children in households in Bremen. I con
 <li>Information about computed variables you may need to look up in accompanying documentation</li>
 <li>Information about certain variables you may find in an accompanying <strong>codebook</strong>. For example the exact wording of questions in survey data.</li>
 </ul>
+</section>
+<section id="data-science-projects-in-the-course" class="slide level2 smaller">
+<h2>Data Science Projects in the Course</h2>
+<div>
+<ul>
+<li class="fragment">A project report is the main assessment for the Data Science Tools module.</li>
+<li class="fragment">This week more <strong>homework repositories</strong> will be released.</li>
+<li class="fragment">These homework repositories may be updated with new tasks once new concepts have been treated.</li>
+<li class="fragment">Topics will for example be
+<ul>
+<li class="fragment">COVID-19</li>
+<li class="fragment">Germany’s income distribution and income tax</li>
+<li class="fragment">Fuel prices in Western Australia</li>
+<li class="fragment">Political Attitudes in Germany</li>
+<li class="fragment">…</li>
+</ul></li>
+<li class="fragment">The repositories mimick data science projects. Later you will choose a data science project on your own. It can build on these topics or on different datasets which you find interesting.</li>
+</ul>
+</div>
 </section></section>
 <section>
-<section id="modeling" class="title-slide slide level1 center">
-<h1>Modeling</h1>
-
+<section id="principal-component-analysis-pca" class="title-slide slide level1 center">
+<h1>Principal component analysis (PCA)</h1>
+<p>A typical part of Exploratory Data Analysis.</p>
 </section>
-<section id="purpose-of-modeling" class="slide level2">
-<h2>Purpose of modeling</h2>
-<p>We use models to</p>
+<section id="pca-description" class="slide level2 smaller">
+<h2>PCA Description</h2>
+<p>Principle component analysis</p>
 <ul>
-<li><strong>explain</strong> relations between variables</li>
-<li>make <strong>predictions</strong></li>
+<li>is a <strong>dimensionality-reduction</strong> technique, that means it can be used to reduce the number of variables</li>
+<li>computes new variables which represent the data in a different way</li>
+<li>transforms the data <strong>linearly</strong> to a new coordinate system where most of the variation in the data can be described with fewer variables than the original data</li>
 </ul>
-<p>First, we focus on linear models.</p>
+<p><strong>Today:</strong> Quick walk through how to use and interpret it.</p>
 </section>
-<section id="palmer-penguins" class="slide level2 scrollable smaller">
-<h2>Palmer Penguins</h2>
-<p>We use the dataset <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a></p>
-<p>Chinstrap, Gentoo, and Adélie Penguins</p>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="200"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="200"></p>
+<section id="example-numerical-variables-of-penguins" class="slide level2 smaller">
+<h2>Example: Numerical variables of penguins</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>peng <span class="ot">&lt;-</span> </span>
+<span id="cb54-2"><a href="#cb54-2"></a> penguins <span class="sc">|&gt;</span> </span>
+<span id="cb54-3"><a href="#cb54-3"></a> <span class="fu">select</span>(species, bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) <span class="sc">|&gt;</span> </span>
+<span id="cb54-4"><a href="#cb54-4"></a> <span class="fu">na.omit</span>()</span>
+<span id="cb54-5"><a href="#cb54-5"></a>peng <span class="sc">|&gt;</span> <span class="fu">count</span>(species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 344 × 8
-   species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g
-   &lt;fct&gt;   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt;
- 1 Adelie  Torgersen           39.1          18.7               181        3750
- 2 Adelie  Torgersen           39.5          17.4               186        3800
- 3 Adelie  Torgersen           40.3          18                 195        3250
- 4 Adelie  Torgersen           NA            NA                  NA          NA
- 5 Adelie  Torgersen           36.7          19.3               193        3450
- 6 Adelie  Torgersen           39.3          20.6               190        3650
- 7 Adelie  Torgersen           38.9          17.8               181        3625
- 8 Adelie  Torgersen           39.2          19.6               195        4675
- 9 Adelie  Torgersen           34.1          18.1               193        3475
-10 Adelie  Torgersen           42            20.2               190        4250
-# ℹ 334 more rows
-# ℹ 2 more variables: sex &lt;fct&gt;, year &lt;int&gt;</code></pre>
+<pre><code># A tibble: 3 × 2
+  species       n
+  &lt;fct&gt;     &lt;int&gt;
+1 Adelie      151
+2 Chinstrap    68
+3 Gentoo      123</code></pre>
 </div>
 </div>
+<p>We have 342 penguins and 4 numeric variables.</p>
 </section>
-<section id="body-mass-in-grams" class="slide level2">
-<h2>Body mass in grams</h2>
+<section id="two-variables" class="slide level2 smaller">
+<h2>Two Variables</h2>
+<p>Example for the new axes.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(body_mass_g)) <span class="sc">+</span></span>
-<span id="cb29-3"><a href="#cb29-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
-<section id="flipper-length-in-millimeters" class="slide level2">
-<h2>Flipper length in millimeters</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
-<section id="relate-variables-as-a-line" class="slide level2 smaller">
-<h2>Relate variables as a line</h2>
-<p>A <em>line</em> is a shift-scale transformation of the identity function usually written in the form</p>
-<p><span class="math display">\[f(x) = a\cdot x + b\]</span></p>
-<p>where <span style="color:red;"><span class="math inline">\(a\)</span> is the <em>slope</em></span>, <span style="color:blue;"><span class="math inline">\(b\)</span> is the <em>intercept</em></span>.<sup>1</sup></p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>a <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
-<span id="cb31-2"><a href="#cb31-2"></a>b <span class="ot">&lt;-</span> <span class="dv">1</span></span>
-<span id="cb31-3"><a href="#cb31-3"></a>func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) a<span class="sc">*</span>x <span class="sc">+</span> b</span>
-<span id="cb31-4"><a href="#cb31-4"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_function</span>(<span class="at">fun =</span> func, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> </span>
-<span id="cb31-5"><a href="#cb31-5"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>() <span class="sc">+</span> <span class="co"># Set axis limits and make axis equal</span></span>
-<span id="cb31-6"><a href="#cb31-6"></a>    <span class="co"># intercept line:</span></span>
-<span id="cb31-7"><a href="#cb31-7"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb31-8"><a href="#cb31-8"></a>    <span class="co"># slope:</span></span>
-<span id="cb31-9"><a href="#cb31-9"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.75</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb31-10"><a href="#cb31-10"></a>    <span class="co"># x-interval of length one:</span></span>
-<span id="cb31-11"><a href="#cb31-11"></a>    <span class="fu">geom_line</span>(<span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.25</span>)), <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"gray"</span>) <span class="sc">+</span></span>
-<span id="cb31-12"><a href="#cb31-12"></a>    <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>This a scale and a shift in the <span class="math inline">\(y\)</span> direction. Note: For lines there are always an analog transformations on the <span class="math inline">\(x\)</span> direction.</p></li></ol></aside></section>
-<section id="penguins-linear-model" class="slide level2">
-<h2>Penguins: Linear model</h2>
-<p><strong>Flipper length</strong> as a function of <strong>body mass</strong>.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb32-3"><a href="#cb32-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb32-4"><a href="#cb32-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb32-5"><a href="#cb32-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb32-6"><a href="#cb32-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb32-7"><a href="#cb32-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="penguins-other-smoothing-method" class="slide level2 smaller">
-<h2>Penguins: Other smoothing method</h2>
-<p><strong>Flipper length</strong> as a function of <strong>body mass</strong> with <code>loess</code><sup>1</sup> smoothing.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb33-3"><a href="#cb33-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb33-4"><a href="#cb33-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb33-5"><a href="#cb33-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>) <span class="sc">+</span> </span>
-<span id="cb33-6"><a href="#cb33-6"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<p>This is a less theory-driven and more data-driven model. Why? We don’t have a simple mathematical form of the function.</p>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>loess = locally estimated scatterplot smoothing</p></li></ol></aside></section>
-<section id="terminology" class="slide level2 smaller">
-<h2>Terminology</h2>
-<ul>
-<li><strong>Response variable:</strong><sup>1</sup> Variable whose behavior or variation you are trying to understand, on the y-axis</li>
-<li><strong>Explanatory variable(s):</strong><sup>2</sup> Other variable(s) that you want to use to explain the variation in the response, on the x-axis</li>
-<li><strong>Predicted value:</strong> Output of the model function.
-<ul>
-<li>The model function gives the typical (expected) value of the response variable conditioning on the explanatory variables</li>
-<li><strong>Residual(s):</strong> A measure of how far away a case is from its predicted value (based on a particular model)<br>
-Residual = Observed value - Predicted value<br>
-The residual tells how far above/below the expected value each case is</li>
-</ul></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn3"><p>Also <strong>dependent variable</strong> in statistics or empirical social sciences.</p></li><li id="fn4"><p>Also <strong>independent variable(s)</strong> in statistics or empirical social sciences.</p></li></ol></aside></section>
-<section id="more-explanatory-variables" class="slide level2">
-<h2>More explanatory variables</h2>
-<p>How does the relation between flipper length and body mass change with different species?</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb34-3"><a href="#cb34-3"></a>            <span class="at">y =</span> flipper_length_mm, </span>
-<span id="cb34-4"><a href="#cb34-4"></a>            <span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb34-5"><a href="#cb34-5"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb34-6"><a href="#cb34-6"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb34-7"><a href="#cb34-7"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb34-8"><a href="#cb34-8"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="technical-how-to-color-penguins-but-keep-one-model" class="slide level2">
-<h2>Technical: How to color penguins but keep one model?</h2>
-<p>Put the mapping of the color aesthetic into the <code>geom_point</code> command.</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb35-3"><a href="#cb35-3"></a>                                                <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb35-4"><a href="#cb35-4"></a> <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> species)) <span class="sc">+</span></span>
-<span id="cb35-5"><a href="#cb35-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,</span>
-<span id="cb35-6"><a href="#cb35-6"></a>                                                    <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb35-7"><a href="#cb35-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
-</div>
-</div>
-</div>
-</section>
-<section id="models---upsides-and-downsides" class="slide level2 smaller">
-<h2>Models - upsides and downsides</h2>
-<ul>
-<li>Models can reveal patterns that are not evident in a graph of the data. This is an advantage of modeling over simple visual inspection of data.</li>
-<li>The risk is that a model is imposing structure that is not really there in the real world data.
-<ul>
-<li>People imagined animal shapes in the stars. This is maybe a good model to detect and memorize shapes, but it has nothing to do with these animals.</li>
-<li>Every model is a simplification of the real world, but there are good and bad models (for particular purposes).</li>
-<li>A skeptical (but constructive) approach to a model is always advisable.</li>
-</ul></li>
-</ul>
-</section>
-<section id="variation-around-a-model" class="slide level2">
-<h2>Variation around a model</h2>
-<p>is as interesting and important as the model!</p>
-<p><em>Statistics is the explanation of uncertainty of variation in the context of what remains unexplained.</em></p>
-<ul>
-<li>The scattered data of flipper length and body mass suggests that there maybe other factors that account for some parts of the variability.</li>
-<li>Or is it randomness?</li>
-<li>Adding more explanatory variables can help (but need not)</li>
-</ul>
-</section>
-<section id="all-models-are-wrong" class="slide level2 smaller">
-<h2><em>All models are wrong …</em></h2>
-<p><em>… but some are useful.</em> (George Box)</p>
-<p>Extending the range of the model:</p>
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb36-2"><a href="#cb36-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb36-3"><a href="#cb36-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb36-4"><a href="#cb36-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb36-5"><a href="#cb36-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb36-6"><a href="#cb36-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb36-7"><a href="#cb36-7"></a>                                                <span class="at">fullrange =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
-<span id="cb36-8"><a href="#cb36-8"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">7000</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">230</span>)) <span class="sc">+</span></span>
-<span id="cb36-9"><a href="#cb36-9"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-23-1.png" width="960"></p>
-</div>
-</div>
-</div>
-<ul>
-<li>The model predicts that penguins with zero weight still have flippers of about 140 mm on average.</li>
-<li>Is the model useless?</li>
-</ul>
-</section>
-<section id="two-model-purposes" class="slide level2">
-<h2>Two model purposes</h2>
-<p>Models can be used for:</p>
-<ul>
-<li><strong>Explanation:</strong> Understand the relations hip of variables in a quantitative way.<br>
-<em>For the linear model, interpret slope and intercept.</em></li>
-<li><strong>Prediction:</strong> Plug in new values for the explanatory variable(s) and receive the expected response value.<br>
-<em>For the linear model, predict the flipper length of new penguins by their body mass.</em></li>
-</ul>
-</section></section>
-<section>
-<section id="fitting-models" class="title-slide slide level1 center">
-<h1>Fitting Models</h1>
-<p>Today: The linear model.</p>
-</section>
-<section id="in-r-tidymodels" class="slide level2">
-<h2>In R: <code>tidymodels</code></h2>
-<p><img data-src="https://datasciencebox.org/course-materials/_slides/u4-d02-fitting-interpreting-models/img/tidymodels.png"></p>
-
-<aside><div>
-<p>From <a href="https://datasciencebox.org" class="uri">https://datasciencebox.org</a></p>
-</div></aside></section>
-<section id="our-goal" class="slide level2">
-<h2>Our goal</h2>
-<p>Predict flipper length from body mass</p>
-<p>average <code>flipper_length_mm</code> <span class="math inline">\(= \beta_0 + \beta_1\cdot\)</span> <code>body_mass_g</code></p>
-</section>
-<section id="step-1-specify-model" class="slide level2">
-<h2>Step 1: Specify model</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb37-2"><a href="#cb37-2"></a><span class="fu">linear_reg</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear Regression Model Specification (regression)
-
-Computational engine: lm </code></pre>
-</div>
-</div>
-</section>
-<section id="step-2-set-the-model-fitting-engine" class="slide level2">
-<h2>Step 2: Set the model fitting <em>engine</em></h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb39-2"><a href="#cb39-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Linear Regression Model Specification (regression)
-
-Computational engine: lm </code></pre>
-</div>
-</div>
-</section>
-<section id="step-3-fit-model-and-estimate-parameters" class="slide level2 smaller">
-<h2>Step 3: Fit model and estimate parameters</h2>
-<p>Only now, the data and the variable selection comes in.</p>
-<p>Use of <strong>formula syntax</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb41-2"><a href="#cb41-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-3"><a href="#cb41-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>parsnip model object
-
-
-Call:
-stats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)
-
-Coefficients:
-(Intercept)  body_mass_g  
-  136.72956      0.01528  </code></pre>
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </div>
 </div>
 
 <aside><div>
-<p>Note: The fit command does not follow the tidyverse principle the the data comes first. Instead, the formula comes first. This is to relate to existing traditions of a much older established way of modeling in R.</p>
+<p>The two arrows show the two eigenvectors of the covariance matrix of the two variables scaled by the square root of the corresponding eigenvalues, and shifted so their origins are at the means of both variables.</p>
 </div></aside></section>
-<section id="what-does-the-output-say" class="slide level2 smaller">
-<h2>What does the output say?</h2>
+<section id="computation-in-r" class="slide level2 smaller">
+<h2>Computation in R</h2>
+<p>The basic function is base-R’s <code>prcomp</code> (there is an older <code>princomp</code> which is not advisable to use).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb43-2"><a href="#cb43-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb43-3"><a href="#cb43-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>parsnip model object
-
-
-Call:
-stats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)
-
-Coefficients:
-(Intercept)  body_mass_g  
-  136.72956      0.01528  </code></pre>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="co"># prcomp can take a data frame with all numerical vectors as 1st argument</span></span>
+<span id="cb56-2"><a href="#cb56-2"></a>P <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span> <span class="fu">select</span>(flipper_length_mm, bill_length_mm) <span class="sc">|&gt;</span> <span class="fu">prcomp</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="fragment">
-<p>average <code>flipper_length_mm</code> <span class="math inline">\(= 136.72956 + 0.01528\cdot\)</span> <code>body_mass_g</code></p>
-</div>
-<div class="fragment">
-<p><strong>Interpretation:</strong><br>
-The penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted …</p>
-</div>
-</section>
-<section id="show-output-in-tidy-form" class="slide level2">
-<h2>Show output in <em>tidy</em> form</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The base output</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb45-2"><a href="#cb45-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb45-3"><a href="#cb45-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb45-4"><a href="#cb45-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>P</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept) 137.      2.00          68.5 5.71e-201
-2 body_mass_g   0.0153  0.000467      32.7 4.37e-107</code></pre>
+<pre><code>Standard deviations (1, .., p=2):
+[1] 14.549388  3.981729
+
+Rotation (n x k) = (2 x 2):
+                        PC1        PC2
+flipper_length_mm 0.9637169 -0.2669266
+bill_length_mm    0.2669266  0.9637169</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The summary output</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">summary</span>(P)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Importance of components:
+                           PC1     PC2
+Standard deviation     14.5494 3.98173
+Proportion of Variance  0.9303 0.06968
+Cumulative Proportion   0.9303 1.00000</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="parameter-estimation" class="slide level2 smaller">
-<h2>Parameter estimation</h2>
-<p>Notation from statistics: <span class="math inline">\(\beta\)</span>’s for the population parameters and <span class="math inline">\(b\)</span>’s for the parameters estimated from the sample statistics.</p>
-<p><span class="math display">\[\hat y = \beta_0 + \beta_1 x\]</span></p>
-<p>Is what we cannot have. (<span class="math inline">\(\hat y\)</span> stands for <em>predicted value of <span class="math inline">\(y\)</span></em>. )</p>
-<div class="fragment">
-<p>We estimate <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> in</p>
-<p><span class="math display">\[\hat y = b_0 + b_1 x\]</span></p>
-<div style="background-color:aquamarine;">
-<p>A typical follow-up data analysis question is what the fitted values <span class="math inline">\(b_0\)</span> and <span class="math inline">\(b_1\)</span> tell us about the population-wide values <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>?</p>
-<p>What type of question is it?<br>
-Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic</p>
+<section id="the-prcomp-object" class="slide level2 smaller">
+<h2>The <code>prcomp</code> object</h2>
+<p>Includes 4 different related entities.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The <strong>standard deviations</strong> related to each principal component.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a>P<span class="sc">$</span>sdev</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 14.549388  3.981729</code></pre>
 </div>
 </div>
-<div class="fragment">
-<div style="background-color:aquamarine;">
-<p>A typical <strong>inferential</strong> question.</p>
+<p>The matrix of variable <strong>loadings</strong>. (It is also the matrix which rotates the original data vectors.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>P<span class="sc">$</span>rotation</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                        PC1        PC2
+flipper_length_mm 0.9637169 -0.2669266
+bill_length_mm    0.2669266  0.9637169</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>The means for each original variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>P<span class="sc">$</span>center</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>flipper_length_mm    bill_length_mm 
+        200.91520          43.92193 </code></pre>
+</div>
+</div>
+<p>Note, there are also standard deviations of original variables in <code>$scale</code> when this is set to be used.</p>
+<p>The centered (scaled, if set) and rotated data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>P<span class="sc">$</span>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               PC1         PC2
+  [1,] -20.4797199  0.66892267
+  [2,] -15.5543649 -0.28022355
+  [3,]  -6.6673719 -1.91158941
+  [4,]  -9.5557414 -4.84711693
+  [5,] -11.7528828 -1.54067330
+  [6,] -20.5331052  0.47617930
+  [7,]  -6.9609911 -2.97167796
+  [8,] -10.2497505 -7.35278078
+  [9,] -11.0321810  1.06136223
+ [10,] -16.0081402 -1.91854222
+ [11,] -21.7904413 -0.31698266
+ [12,] -18.9821498  2.32942980
+ [13,] -10.9760146 -2.48220170
+ [14,]  -5.2977029 -8.20555532
+ [15,] -17.2921689 -2.80807586
+ [16,]  -7.0944544 -3.45353639
+ [17,]  -4.1526997 -0.32526550
+ [18,] -18.8431243 -4.66132637
+ [19,]  -6.1096072  3.84852331
+ [20,] -27.5727425  1.28457691
+ [21,] -21.8171340 -0.41335434
+ [22,] -13.6241501 -4.55038405
+ [23,] -16.8650864 -1.26612888
+ [24,] -21.5235147  0.64673421
+ [25,] -15.7117398 -4.59476098
+ [26,] -18.1518963  1.58064478
+ [27,] -14.3237215  0.41656672
+ [28,] -29.4734836  1.91480178
+ [29,] -21.0697395  2.28505287
+ [30,] -23.2640999  1.85518920
+ [31,] -23.8780310 -0.36135959
+ [32,] -13.6269312 -0.81407674
+ [33,] -17.1081014  1.60283324
+ [34,]  -7.7083856 -5.67008518
+ [35,]  -5.9972743 -3.23860456
+ [36,] -11.8863461 -2.02253174
+ [37,] -20.6159643  3.92337154
+ [38,] -20.8801098 -0.77665262
+ [39,] -17.4017207  0.54274469
+ [40,] -20.2100122 -2.10366777
+ [41,]  -6.5339086 -1.42973098
+ [42,] -16.4886080 -3.65323258
+ [43,]  -4.6893340  1.48360808
+ [44,] -17.1853983 -2.42258912
+ [45,] -11.6728048 -1.25155824
+ [46,] -18.9821498  2.32942980
+ [47,] -22.8342362 -0.33917112
+ [48,] -12.6337406 -4.72093895
+ [49,]  -9.9883862  1.08355069
+ [50,] -15.5276723 -0.18385187
+ [51,] -13.4667753 -0.23584662
+ [52,] -12.9006672 -5.68465582
+ [53,]  -1.3950124 -1.60790371
+ [54,] -15.9252810 -5.36573447
+ [55,] -10.2286201  0.21620552
+ [56,] -15.6878282 -0.76208199
+ [57,]  -8.5147276 -1.08862116
+ [58,] -21.1737290 -1.83674117
+ [59,]  -8.3517906 -4.24669835
+ [60,] -17.5324029 -3.67542104
+ [61,]  -6.4004453 -0.94787255
+ [62,] -17.0252423 -1.84435900
+ [63,]  -9.3449812 -0.33983614
+ [64,] -18.3092711 -2.73389264
+ [65,]  -9.2115179  0.14202229
+ [66,]  -7.9486195 -6.53743036
+ [67,] -13.1998487  0.72787024
+ [68,] -12.6604332 -4.81731064
+ [69,]  -3.3758314 -1.26679390
+ [70,] -13.3010571 -7.13023111
+ [71,] -11.6461122 -1.15518656
+ [72,]  -5.8905036 -2.85311781
+ [73,]  -3.2718419  2.85500015
+ [74,] -12.7672039 -5.20279739
+ [75,]  -6.0000554  0.49770275
+ [76,] -10.3620834 -0.26565292
+ [77,] -18.0957298 -1.96291915
+ [78,] -15.4715058 -3.72741580
+ [79,]  -6.1869040 -0.17689906
+ [80,] -13.9711547 -5.80321597
+ [81,]  -5.0096459  0.32714784
+ [82,] -15.3380425 -3.24555737
+ [83,]  -9.9828239 -6.38906391
+ [84,] -11.3230191 -3.73503363
+ [85,]  -7.3641622 -0.68094595
+ [86,] -12.5536626 -4.43182390
+ [87,] -13.3572235 -3.58666718
+ [88,] -12.9835263 -2.23746357
+ [89,] -11.8596534 -1.92616005
+ [90,]  -1.1492162 -8.21317314
+ [91,]   3.1833380 -3.80988186
+ [92,] -17.9861781 -5.31373971
+ [93,] -15.5276723 -0.18385187
+ [94,] -15.4715058 -3.72741580
+ [95,]   5.9944106 -4.89977671
+ [96,] -12.0731947 -2.69713354
+ [97,]  -5.7036550 -2.17851601
+ [98,] -24.9724301 -4.31259873
+ [99,]  -8.7844354  1.68396928
+[100,] -10.9732334 -6.21850901
+[101,]   1.2292116 -3.37240036
+[102,] -18.9259834 -1.21413413
+[103,] -12.1532727 -2.98624860
+[104,]  -9.2354294 -3.69065670
+[105,] -17.4284133  0.44637301
+[106,]  -3.2662796 -4.61761446
+[107,] -12.0465021 -2.60076185
+[108,] -20.7466465 -0.29479419
+[109,]  -3.9658510  0.34933630
+[110,]  -4.3634598 -4.83254629
+[111,]  -9.1075284  4.26381634
+[112,]  -8.7549616 -1.95596634
+[113,]  -4.2327776 -0.61438056
+[114,] -10.7090880 -1.51848484
+[115,]  -5.0630312  0.13440447
+[116,] -13.8671651 -1.68142192
+[117,]  -3.6132842 -5.87044638
+[118,] -13.6775354 -4.74312742
+[119,] -12.2361318  0.46094364
+[120,] -15.4715058 -3.72741580
+[121,]  -4.4702304 -5.21803304
+[122,] -25.0046850  3.06364419
+[123,]   0.3722654 -2.71998702
+[124,] -16.7021493 -4.42420607
+[125,]  -2.7324265 -2.69018073
+[126,] -10.9226292 -2.28945833
+[127,]  -6.3470600 -0.75512918
+[128,] -10.8692439 -2.09671496
+[129,]   8.8027021 -2.25336424
+[130,] -11.9664241 -2.31164679
+[131,]  -3.9925437  0.25296462
+[132,]  -9.5290487 -4.75074525
+[133,]  -3.5598989 -5.67770301
+[134,] -14.9643453 -1.89635376
+[135,] -11.2724149  0.19401705
+[136,] -11.7767943 -5.37335229
+[137,]  -1.8754802 -3.34259407
+[138,] -17.1853983 -2.42258912
+[139,]  -8.7549616 -1.95596634
+[140,]  -8.6214983 -1.47410791
+[141,] -14.2970288  0.51293840
+[142,] -15.6021880 -7.94558153
+[143,] -11.3791856 -0.19146969
+[144,] -10.3593023 -4.00196022
+[145,] -16.6515451 -0.49515539
+[146,] -11.7795755 -1.63704499
+[147,] -18.2558858 -2.54114927
+[148,]  -7.8151562 -6.05557193
+[149,]  -9.2621221 -3.78702838
+[150,] -15.5248912 -3.92015917
+[151,]  -0.5647588 -2.35668874
+[152,]  10.3002722 -0.59285711
+[153,]  29.6519063 -1.90596663
+[154,]  10.0305645  2.17973333
+[155,]  18.0873039  1.29715250
+[156,]  14.5555295 -0.21498819
+[157,]   9.4433259  0.05955623
+[158,]  10.1134236 -1.26745892
+[159,]  18.1701630 -2.15003975
+[160,]   7.6254440 -2.75741114
+[161,]  14.3419882 -0.98596168
+[162,]  11.8034045 -6.40496458
+[163,]  15.8929436  0.86728882
+[164,]  13.0312668 -1.97186701
+[165,]  12.8416371  1.08983849
+[166,]   9.2564773 -0.61504558
+[167,]  16.9367385  0.88947729
+[168,]   8.2421563 -4.27716966
+[169,]  20.7649133 -0.27460078
+[170,]   8.3995311  0.03736776
+[171,]  21.5951668 -1.02338580
+[172,]  18.1406893  1.48989587
+[173,]  13.8882130 -2.62428035
+[174,]  12.3344765 -0.74122355
+[175,]  14.2085249 -1.46782012
+[176,]  13.3009745 -4.74445745
+[177,]  14.1551396 -1.66056349
+[178,]  14.6917739 -3.46943706
+[179,]  14.6089148 -0.02224482
+[180,]   9.8971012  1.69787490
+[181,]  20.0147377  0.76329931
+[182,]  21.2214696 -2.37258941
+[183,]   7.4919807 -3.23926957
+[184,]   6.1784781 -0.48886760
+[185,]  32.2144016  7.34571526
+[186,]  19.7745037 -0.10404587
+[187,]  19.5876551 -0.77864767
+[188,]  11.2934628 -4.49971932
+[189,]  17.5562319 -4.36658853
+[190,]   6.8485757 -1.81588274
+[191,]   8.1031307  2.71358652
+[192,]   6.5015712 -3.06871466
+[193,]  24.7265513 -0.95682041
+[194,]   9.1230140 -1.09690401
+[195,]  16.0530996  1.44551894
+[196,]  22.0756347  0.71130455
+[197,]  15.4152569 -4.60370884
+[198,]   9.1763994 -0.90416063
+[199,]  24.9667853 -0.08947523
+[200,]  11.9073940 -2.28317054
+[201,]  13.9149057 -2.52790867
+[202,]   9.4700186  0.15592792
+[203,]  19.6143478 -0.68227599
+[204,]   9.0696287 -1.28964738
+[205,]  24.8600146 -0.47496198
+[206,]  16.1893440 -1.80892993
+[207,]  18.6801047 -4.05528501
+[208,]   6.7951904 -2.00862611
+[209,]  18.8135680 -3.57342658
+[210,]   6.6350345 -2.58685623
+[211,]  23.9763758  0.08107968
+[212,]   7.1955803 -0.56305082
+[213,]  19.9641335 -3.16575137
+[214,]  13.0846521 -1.77912364
+[215,]  31.7634075  1.97108929
+[216,]  17.9299291 -3.01738492
+[217,]  29.5985210 -2.09871001
+[218,]  13.2181154 -1.29726521
+[219,]  28.5547261 -2.12089847
+[220,]  18.2797148 -5.50086030
+[221,]  23.0927369  0.63712133
+[222,]  15.5459390 -0.38554310
+[223,]  20.0175188 -2.97300799
+[224,]  20.4979867 -1.23831764
+[225,]  16.1893440 -1.80892993
+[226,]  15.1989345 -1.63837502
+[227,]  29.2782091 -3.25517024
+[228,]   8.7465357  1.29019969
+[229,]  20.3083569  1.82338786
+[230,]  13.9149057 -2.52790867
+[231,]  21.6246406 -4.66332142
+[232,]  12.0647688  2.03136689
+[233,]  21.6457710  2.90566487
+[234,]  11.6109936  0.39304822
+[235,]  23.8696051 -0.30440707
+[236,]  10.9436771 -2.01624394
+[237,]  27.9380138 -0.60113995
+[238,]  16.3255884 -5.06337880
+[239,]  18.4343085  2.54998442
+[240,]  11.6376863  0.48941990
+[241,]  30.2124521  0.11783878
+[242,]  17.4199874 -1.11213966
+[243,]  28.3117111  0.74806366
+[244,]  11.1038331 -1.43801382
+[245,]  23.7361418 -0.78626550
+[246,]  12.7643402 -2.93558388
+[247,]  26.0105801 -0.06728677
+[248,]  15.9997143  1.25277557
+[249,]  21.1146989 -2.75807616
+[250,]   3.2044684  3.75910443
+[251,]  25.1269412  0.48875489
+[252,]  18.6506309 -0.41534939
+[253,]  29.2993395  4.31381605
+[254,]  14.4487589 -0.60047494
+[255,]  27.4842386 -2.23945862
+[256,]  15.4391684 -0.77102985
+[257,]  14.3419882 -0.98596168
+[258,]   8.1620783 -4.56628472
+[259,]  19.9585712  4.30686324
+[260,]   6.6617271 -2.49048455
+[261,]   8.9066916  1.86842981
+[262,]  16.2933335  2.31286412
+[263,]  28.6348041 -1.83178341
+[264,]  11.5336968 -3.63237414
+[265,]  30.0522962 -0.46039134
+[266,]  16.1092660 -2.09804499
+[267,]  31.0132319  3.00898937
+[268,]  15.6554908 -3.73636366
+[269,]  21.6218595 -0.92701412
+[270,]  13.4850420 -0.33354834
+[271,]  14.3419882 -0.98596168
+[272,]  22.0489420  0.61493287
+[273,]  11.0237551 -1.72712888
+[274,]  13.2420270  2.53541378
+[275,]  -7.9035776  4.86423493
+[276,]  -3.1144671  7.16953757
+[277,]  -5.6586131  9.22314928
+[278,] -12.0520643  4.87185275
+[279,]  -1.4300484  9.50464651
+[280,]  -2.4682810  2.00984344
+[281,] -21.5023843  8.21572050
+[282,]  -1.8037456  8.15544290
+[283,]  -5.1458903  3.58159671
+[284,]  -0.8400288  7.88851631
+[285,]  -6.9131681  4.69368002
+[286,]  -4.5881256  9.34170943
+[287,] -14.5161323  7.21457952
+[288,]   2.2379704  7.76233833
+[289,]  -9.9911673  4.81985800
+[290,]   1.8375806  6.31676303
+[291,]  -2.0706722  7.19172604
+[292,] -15.4348073 18.88317139
+[293,]  -9.8577040  5.30171643
+[294,]  -4.2917252  6.66549067
+[295,] -19.5988621  3.84918832
+[296,]  -8.3334413  7.05859525
+[297,] -13.6030197  3.01860225
+[298,]  -5.8454617  8.54854747
+[299,]  -4.9590417  4.25619852
+[300,]  -1.6168970  8.83004470
+[301,]   0.8738637  6.58368963
+[302,]   0.6069371  5.61997276
+[303,]  -8.8939871  5.03478983
+[304,]   6.3063792  7.46560544
+[305,] -14.2169508  0.80205346
+[306,]   2.8252089  9.88251543
+[307,] -13.7898683  2.34400044
+[308,]   3.8984776  6.26476828
+[309,]  -4.1582619  7.14734911
+[310,]  -0.8906330  3.95946563
+[311,]  -4.7188078  5.12354369
+[312,]  10.9114222  5.35999898
+[313,]  -7.7968070  5.24972167
+[314,]   6.4932278  8.14020725
+[315,]  10.1106424  2.46884839
+[316,] -12.8022399  5.90975284
+[317,]  -2.8742331  8.03688275
+[318,]  -4.3156367  2.83281168
+[319,]  -2.8742331  8.03688275
+[320,]   1.9176585  6.60587809
+[321,]  -8.8700756  8.86746882
+[322,]  12.0380762  1.93499520
+[323,] -11.3875289 11.01745222
+[324,]  -1.2404187  6.44294101
+[325,]  -0.7304770  4.53769575
+[326,]   2.0778145  7.18410821
+[327,]  -7.1534020  3.82633484
+[328,]   3.8183996  5.97565322
+[329,] -13.7898683  2.34400044
+[330,]  -1.5635117  9.02278808
+[331,]  -9.2142990  3.87832960
+[332,]   3.4447024  4.62644961
+[333,]   2.7212194  5.76072138
+[334,]  -6.2163778  3.46303656
+[335,]   7.0298621  6.33133367
+[336,] -10.7146502  5.95412977
+[337,]  -5.2259683  3.29248165
+[338,]   9.0345927  9.82290284
+[339,]   0.9328113 -0.69618161
+[340,]  -6.1123883  7.58483061
+[341,]  10.5911103  4.20353874
+[342,]  -1.1336480  6.82842776</code></pre>
+</div>
+</div>
 </div>
 </div>
 </section>
-<section id="fitting-method-least-squares-regression" class="slide level2">
-<h2>Fitting method: Least squares regression</h2>
+<section id="pca-as-exploratory-data-analysis" class="slide level2 smaller">
+<h2>PCA as Exploratory Data Analysis</h2>
+<p>Suppose we do a PCA with all 342 penguins (rows) and all 4 numeric variables.</p>
 <ul>
-<li>The regression line shall minimize the sum of the squared residuals (or, identically, their mean).</li>
-<li>Mathematically: The residual for case <span class="math inline">\(i\)</span> is <span class="math inline">\(e_i = \hat y_i - y_i\)</span>.</li>
-<li>Now we want to minimize <span class="math inline">\(\sum_{i=1}^n e_i^2\)</span><br>
-(or equivalently <span class="math inline">\(\frac{1}{n}\sum_{i=1}^n e_i^2\)</span> the <em>the mean of squared errors</em>, which we will look at later).</li>
+<li><em>How long will the vector of standard deviations be?</em> <span class="fragment">4</span><br>
+</li>
+<li><em>What dimensions will the rotation matrix have?</em> <span class="fragment">4 x 4</span><br>
+</li>
+<li><em>What dimensions will the rotated data frame have?</em> <span class="fragment">342 x 4</span></li>
+</ul>
+<div class="fragment">
+<p>When we do a PCA for exploration there are 3 things to look at:</p>
+<ol type="1">
+<li>The data in PC coordinates - the centered (scaled, if set) and rotated data.<br>
+</li>
+<li>The rotation matrix - the variable loadings.</li>
+<li>The variance explained by each PC - based on the standard deviations.</li>
+</ol>
+</div>
+</section>
+<section id="all-variables" class="slide level2 smaller">
+<h2>All variables</h2>
+<p>Now, with <code>scale = TRUE</code> (recommended). Data will be centered and scaled (a.k.a. standardized) first.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a>peng_PCA <span class="ot">&lt;-</span> peng <span class="sc">|&gt;</span> <span class="fu">select</span>(<span class="sc">-</span>species) <span class="sc">|&gt;</span> </span>
+<span id="cb69-2"><a href="#cb69-2"></a> <span class="fu">prcomp</span>(<span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb69-3"><a href="#cb69-3"></a>peng_PCA</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Standard deviations (1, .., p=4):
+[1] 1.6594442 0.8789293 0.6043475 0.3293816
+
+Rotation (n x k) = (4 x 4):
+                         PC1          PC2        PC3        PC4
+bill_length_mm     0.4552503 -0.597031143 -0.6443012  0.1455231
+bill_depth_mm     -0.4003347 -0.797766572  0.4184272 -0.1679860
+flipper_length_mm  0.5760133 -0.002282201  0.2320840 -0.7837987
+body_mass_g        0.5483502 -0.084362920  0.5966001  0.5798821</code></pre>
+</div>
+</div>
+</section>
+<section id="explore-data-in-pc-coordinates" class="slide level2 smaller">
+<h2>Explore data in PC coordinates</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<ul>
+<li>Start plotting PC1 against PC2. By default these are the most important ones. Drill deeper later.</li>
+<li>Append the original data. Here used to color by species.</li>
+</ul>
+</div><div class="column" style="width:65%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>plotdata <span class="ot">&lt;-</span> peng_PCA<span class="sc">$</span>x <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">bind_cols</span>(peng)</span>
+<span id="cb71-2"><a href="#cb71-2"></a>plotdata <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(PC1, PC2, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb71-3"><a href="#cb71-3"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb71-4"><a href="#cb71-4"></a> <span class="fu">coord_fixed</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-45-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="variable-loadings" class="slide level2 smaller">
+<h2>Variable loadings</h2>
+<ul>
+<li>The columns of the rotation matrix shows how the original variables <em>load</em> on the principle components.</li>
+<li>We can try to interpret these loadings and give descriptive names to principal components.</li>
+<li><code>tidy</code> extracts the rotation matrix in long format with a <code>PC</code>, a <code>column</code> (for the original variable name), and a <code>value</code> variable.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>peng_PCA<span class="sc">$</span>rotation <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>(<span class="at">rownames =</span> <span class="st">"variable"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb72-2"><a href="#cb72-2"></a> <span class="fu">pivot_longer</span>(<span class="fu">starts_with</span>(<span class="st">"PC"</span>), <span class="at">names_to =</span> <span class="st">"PC"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb72-3"><a href="#cb72-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(value, variable)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb72-4"><a href="#cb72-4"></a> <span class="fu">facet_wrap</span>(<span class="sc">~</span>PC, <span class="at">nrow =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section>
+<section id="variance-explained" class="slide level2 smaller">
+<h2>Variance explained</h2>
+<ul>
+<li>Principle components are by default sorted by importance.</li>
+<li>The squares of the standard deviation for each component gives its variances and <strong>variances have to sum up to the sum of the variances</strong> of the original variables.
+<ul>
+<li>When original variables were standardized their original variances are all each one. Consequently, the variances of the principal components sum up to the number of original variables.</li>
+</ul></li>
+<li>A typical plot to visualize the importance of the components is to plot the percentage of the variance explained by each component.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">tibble</span>(<span class="at">PC =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">sdev =</span> peng_PCA<span class="sc">$</span>sdev) <span class="sc">|&gt;</span> </span>
+<span id="cb73-2"><a href="#cb73-2"></a> <span class="fu">mutate</span>(<span class="at">percent =</span> sdev<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sum</span>(sdev<span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> <span class="dv">100</span>) <span class="sc">|&gt;</span></span>
+<span id="cb73-3"><a href="#cb73-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(PC, percent)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_grey</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-47-1.png" width="960" class="r-stretch"></section>
+<section id="interpretations-1" class="slide level2 smaller">
+<h2>Interpretations (1)</h2>
+
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-48-1.png" width="960" class="r-stretch"><ul>
+<li>The first component explains almost 70% of the variance. So most emphasize should be on this.</li>
+<li>The first two explain about 88% of the total variance.</li>
 </ul>
 </section>
-<section id="visualization-of-residuals" class="slide level2">
-<h2>Visualization of residuals</h2>
-<p>The residuals are the gray lines between predictid values on the regression line and the actual values.</p>
+<section id="interpretations-2" class="slide level2 smaller">
+<h2>Interpretations (2)</h2>
 
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
-<section id="proporties-of-least-squares-regression" class="slide level2 smaller">
-<h2>Proporties of least squares regression</h2>
-<p>The regression lines goes through the point (<code>mean(x)</code>, <code>mean(y)</code>).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 4201.754</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 200.9152</code></pre>
-</div>
-</div>
-
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
-<section id="proporties-of-least-squares-regression-1" class="slide level2 smaller">
-<h2>Proporties of least squares regression</h2>
-<p>Residuals sum up to zero</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
-<span id="cb51-2"><a href="#cb51-2"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -3.765044e-14</code></pre>
-</div>
-</div>
-<p>There is no correlation between residuals and the explanatory variable</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">cor</span>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals, <span class="fu">na.omit</span>(penguins<span class="sc">$</span>body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -1.353445e-16</code></pre>
-</div>
-</div>
-<p>The correlation of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is the slope <span class="math inline">\(b_1\)</span> corrected by their standard deviations.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span>
-<span id="cb55-2"><a href="#cb55-2"></a>sd_flipper <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> T)</span>
-<span id="cb55-3"><a href="#cb55-3"></a>sd_mass <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> T)</span>
-<span id="cb55-4"><a href="#cb55-4"></a><span class="fu">c</span>(correlation, sd_flipper, sd_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]   0.8712018  14.0617137 801.9545357</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>correlation <span class="sc">*</span> sd_flipper <span class="sc">/</span> sd_mass</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.01527592</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> (Intercept)  body_mass_g 
-136.72955927   0.01527592 </code></pre>
-</div>
-</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-49-1.png" width="960" class="r-stretch"><ol type="1">
+<li>To score high on PC1 a penguin needs to be generally large but with low bill depth.</li>
+<li>Penguins scoring high on PC2 are penguins with generally small bills.</li>
+</ol>
 </section>
-<section id="linear-model-when-explanatory-variables-are-categorical" class="slide level2 smaller">
-<h2>Linear model when explanatory variables are categorical</h2>
+<section id="interpretations-3" class="slide level2 smaller">
+<h2>Interpretations (3)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb61-2"><a href="#cb61-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb61-3"><a href="#cb61-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb61-4"><a href="#cb61-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-50-1.png" width="960"></p>
 </div>
 </div>
-<p>What happened? Two of the three species categories appear as variables now.</p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Hope_Bay-2016-Trinity_Peninsula%E2%80%93Ad%C3%A9lie_penguin_%28Pygoscelis_adeliae%29_04.jpg" height="120"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/08/South_Shetland-2016-Deception_Island%E2%80%93Chinstrap_penguin_%28Pygoscelis_antarctica%29_04.jpg" height="120"> <img data-src="https://upload.wikimedia.org/wikipedia/commons/0/00/Brown_Bluff-2016-Tabarin_Peninsula%E2%80%93Gentoo_penguin_%28Pygoscelis_papua%29_03.jpg" height="120"></p>
+</section>
+<section id="apply-pca" class="slide level2 smaller">
+<h2>Apply PCA</h2>
 <ul>
-<li>Categorical variables are automatically encoded to <strong>dummy variables</strong></li>
-<li>Each coefficient describes the expected difference between flipper length of that particular species compared to the baseline level</li>
-<li>What is the baseline level?</li>
+<li>Besides standardization, PCA may benefit by <strong>preprocessing</strong> steps of <strong>data transformation</strong> with variables with skew distributions (log, square-root, or Box-Cox transformation). This may result in less outliers.</li>
+<li>PCA is a often a useful step of <strong>exploratory data analysis</strong> when you have a large number of numerical variables to show the empirical <em>dimensionality</em> of the data and its structure</li>
+<li>Limitation: PCA is only sensitive for linear relation ships (no U-shaped) or the like</li>
+<li>The principal components can be used <strong>as predictors</strong> in a model instead of the raw variables.</li>
 </ul>
-<div class="fragment">
+</section>
+<section id="properties-of-pca" class="slide level2 smaller">
+<h2>Properties of PCA</h2>
+<div>
 <ul>
-<li>The first category! (Here alphabetically <code>"Adelie"</code>)</li>
+<li class="fragment">The principal components (the columns of the rotation matrix) are maximally <em>uncorrelated</em> (actually they are even <em>orthogonal</em>).</li>
+<li class="fragment">This also holds for the columns of the rotated data.</li>
+<li class="fragment">The total variances of all prinicipal components sum up to the number of variables (when variables are standardized)</li>
+<li class="fragment">The PCA is unique. All principle components together are a complete representation of the data. (Unlike other technique of dimensionality reduction which may rely on starting values, random factors, or tuning parameters)</li>
 </ul>
 </div>
 </section>
-<section id="how-do-dummy-variables-look" class="slide level2">
-<h2>How do dummy variables look</h2>
-<table>
-<thead>
-<tr class="header">
-<th>species</th>
-<th>speciesChinstrap</th>
-<th>speciesGentoo</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Adelie</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td>Chinstrap</td>
-<td>1</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td>Gentoo</td>
-<td>0</td>
-<td>1</td>
-</tr>
-</tbody>
-</table>
-<p>Then the computation is as usual with the zero-one variables.</p>
-</section>
-<section id="interpretation" class="slide level2">
-<h2>Interpretation</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb63-2"><a href="#cb63-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb63-3"><a href="#cb63-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb63-4"><a href="#cb63-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
-</div>
-</div>
+<section id="relations-of-pca" class="slide level2 smaller">
+<h2>Relations of PCA</h2>
+<div>
 <ul>
-<li>Flipper length of the baseline species is the intercept.</li>
-<li>Flipper length of the two other species add their coefficient</li>
+<li class="fragment">A technique similar in spirit is <em>factor analysis</em> (e.g.&nbsp;<code>factanal</code>). It is more theory based as it requires to specify to the theoriezed number of factors up front.</li>
+<li class="fragment">PCA is an example of the importance of linear algebra (“matrixology”) in data science techniques.
+<ul>
+<li class="fragment">PCA is based on the <strong>eigenvalue decomposition</strong> of the covariance matrix (or correlation matrix in the standardized case) of the data.</li>
+</ul></li>
 </ul>
-</section>
-<section id="compare-to-a-visualization" class="slide level2 smaller">
-<h2>Compare to a visualization</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 3 × 5
-  term             estimate std.error statistic   p.value
-  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)        190.       0.540    351.   0        
-2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9
-3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
 </div>
-</div>
-
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-38-1.png" width="288" class="r-stretch"><p>The red dots are the average values for species.</p>
-<p>The rest is a boxplot. More on these later.</p>
 </section></section>
 <section>
-<section id="nonlinear-models" class="title-slide slide level1 center">
-<h1>Nonlinear Models</h1>
+<section id="calculus" class="title-slide slide level1 center">
+<h1>Calculus</h1>
 
 </section>
-<section id="where-a-linear-model-is-bad" class="slide level2">
-<h2>Where a linear model is bad</h2>
-<p>Total corona cases in Germany in the first wave 2020.</p>
-
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
-<section id="log-transformation" class="slide level2 smaller">
-<h2><span class="math inline">\(\log\)</span> transformation</h2>
-<p>Instead of <code>Cumulative_cases</code> we look at <span class="math inline">\(\log(\)</span><code>Cumulative_cases</code><span class="math inline">\()\)</span></p>
-
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"><p>Almost perfect fit of a linear model.</p>
-<p>The model is <span class="math inline">\(y=\beta_0 e^{\beta_1\cdot x}\)</span> (<span class="math inline">\(y=\)</span> <code>Cumulative cases</code>, <span class="math inline">\(x=\)</span> Days).</p>
-<p><span class="math inline">\(\log(y)=\log(\beta_0) + \beta_1\cdot x\)</span> (A linear model!)</p>
-</section>
-<section id="log-transformation-1" class="slide level2 smaller">
-<h2><span class="math inline">\(\log\)</span> transformation</h2>
-
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"><p>What is the difference to the penguin model?</p>
-<div class="fragment">
+<section id="epidemic-modeling" class="slide level2 smaller" data-background-color="khaki">
+<h2>Epidemic Modeling</h2>
 <ul>
-<li><span class="math inline">\(x\)</span> has an ordered structure and no duplicates</li>
+<li>Assume a population of N individuals.<br>
+</li>
+<li>Individuals can have different states, e.g.: <strong>S</strong>usceptible, <strong>I</strong>nfectious, <strong>R</strong>ecovered, …</li>
+<li>The population divides into compartments of these states which change over time, e.g.: <span class="math inline">\(S(t), I(t), R(t)\)</span> <em>number of susceptible, infectious, recovered</em> individuals</li>
 </ul>
-<p>The fit looks so good. Why?</p>
-</div>
-<div class="fragment">
-<p>This shows exponential growth (more later).<br>
-Maybe we can go after a <strong>mechanistic</strong> explanation here.</p>
-</div>
-</section>
-<section id="however-it-works-only-in-a-certain-range" class="slide level2">
-<h2>However, it works only in a certain range …</h2>
+<p>Now we define dynamics like</p>
 
-<img data-src="W05_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section></section>
-<section>
-<section id="next" class="title-slide slide level1 center">
-<h1>Next</h1>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/3/30/Diagram_of_SIR_epidemic_model_states_and_transition_rates.svg" class="r-stretch"><p>where the numbers on the arrows represent transition probabilities.</p>
+</section>
+<section id="si-model" class="slide level2 smaller" data-background-color="khaki">
+<h2>SI model</h2>
+<p>Today we only treat the SI part of the model.</p>
 <ul>
-<li><p>On demand: Q&amp;A on getting up with homework</p></li>
-<li><p>More math on summary statistics (Mean, standard deviation, correlation and others)</p></li>
-<li><p>A bit of calculus (with data)</p></li>
-<li><p>More models (and surroundings like fitting methods, preprocessing, performance measures)</p></li>
+<li>People who are susceptible can become infected through contact with infectious.</li>
+<li>People who are infectious stay infectious</li>
 </ul>
+<p>The parameter <span class="math inline">\(\beta\)</span> is the average number of contacts per unit time multiplied with the probability that an infection happens during such a contact.</p>
+<p>Two compartments:<br>
+<span class="math inline">\(S(t)\)</span> is the number of susceptible people at time <span class="math inline">\(t\)</span>.<br>
+<span class="math inline">\(I(t)\)</span> is the number of infected people at time <span class="math inline">\(t\)</span>.<br>
+It always holds <span class="math inline">\(S(t) + I(t) = N\)</span>. (The total population is constant.)</p>
 </section>
-<section id="backup-correlations" class="slide level2">
-<h2>Backup Correlations</h2>
+<section id="how-many-infections-per-time" class="slide level2 smaller" data-background-color="khaki">
+<h2>How many infections per time?</h2>
+<p>The change of the number of infectious</p>
+<p><span class="math display">\[\frac{dI}{dt} = \underbrace{\beta}_\text{infection prob.} \cdot \underbrace{\frac{S}{N}}_\text{frac. of $S$ still there} \cdot \underbrace{\frac{I}{N}}_\text{frac. $I$ to meet} \cdot N = \frac{\beta\cdot S\cdot I}{N}\]</span></p>
+<p>where <span class="math inline">\(dI\)</span> is the <em>change</em> of <span class="math inline">\(I\)</span> (the newly infected here) and <span class="math inline">\(dt\)</span> the time interval.</p>
+<p><strong>Interpretation:</strong> The newly infected are from the fraction of susceptible <em>times</em> the probability that they meet an infected <em>times</em> the infection probability <em>times</em> the total number of individuals.</p>
+<p>Using <span class="math inline">\(S = N - I\)</span> we rewrite</p>
+<p><span class="math display">\[\frac{dI}{dt} = \frac{\beta (N-I)I}{N}\]</span></p>
 </section>
-<section id="correlation-and-linear-regression" class="slide level2 smaller">
-<h2>Correlation and linear regression</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb66-2"><a href="#cb66-2"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb66-3"><a href="#cb66-3"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb66-4"><a href="#cb66-4"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb66-5"><a href="#cb66-5"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept) 137.      2.00          68.5 5.71e-201
-2 body_mass_g   0.0153  0.000467      32.7 4.37e-107</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>penguins_standardized <span class="ot">&lt;-</span> penguins <span class="sc">|&gt;</span> </span>
-<span id="cb68-2"><a href="#cb68-2"></a> <span class="fu">mutate</span>(<span class="at">flipper_length_mm_s =</span> <span class="fu">scale</span>(flipper_length_mm)[,<span class="dv">1</span>],</span>
-<span id="cb68-3"><a href="#cb68-3"></a>        <span class="at">body_mass_g_s =</span> <span class="fu">scale</span>(body_mass_g)[,<span class="dv">1</span>])</span>
-<span id="cb68-4"><a href="#cb68-4"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb68-5"><a href="#cb68-5"></a> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb68-6"><a href="#cb68-6"></a> <span class="fu">fit</span>(flipper_length_mm_s <span class="sc">~</span> body_mass_g_s, <span class="at">data =</span> penguins_standardized) <span class="sc">|&gt;</span> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term           estimate std.error statistic   p.value
-  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)   -9.33e-16    0.0266 -3.51e-14 1.00e+  0
-2 body_mass_g_s  8.71e- 1    0.0266  3.27e+ 1 4.37e-107</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a><span class="fu">cor</span>(penguins_standardized<span class="sc">$</span>body_mass_g_s,</span>
-<span id="cb70-2"><a href="#cb70-2"></a>    penguins_standardized<span class="sc">$</span>flipper_length_mm_s, </span>
-<span id="cb70-3"><a href="#cb70-3"></a>    <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.8712018</code></pre>
-</div>
-</div>
+<section id="ordinary-differential-equation" class="slide level2" data-background-color="aquamarine">
+<h2>Ordinary differential equation</h2>
+<p>We interpret <span class="math inline">\(I(t)\)</span> as a function of time which gives us the number of infectious at each point in time. The change function is now</p>
+<p><span class="math display">\[\frac{dI(t)}{dt} = \frac{\beta (N-I(t))I(t)}{N}\]</span></p>
+<p>and <span class="math inline">\(\frac{dI(t)}{dt}\)</span> is also called the <strong>derivative</strong> of <span class="math inline">\(I(t)\)</span>.</p>
 </section>
-<section id="correlation-and-linear-regression-1" class="slide level2">
-<h2>Correlation and linear regression</h2>
-<p>When the two variables in the linear regression are standardized (standard scores)</p>
+<section id="derivatives" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Derivatives</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
 <ul>
-<li>the intercept is zero</li>
-<li>the coefficient coincides with the correlation</li>
+<li>The <em>derivative</em> of a function is also a function with the same domain.</li>
+<li>Measures the sensitivity to change of the function output when the input changes (a bit)</li>
+<li>Example from physics: The derivative of the <em>position</em> of a moving object is its <em>speed</em>. The derivative of its speed is its <em>acceleration.</em></li>
+<li>Graphically: The derivative is the <em>slope</em> of a <em>tangent line</em> of the graph of a function.</li>
 </ul>
+</div><div class="column" style="width:30%;">
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tangent_function_animation.gif"></p>
+</div>
+</div>
+</section>
+<section id="differentiation" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Differentiation</h2>
+<p>is the process to compute the derivative. For parameters <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and other functions <span class="math inline">\(g\)</span> and <span class="math inline">\(h\)</span>, rules of differentiation are</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p>Function <span class="math inline">\(f(x)\)</span></p>
+<p><span class="math inline">\(a\cdot x\)</span></p>
+<p><span class="math inline">\(b\)</span></p>
+<p><span class="math inline">\(x^2,\ x^{-1} = \frac{1}{x},\ x^k\)</span></p>
+<p><span class="math inline">\(g(x) + h(x)\)</span></p>
+<p><span class="math inline">\(g(x)\cdot h(x)\)</span></p>
+<p><span class="math inline">\(g(h(x))\)</span></p>
+<p><span class="math inline">\(e^x,\ 10^x = e^{\log(10)x}\)</span></p>
+<p><span class="math inline">\(\log(x)\)</span></p>
+</div><div class="column" style="width:70%;">
+<p>Its derivative <span class="math inline">\(\frac{df(x)}{dx}\)</span> or <span class="math inline">\(\frac{d}{dx}f(x)\)</span> or <span class="math inline">\(f'(x)\)</span></p>
+<div class="fragment" data-fragment-index="1">
+<p><span class="math inline">\(a\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="2">
+<p><span class="math inline">\(0\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="3">
+<p><span class="math inline">\(2\cdot x,\ -x^{-2} = -\frac{1}{x^2},\ k\cdot x^{k-1}\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="4">
+<p><span class="math inline">\(g'(x) + h'(x)\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="5">
+<p><span class="math inline">\(g'(x)\cdot h(x) + g(x)\cdot h'(x)\)</span> (product rule)</p>
+</div>
+<div class="fragment" data-fragment-index="6">
+<p><span class="math inline">\(g'(h(x))\cdot h'(x)\)</span> (chain rule)</p>
+</div>
+<div class="fragment" data-fragment-index="7">
+<p><span class="math inline">\(e^x,\ 10^x = \log(10)\cdot10^x\)</span></p>
+</div>
+<div class="fragment" data-fragment-index="">
+<p><span class="math inline">\(\frac{1}{x}\)</span> (This is a “surprising” relation …)</p>
+</div>
+</div>
+</div>
+</section>
+<section id="differential-equation" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Differential equation</h2>
+<p>In a differential equation the <em>unknown</em> is a function!</p>
+<p>We are looking for a function which derivative is a function of the function itself.</p>
+<p><strong>Example: SI-model</strong></p>
+<p><span class="math display">\[\frac{dI(t)}{dt} = \frac{\beta (N-I(t))I(t)}{N}\]</span></p>
+<p>Which function <span class="math inline">\(I(t)\)</span> fulfills this equation?</p>
+<p>The <strong>analytical solution</strong><sup>1</sup> is</p>
+<p><span class="math inline">\(I(t) = \frac{N}{1 + (\frac{N}{I(0)} - 1)e^{-\beta t}}\)</span></p>
+<p>Which is called the <em>logistic equation</em>.<br>
+Note, we need to specify the initial number of infectious individuals <span class="math inline">\(I(0)\)</span>.</p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Can you check that this is correct? If you want but can’t, don’t hesitate to ask later.</p></li></ol></aside></section>
+<section id="si-model-logistic-equation" class="slide level2 smaller" data-background-color="khaki">
+<h2>SI-model: Logistic Equation</h2>
+<p><span class="math inline">\(I(t) = \frac{N}{1 + (\frac{N}{I(0)} - 1)e^{-\beta t}}\)</span></p>
+<p>Plot the equation for <span class="math inline">\(N = 10000\)</span>, <span class="math inline">\(I_0 = 1\)</span>, and <span class="math inline">\(\beta = 0.3\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb74-2"><a href="#cb74-2"></a>I0 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb74-3"><a href="#cb74-3"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb74-4"><a href="#cb74-4"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb74-5"><a href="#cb74-5"></a> <span class="fu">geom_function</span>( <span class="at">fun =</span> <span class="cf">function</span>(t) N <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> (N<span class="sc">/</span>I0 <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>beta<span class="sc">*</span>t)) ) <span class="sc">+</span> </span>
+<span id="cb74-6"><a href="#cb74-6"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">75</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-51-1.png" width="960" class="r-stretch"></section>
+<section id="si-model-numerical-integration" class="slide level2 smaller" data-background-color="khaki">
+<h2>SI-model: Numerical integration</h2>
+<p>Another way of solution using, e.g., using <em>Euler’s method</em>.</p>
+<p>We compute the solution step-by-step using small increments of, e.g.&nbsp;<span class="math inline">\(dt = 0.5\)</span>.</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb75-2"><a href="#cb75-2"></a>I0 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb75-3"><a href="#cb75-3"></a>dI <span class="ot">&lt;-</span> <span class="cf">function</span>(I,N,b) b<span class="sc">*</span>I<span class="sc">*</span>(N <span class="sc">-</span> I)<span class="sc">/</span>N</span>
+<span id="cb75-4"><a href="#cb75-4"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb75-5"><a href="#cb75-5"></a>dt <span class="ot">&lt;-</span> <span class="fl">0.5</span> <span class="co"># time increment, supposed to be infinitesimally small</span></span>
+<span id="cb75-6"><a href="#cb75-6"></a>tmax <span class="ot">&lt;-</span> <span class="dv">75</span></span>
+<span id="cb75-7"><a href="#cb75-7"></a>t <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,tmax,dt) <span class="co"># this is the vector of timesteps</span></span>
+<span id="cb75-8"><a href="#cb75-8"></a>It <span class="ot">&lt;-</span> I0 <span class="co"># this will become the vector of the number infected I(t) over time</span></span>
+<span id="cb75-9"><a href="#cb75-9"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(t)) { <span class="co"># We iterate over the vector of time steps and incrementally compute It</span></span>
+<span id="cb75-10"><a href="#cb75-10"></a>  It[i] <span class="ot">=</span> It[i<span class="dv">-1</span>] <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dI</span>(It[i<span class="dv">-1</span>], N, beta) <span class="co"># This is called Euler's method</span></span>
+<span id="cb75-11"><a href="#cb75-11"></a>}</span>
+<span id="cb75-12"><a href="#cb75-12"></a><span class="fu">tibble</span>(t, It) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(t,It)) <span class="sc">+</span> </span>
+<span id="cb75-13"><a href="#cb75-13"></a> <span class="fu">geom_function</span>( <span class="at">fun =</span> <span class="cf">function</span>(t) N <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> (N<span class="sc">/</span>I0 <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>beta<span class="sc">*</span>t)) ,</span>
+<span id="cb75-14"><a href="#cb75-14"></a>                <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="co"># Analytical solution for comparison</span></span>
+<span id="cb75-15"><a href="#cb75-15"></a> <span class="fu">geom_line</span>() <span class="co"># The numerical solution in black</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-52-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="numerical-integration-more-precise-with-small-dt" class="slide level2 smaller" data-background-color="khaki">
+<h2>Numerical integration more precise with small <span class="math inline">\(dt\)</span></h2>
+<p>We compute the solution step-by-step using small increments of, e.g.&nbsp;<span class="math inline">\(dt = 0.01\)</span>.</p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb76-2"><a href="#cb76-2"></a>I0 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb76-3"><a href="#cb76-3"></a>dI <span class="ot">&lt;-</span> <span class="cf">function</span>(I,N,b) b<span class="sc">*</span>I<span class="sc">*</span>(N <span class="sc">-</span> I)<span class="sc">/</span>N</span>
+<span id="cb76-4"><a href="#cb76-4"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb76-5"><a href="#cb76-5"></a>dt <span class="ot">&lt;-</span> <span class="fl">0.01</span> <span class="co"># time increment, supposed to be infinitesimally small</span></span>
+<span id="cb76-6"><a href="#cb76-6"></a>tmax <span class="ot">&lt;-</span> <span class="dv">75</span></span>
+<span id="cb76-7"><a href="#cb76-7"></a>t <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>,tmax,dt) <span class="co"># this is the vector of timesteps</span></span>
+<span id="cb76-8"><a href="#cb76-8"></a>It <span class="ot">&lt;-</span> I0 <span class="co"># this will become the vector of the number infected I(t) over time</span></span>
+<span id="cb76-9"><a href="#cb76-9"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span><span class="fu">length</span>(t)) { <span class="co"># We iterate over the vector of time steps and incrementally compute It</span></span>
+<span id="cb76-10"><a href="#cb76-10"></a>  It[i] <span class="ot">=</span> It[i<span class="dv">-1</span>] <span class="sc">+</span> dt <span class="sc">*</span> <span class="fu">dI</span>(It[i<span class="dv">-1</span>], N, beta) <span class="co"># This is called Euler's method</span></span>
+<span id="cb76-11"><a href="#cb76-11"></a>}</span>
+<span id="cb76-12"><a href="#cb76-12"></a><span class="fu">tibble</span>(t, It) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(t,It)) <span class="sc">+</span> </span>
+<span id="cb76-13"><a href="#cb76-13"></a> <span class="fu">geom_function</span>( <span class="at">fun =</span> <span class="cf">function</span>(t) N <span class="sc">/</span> (<span class="dv">1</span> <span class="sc">+</span> (N<span class="sc">/</span>I0 <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>beta<span class="sc">*</span>t)) ,</span>
+<span id="cb76-14"><a href="#cb76-14"></a>                <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="co"># Analytical solution for comparison</span></span>
+<span id="cb76-15"><a href="#cb76-15"></a> <span class="fu">geom_line</span>() <span class="co"># The numerical solution in black</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-53-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="si-model-simulation" class="slide level2 smaller" data-background-color="khaki">
+<h2>SI-model: Simulation</h2>
+<p>Another more basic solution is direct <strong>individual-based simulation</strong>.</p>
+<ul>
+<li>We produce a vector of length <span class="math inline">\(N\)</span> with entries representing the state of each individual as <code>"S"</code> or <code>"I"</code>.</li>
+<li>We model the random infection process in each step of unit time</li>
+</ul>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>N <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb77-2"><a href="#cb77-2"></a>beta <span class="ot">&lt;-</span> <span class="fl">0.3</span></span>
+<span id="cb77-3"><a href="#cb77-3"></a>randomly_infect <span class="ot">&lt;-</span> <span class="cf">function</span>(N, prob) { <span class="fu">runif</span>(N) <span class="sc">&lt;</span> prob }</span>
+<span id="cb77-4"><a href="#cb77-4"></a><span class="co"># Gives a logical vector of length N where TRUE appears with probability 0.3</span></span>
+<span id="cb77-5"><a href="#cb77-5"></a>init <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="st">"S"</span>,N) <span class="co"># All susceptible</span></span>
+<span id="cb77-6"><a href="#cb77-6"></a>init[<span class="fu">sample.int</span>(N, <span class="at">size=</span><span class="dv">1</span>)] <span class="ot">&lt;-</span> <span class="st">"I"</span> <span class="co"># Infect one individual</span></span>
+<span id="cb77-7"><a href="#cb77-7"></a>tmax <span class="ot">&lt;-</span> <span class="dv">75</span></span>
+<span id="cb77-8"><a href="#cb77-8"></a>sim_run <span class="ot">&lt;-</span> <span class="fu">list</span>(init)</span>
+<span id="cb77-9"><a href="#cb77-9"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>tmax) {</span>
+<span id="cb77-10"><a href="#cb77-10"></a> contacts <span class="ot">&lt;-</span> <span class="fu">sample</span>(sim_run[[i<span class="dv">-1</span>]], <span class="at">size =</span> N)</span>
+<span id="cb77-11"><a href="#cb77-11"></a> sim_run[[i]] <span class="ot">&lt;-</span> <span class="fu">if_else</span>(contacts <span class="sc">==</span> <span class="st">"I"</span> <span class="sc">&amp;</span> <span class="fu">randomly_infect</span>(N, beta), </span>
+<span id="cb77-12"><a href="#cb77-12"></a>                         <span class="at">true =</span> <span class="st">"I"</span>, </span>
+<span id="cb77-13"><a href="#cb77-13"></a>                         <span class="at">false =</span> sim_run[[i<span class="dv">-1</span>]])</span>
+<span id="cb77-14"><a href="#cb77-14"></a>}</span>
+<span id="cb77-15"><a href="#cb77-15"></a>sim_output <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">t =</span> <span class="dv">0</span><span class="sc">:</span>(tmax<span class="dv">-1</span>), </span>
+<span id="cb77-16"><a href="#cb77-16"></a>       <span class="co"># Compute a vector with length tmax with the count of "I" in sim_run list</span></span>
+<span id="cb77-17"><a href="#cb77-17"></a>       <span class="at">infected =</span> <span class="fu">map_dbl</span>(sim_run, <span class="cf">function</span>(x) <span class="fu">sum</span>(x <span class="sc">==</span> <span class="st">"I"</span>))) </span>
+<span id="cb77-18"><a href="#cb77-18"></a>sim_output <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(t,infected)) <span class="sc">+</span> <span class="fu">geom_line</span>()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-54-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="new-programming-concepts-used-here" class="slide level2">
+<h2>New programming concepts used here</h2>
+<p>From base R:</p>
+<p><code>runif</code> random numbers<br>
+<code>sample.int</code> and <code>sample</code><br>
+<code>for</code> loops<br>
+<code>if</code> and <code>else</code> <code>ifelse</code></p>
+<p>From <code>purrr</code>:</p>
+<p><code>map</code> apply function to lists and collect output</p>
+</section>
+<section id="three-ways-to-explore-mechanistic-models" class="slide level2 smaller" data-background-color="khaki">
+<h2>Three ways to explore mechanistic models</h2>
+<ul>
+<li>Individual-based simulation
+<ul>
+<li>We model every individual explicitly</li>
+<li>Simulation involve random numbers! So simulation runs can be different!</li>
+</ul></li>
+<li>Numerical integration of differential equation
+<ul>
+<li>Needs a more abstract concept of compartments</li>
+</ul></li>
+<li>Analytical solutions of differential equation
+<ul>
+<li>often not possible or not in nice form</li>
+</ul></li>
+</ul>
+<p><em>Such mechanistic models are typical for natural sciences, but they also make sense for many processes in societies and ecomonies.</em></p>
+</section>
+<section id="differentiation-with-data" class="slide level2">
+<h2>Differentiation with data</h2>
+<p>In empirical data we can compute the increase in a vector with the function <code>diff</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">0</span>)</span>
+<span id="cb78-2"><a href="#cb78-2"></a><span class="fu">diff</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  2  1  0 -2 -3</code></pre>
+</div>
+</div>
+<p>More convenient in a data frame is to use <code>x - lag(x)</code> because the vector has the same length.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1"></a>x <span class="sc">-</span> <span class="fu">lag</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] NA  1  2  1  0 -2 -3</code></pre>
+</div>
+</div>
+</section>
+<section id="the-diff-of-our-simulation-output" class="slide level2 smaller">
+<h2>The diff of our simulation output</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a href="#cb82-1"></a>g2 <span class="ot">&lt;-</span> sim_output <span class="sc">|&gt;</span> </span>
+<span id="cb82-2"><a href="#cb82-2"></a> <span class="fu">mutate</span>(<span class="at">derivative_infected =</span> infected <span class="sc">-</span> <span class="fu">lag</span>(infected)) <span class="sc">|&gt;</span> </span>
+<span id="cb82-3"><a href="#cb82-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> t)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> derivative_infected))</span>
+<span id="cb82-4"><a href="#cb82-4"></a>g1 <span class="ot">&lt;-</span> sim_output <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> t)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> infected))</span>
+<span id="cb82-5"><a href="#cb82-5"></a>g2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-57-1.png" width="960"></p>
+</div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a>g1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W05_files/figure-revealjs/unnamed-chunk-57-2.png" width="960"></p>
+</div>
+</div>
+</section>
+<section id="nd-derivative-change-of-change" class="slide level2">
+<h2>2nd derivative: Change of change</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a href="#cb84-1"></a>g3 <span class="ot">&lt;-</span> sim_output <span class="sc">|&gt;</span> </span>
+<span id="cb84-2"><a href="#cb84-2"></a> <span class="fu">mutate</span>(<span class="at">derivative_infected =</span> infected <span class="sc">-</span> <span class="fu">lag</span>(infected),</span>
+<span id="cb84-3"><a href="#cb84-3"></a>        <span class="at">derivative2_infected =</span> derivative_infected <span class="sc">-</span> <span class="fu">lag</span>(derivative_infected)) <span class="sc">|&gt;</span> </span>
+<span id="cb84-4"><a href="#cb84-4"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> t)) <span class="sc">+</span> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">y =</span> derivative2_infected))</span>
+<span id="cb84-5"><a href="#cb84-5"></a>g3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-58-1.png" width="960" class="r-stretch"><p>In empirical data: Derivatives of higher order tend to show fluctuation</p>
+</section>
+<section id="interpretation-in-si-model" class="slide level2 smaller" data-background-color="khaki">
+<h2>Interpretation in SI-model</h2>
+
+<img data-src="W05_files/figure-revealjs/unnamed-chunk-59-1.png" width="960" class="r-stretch"><ul>
+<li><span class="math inline">\(I(t)\)</span> total number of infected</li>
+<li><span class="math inline">\(I'(t)\)</span> number of new cases per day (time step)</li>
+<li><span class="math inline">\(I''(t)\)</span> how the number of new cases has changes compared to yesterday
+<ul>
+<li>Can be a good early indicator for the end of a wave.</li>
+</ul></li>
+</ul>
+</section>
+<section id="integration" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Integration</h2>
+<p>The <strong>integral</strong> of the daily new cases from the beginning to day <span class="math inline">\(s\)</span> is <span class="math inline">\(\int_{-\infty}^s f(t)dt\)</span> and represents the total cases at day <span class="math inline">\(s\)</span>.</p>
+<ul>
+<li>The integral of a function <span class="math inline">\(f\)</span> up to time <span class="math inline">\(s\)</span> is also called the <strong>anti-derivative</strong> <span class="math inline">\(F(s) = \int_{-\infty}^s f(t)dt\)</span>.</li>
+<li>Compute the anti-derivative of data vector with <code>cumsum</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">0</span>)</span>
+<span id="cb85-2"><a href="#cb85-2"></a><span class="fu">cumsum</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]  1  3  7 12 17 20 20</code></pre>
+</div>
+</div>
+<ul>
+<li>Empirically derivatives tend to become noisy, while integrals tend to become smooth.</li>
+</ul>
+</section>
+<section id="fundamental-theorem-of-calculus" class="slide level2" data-background-color="aquamarine">
+<h2>Fundamental theorem of calculus</h2>
+<p><strong>The integral of the derivative is the function itself.</strong></p>
+<p>This is not a proof but shows the idea:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a>f <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">0</span>)</span>
+<span id="cb87-2"><a href="#cb87-2"></a>antiderivative <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(f)</span>
+<span id="cb87-3"><a href="#cb87-3"></a><span class="fu">diff</span>(<span class="fu">c</span>(<span class="dv">0</span>, antiderivative)) <span class="co"># We have to put 0 before to regain the full vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 4 5 5 3 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1"></a>derivative <span class="ot">&lt;-</span> <span class="fu">diff</span>(f)</span>
+<span id="cb89-2"><a href="#cb89-2"></a><span class="fu">cumsum</span>(<span class="fu">c</span>(<span class="dv">1</span>,derivative)) <span class="co"># We have to put in the first value (here 1) manually because it was lost during the diff</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 4 5 5 3 0</code></pre>
+</div>
+</div>
 
 
-<p><img src="img/ConstructorUniversity.png" class="slide-logo"></p>
-<div class="footer footer-default">
+<img src="img/ConstructorUniversity.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools">CU-F23-MDSSB-DSCO-02: Data Science Concepts</a></p>
 </div>
-<aside><div>
-<ul>
-<li>The function <code>scale</code> is a function for standardization from base R which delivers a matrix which is unconventional for tidyverse.</li>
-<li>The function <code>cor</code> is also from base R. It outputs <code>NA</code> whenever one value in one variable is <code>NA</code>. Therefore a methods to use has to be specified. <code>use = "pairwise.complete.obs"</code> keeps all values where both variables are not <code>NA</code>.</li>
-</ul>
-</div></aside></section></section>
+</section></section>
 
     </div>
   </div>
