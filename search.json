@@ -599,7 +599,7 @@
     "href": "W12.html#random-number-generator-r",
     "title": "W#12: Probability, Principal Component Analysis",
     "section": "Random number generator r",
-    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  4  7 10  6  3  4  8  4  5  3\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
+    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  4  6  6  5 11  6  3  8  8 10\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
   },
   {
     "objectID": "W12.html#empirical-distributions",
@@ -837,7 +837,7 @@
     "href": "W06.html#si-model-simulation-in-r",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "SI-model: Simulation in R",
-    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1] FALSE FALSE  TRUE FALSE FALSE FALSE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
+    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1]  TRUE FALSE FALSE  TRUE FALSE FALSE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
   },
   {
     "objectID": "W06.html#si-model-simulation-in-r-1",
@@ -1043,11 +1043,11 @@
     "text": "ggplot-hint: How to color penguins but keep one model?\nPut the mapping of the color aesthetic into the geom_point command.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n                                                y = flipper_length_mm)) +\n geom_point(aes(color = species)) +\n geom_smooth(method = \"lm\",\n                                                    se = FALSE) + \n theme_classic(base_size = 24)"
   },
   {
-    "objectID": "W06.html#beware-of-simpsons-paradox-.smaller-background-coloraquamarine",
-    "href": "W06.html#beware-of-simpsons-paradox-.smaller-background-coloraquamarine",
+    "objectID": "W06.html#beware-of-simpsons-paradox",
+    "href": "W06.html#beware-of-simpsons-paradox",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Beware of Simpson’s paradox {.smaller background-color=“aquamarine”}}",
-    "text": "Beware of Simpson’s paradox {.smaller background-color=“aquamarine”}}\nSlopes for all groups can be in the opposite direction of the main effect’s slope!"
+    "section": "Beware of Simpson’s paradox",
+    "text": "Beware of Simpson’s paradox\nSlopes for all groups can be in the opposite direction of the main effect’s slope!"
   },
   {
     "objectID": "W06.html#the-paradox-is-real",
@@ -1453,7 +1453,7 @@
     "href": "W04.html#function-as-objects-in-r",
     "title": "W#04: Math refresh, Function Programming, Descriptive Statistics",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x5630da624ee8>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x5630d8c918f8>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x556c8aff9d08>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x556c89674ac8>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#define-your-own-functions-in-r",
@@ -2076,7 +2076,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1506170973"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1506200799"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
