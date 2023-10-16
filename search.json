@@ -375,7 +375,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n7\n10-16, 10-19\nClassification Problems, Logistic Regression, Prediction, Probability, Random Variables, Performance Metrics\nR\n\n\n8\n10-23, 10-26\nStatistics, Hypothesis Testing, Simulating Data\npython\n\n\n9\n10-30, 11-02\nModeling Mindsets, Cluster Analysis\nR\n\n\n10\n11-06, 11-09\nDomain Knowledge, Communication\npython\n\n\n11\n11-13, 11-16\nTo be decided\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n\n\n8 | 10-23, 10-26 | Prediction, Probability, Random Variables, Performance Metrics | python | 9 | 10-30, 11-02 | Statistics, Hypothesis Testing, Simulating Data | R | 10 | 11-06, 11-09 | Modeling Mindsets, Cluster Analysis | python | 11 | 11-13, 11-16 | Domain Knowledge, Communication | R | 12 | 11-20, 11-23 | To be decided | python | 13 | 11-27, 11-30 | To be decided | R / python | 14 | 12-04, 12-07 | Course Review, Exam Preparation | Presentations |\n: {tbl-colwidths=“[5, 15, 70, 10]”}\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
   },
   {
     "objectID": "reports.html",
@@ -599,7 +599,7 @@
     "href": "W12.html#random-number-generator-r",
     "title": "W#12: Probability, Principal Component Analysis",
     "section": "Random number generator r",
-    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  4  6  6  5 11  6  3  8  8 10\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
+    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  7  7  5 10  3  9  8  3  5  7\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
   },
   {
     "objectID": "W12.html#empirical-distributions",
@@ -777,6 +777,13 @@
     "text": "4 Mathematics\n\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
   },
   {
+    "objectID": "literature.html#project-based-learning",
+    "href": "literature.html#project-based-learning",
+    "title": "Learning Resources",
+    "section": "5 Project-based learning",
+    "text": "5 Project-based learning\nhttps://github.com/practical-tutorials/project-based-learning/tree/master"
+  },
+  {
     "objectID": "help.html",
     "href": "help.html",
     "title": "Need help for Homework?",
@@ -788,7 +795,7 @@
     "href": "W06.html#sir-model",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "SIR model",
-    "text": "SIR model\n\nAssume a population of N individuals.\n\nIndividuals can have different states, e.g.: Susceptible, Infectious, Recovered, …\nThe population divides into compartments of these states which change over time, e.g.: \\(S(t), I(t), R(t)\\) number of susceptible, infectious, recovered individuals\n\nNow we define dynamics like\n\nwhere the numbers on the arrows represent transition probabilities."
+    "text": "SIR model\n\nAssume a population of \\(N\\) individuals.\n\nIndividuals can have different states, e.g.: Susceptible, Infectious, Recovered, …\nThe population divides into compartments of these states which change over time, e.g.: \\(S(t), I(t), R(t)\\) number of susceptible, infectious, recovered individuals\n\nNow we define dynamics like\n\nwhere the numbers on the arrows represent transition probabilities."
   },
   {
     "objectID": "W06.html#agent-based-simulation",
@@ -837,7 +844,7 @@
     "href": "W06.html#si-model-simulation-in-r",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "SI-model: Simulation in R",
-    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1]  TRUE FALSE FALSE  TRUE FALSE FALSE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
+    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1] FALSE FALSE FALSE FALSE  TRUE FALSE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
   },
   {
     "objectID": "W06.html#si-model-simulation-in-r-1",
@@ -1124,7 +1131,7 @@
     "href": "W06.html#what-does-the-output-say",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "What does the output say?",
-    "text": "What does the output say?\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\naverage flipper_length_mm \\(= 136.72956 + 0.01528\\cdot\\) body_mass_g\n\n\nInterpretation:\nThe penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted …"
+    "text": "What does the output say?\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\naverage flipper_length_mm \\(= 136.72956 + 0.01528\\cdot\\) body_mass_g\n\n\nInterpretation:\nThe penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted."
   },
   {
     "objectID": "W06.html#show-output-in-tidy-form",
@@ -1141,109 +1148,11 @@
     "text": "Parameter estimation\nNotation from statistics: \\(\\beta\\)’s for the population parameters and \\(b\\)’s for the parameters estimated from the sample statistics.\n\\[\\hat y = \\beta_0 + \\beta_1 x\\]\nIs what we cannot have. (\\(\\hat y\\) stands for predicted value of \\(y\\). )\n\nWe estimate \\(b_0\\) and \\(b_1\\) in\n\\[\\hat y = b_0 + b_1 x\\]\n\nA typical follow-up data analysis question is what the fitted values \\(b_0\\) and \\(b_1\\) tell us about the population-wide values \\(\\beta_0\\) and \\(\\beta_1\\)?\nThis is the typical inferential question."
   },
   {
-    "objectID": "W06.html#fitting-method-least-squares-regression",
-    "href": "W06.html#fitting-method-least-squares-regression",
+    "objectID": "W06.html#fitting-linear-models-part-2",
+    "href": "W06.html#fitting-linear-models-part-2",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Fitting method: Least squares regression",
-    "text": "Fitting method: Least squares regression\n\nThe regression line shall minimize the sum of the squared residuals (or, identically, their mean).\nMathematically: The residual for case \\(i\\) is \\(e_i = \\hat y_i - y_i\\).\nNow we want to minimize \\(\\sum_{i=1}^n e_i^2\\)\n(or equivalently \\(\\frac{1}{n}\\sum_{i=1}^n e_i^2\\) the the mean of squared errors, which we will look at later)."
-  },
-  {
-    "objectID": "W06.html#visualization-of-residuals",
-    "href": "W06.html#visualization-of-residuals",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Visualization of residuals",
-    "text": "Visualization of residuals\nThe residuals are the gray lines between predictid values on the regression line and the actual values."
-  },
-  {
-    "objectID": "W06.html#proporties-of-least-squares-regression",
-    "href": "W06.html#proporties-of-least-squares-regression",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Proporties of least squares regression",
-    "text": "Proporties of least squares regression\nThe regression lines goes through the point (mean(x), mean(y)).\n\nmean(penguins$body_mass_g, na.rm = TRUE)\n\n[1] 4201.754\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152"
-  },
-  {
-    "objectID": "W06.html#proporties-of-least-squares-regression-1",
-    "href": "W06.html#proporties-of-least-squares-regression-1",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Proporties of least squares regression",
-    "text": "Proporties of least squares regression\nResiduals sum up to zero\n\npengmod <- linear_reg() |>  set_engine(\"lm\") |> fit(flipper_length_mm ~ body_mass_g, data = penguins)\npengmod$fit$residuals |> sum()\n\n[1] -3.765044e-14\n\n\n\nThere is no correlation between residuals and the explanatory variable\n\ncor(pengmod$fit$residuals, na.omit(penguins$body_mass_g))\n\n[1] -1.353445e-16\n\n\n\n\nThe correlation of \\(x\\) and \\(y\\) is the slope \\(b_1\\) corrected by their standard deviations.\n\ncorrelation <- cor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\nsd_flipper <- sd(penguins$flipper_length_mm, na.rm = T)\nsd_mass <- sd(penguins$body_mass_g, na.rm = T)\nc(correlation, sd_flipper, sd_mass)\n\n[1]   0.8712018  14.0617137 801.9545357\n\ncorrelation * sd_flipper / sd_mass\n\n[1] 0.01527592\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592"
-  },
-  {
-    "objectID": "W06.html#correlation-and-linear-regression",
-    "href": "W06.html#correlation-and-linear-regression",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Correlation and linear regression",
-    "text": "Correlation and linear regression\nWhen the two variables in the linear regression are standardized (standard scores)\n\nthe intercept is zero\nthe coefficient coincides with the correlation"
-  },
-  {
-    "objectID": "W06.html#linear-model-when-explanatory-variables-are-categorical",
-    "href": "W06.html#linear-model-when-explanatory-variables-are-categorical",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Linear model when explanatory variables are categorical",
-    "text": "Linear model when explanatory variables are categorical\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\nWhat happened? Two of the three species categories appear as variables now.\n\nCategorical variables are automatically encoded to dummy variables\nEach coefficient describes the expected difference between flipper length of that particular species compared to the baseline level\nWhat is the baseline level?\n\n\n\nThe first category! (Here alphabetically \"Adelie\")"
-  },
-  {
-    "objectID": "W06.html#how-do-dummy-variables-look",
-    "href": "W06.html#how-do-dummy-variables-look",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "How do dummy variables look",
-    "text": "How do dummy variables look\n\n\n\nspecies\nspeciesChinstrap\nspeciesGentoo\n\n\n\n\nAdelie\n0\n0\n\n\nChinstrap\n1\n0\n\n\nGentoo\n0\n1\n\n\n\nThen the computation is as usual with the zero-one variables."
-  },
-  {
-    "objectID": "W06.html#interpretation",
-    "href": "W06.html#interpretation",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Interpretation",
-    "text": "Interpretation\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nFlipper length of the baseline species is the intercept.\nFlipper length of the two other species add their coefficient"
-  },
-  {
-    "objectID": "W06.html#compare-to-a-visualization",
-    "href": "W06.html#compare-to-a-visualization",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Compare to a visualization",
-    "text": "Compare to a visualization\n\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nThe red dots are the average values for species."
-  },
-  {
-    "objectID": "W06.html#when-a-linear-model-is-bad",
-    "href": "W06.html#when-a-linear-model-is-bad",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "When a linear model is bad",
-    "text": "When a linear model is bad\nExample: Total corona cases in Germany in the first wave 2020."
-  },
-  {
-    "objectID": "W06.html#log-transformation",
-    "href": "W06.html#log-transformation",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "\\(\\log\\) transformation",
-    "text": "\\(\\log\\) transformation\nInstead of Cumulative_cases we look at \\(\\log(\\)Cumulative_cases\\()\\)\n\nAlmost perfect fit of the linear model: \\(\\log(y)=\\log(\\beta_0) + \\beta_1\\cdot x\\)\n(\\(y=\\) Cumulative cases, \\(x=\\) Days)\n\nExponention gives the model: \\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)"
-  },
-  {
-    "objectID": "W06.html#exponential-growth",
-    "href": "W06.html#exponential-growth",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "Exponential growth!",
-    "text": "Exponential growth!\n\\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)\nFor comparison: Logistic function \\(y = \\frac{N \\beta_0 e^{\\beta_1\\cdot x}}{N + \\beta_0 e^{\\beta_1\\cdot x}}\\) for \\(N=200000\\)\n\nLogistic growth (as in the SI model) mimicks exponential growth initially."
-  },
-  {
-    "objectID": "W06.html#log-transformation-1",
-    "href": "W06.html#log-transformation-1",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "\\(\\log\\) transformation",
-    "text": "\\(\\log\\) transformation\n\nWhat is the difference to the penguin model?\n\n\n\\(x\\) has an ordered structure and no duplicates\n\nThe fit looks so good. Why?\n\n\nBecause there is a mechanistic explanation behind: The SI model."
-  },
-  {
-    "objectID": "W06.html#however-it-works-only-in-a-certain-range",
-    "href": "W06.html#however-it-works-only-in-a-certain-range",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "However, it works only in a certain range …",
-    "text": "However, it works only in a certain range …"
-  },
-  {
-    "objectID": "W06.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
-    "href": "W06.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
-    "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
-    "section": "However, it works only in a certain range (log scale on y) …",
-    "text": "However, it works only in a certain range (log scale on y) …\n\n\n\n\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
+    "section": "Fitting Linear Models Part 2",
+    "text": "Fitting Linear Models Part 2\nNext week!\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "hw-01.html",
@@ -1453,7 +1362,7 @@
     "href": "W04.html#function-as-objects-in-r",
     "title": "W#04: Math refresh, Function Programming, Descriptive Statistics",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x556c8aff9d08>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x556c89674ac8>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x560d967b3440>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x560d942700f8>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#define-your-own-functions-in-r",
@@ -2055,14 +1964,14 @@
     "href": "W03.html#dates",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "Dates",
-    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-09.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
+    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-16.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
   },
   {
     "objectID": "W03.html#how-many-days-are-you-old",
     "href": "W03.html#how-many-days-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many days are you old?",
-    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17433 days\n\n# Sys.Date() gives as the current day your computer is set to"
+    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17440 days\n\n# Sys.Date() gives as the current day your computer is set to"
   },
   {
     "objectID": "W03.html#date-times",
@@ -2076,7 +1985,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1506200799"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1506797039"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
@@ -2499,172 +2408,389 @@
     "text": "What is an Enviroment, and why you should know it\n\nEnvironment can be understood as the surrounding conditions in which code is executed.\n\nIn RStudio: There is an Environment-Tab.\nMost important: Shows the variables currently accessible from the Console.\n\nThe environment of your quarto document is different for that of the Console! Remember this! It will be a source of confusion.\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
-    "objectID": "W07.html#same-phenomenon-different-data",
-    "href": "W07.html#same-phenomenon-different-data",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Same phenomenon different data?",
-    "text": "Same phenomenon different data?\nQuestion: Is the data of OWiD and WHO the same?\n\n\n\nNo.\nWhy?\nWhat are the data sources of WHO and OWiD?\n\n\n\n\n\n\n\n\n\nOWiD documentation refers to have data from CSSE at Johns Hopkins University which document various data sources (e.g., a newspaper from Germany)\nWHO documentation says: “WHO collected the numbers of confirmed COVID-19 cases and deaths through official communications under the International Health Regulations (IHR, 2005), complemented by monitoring the official ministries of health websites and social media accounts.” For Germany this is the Robert-Koch-Institut RKI."
+    "objectID": "W07.html#recap-linear-model",
+    "href": "W07.html#recap-linear-model",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Recap: Linear model",
+    "text": "Recap: Linear model\nFlipper length as a function of body mass.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm)) +\n geom_point() +\n geom_smooth(method = \"lm\", \n             se = FALSE) + \n theme_classic(base_size = 24)\n\n\n\n\n\n\n\nThe fitting question: How can we get this line?"
   },
   {
-    "objectID": "W07.html#good-reasons-for-different-data",
-    "href": "W07.html#good-reasons-for-different-data",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Good reasons for different data?",
-    "text": "Good reasons for different data?\n\nDuring the pandemic daily new case numbers were relevant for decisions about safety measures.\nIn reality, data comes with delays.\n\nExample: Recent new cases in Germany (RKI). Notice many new cases several days ago."
+    "objectID": "W07.html#recap-a-line",
+    "href": "W07.html#recap-a-line",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Recap: A line",
+    "text": "Recap: A line\nA line is a shift-scale transformation of the identity function usually written in the form\n\\[f(x) = a\\cdot x + b\\]\nwhere \\(a\\) is the slope, \\(b\\) is the intercept."
   },
   {
-    "objectID": "W07.html#conflict-day-to-day-consistency-and-correctness",
-    "href": "W07.html#conflict-day-to-day-consistency-and-correctness",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Conflict day-to-day consistency and correctness",
-    "text": "Conflict day-to-day consistency and correctness\n\nFixing daily cases is useful to record the numbers on which daily safety decisions are based.\nCorrected cases (which also change data from the past) are better for analysis in retrospect. It reflects the actual pandemic better."
+    "objectID": "W07.html#recap-terminology",
+    "href": "W07.html#recap-terminology",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Recap: Terminology",
+    "text": "Recap: Terminology\n\nResponse variable:1 Variable whose behavior or variation you are trying to understand, on the y-axis\nExplanatory variable(s):2 Other variable(s) that you want to use to explain the variation in the response, on the x-axis\nPredicted value: Output of the model function.\n\nThe model function gives the (expected) average value of the response variable conditioning on the explanatory variables\nResidual(s): A measure of how far away a case is from its predicted value (based on the particular model)\nResidual = Observed value - Predicted value\nThe residual tells how far above/below the expected value each case is\n\n\nAlso dependent variable in statistics or empirical social sciences.Also independent variable(s) in statistics or empirical social sciences."
   },
   {
-    "objectID": "W07.html#reported-cases-and-real-cases",
-    "href": "W07.html#reported-cases-and-real-cases",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Reported cases and real cases?",
-    "text": "Reported cases and real cases?\nCase numbers are to inform us about real cases. What type of data analysis question is this? (Descriptive, Exploratory, Inferential, Predictive, Causal, Mechanistic)\n\n\nInferential: “Quantify whether the discovery is likely to hold in a new sample.”\n\nHere: What do reported cases tell us about cases in the whole population?\n\nLimitations\n\nWe cannot test all\nTests are not on a random sample\nMild/asymptomatic cases remain unnoticed even to individuals\n…\n\n\nThe unknown: What is the dark figure?"
+    "objectID": "W07.html#our-goal",
+    "href": "W07.html#our-goal",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Our goal",
+    "text": "Our goal\nPredict flipper length from body mass\naverage flipper_length_mm \\(= \\beta_0 + \\beta_1\\cdot\\) body_mass_g\n\n\\(\\beta_0\\) is the intercet of the line\n\\(\\beta_1\\) is the slope of the line\n\n\nLater we will have \\(\\beta_2, \\dots, \\beta_m\\) as coefficients for more variables."
   },
   {
-    "objectID": "W07.html#excercise-for-german-new-case-counts",
-    "href": "W07.html#excercise-for-german-new-case-counts",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Excercise for German new case counts",
-    "text": "Excercise for German new case counts\n\n\nCan we infer the real incidence (= new cases per 100,000)?\nWhat can we infer the trend of the real incidence?\n\n\nIncidence: Not really, we would need a either a random sample (then we can infer the fraction of infected), or an idea how to estimate the dark figure.\nTrend: Yes! Under the assumptions that reported cases do reflect a relevant part of the pandemic and the limitation remain mostly constant during the observed trend."
+    "objectID": "W07.html#fitting-the-model-in-r",
+    "href": "W07.html#fitting-the-model-in-r",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Fitting the model in R",
+    "text": "Fitting the model in R\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\naverage flipper_length_mm \\(= 136.72956 + 0.01528\\cdot\\) body_mass_g\nInterpretation:\nThe penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted."
   },
   {
-    "objectID": "W07.html#smoothing-time-series",
-    "href": "W07.html#smoothing-time-series",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Smoothing time series",
-    "text": "Smoothing time series\n\n\n\nx <- c(1, 2, 5, 3, 0)\nx\n\n\n[1] 1 2 5 3 0\n\n\n\n\n\nzoo::rollmean(x, k = 3, na.pad = TRUE) # for centered window\n\n\n[1]       NA 2.666667 3.333333 2.666667       NA\n\n\n\n\n\n(x + lag(x, n = 1) + lag(x, n = 2))/3 # for lagged window\n\n\n[1]       NA       NA 2.666667 3.333333 2.666667\n\n\n\n\nCentered: Leaves smoothed data close to real data.\nLagged: Lags the smoothed data, but can be consistently computed for the newest day\nRemember: Data with weekly seasonality is best smoothed with a weekly window!"
+    "objectID": "W07.html#parsnip-model-objects",
+    "href": "W07.html#parsnip-model-objects",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "parsnip model objects",
+    "text": "parsnip model objects\n\npengmod <- linear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\nclass(pengmod) # attributes\n\n[1] \"_lm\"       \"model_fit\"\n\ntypeof(pengmod) \n\n[1] \"list\"\n\nnames(pengmod)\n\n[1] \"lvl\"          \"spec\"         \"fit\"          \"preproc\"      \"elapsed\"     \n[6] \"censor_probs\"\n\n\n\nMost interesting for us for now: $fit\n\npengmod$fit\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\n\nNotice: parsnip model object is now missing in the output."
   },
   {
-    "objectID": "W07.html#total-death-per-million-and-human-development",
-    "href": "W07.html#total-death-per-million-and-human-development",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Total death per million and human development",
-    "text": "Total death per million and human development\n\nWhat findings? Explanations?"
+    "objectID": "W07.html#fit-is-the-object-created-by-lm-base-r",
+    "href": "W07.html#fit-is-the-object-created-by-lm-base-r",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "$fit is the object created by lm (base R)",
+    "text": "$fit is the object created by lm (base R)\n\nnames(pengmod$fit)\n\n [1] \"coefficients\"  \"residuals\"     \"effects\"       \"rank\"         \n [5] \"fitted.values\" \"assign\"        \"qr\"            \"df.residual\"  \n [9] \"na.action\"     \"xlevels\"       \"call\"          \"terms\"        \n[13] \"model\"        \n\npengmod$fit$call\n\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592 \n\npengmod$fit$fitted.values |> head()\n\n       1        2        3        5        6        7 \n194.0142 194.7780 186.3763 189.4315 192.4867 192.1048 \n\npengmod$fit$residuals |> head()\n\n         1          2          3          5          6          7 \n-13.014243  -8.778039   8.623715   3.568532  -2.486651 -11.104753"
   },
   {
-    "objectID": "W07.html#level-of-measurement",
-    "href": "W07.html#level-of-measurement",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Level of measurement",
-    "text": "Level of measurement\n\nNominal: the data can only be categorized\nOrdinal: the data can be categorized and ranked\nInterval: the data can be categorized, ranked, and evenly spaced\nRatio: the data can be categorized, ranked, evenly spaced, and has a natural zero.\n\nWhat is the difference of level of measurement and data type?\n\nMainly perspective:\n\nLevel of measurement is about the variable/the thing which is measured.\nData type is more about the technical way to store data."
+    "objectID": "W07.html#fitting-method-least-squares-regression",
+    "href": "W07.html#fitting-method-least-squares-regression",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Fitting method: Least squares regression",
+    "text": "Fitting method: Least squares regression\n\nThe regression line shall minimize the sum of the squared residuals\n(or, identically, their mean).\nMathematically: The residual for case \\(i\\) is \\(e_i = \\hat y_i - y_i\\).\nNow we want to minimize \\(\\sum_{i=1}^n e_i^2\\)\n(or equivalently \\(\\frac{1}{n}\\sum_{i=1}^n e_i^2\\) the the mean of squared errors, which we will look at later)."
   },
   {
-    "objectID": "W07.html#scales-in-surveysquestionaires",
-    "href": "W07.html#scales-in-surveysquestionaires",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Scales in surveys/questionaires",
-    "text": "Scales in surveys/questionaires\nLikert scale: Strongly disagree … [scale steps] … Strongly agree\nRating scales: Extreme statement … [scale steps] … Opposite statement\nWhat level of measurement do these questions have?\n \n\nOrdinal clearly, interval assuming scale steps are equal, ratio assuming 5 as natural zero"
+    "objectID": "W07.html#visualization-of-residuals",
+    "href": "W07.html#visualization-of-residuals",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Visualization of residuals",
+    "text": "Visualization of residuals\nThe residuals are the gray lines between predictid values on the regression line and the actual values."
   },
   {
-    "objectID": "W07.html#dealing-with-missing-values",
-    "href": "W07.html#dealing-with-missing-values",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Dealing with missing values",
-    "text": "Dealing with missing values\nCoding in the ESS data:\n\nInterval data coded numerically 0, 1, …, 10\nMissing values with numerical codes 77, 88, 99\n\nWhat is the reason for missing data? This can be important for inferential questions!\n\n\n\n\nFor numerical computations these must be filtered out or coded as NA!\n\ness |> select(euftf) |> \n mutate(euftf_na = euftf  |> na_if(77) |> na_if(88) |> na_if(99)) |> \n summarize(across(.fns = function(x) mean(x, na.rm = TRUE)))\n\n# A tibble: 1 × 2\n  euftf euftf_na\n  <dbl>    <dbl>\n1  13.7     5.20"
+    "objectID": "W07.html#check-fitted-values-and-residuals",
+    "href": "W07.html#check-fitted-values-and-residuals",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Check: Fitted values and Residuals",
+    "text": "Check: Fitted values and Residuals\nRecall: Residual = Observed value - Predicted value\nThe Predicted values are also called Fitted values. Hence:\nResiduals + Fitted values = Observed values\n\n(pengmod$fit$residuals + pengmod$fit$fitted.values) |> \nhead()\n\n  1   2   3   5   6   7 \n181 186 195 193 190 181 \n\n\n\npenguins$flipper_length_mm |> head()\n\n[1] 181 186 195  NA 193 190"
   },
   {
-    "objectID": "W07.html#emotional-attachment",
-    "href": "W07.html#emotional-attachment",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Emotional attachment",
-    "text": "Emotional attachment\nQuestion: What is the relation of the emotional attachment of Europeans to their own country and to Europe?\n\n\ness |> \n filter(essround == 9) |> \n count(atchctr, atcherp) |> \n na.omit() |> \n ggplot(aes(atchctr, atcherp, \n            size = n, color = n)) + \n geom_point() +\n geom_smooth(aes(weight = n), \n             method = 'loess', \n             formula = 'y ~ x') +\n scale_color_continuous(type = \"viridis\") +\n scale_size_area(max_size = 10) + ylim(c(0,10)) +\n coord_fixed() + \n guides(size = \"none\") +\n theme_classic(base_size = 24)\n\n\n\n\n\n\n\n\nDifferences between lowess used in seaborn.regplot and loess, the default in ggplot::geom_smooth: https://stats.stackexchange.com/questions/161069/difference-between-loess-and-lowess"
+    "objectID": "W07.html#proporties-of-least-squares-regression",
+    "href": "W07.html#proporties-of-least-squares-regression",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Proporties of least squares regression",
+    "text": "Proporties of least squares regression\nThe regression lines goes through the point (mean(x), mean(y)).\n\nmean(penguins$body_mass_g, na.rm = TRUE)\n\n[1] 4201.754\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152"
   },
   {
-    "objectID": "W07.html#emotional-attachment-eu-integration",
-    "href": "W07.html#emotional-attachment-eu-integration",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Emotional attachment EU integration",
-    "text": "Emotional attachment EU integration\nQuestion: What is the relation of the emotional attachment to the own country to attachment to Europe compared to the attitude about European integration?\n\n\nEmotional attachment to the own country and Europe is positively related. (“Positive” here means the sign of the correlation. It does not mean “good”!)\nNo compensation like “Emotion must be split between both.”\nRelation of country attachment to EU integration is weak but non-linear."
+    "objectID": "W07.html#proporties-of-least-squares-regression-1",
+    "href": "W07.html#proporties-of-least-squares-regression-1",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Proporties of least squares regression",
+    "text": "Proporties of least squares regression\nResiduals sum up to zero\n\npengmod <- linear_reg() |>  set_engine(\"lm\") |> fit(flipper_length_mm ~ body_mass_g, data = penguins)\npengmod$fit$residuals |> sum()\n\n[1] -3.765044e-14\n\n\n\nThere is no correlation between residuals and the explanatory variable\n\ncor(pengmod$fit$residuals, na.omit(penguins$body_mass_g))\n\n[1] -1.353445e-16\n\n\n\n\nThe correlation of \\(x\\) and \\(y\\) is the slope \\(b_1\\) corrected by their standard deviations.\n\ncorrelation <- cor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\nsd_flipper <- sd(penguins$flipper_length_mm, na.rm = T)\nsd_mass <- sd(penguins$body_mass_g, na.rm = T)\nc(correlation, sd_flipper, sd_mass)\n\n[1]   0.8712018  14.0617137 801.9545357\n\ncorrelation * sd_flipper / sd_mass\n\n[1] 0.01527592\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592"
   },
   {
-    "objectID": "W07.html#weighting-after-count",
-    "href": "W07.html#weighting-after-count",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Weighting after count",
-    "text": "Weighting after count\nHow many rows does the the data frame ess |> filter(essround == 9) |> count(atchctr, euftf) |> na.omit() have?\n\n11 times 11 = 121 (when each combination has a non-zero number of cases)\nHow many observations (not NA) do we have in the data set?\n\ness |> filter(essround == 9) |> count(atchctr, euftf) |> na.omit() |> summarize(n = sum(n))\n\n# A tibble: 1 × 1\n      n\n  <int>\n1 45552\n\n\nWeighting points correctly is important!"
+    "objectID": "W07.html#correlation-and-linear-regression",
+    "href": "W07.html#correlation-and-linear-regression",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Correlation and linear regression",
+    "text": "Correlation and linear regression\nWhen the two variables in the linear regression are standardized (standard scores)\n\nthe intercept is zero\nthe coefficient coincides with the correlation"
   },
   {
-    "objectID": "W07.html#three-different-smooth-plots",
-    "href": "W07.html#three-different-smooth-plots",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Three different smooth plots",
-    "text": "Three different smooth plots\n\nA: Counts unweightedB: Counts weightedC: Individual cases\n\n\n\ness |> filter(essround == 9) |> count(atchctr, euftf) |> na.omit() |> \n ggplot(aes(atchctr, euftf)) + geom_smooth() \n\n\n\n\nMakes no sense because, just 121 points in a square.\n\n\n\ness |> filter(essround == 9) |> count(atchctr, euftf) |> na.omit() |> \n ggplot(aes(atchctr, euftf, weight = n)) + geom_smooth() \n\n\n\n\nMakes sense weighted by the counts.\n\n\n\ness |> filter(essround == 9) |> \n ggplot(aes(atchctr, euftf)) + geom_smooth()\n\n\n\n\nSimilar to B. Lower uncertainty! Different y-axis limits!\nNote, geom_smooth uses stats::loess for less than 1,000 cases (as before), otherwise (as here) mgcv::gam() because it is more efficient computationally. We omit details here."
+    "objectID": "W07.html#explanatory-variables-are-categorical",
+    "href": "W07.html#explanatory-variables-are-categorical",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Explanatory variables are categorical",
+    "text": "Explanatory variables are categorical\nLet’s just try what happens with species as explanatory variable. Remember, we have three species: Adelie, Chinstrap, Gentoo.\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\nWhat happened?\n\nTwo of the three species categories appear as variables now.\n\nCategorical variables are automatically encoded to dummy variables\nEach coefficient describes the expected difference between flipper length of that particular species compared to the baseline level\nWhat is the baseline level? The first category! (Here alphabetically \"Adelie\")"
   },
   {
-    "objectID": "W07.html#significance-of-nonlinear-relation",
-    "href": "W07.html#significance-of-nonlinear-relation",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Significance of nonlinear relation?",
-    "text": "Significance of nonlinear relation?\n\n\nTaking into account the real number of cases the uncertainty range indicates that the non-linear relationship is fairly certain, although small in magnitude.\nNote, we have not looked at uncertainty measures in detail yet.\nMain message here: Low uncertainty and large effect size is not the same!\n\nIn statistics the first is called significant.\nIn common language the second is often called significant.\n\nThis dual use of significant is a source of confusion in science communication!"
+    "objectID": "W07.html#how-do-dummy-variables-look",
+    "href": "W07.html#how-do-dummy-variables-look",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "How do dummy variables look?",
+    "text": "How do dummy variables look?\n\n\n\nspecies\nspeciesChinstrap\nspeciesGentoo\n\n\n\n\nAdelie\n0\n0\n\n\nChinstrap\n1\n0\n\n\nGentoo\n0\n1\n\n\n\nThen the fitting of the linear model is as before using the zero-one variables."
   },
   {
-    "objectID": "W07.html#linear-models",
-    "href": "W07.html#linear-models",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Linear models",
-    "text": "Linear models\n\nlibrary(tidymodels)\nlinear_reg() |> set_engine(\"lm\") |> \n fit(atcherp ~ atchctr, data = ess) |> tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic p.value\n  <chr>          <dbl>     <dbl>     <dbl>   <dbl>\n1 (Intercept)    2.62    0.0411       63.8       0\n2 atchctr        0.414   0.00504      82.1       0\n\n\nInterpretation?\n\nWhen atchctr = 0 the average atcherp is 2.62. For an increase of country attachment by one there is an average increase of 0.414 in European attachment.\n\n\nFor EU integration attitude.\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(euftf ~ atchctr, data = ess) |> tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic      p.value\n  <chr>          <dbl>     <dbl>     <dbl>        <dbl>\n1 (Intercept)   5.00     0.0481     104.   0           \n2 atchctr       0.0333   0.00589      5.65 0.0000000157"
+    "objectID": "W07.html#interpretation",
+    "href": "W07.html#interpretation",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Interpretation",
+    "text": "Interpretation\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nFlipper length of the baseline species is the intercept.\n\nAverage flipper length of Adelie is 190 mm\n\nFlipper length of the two other species add their coefficient\n\nAverage flipper length of Chinstrap is 190 + 5.87 mm\nAverage flipper length of Gentoo is 190 + 27.2 mm"
+  },
+  {
+    "objectID": "W07.html#compare-to-a-visualization",
+    "href": "W07.html#compare-to-a-visualization",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Compare to a visualization",
+    "text": "Compare to a visualization\n\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nThe red dots are the average values for species."
+  },
+  {
+    "objectID": "W07.html#linear-model",
+    "href": "W07.html#linear-model",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Linear model",
+    "text": "Linear model\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept) 137.      2.00          68.5 5.71e-201\n2 body_mass_g   0.0153  0.000467      32.7 4.37e-107\n\n\naverage flipper_length_mm \\(= 137 + 0.0153\\cdot\\) body_mass_g\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(bill_depth_mm ~ bill_length_mm, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     20.9       0.844      24.7  4.72e-78\n2 bill_length_mm  -0.0850    0.0191     -4.46 1.12e- 5\n\n\naverage bill_depth_mm \\(= 20.9 -0.085\\cdot\\) bill_length_mm\n\n\nTechnical: The idea of the tidy() function is to turn an object into a tidy tibble. Here, it extracts the coefficients of the linear model (and more statistical information)."
   },
   {
     "objectID": "W07.html#r-squared-of-a-fitted-model",
     "href": "W07.html#r-squared-of-a-fitted-model",
-    "title": "W#07: Interaction Effect Linear Model",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
     "section": "R-squared of a fitted model",
-    "text": "R-squared of a fitted model\n\\(R^2\\) is the percentage of variability in the response explained by the regression model.\nR-squared is also called coefficient of determination.\nDefinition:\n\\(R^2 = 1 - \\frac{SS_\\text{res}}{SS_\\text{tot}}\\)\nwhere \\(SS_\\text{res} = \\sum_i(y_i - f_i)^2 = \\sum_i e_i^2\\) is the sum of the squared residuals, and\n\\(SS_\\text{tot} = \\sum_i(y_i - \\bar y)^2\\) the total sum of squares which is proportional to the variance of \\(y\\). (\\(\\bar y\\) is the mean of \\(y\\).)\n\\(R^2\\) is the square of the correlation coefficient, hence the name. (No math on this today.)"
+    "text": "R-squared of a fitted model\n\\(R^2\\) is the percentage of variability in the response explained by the regression model.\nR-squared is also called coefficient of determination.\nDefinition:\n\\(R^2 = 1 - \\frac{SS_\\text{res}}{SS_\\text{tot}}\\)\nwhere \\(SS_\\text{res} = \\sum_i(y_i - f_i)^2 = \\sum_i e_i^2\\) is the sum of the squared residuals, and\n\\(SS_\\text{tot} = \\sum_i(y_i - \\bar y)^2\\) the total sum of squares which is proportional to the variance of \\(y\\). (\\(\\bar y\\) is the mean of \\(y\\).)"
   },
   {
-    "objectID": "W07.html#linear-models-r-squared",
-    "href": "W07.html#linear-models-r-squared",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Linear models R-squared",
-    "text": "Linear models R-squared\n\nlibrary(tidymodels)\nlinear_reg() |> set_engine(\"lm\") |> \n fit(atcherp ~ atchctr, data = ess) |>\n glance()  # glance shows summary statistics of model fit\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic p.value    df   logLik     AIC     BIC\n      <dbl>         <dbl> <dbl>     <dbl>   <dbl> <dbl>    <dbl>   <dbl>   <dbl>\n1     0.122         0.122  2.45     6747.       0     1 -112254. 224514. 224540.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\nInterpretation R-square?\n\n12.2% of the variance of European emotional attachment can be explained by a linear relation with country emotional attachment.\n\n\nFor EU integration attitude.\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(euftf ~ atchctr, data = ess) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic    p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>      <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1  0.000702      0.000680  2.75      32.0    1.57e-8     1 -1.11e5 2.21e5 2.21e5\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
+    "objectID": "W07.html#linear-model-r-squared",
+    "href": "W07.html#linear-model-r-squared",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Linear model R-squared",
+    "text": "Linear model R-squared\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |>\n glance()  # glance shows summary statistics of model fit\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\nInterpretation R-square? 75.8% of the variance of flipper length can be explained by a linear relation with body mass.\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(bill_depth_mm ~ bill_length_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1    0.0552        0.0525  1.92      19.9 0.0000112     1  -708. 1422. 1433.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n5.25% of the variance of bill depth can be explained by a linear relation with bill length.\n\n\nTechnical: The idea of the glance() function is to construct a single row summary “glance” of a model, fit, or other object."
   },
   {
-    "objectID": "W07.html#linear-model-with-more-predictors",
-    "href": "W07.html#linear-model-with-more-predictors",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Linear model with more predictors",
-    "text": "Linear model with more predictors\n\nlibrary(tidymodels)\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(euftf ~ atchctr + atcherp, data = ess) |> tidy()\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic  p.value\n  <chr>          <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)    4.05    0.0478       84.8 0       \n2 atchctr       -0.114   0.00599     -19.1 1.12e-80\n3 atcherp        0.354   0.00509      69.7 0       \n\n\n\nNote, that atchctr now has a negative coefficient!\nThe tiny bit of positive relation explained by atchctr in a one predictor model can better be explained by atcherp (which we know is correlated with atchctr)."
+    "objectID": "W07.html#r-squared-and-correlation",
+    "href": "W07.html#r-squared-and-correlation",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "R-squared and correlation",
+    "text": "R-squared and correlation\nFor a linear model with one predictor, the square of the correlation coefficient is the same as the R-squared of the model.\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\ncor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\n\n[1] 0.8712018\n\n\n\ncor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")^2\n\n[1] 0.7589925\n\n\n\nHence, the name \\(R^2\\)!"
   },
   {
-    "objectID": "W07.html#corona-deaths-vs.-human-development",
-    "href": "W07.html#corona-deaths-vs.-human-development",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Corona deaths vs. Human development",
-    "text": "Corona deaths vs. Human development\n\nNote: Not weighted by population!"
+    "objectID": "W07.html#more-predictors-coefficients",
+    "href": "W07.html#more-predictors-coefficients",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "More predictors: Coefficients",
+    "text": "More predictors: Coefficients\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept) 137.      2.00          68.5 5.71e-201\n2 body_mass_g   0.0153  0.000467      32.7 4.37e-107\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm, data = penguins) |> \n tidy()\n\n# A tibble: 3 × 5\n  term           estimate std.error statistic   p.value\n  <chr>             <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)    122.      2.86         42.7  1.70e-138\n2 body_mass_g      0.0131  0.000545     23.9  7.56e- 75\n3 bill_length_mm   0.549   0.0801        6.86 3.31e- 11\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm + bill_depth_mm, data = penguins) |> \n tidy()\n\n# A tibble: 4 × 5\n  term           estimate std.error statistic   p.value\n  <chr>             <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)    158.      4.63         34.1  1.80e-111\n2 body_mass_g      0.0109  0.000538     20.3  1.93e- 60\n3 bill_length_mm   0.592   0.0717        8.26 3.42e- 15\n4 bill_depth_mm   -1.68    0.181        -9.29 1.99e- 18"
   },
   {
-    "objectID": "W07.html#linear-model-total-deaths-vs.-hdi",
-    "href": "W07.html#linear-model-total-deaths-vs.-hdi",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Linear model: Total deaths vs. HDI",
-    "text": "Linear model: Total deaths vs. HDI\n\nowid_aug22 <- owid |> \n filter(date == \"2022-08-31\", !is.na(human_development_index), \n        !is.na(total_deaths_per_million), !is.na(continent))\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(total_deaths_per_million ~ human_development_index, data = owid_aug22) |> tidy()\n\n# A tibble: 2 × 5\n  term                    estimate std.error statistic  p.value\n  <chr>                      <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)               -2350.      385.     -6.11 5.84e- 9\n2 human_development_index    4917.      522.      9.43 1.71e-17"
+    "objectID": "W07.html#more-predictors-glance-r-squared",
+    "href": "W07.html#more-predictors-glance-r-squared",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "More predictors: glance R-squared",
+    "text": "More predictors: glance R-squared\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.788         0.787  6.49      631. 4.88e-115     2 -1123. 2255. 2270.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm + bill_depth_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.831         0.830  5.80      556. 2.99e-130     3 -1084. 2179. 2198.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
   },
   {
-    "objectID": "W07.html#adding-a-main-effect-of-continents",
-    "href": "W07.html#adding-a-main-effect-of-continents",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Adding a main effect of continents",
-    "text": "Adding a main effect of continents\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(total_deaths_per_million ~ human_development_index + continent, \n        data = owid_aug22) |> tidy()\n\n# A tibble: 7 × 5\n  term                    estimate std.error statistic       p.value\n  <chr>                      <dbl>     <dbl>     <dbl>         <dbl>\n1 (Intercept)               -754.       392.    -1.92  0.0560       \n2 human_development_index   1901.       666.     2.86  0.00480      \n3 continentAsia               58.5      213.     0.274 0.784        \n4 continentEurope           1685.       279.     6.04  0.00000000867\n5 continentNorth America     742.       254.     2.92  0.00397      \n6 continentOceania          -312.       298.    -1.05  0.297        \n7 continentSouth America    1910.       311.     6.15  0.00000000489\n\n\nA main effect by categorical dummy variables allows for different intercepts per continent."
+    "objectID": "W07.html#more-predictors-equations",
+    "href": "W07.html#more-predictors-equations",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "More predictors: Equations",
+    "text": "More predictors: Equations\naverage flipper_length_mm \\(= 137 + 0.0153\\cdot\\) body_mass_g\n75.8% explained variance\naverage flipper_length_mm \\(= 122 + 0.0131\\cdot\\) body_mass_g \\(+ 0.549\\cdot\\) bill_length_mm\n78.7% explained variance\naverage flipper_length_mm \\(= 158 + 0.0109\\cdot\\) body_mass_g \\(+ 0.592\\cdot\\) bill_length_mm \\(- 1.68\\cdot\\) bill_length_mm\n83.0% explained variance"
   },
   {
-    "objectID": "W07.html#adding-as-interaction",
-    "href": "W07.html#adding-as-interaction",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Adding as interaction",
-    "text": "Adding as interaction\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(total_deaths_per_million ~ human_development_index * continent, \n        data = owid_aug22) |> tidy()\n\n# A tibble: 12 × 5\n   term                                    estimate std.error statistic  p.value\n   <chr>                                      <dbl>     <dbl>     <dbl>    <dbl>\n 1 (Intercept)                               -1555.      581.    -2.67  8.19e- 3\n 2 human_development_index                    3329.     1019.     3.27  1.31e- 3\n 3 continentAsia                               563.      940.     0.598 5.50e- 1\n 4 continentEurope                           14759.     1956.     7.55  2.32e-12\n 5 continentNorth America                    -1346.     1512.    -0.890 3.75e- 1\n 6 continentOceania                           1125.     1424.     0.790 4.31e- 1\n 7 continentSouth America                    -4243.     3436.    -1.23  2.19e- 1\n 8 human_development_index:continentAsia     -1027.     1419.    -0.724 4.70e- 1\n 9 human_development_index:continentEurope  -15377.     2351.    -6.54  6.40e-10\n10 human_development_index:continentNorth…    2394.     2099.     1.14  2.56e- 1\n11 human_development_index:continentOcean…   -2318.     2063.    -1.12  2.63e- 1\n12 human_development_index:continentSouth…    7684.     4543.     1.69  9.25e- 2\n\n\n\nNote the * for interaction effect!\nAlso main effects for both variables are in as coefficients.\nAfrica has been chosen as reference category (because it is first in the alphabet).\nAn interaction effect allows for different slopes for each continent!"
+    "objectID": "W07.html#adding-a-categorical-variable-as-main-effect",
+    "href": "W07.html#adding-a-categorical-variable-as-main-effect",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Adding a categorical variable as main effect",
+    "text": "Adding a categorical variable as main effect\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n tidy()\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)      159.       2.39         66.6  2.45e-196\n2 body_mass_g        0.00840  0.000634     13.3  1.40e- 32\n3 speciesChinstrap   5.60     0.788         7.10 7.33e- 12\n4 speciesGentoo     15.7      1.09         14.4  6.80e- 37\n\n\nA main effect by categorical dummy variables allows for different intercepts per species. (However, the slopes are the same.)\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.854         0.853  5.40      659. 7.42e-141     3 -1060. 2129. 2149.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\nAdding species increases R-squared better than adding bill length and bill depth together!"
   },
   {
-    "objectID": "W07.html#regression-lines-by-continent",
-    "href": "W07.html#regression-lines-by-continent",
-    "title": "W#07: Interaction Effect Linear Model",
-    "section": "Regression lines by continent",
-    "text": "Regression lines by continent\n\n\n\n\n\nThe relation between deaths and human development is reverse in Europe.\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
+    "objectID": "W07.html#adding-as-interaction-effect",
+    "href": "W07.html#adding-as-interaction-effect",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Adding as interaction effect",
+    "text": "Adding as interaction effect\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n tidy()\n\n# A tibble: 6 × 5\n  term                          estimate std.error statistic   p.value\n  <chr>                            <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)                  165.       3.55         46.5  1.56e-148\n2 body_mass_g                    0.00668  0.000952      7.01 1.30e- 11\n3 speciesChinstrap             -13.9      7.30         -1.90 5.84e-  2\n4 speciesGentoo                  6.06     6.05          1.00 3.17e-  1\n5 body_mass_g:speciesChinstrap   0.00523  0.00195       2.68 7.66e-  3\n6 body_mass_g:speciesGentoo      0.00236  0.00135       1.75 8.16e-  2\n\n\n\nNote the * for interaction effect!\nAlso main effects for both variables are in as coefficients.\nAdelie is the baseline species (because it is first in the alphabet).\nAn interaction effect allows for different slopes for each species!"
+  },
+  {
+    "objectID": "W07.html#improvement-through-the-interaction-effects-is-small-here",
+    "href": "W07.html#improvement-through-the-interaction-effects-is-small-here",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Improvement through the interaction effects is small here",
+    "text": "Improvement through the interaction effects is small here\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.854         0.853  5.40      659. 7.42e-141     3 -1060. 2129. 2149.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.857         0.855  5.35      404. 9.60e-140     5 -1056. 2125. 2152.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
+  },
+  {
+    "objectID": "W07.html#regression-lines-by-species",
+    "href": "W07.html#regression-lines-by-species",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Regression lines by species",
+    "text": "Regression lines by species\n\nCompare the slopes to the regression output on the slides before!"
+  },
+  {
+    "objectID": "W07.html#different-equations-for-each-species",
+    "href": "W07.html#different-equations-for-each-species",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Different equations for each species!",
+    "text": "Different equations for each species!\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n tidy()\n\n# A tibble: 6 × 5\n  term                          estimate std.error statistic   p.value\n  <chr>                            <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)                  165.       3.55         46.5  1.56e-148\n2 body_mass_g                    0.00668  0.000952      7.01 1.30e- 11\n3 speciesChinstrap             -13.9      7.30         -1.90 5.84e-  2\n4 speciesGentoo                  6.06     6.05          1.00 3.17e-  1\n5 body_mass_g:speciesChinstrap   0.00523  0.00195       2.68 7.66e-  3\n6 body_mass_g:speciesGentoo      0.00236  0.00135       1.75 8.16e-  2\n\n\nAdelie:\naverage flipper_length_mm \\(= 165 + 0.00668\\cdot\\) body_mass_g\nChinstrap:\naverage flipper_length_mm \\(= 165 - 13.6 + (0.00668 + 0.00523)\\cdot\\) body_mass_g\nGentoo:\naverage flipper_length_mm \\(= 165 + 6.06 + (0.00668 + 0.00236)\\cdot\\) body_mass_g"
+  },
+  {
+    "objectID": "W07.html#interaction-effects-more-categoricals",
+    "href": "W07.html#interaction-effects-more-categoricals",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Interaction effects more categoricals",
+    "text": "Interaction effects more categoricals\nAdding products of variables in the linear model \\(y_i = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 + \\beta_{3}x_1x_2 + \\dots\\).\nFor \\(x_1\\) and \\(x_2\\) being dummy variables for being female and having kids this is for example\n\n\n\n\n\ngndr_f\nhas_kids\ngndr_f_x_has_kids\n\n\n\n\n0\n1\n0\n\n\n1\n0\n0\n\n\n1\n1\n1\n\n\n0\n0\n0\n\n\n\n\n\n\nWhat is the baseline? Being male without kids.\n\nThought experiment:\n\nWhen we estimate a model explaining life satisfaction with these. How would we see if being a mother increases life satisfaction more than being a father? positiv coefficient for gndr_f_x_has_kids"
+  },
+  {
+    "objectID": "W07.html#when-a-linear-model-is-bad",
+    "href": "W07.html#when-a-linear-model-is-bad",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "When a linear model is bad",
+    "text": "When a linear model is bad\nExample: Total corona cases in Germany in the first wave 2020."
+  },
+  {
+    "objectID": "W07.html#log-transformation",
+    "href": "W07.html#log-transformation",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "\\(\\log\\) transformation",
+    "text": "\\(\\log\\) transformation\nInstead of Cumulative_cases we look at \\(\\log(\\)Cumulative_cases\\()\\)\n\nAlmost perfect fit of the linear model: \\(\\log(y)=\\log(\\beta_0) + \\beta_1\\cdot x\\)\n(\\(y=\\) Cumulative cases, \\(x=\\) Days)\n\nExponention gives the model: \\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)"
+  },
+  {
+    "objectID": "W07.html#exponential-growth",
+    "href": "W07.html#exponential-growth",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Exponential growth!",
+    "text": "Exponential growth!\n\\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)\nFor comparison: Logistic function \\(y = \\frac{N \\beta_0 e^{\\beta_1\\cdot x}}{N + \\beta_0 e^{\\beta_1\\cdot x}}\\) for \\(N=200000\\)\n\nLogistic growth (as in the SI model) mimicks exponential growth initially."
+  },
+  {
+    "objectID": "W07.html#log-transformation-1",
+    "href": "W07.html#log-transformation-1",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "\\(\\log\\) transformation",
+    "text": "\\(\\log\\) transformation\n\nWhat is the difference to the penguin model?\n\n\n\\(x\\) has an ordered structure and no duplicates\n\nThe fit looks so good. Why?\n\n\nBecause there is a mechanistic explanation behind: The SI model."
+  },
+  {
+    "objectID": "W07.html#however-it-works-only-in-a-certain-range",
+    "href": "W07.html#however-it-works-only-in-a-certain-range",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "However, it works only in a certain range",
+    "text": "However, it works only in a certain range"
+  },
+  {
+    "objectID": "W07.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
+    "href": "W07.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "However, it works only in a certain range (log scale on y)",
+    "text": "However, it works only in a certain range (log scale on y)"
+  },
+  {
+    "objectID": "W07.html#what-if-response-is-binary",
+    "href": "W07.html#what-if-response-is-binary",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "What if response is binary?",
+    "text": "What if response is binary?\n\nExample: Spam filter for emails\n\n\nlibrary(openintro)\nlibrary(tidyverse)\nglimpse(email)\n\nRows: 3,921\nColumns: 21\n$ spam         <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ to_multiple  <fct> 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ from         <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ cc           <int> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2, 1, 0, 2, 0, …\n$ sent_email   <fct> 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, …\n$ time         <dttm> 2012-01-01 07:16:41, 2012-01-01 08:03:59, 2012-01-01 17:…\n$ image        <dbl> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ attach       <dbl> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ dollar       <dbl> 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 5, 0, 0, …\n$ winner       <fct> no, no, no, no, no, no, no, no, no, no, no, no, no, no, n…\n$ inherit      <dbl> 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ viagra       <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ password     <dbl> 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ num_char     <dbl> 11.370, 10.504, 7.773, 13.256, 1.231, 1.091, 4.837, 7.421…\n$ line_breaks  <int> 202, 202, 192, 255, 29, 25, 193, 237, 69, 68, 25, 79, 191…\n$ format       <fct> 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, …\n$ re_subj      <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, …\n$ exclaim_subj <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ urgent_subj  <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ exclaim_mess <dbl> 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 20, 0…\n$ number       <fct> big, small, small, small, none, none, big, small, small, …"
+  },
+  {
+    "objectID": "W07.html#multinomial-response-variable",
+    "href": "W07.html#multinomial-response-variable",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Multinomial response variable?",
+    "text": "Multinomial response variable?\n\nWe will not cover other categorical variables than binary ones here.\nHowever, many of the probabilistic concepts transfer."
+  },
+  {
+    "objectID": "W07.html#variables",
+    "href": "W07.html#variables",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Variables",
+    "text": "Variables\n?email shows all variable descriptions. For example:\n\nspam Indicator for whether the email was spam.\nfrom Whether the message was listed as from anyone (this is usually set by default for regular outgoing email).\ncc Number of people cc’ed.\ntime Time at which email was sent.\nattach The number of attached files.\ndollar The number of times a dollar sign or the word “dollar” appeared in the email.\nnum_char The number of characters in the email, in thousands.\nre_subj Whether the subject started with “Re:”, “RE:”, “re:”, or “rE:”\n\n\n\nThe development, extraction, or discovery of such variables is called feature engineering, feature extraction or feature discovery. Usually, a combination of domain knowledge and data science skill is needed to do this."
+  },
+  {
+    "objectID": "W07.html#data-exploration",
+    "href": "W07.html#data-exploration",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Data exploration",
+    "text": "Data exploration\nWould you expect spam to be longer or shorter?\n\n\nemail |> ggplot(aes(x = num_char, y = spam)) + geom_boxplot()\n\n\n\n\n\n\nWould you expect spam subject to start with “Re:” or the like?\n\n\n\nemail |> ggplot(aes(y = re_subj, fill = spam)) + geom_bar()"
+  },
+  {
+    "objectID": "W07.html#linear-models",
+    "href": "W07.html#linear-models",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Linear models?",
+    "text": "Linear models?\nBoth seem to give some signal. How can we model the relationship?\nWe focus first on just num_char:\n\nemail |> ggplot(aes(x = num_char, y = as.numeric(spam)-1)) + \n geom_point(alpha = 0.2) + geom_smooth(method = \"lm\")\n\n\n\nlinear_reg() |> fit(as.numeric(spam)-1 ~ num_char, data = email)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = as.numeric(spam) - 1 ~ num_char, data = data)\n\nCoefficients:\n(Intercept)     num_char  \n   0.118214    -0.002299  \n\n\nWe would like to have a better concept!"
+  },
+  {
+    "objectID": "W07.html#a-penguins-example",
+    "href": "W07.html#a-penguins-example",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "A penguins example",
+    "text": "A penguins example\n\npenguins |> na.omit() |> \n ggplot(aes(x = body_mass_g, y = as.numeric(sex)-1)) + \n geom_point(alpha = 0.2) + geom_smooth(method = \"lm\")\n\n\nIt does not make much sense to predict 0-1-values with a linear model."
+  },
+  {
+    "objectID": "W07.html#a-probabilistic-concept",
+    "href": "W07.html#a-probabilistic-concept",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "A probabilistic concept",
+    "text": "A probabilistic concept\n\nWe treat each outcome (spam and not) as successes and failures arising from separate Bernoulli trials\n\nBernoulli trial: a random experiment with exactly two possible outcomes, success and failure, in which the probability of success is the same every time the experiment is conducted\n\n\n\n\nEach email is treated as Bernoulli trial with separate probability of success\n\n\\[ y_i ∼ \\text{Bernoulli}(p_i) \\]\n\n\n\nWe use the predictor variables to model the Bernoulli parameter \\(p_i\\)\n\n\n\n\nNow we conceptualized a continuous response, but still a linear model does not fit perfectly for \\(p_i\\) (since a probability is between 0 and 1).\nHowever, we can transform the linear model to have the appropriate range."
+  },
+  {
+    "objectID": "W07.html#characterising-glms",
+    "href": "W07.html#characterising-glms",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Characterising GLMs",
+    "text": "Characterising GLMs\n\nGeneralized linear models (GLMs) are a way of addressing many problems in regression\nLogistic regression is one example\n\nAll GLMs have the following three characteristics:\n\nA probability distribution as a generative model for the outcome variable \\(y_i \\sim \\text{Distribution}(\\text{parameter})\\)\n\n\n\nA linear model \\(\\eta = \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_k X_k\\)\nwhere \\(\\eta\\) is related to a mean parameter of the distribution by the …\n\n\n\n\nLink function that relates the linear model to the parameter of the outcome distribution."
+  },
+  {
+    "objectID": "W07.html#logistic-regression-1",
+    "href": "W07.html#logistic-regression-1",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Logistic regression",
+    "text": "Logistic regression\n\nLogistic regression is a GLM used to model a binary categorical outcome using numerical and categorical predictors.\nThe distribution is the Bernoulli distribution.\nAs link function connecting \\(\\eta_i\\) to \\(p_i\\) we use the logit function.\n\n\n\nLogit function: \\(\\text{logit}: [0,1] \\to \\mathbb{R}\\)\n\n\\[\\text{logit}(p) = \\log\\left(\\frac{p}{1-p}\\right)\\]\n\n\\(\\frac{p}{1-p}\\) is called the odds of a success which happens with probability \\(p\\).\nExample: Roll a six with a die has \\(p=1/6\\). Thus, the odds are \\(\\frac{1/6}{5/6} = 1/5\\). Sometimes written as 1:5. “The odds of success are one to five.”"
+  },
+  {
+    "objectID": "W07.html#properties-of-the-logit",
+    "href": "W07.html#properties-of-the-logit",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Properties of the logit",
+    "text": "Properties of the logit\n\nLogit takes values between 0 and 1 and returns values between \\(-\\infty\\) and \\(\\infty\\)\nThe inverse of the logit function if the logistic function (mapping values from \\(-\\infty\\) and \\(\\infty\\) to values between 0 and 1): \\[\\text{logit}^{-1}(x) = \\text{logistic}(x) = \\frac{e^x}{1+e^x} = \\frac{1}{1+e^{-x}}\\]\nLogit can be interpreted as the log odds of a success – more on this later.\n\n\n\n\nThe logistic function is the solution of the differential equation \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\) which also appears in the SI-model of epidemics (and other models of exponential growth with saturation).\nGood exercises to check your math skills:\n\nShow that \\(\\text{logit}^{-1}(x) = \\text{logistic}(x)\\) or the other way round.\nTransform \\(\\frac{e^x}{1+e^x}\\) into \\(\\frac{1}{1+e^{-x}}\\).\nCheck that \\(\\text{logistic}(x)\\) is a solution to \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\).\n\nYou can request hints from me when you get stuck."
+  },
+  {
+    "objectID": "W07.html#logit-and-logistic-function",
+    "href": "W07.html#logit-and-logistic-function",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Logit and logistic function",
+    "text": "Logit and logistic function\n\nggplot() + \n geom_function(fun = function(x) log(x/(1-x)), xlim=c(0.001,0.999), n = 500) + \n geom_function(fun = function(x) 1/(1 + exp(-x)), color = \"red\") +\n scale_x_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n scale_y_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n coord_fixed() + theme_minimal(base_size = 24) + labs(x = \"x\")"
+  },
+  {
+    "objectID": "W07.html#the-logistic-regression-model",
+    "href": "W07.html#the-logistic-regression-model",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "The logistic regression model",
+    "text": "The logistic regression model\n\nBased on the three GLM criteria we have\n\n\\(y_i \\sim \\text{Bernoulli}(p_i)\\)\n\\(\\eta_i = \\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_n x_{n,i}\\)\n\\(\\text{logit}(p_i) = \\eta_i\\)\n\n\n\n\nFrom which we get\n\n\\[p_i = \\frac{e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}{1 + e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}\\]"
+  },
+  {
+    "objectID": "W07.html#modeling-spam",
+    "href": "W07.html#modeling-spam",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Modeling spam",
+    "text": "Modeling spam\nWith tidymodels we fit a GLM in the same way as a linear model except we\n\nspecify the model with logistic_reg()\nuse \"glm\" instead of \"lm\" as the engine\ndefine family = \"binomial\" for the link function to be used in the model\n\n\nspam_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ num_char, data = email, family = \"binomial\")\ntidy(spam_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\n\n\n\nThe family is binomial because the Bernoulli distribution is a special case of the binomial distribution \\(\\text{Binomial}(n,p)\\) with \\(n=1\\).\nThe binomial distribution specifies the probability to have \\(k\\) successes in \\(n\\) Bernoulli trials with the same success probability \\(p\\)."
+  },
+  {
+    "objectID": "W07.html#spam-model",
+    "href": "W07.html#spam-model",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Spam model",
+    "text": "Spam model\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\nModel: \\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]"
+  },
+  {
+    "objectID": "W07.html#predicted-probability-examples",
+    "href": "W07.html#predicted-probability-examples",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Predicted probability: Examples",
+    "text": "Predicted probability: Examples\nWe can compute the predicted probability that an email with 2000 character is spam as follows:\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot 2 = -1.9242\\]\n(Note: num_char is in thousands.)\n\\[\\frac{p}{1-p} = e^{-1.9242} = 0.15 \\Rightarrow p = 0.15 \\cdot (1 - p)\\]\n\\[p = 0.15 - 0.15\\cdot p \\Rightarrow 1.15\\cdot p = 0.15\\]\n\\[p = 0.15 / 1.15 = 0.13\\]"
+  },
+  {
+    "objectID": "W07.html#predicted-probability",
+    "href": "W07.html#predicted-probability",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Predicted probability",
+    "text": "Predicted probability\n\nlogistic <- function(t) 1/(1+exp(-t))\npreds <- tibble(x=c(2,15,40), y = logistic(-1.80-0.0621*x))\nemail |> ggplot(aes(x = num_char, y = as.numeric(spam)-1)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-1.80-0.0621*x),color=\"red\") +\n geom_point(data = preds, mapping = aes(x,y), color = \"blue\", size = 3)\n\n\nSpam probability 2,000 characters: 0.1273939\nSpam probability 15,000 characters: 0.06114\nSpam probability 40,000 characters: 0.0135999"
+  },
+  {
+    "objectID": "W07.html#interpretation-of-coefficients",
+    "href": "W07.html#interpretation-of-coefficients",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Interpretation of coefficients",
+    "text": "Interpretation of coefficients\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]\nWhat does an increase by thousand characters (num_char + 1) imply?\n\nLet us assume the predicted probability of an email is \\(p_0\\). Then an increase of num_char by one implied that the log-odds become\n\\[\\log\\left(\\frac{p_0}{1-p_0}\\right) - 0.0621 = \\log\\left(\\frac{p_0}{1-p_0}\\right) - \\log(e^{0.0621})\\]\n\\[ = \\log\\left(\\frac{p_0}{1-p_0}\\right) + \\log(\\frac{1}{e^{0.0621}}) = \\log\\left(\\frac{p_0}{1-p_0} \\frac{1}{e^{0.0621}}\\right) = \\log\\left(\\frac{p_0}{1-p_0} 0.94\\right)\\]\nThat means the odds of being spam decrease by 6%."
+  },
+  {
+    "objectID": "W07.html#penguins-example",
+    "href": "W07.html#penguins-example",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Penguins example",
+    "text": "Penguins example\n\nlibrary(palmerpenguins)\nsex_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(sex ~ body_mass_g, data = na.omit(penguins), family = \"binomial\")\ntidy(sex_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  <chr>          <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept) -5.16     0.724        -7.13 1.03e-12\n2 body_mass_g  0.00124  0.000173      7.18 7.10e-13\n\n\n\nna.omit(penguins) |> ggplot(aes(x = body_mass_g, y = sex)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-5.16+0.00124*x) + 1,color=\"red\") +\n xlim(c(2000,7000))"
+  },
+  {
+    "objectID": "W07.html#summarizing-the-idea-of-logistic-regression",
+    "href": "W07.html#summarizing-the-idea-of-logistic-regression",
+    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "section": "Summarizing the Idea of Logistic Regression",
+    "text": "Summarizing the Idea of Logistic Regression\n\nWe want to explain/predict a binary response variable.\nWe want to use the concept of linear models.\nTo that end we first interprete each outcome as the outcome of a probabilisitic event happening with probability \\(p_i\\). That way transform the problem to from modeling a binary outcome to a numerical outcome.\nHowever, probabilities are bounded between 0 and 1.\nWe use the logit function to transform the probabilities to the real line. We transform to the log-odds of the probability.\nWe model the log-odds with a linear model.\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "socialmedia.html",
