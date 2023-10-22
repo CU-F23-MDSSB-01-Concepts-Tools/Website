@@ -375,7 +375,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n7\n10-16, 10-19\nFitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression  Slides Week 7\nR\n\n\n8\n10-23, 10-26\nPrediction, Probability, Random Variables, Performance Metrics\npython\n\n\n9\n10-30, 11-02\nStatistics, Hypothesis Testing, Simulating Data\nR\n\n\n10\n11-06, 11-09\nModeling Mindsets, Cluster Analysis\npython\n\n\n11\n11-13, 11-16\nDomain Knowledge, Communication\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n7\n10-16, 10-19\nFitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables  Slides Week 7\nR\n\n\n8\n10-23, 10-26\nPrediction, Probability, Random Variables, Performance Metrics\npython\n\n\n9\n10-30, 11-02\nStatistics, Hypothesis Testing, Simulating Data\nR\n\n\n10\n11-06, 11-09\nModeling Mindsets, Cluster Analysis\npython\n\n\n11\n11-13, 11-16\nDomain Knowledge, Communication\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
   },
   {
     "objectID": "reports.html",
@@ -404,6 +404,384 @@
     "title": "Create a homework report",
     "section": "3 Structuring your report",
     "text": "3 Structuring your report\nMake headers with # and maybe ## for second level headers."
+  },
+  {
+    "objectID": "W08.html#logistic-regression-1",
+    "href": "W08.html#logistic-regression-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Logistic regression",
+    "text": "Logistic regression\n\nLogistic regression is a GLM used to model a binary categorical outcome using numerical and categorical predictors.\nThe distribution is the Bernoulli distribution.\nAs link function connecting \\(\\eta_i\\) to \\(p_i\\) we use the logit function.\n\n\n\nLogit function: \\(\\text{logit}: [0,1] \\to \\mathbb{R}\\)\n\n\\[\\text{logit}(p) = \\log\\left(\\frac{p}{1-p}\\right)\\]\n\n\\(\\frac{p}{1-p}\\) is called the odds of a success which happens with probability \\(p\\).\nExample: Roll a six with a die has \\(p=1/6\\). Thus, the odds are \\(\\frac{1/6}{5/6} = 1/5\\). Sometimes written as 1:5. “The odds of success are one to five.”"
+  },
+  {
+    "objectID": "W08.html#properties-of-the-logit",
+    "href": "W08.html#properties-of-the-logit",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Properties of the logit",
+    "text": "Properties of the logit\n\nLogit takes values between 0 and 1 and returns values between \\(-\\infty\\) and \\(\\infty\\)\nThe inverse of the logit function if the logistic function (mapping values from \\(-\\infty\\) and \\(\\infty\\) to values between 0 and 1): \\[\\text{logit}^{-1}(x) = \\text{logistic}(x) = \\frac{e^x}{1+e^x} = \\frac{1}{1+e^{-x}}\\]\nLogit can be interpreted as the log odds of a success – more on this later.\n\n\n\n\nThe logistic function is the solution of the differential equation \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\) which also appears in the SI-model of epidemics (and other models of exponential growth with saturation).\nGood exercises to check your math skills:\n\nShow that \\(\\text{logit}^{-1}(x) = \\text{logistic}(x)\\) or the other way round.\nTransform \\(\\frac{e^x}{1+e^x}\\) into \\(\\frac{1}{1+e^{-x}}\\).\nCheck that \\(\\text{logistic}(x)\\) is a solution to \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\).\n\nYou can request hints from me when you get stuck."
+  },
+  {
+    "objectID": "W08.html#logit-and-logistic-function",
+    "href": "W08.html#logit-and-logistic-function",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Logit and logistic function",
+    "text": "Logit and logistic function\n\nggplot() + \n geom_function(fun = function(x) log(x/(1-x)), xlim=c(0.001,0.999), n = 500) + \n geom_function(fun = function(x) 1/(1 + exp(-x)), color = \"red\") +\n scale_x_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n scale_y_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n coord_fixed() + theme_minimal(base_size = 24) + labs(x = \"x\")"
+  },
+  {
+    "objectID": "W08.html#the-logistic-regression-model",
+    "href": "W08.html#the-logistic-regression-model",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "The logistic regression model",
+    "text": "The logistic regression model\n\nBased on the three GLM criteria we have\n\n\\(y_i \\sim \\text{Bernoulli}(p_i)\\)\n\\(\\eta_i = \\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_n x_{n,i}\\)\n\\(\\text{logit}(p_i) = \\eta_i\\)\n\n\n\n\nFrom which we get\n\n\\[p_i = \\frac{e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}{1 + e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}\\]"
+  },
+  {
+    "objectID": "W08.html#modeling-spam",
+    "href": "W08.html#modeling-spam",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Modeling spam",
+    "text": "Modeling spam\nWith tidymodels we fit a GLM in the same way as a linear model except we\n\nspecify the model with logistic_reg()\nuse \"glm\" instead of \"lm\" as the engine\ndefine family = \"binomial\" for the link function to be used in the model\n\n\nspam_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ num_char, data = email, family = \"binomial\")\ntidy(spam_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\n\n\n\nThe family is binomial because the Bernoulli distribution is a special case of the binomial distribution \\(\\text{Binomial}(n,p)\\) with \\(n=1\\).\nThe binomial distribution specifies the probability to have \\(k\\) successes in \\(n\\) Bernoulli trials with the same success probability \\(p\\)."
+  },
+  {
+    "objectID": "W08.html#spam-model",
+    "href": "W08.html#spam-model",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Spam model",
+    "text": "Spam model\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\nModel: \\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]"
+  },
+  {
+    "objectID": "W08.html#predicted-probability-examples",
+    "href": "W08.html#predicted-probability-examples",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Predicted probability: Examples",
+    "text": "Predicted probability: Examples\nWe can compute the predicted probability that an email with 2000 character is spam as follows:\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot 2 = -1.9242\\]\n(Note: num_char is in thousands.)\n\\[\\frac{p}{1-p} = e^{-1.9242} = 0.15 \\Rightarrow p = 0.15 \\cdot (1 - p)\\]\n\\[p = 0.15 - 0.15\\cdot p \\Rightarrow 1.15\\cdot p = 0.15\\]\n\\[p = 0.15 / 1.15 = 0.13\\]"
+  },
+  {
+    "objectID": "W08.html#predicted-probability",
+    "href": "W08.html#predicted-probability",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Predicted probability",
+    "text": "Predicted probability\n\nlogistic <- function(t) 1/(1+exp(-t))\npreds <- tibble(x=c(2,15,40), y = logistic(-1.80-0.0621*x))\nemail |> ggplot(aes(x = num_char, y = as.numeric(spam)-1)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-1.80-0.0621*x),color=\"red\") +\n geom_point(data = preds, mapping = aes(x,y), color = \"blue\", size = 3)\n\n\nSpam probability 2,000 characters: 0.1273939\nSpam probability 15,000 characters: 0.06114\nSpam probability 40,000 characters: 0.0135999"
+  },
+  {
+    "objectID": "W08.html#interpretation-of-coefficients",
+    "href": "W08.html#interpretation-of-coefficients",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Interpretation of coefficients",
+    "text": "Interpretation of coefficients\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]\nWhat does an increase by thousand characters (num_char + 1) imply?\n\nLet us assume the predicted probability of an email is \\(p_0\\). Then an increase of num_char by one implied that the log-odds become\n\\[\\log\\left(\\frac{p_0}{1-p_0}\\right) - 0.0621 = \\log\\left(\\frac{p_0}{1-p_0}\\right) - \\log(e^{0.0621})\\]\n\\[ = \\log\\left(\\frac{p_0}{1-p_0}\\right) + \\log(\\frac{1}{e^{0.0621}}) = \\log\\left(\\frac{p_0}{1-p_0} \\frac{1}{e^{0.0621}}\\right) = \\log\\left(\\frac{p_0}{1-p_0} 0.94\\right)\\]\nThat means the odds of being spam decrease by 6%."
+  },
+  {
+    "objectID": "W08.html#penguins-example",
+    "href": "W08.html#penguins-example",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Penguins example",
+    "text": "Penguins example\n\nlibrary(palmerpenguins)\nsex_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(sex ~ body_mass_g, data = na.omit(penguins), family = \"binomial\")\ntidy(sex_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  <chr>          <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept) -5.16     0.724        -7.13 1.03e-12\n2 body_mass_g  0.00124  0.000173      7.18 7.10e-13\n\n\n\nna.omit(penguins) |> ggplot(aes(x = body_mass_g, y = sex)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-5.16+0.00124*x) + 1,color=\"red\") +\n xlim(c(2000,7000))"
+  },
+  {
+    "objectID": "W08.html#summarizing-the-idea-of-logistic-regression",
+    "href": "W08.html#summarizing-the-idea-of-logistic-regression",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Summarizing the Idea of Logistic Regression",
+    "text": "Summarizing the Idea of Logistic Regression\n\nWe want to explain/predict a binary response variable.\nWe want to use the concept of linear models.\nTo that end we first interprete each outcome as the outcome of a probabilisitic event happening with probability \\(p_i\\). That way transform the problem to from modeling a binary outcome to a numerical outcome.\nHowever, probabilities are bounded between 0 and 1.\nWe use the logit function to transform the probabilities to the real line. We transform to the log-odds of the probability.\nWe model the log-odds with a linear model."
+  },
+  {
+    "objectID": "W08.html#significance-of-nonlinear-relation",
+    "href": "W08.html#significance-of-nonlinear-relation",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Significance of nonlinear relation?",
+    "text": "Significance of nonlinear relation?\n\n\n\n\nTaking into account the real number of cases the uncertainty range indicates that the non-linear relationship is fairly certain, although small in magnitude.\nNote, we have not looked at uncertainty measures in detail yet.\nMain message here: Low uncertainty and large effect size is not the same!\n\nIn statistics the first is called significant.\nIn common language the second is often called significant.\n\nThis dual use of significant is a source of confusion in science communication!"
+  },
+  {
+    "objectID": "W08.html#false-positive-and-negative",
+    "href": "W08.html#false-positive-and-negative",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "False positive and negative",
+    "text": "False positive and negative\n\n\n\n\n\n\n\n\n\nEmail labelled spam\nEmail labelled not spam\n\n\n\n\nEmail is spam\nTrue positive\nFalse negative (Type 2 error)\n\n\nEmail is not spam\nFalse positive (Type 1 error)\nTrue negative"
+  },
+  {
+    "objectID": "W08.html#confusion-matrix",
+    "href": "W08.html#confusion-matrix",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Confusion matrix",
+    "text": "Confusion matrix\nMore general: Confusion matrix of statistical classification:"
+  },
+  {
+    "objectID": "W08.html#sensitivity-and-specificity-1",
+    "href": "W08.html#sensitivity-and-specificity-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Sensitivity and specificity",
+    "text": "Sensitivity and specificity\n\n\n\n\nSensitivity is the true positive rate: TP / (TP + FN)\nSpecificity is the true negative rate: TN / (TN + FP)\n\n\nFor spam:\nSensitivity: Fraction of emails labelled as spam among all emails which are spam.\nLow sensitivity \\(\\to\\) More false negatives \\(\\to\\) More spam in you inbox!\nSpecificity: Fraction of emails labelled as not spam among all emails which are not spam.\nLow specificity \\(\\to\\) More false positives \\(\\to\\) More relevant emails in spam folder!\n\nIf you were designing a spam filter, would you want sensitivity and specificity to be high or low? What are the trade-offs associated with each decision?"
+  },
+  {
+    "objectID": "W08.html#covid-19-tests",
+    "href": "W08.html#covid-19-tests",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "COVID-19 tests",
+    "text": "COVID-19 tests\nWhat is the sensitivity of a test?\n\nProbability to have COVID-19 when the test is positive.\n\n\nWhat is the specificity of a test?\n\n\nProbability to not have COVID-19 when the test is negative.\nOften the sensitivity is around 90% and the specificity is around 99%. What does that mean?\n\n\n\nWhen you test negative you can be more sure that you don’t have it, than you can be sure that you have it when your test is positive.\nHowever, in a larger population of testing individuals with high prevalence also 99% specificity implies a large fraction of false negatives!"
+  },
+  {
+    "objectID": "W08.html#another-view",
+    "href": "W08.html#another-view",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Another view",
+    "text": "Another view"
+  },
+  {
+    "objectID": "W08.html#goal-building-a-spam-filter",
+    "href": "W08.html#goal-building-a-spam-filter",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Goal: Building a spam filter",
+    "text": "Goal: Building a spam filter\n\nData: Set of emails and we know if each email is spam/not and other features\nUse logistic regression to predict the probability that an incoming email is spam\nUse model selection to pick the model with the best predictive performance\n\n\n\nBuilding a model to predict the probability that an email is spam is only half of the battle! We also need a decision rule about which emails get flagged as spam (e.g. what probability should we use as out cutoff?)\n\n\n\n\nA simple approach: choose a single threshold probability and any email that exceeds that probability is flagged as spam"
+  },
+  {
+    "objectID": "W08.html#emails-use-all-predictors",
+    "href": "W08.html#emails-use-all-predictors",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Emails: Use all predictors",
+    "text": "Emails: Use all predictors\n\nlogistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ ., data = email, family = \"binomial\") |>\n  tidy() |> print(n = 22)\n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\n\n# A tibble: 22 × 5\n   term         estimate std.error statistic  p.value\n   <chr>           <dbl>     <dbl>     <dbl>    <dbl>\n 1 (Intercept)  -9.09e+1   9.80e+3  -0.00928 9.93e- 1\n 2 to_multiple1 -2.68e+0   3.27e-1  -8.21    2.25e-16\n 3 from1        -2.19e+1   9.80e+3  -0.00224 9.98e- 1\n 4 cc            1.88e-2   2.20e-2   0.855   3.93e- 1\n 5 sent_email1  -2.07e+1   3.87e+2  -0.0536  9.57e- 1\n 6 time          8.48e-8   2.85e-8   2.98    2.92e- 3\n 7 image        -1.78e+0   5.95e-1  -3.00    2.73e- 3\n 8 attach        7.35e-1   1.44e-1   5.09    3.61e- 7\n 9 dollar       -6.85e-2   2.64e-2  -2.59    9.64e- 3\n10 winneryes     2.07e+0   3.65e-1   5.67    1.41e- 8\n11 inherit       3.15e-1   1.56e-1   2.02    4.32e- 2\n12 viagra        2.84e+0   2.22e+3   0.00128 9.99e- 1\n13 password     -8.54e-1   2.97e-1  -2.88    4.03e- 3\n14 num_char      5.06e-2   2.38e-2   2.13    3.35e- 2\n15 line_breaks  -5.49e-3   1.35e-3  -4.06    4.91e- 5\n16 format1      -6.14e-1   1.49e-1  -4.14    3.53e- 5\n17 re_subj1     -1.64e+0   3.86e-1  -4.25    2.16e- 5\n18 exclaim_subj  1.42e-1   2.43e-1   0.585   5.58e- 1\n19 urgent_subj1  3.88e+0   1.32e+0   2.95    3.18e- 3\n20 exclaim_mess  1.08e-2   1.81e-3   5.98    2.23e- 9\n21 numbersmall  -1.19e+0   1.54e-1  -7.74    9.62e-15\n22 numberbig    -2.95e-1   2.20e-1  -1.34    1.79e- 1\n\n\n\n\nWe treat the warning later."
+  },
+  {
+    "objectID": "W08.html#the-prediction-task",
+    "href": "W08.html#the-prediction-task",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "The prediction task",
+    "text": "The prediction task\n\nThe mechanics of prediction is easy:\n\nPlug in values of predictors to the model equation\nCalculate the predicted value of the response variable, \\(\\hat{y}\\)\n\n\n\n\nGetting it right is harder\n\nThere is no guarantee the model estimates you have are correct\nOr that your model will perform as well with new data as it did with your sample data"
+  },
+  {
+    "objectID": "W08.html#overfitting",
+    "href": "W08.html#overfitting",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Overfitting",
+    "text": "Overfitting\n\n\n\n\n\n\n\nThis is simulated data."
+  },
+  {
+    "objectID": "W08.html#spending-our-data",
+    "href": "W08.html#spending-our-data",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Spending our data",
+    "text": "Spending our data\n\nSeveral steps to create a useful model: parameter estimation, model selection, performance assessment, etc.\nDoing all of this on the entire data we have available can lead to overfitting.\n\nSolution: We subsets our data for different tasks, as opposed to allocating all data to parameter estimation (as we have done so far)."
+  },
+  {
+    "objectID": "W08.html#splitting-data-1",
+    "href": "W08.html#splitting-data-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Splitting data",
+    "text": "Splitting data\n\nTraining set:\n\nSandbox for model building\nSpend most of your time using the training set to develop the model\nMajority of the data (usually 80%)\n\nTesting set:\n\nHeld in reserve to determine efficacy of one or two chosen models\nCritical to look at it once, otherwise it becomes part of the modeling process\nRemainder of the data (usually 20%)"
+  },
+  {
+    "objectID": "W08.html#performing-the-split",
+    "href": "W08.html#performing-the-split",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Performing the split",
+    "text": "Performing the split\n\n# Fix random numbers by setting the seed \n# Enables analysis to be reproducible when random numbers are used \nset.seed(1116)\n\n# Put 80% of the data into the training set \nemail_split <- initial_split(email, prop = 0.80)\n\n# Create data frames for the two sets:\ntrain_data <- training(email_split)\ntest_data  <- testing(email_split)"
+  },
+  {
+    "objectID": "W08.html#peek-at-the-split",
+    "href": "W08.html#peek-at-the-split",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Peek at the split",
+    "text": "Peek at the split\n\n\n\nglimpse(train_data)\n\nRows: 3,136\nColumns: 21\n$ spam         <fct> 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ to_multiple  <fct> 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, …\n$ from         <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ cc           <int> 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 35, 0, 0, 0, 0, 0,…\n$ sent_email   <fct> 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, …\n$ time         <dttm> 2012-01-25 23:46:55, 2012-01-03 06:28:28, 2012-02-04 17:…\n$ image        <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ attach       <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ dollar       <dbl> 10, 0, 0, 0, 0, 0, 13, 0, 0, 0, 2, 0, 0, 0, 14, 0, 0, 0, …\n$ winner       <fct> no, no, no, no, no, no, no, yes, no, no, no, no, no, no, …\n$ inherit      <dbl> 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ viagra       <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ password     <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, …\n$ num_char     <dbl> 23.308, 1.162, 4.732, 42.238, 1.228, 25.599, 16.764, 10.7…\n$ line_breaks  <int> 477, 2, 127, 712, 30, 674, 367, 226, 98, 671, 46, 192, 67…\n$ format       <fct> 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, …\n$ re_subj      <fct> 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, …\n$ exclaim_subj <dbl> 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, …\n$ urgent_subj  <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ exclaim_mess <dbl> 12, 0, 2, 2, 2, 31, 2, 0, 0, 1, 0, 1, 2, 0, 2, 0, 11, 1, …\n$ number       <fct> small, none, big, big, small, small, small, small, small,…\n\n\n\n\nglimpse(test_data)\n\nRows: 785\nColumns: 21\n$ spam         <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ to_multiple  <fct> 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, …\n$ from         <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ cc           <int> 0, 1, 0, 1, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, …\n$ sent_email   <fct> 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, …\n$ time         <dttm> 2012-01-01 18:55:06, 2012-01-01 20:38:32, 2012-01-02 06:…\n$ image        <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ attach       <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, …\n$ dollar       <dbl> 0, 0, 5, 0, 0, 0, 0, 5, 4, 0, 0, 0, 21, 0, 0, 2, 9, 0, 0,…\n$ winner       <fct> no, no, no, no, no, no, no, no, no, no, no, no, no, no, n…\n$ inherit      <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ viagra       <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ password     <dbl> 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 2, …\n$ num_char     <dbl> 4.837, 15.075, 18.037, 45.842, 11.438, 1.482, 14.431, 0.9…\n$ line_breaks  <int> 193, 354, 345, 881, 125, 24, 296, 13, 192, 14, 32, 30, 55…\n$ format       <fct> 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, …\n$ re_subj      <fct> 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, …\n$ exclaim_subj <dbl> 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ urgent_subj  <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ exclaim_mess <dbl> 1, 10, 20, 5, 2, 0, 0, 0, 6, 0, 0, 1, 3, 0, 4, 0, 1, 0, 1…\n$ number       <fct> big, small, small, big, small, none, small, small, small,…"
+  },
+  {
+    "objectID": "W08.html#fit-a-model-to-the-training-dataset",
+    "href": "W08.html#fit-a-model-to-the-training-dataset",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Fit a model to the training dataset",
+    "text": "Fit a model to the training dataset\n\nemail_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ ., data = train_data, family = \"binomial\")\n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\n\nWe get a warning and should explore the reasons for 0 or 1 probability.\n\n\n\nA deeper looking into the predicted probabilities (not shown here) shows that 4 cases are predicted to be spam with 100% probability, as well as 864 cases are predicted to be not spam with 100% probability.\nNote: The dplyr function near was used to assess if predicted probabilities were one.\nThis is usually undesirable. Hence the warning."
+  },
+  {
+    "objectID": "W08.html#look-at-categorical-predictors",
+    "href": "W08.html#look-at-categorical-predictors",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Look at categorical predictors",
+    "text": "Look at categorical predictors\n\nCloser look at from and sent_email."
+  },
+  {
+    "objectID": "W08.html#counting-cases",
+    "href": "W08.html#counting-cases",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Counting cases",
+    "text": "Counting cases\n\n\nfrom: Whether the message was listed as from anyone (this is usually set by default for regular outgoing email).\n\ntrain_data |> count(spam, from)\n\n# A tibble: 3 × 3\n  spam  from      n\n  <fct> <fct> <int>\n1 0     1      2837\n2 1     0         3\n3 1     1       296\n\n\nNo non-spam mails without from.\n\nsent_mail: Indicator for whether the sender had been sent an email from the receiver in the last 30 days.\n\ntrain_data |> count(spam, sent_email)\n\n# A tibble: 3 × 3\n  spam  sent_email     n\n  <fct> <fct>      <int>\n1 0     0           1972\n2 0     1            865\n3 1     0            299\n\n\nNo spam mails with sent_email.\n\n\n\nThere is incomplete separation in the data for those variables.\nThat mean we have a sure prediction probabilities (0 or 1). (That is the warning. Also, these variables have the highest coefficients.)\nThis is not what we assume about reality. Maybe our sample is too small to see it.\nTherefore we exclude these variables."
+  },
+  {
+    "objectID": "W08.html#look-at-numerical-variables",
+    "href": "W08.html#look-at-numerical-variables",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Look at numerical variables",
+    "text": "Look at numerical variables\n\n\ntrain_data |>\n group_by(spam) |>\n select(where(is.numeric)) |> \n pivot_longer(-spam) |> \n group_by(name, spam) |> \n summarize(mean = mean(value), sd = sd(value)) |> \n print(n = 22)\n\n\n# A tibble: 22 × 4\n# Groups:   name [11]\n   name         spam       mean       sd\n   <chr>        <fct>     <dbl>    <dbl>\n 1 attach       0       0.124     0.775 \n 2 attach       1       0.227     0.620 \n 3 cc           0       0.393     2.62  \n 4 cc           1       0.388     3.25  \n 5 dollar       0       1.56      5.33  \n 6 dollar       1       0.779     3.01  \n 7 exclaim_mess 0       6.68     50.2   \n 8 exclaim_mess 1       8.75     88.4   \n 9 exclaim_subj 0       0.0783    0.269 \n10 exclaim_subj 1       0.0769    0.267 \n11 image        0       0.0536    0.503 \n12 image        1       0.00334   0.0578\n13 inherit      0       0.0352    0.216 \n14 inherit      1       0.0702    0.554 \n15 line_breaks  0     247.      326.    \n16 line_breaks  1     108.      321.    \n17 num_char     0      11.4      14.9   \n18 num_char     1       5.63     15.7   \n19 password     0       0.112     0.938 \n20 password     1       0.0201    0.182 \n21 viagra       0       0         0     \n22 viagra       1       0.0268    0.463 \n\n\n\nviagra has no mentions in non-spam emails.\n\nWe should exclude this variable for the same reason."
+  },
+  {
+    "objectID": "W08.html#fit-a-model-to-the-training-dataset-1",
+    "href": "W08.html#fit-a-model-to-the-training-dataset-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Fit a model to the training dataset",
+    "text": "Fit a model to the training dataset\n\nemail_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ . - from - sent_email - viagra, data = train_data, family = \"binomial\") \n\nWarning: glm.fit: fitted probabilities numerically 0 or 1 occurred\n\nemail_fit\n\nparsnip model object\n\n\nCall:  stats::glm(formula = spam ~ . - from - sent_email - viagra, family = stats::binomial, \n    data = data)\n\nCoefficients:\n (Intercept)  to_multiple1            cc          time         image  \n  -9.867e+01    -2.505e+00     1.944e-02     7.396e-08    -2.854e+00  \n      attach        dollar     winneryes       inherit      password  \n   5.070e-01    -6.440e-02     2.170e+00     4.499e-01    -7.065e-01  \n    num_char   line_breaks       format1      re_subj1  exclaim_subj  \n   5.870e-02    -5.420e-03    -9.017e-01    -2.995e+00     1.002e-01  \nurgent_subj1  exclaim_mess   numbersmall     numberbig  \n   3.572e+00     1.009e-02    -8.518e-01    -1.329e-01  \n\nDegrees of Freedom: 3135 Total (i.e. Null);  3117 Residual\nNull Deviance:      1974 \nResidual Deviance: 1447     AIC: 1485\n\n\nWe still get a warning, but without very high coefficients.\n\n\nA deeper analysis shows that now only two cases are predicted not spam with 100% probability."
+  },
+  {
+    "objectID": "W08.html#predict-with-the-testing-dataset",
+    "href": "W08.html#predict-with-the-testing-dataset",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Predict with the testing dataset",
+    "text": "Predict with the testing dataset\nPredicting the raw values (log-odds)\n\npredict(email_fit, test_data, type = \"raw\") |> head() # head prints the first values\n\n        1         2         3         4         5         6 \n-4.942500 -6.312226 -3.938487 -6.688992 -4.399541 -1.587700 \n\n\n\n\nPredicting probabilities\n\npredict(email_fit, test_data, type = \"prob\") |> head()\n\n# A tibble: 6 × 2\n  .pred_0 .pred_1\n    <dbl>   <dbl>\n1   0.993 0.00709\n2   0.998 0.00181\n3   0.981 0.0191 \n4   0.999 0.00124\n5   0.988 0.0121 \n6   0.830 0.170  \n\n\n\nPredicting spam (default)\n\npredict(email_fit, test_data) # Would be type = \"class\"\n\n# A tibble: 785 × 1\n   .pred_class\n   <fct>      \n 1 0          \n 2 0          \n 3 0          \n 4 0          \n 5 0          \n 6 0          \n 7 0          \n 8 0          \n 9 0          \n10 0          \n# ℹ 775 more rows"
+  },
+  {
+    "objectID": "W08.html#relate-back-to-the-model-concept",
+    "href": "W08.html#relate-back-to-the-model-concept",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Relate back to the model concept",
+    "text": "Relate back to the model concept\n\n\nemail_pred <- \n predict(email_fit, test_data, type = \"prob\") |>\n select(spam_prob = .pred_1) |> \n mutate(spam_logodds = \n         predict(email_fit, test_data, type = \"raw\"), \n        spam_odds = exp(spam_logodds)) |> \n bind_cols(predict(email_fit, test_data)) |> \n # Append real data\n bind_cols(test_data |> select(spam)) \nemail_pred\n\n\n# A tibble: 785 × 5\n   spam_prob spam_logodds spam_odds .pred_class spam \n       <dbl>        <dbl>     <dbl> <fct>       <fct>\n 1   0.00709        -4.94   0.00714 0           0    \n 2   0.00181        -6.31   0.00181 0           0    \n 3   0.0191         -3.94   0.0195  0           0    \n 4   0.00124        -6.69   0.00124 0           0    \n 5   0.0121         -4.40   0.0123  0           0    \n 6   0.170          -1.59   0.204   0           0    \n 7   0.0410         -3.15   0.0427  0           0    \n 8   0.139          -1.83   0.161   0           0    \n 9   0.0617         -2.72   0.0657  0           0    \n10   0.0983         -2.22   0.109   0           0    \n# ℹ 775 more rows\n\n\n\n\nThe raw predictions are the log-odds.\nFrom which we can compute the odds.\nFrom which the probability is computed. Here it is done by predict.\nThe .pred_class prediction is when the probability > 0.5.\n\nWhat does it mean for the odds and the log-odds?\n\n\n\nAnswers: odds > 1, log-odds > 0"
+  },
+  {
+    "objectID": "W08.html#another-look",
+    "href": "W08.html#another-look",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Another look",
+    "text": "Another look\n\nemail_pred |> arrange(desc(spam_prob)) |> print(n = 20)\n\n# A tibble: 785 × 5\n   spam_prob spam_logodds spam_odds .pred_class spam \n       <dbl>        <dbl>     <dbl> <fct>       <fct>\n 1     0.903       2.23       9.29  1           1    \n 2     0.833       1.60       4.98  1           0    \n 3     0.825       1.55       4.71  1           1    \n 4     0.733       1.01       2.75  1           1    \n 5     0.683       0.766      2.15  1           1    \n 6     0.626       0.517      1.68  1           1    \n 7     0.614       0.464      1.59  1           0    \n 8     0.597       0.392      1.48  1           1    \n 9     0.538       0.153      1.17  1           1    \n10     0.537       0.148      1.16  1           0    \n11     0.510       0.0404     1.04  1           0    \n12     0.491      -0.0345     0.966 0           0    \n13     0.490      -0.0407     0.960 0           0    \n14     0.489      -0.0453     0.956 0           1    \n15     0.483      -0.0698     0.933 0           1    \n16     0.473      -0.107      0.899 0           0    \n17     0.463      -0.150      0.861 0           0    \n18     0.457      -0.174      0.840 0           0    \n19     0.447      -0.212      0.809 0           0    \n20     0.447      -0.214      0.808 0           1    \n# ℹ 765 more rows\n\n\nWe see false positives and false negatives."
+  },
+  {
+    "objectID": "W08.html#evaluate-the-performance",
+    "href": "W08.html#evaluate-the-performance",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Evaluate the performance",
+    "text": "Evaluate the performance\nReceiver operating characteristic (ROC) curve1 which plots true positive rate (sensitivity) vs. false positive rate (1 - specificity)\n\nemail_pred |> roc_curve(\n    truth = spam, spam_prob,\n    event_level = \"second\" # this adjusts the location above the diagonal\n  ) |> autoplot()\n\n\n\n\nOriginally developed for operators of military radar receivers, hence the odd name."
+  },
+  {
+    "objectID": "W08.html#evaluate-the-performance-1",
+    "href": "W08.html#evaluate-the-performance-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Evaluate the performance",
+    "text": "Evaluate the performance\nFind the area under the curve.\nIn calculus language: \\(\\int_0^1 \\text{TPR}(\\text{FPR}) d\\text{FPR}\\) where TPR = True Positive Rate and FPR = False Positive Rate.\n\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 roc_auc binary         0.857"
+  },
+  {
+    "objectID": "W08.html#feature-engineering-1",
+    "href": "W08.html#feature-engineering-1",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Feature engineering",
+    "text": "Feature engineering\n\nWe prefer simple models when possible, but parsimony does not mean sacrificing accuracy (or predictive performance) in the interest of simplicity\nVariables that go into the model and how they are represented are critical to the success of the model\nFeature engineering is getting creative with our predictors in an effort to make them more useful for our model (to increase its predictive performance)"
+  },
+  {
+    "objectID": "W08.html#modeling-workflow-revisited",
+    "href": "W08.html#modeling-workflow-revisited",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Modeling workflow, revisited",
+    "text": "Modeling workflow, revisited\n\nCreate a recipe for feature engineering steps to be applied to the training data\n\nThe tidymodels way (similar to ways in python).\n\nFit the model to the training data after these steps have been applied\nUsing the model estimates from the training data, predict outcomes for the test data\nEvaluate the performance of the model on the test data"
+  },
+  {
+    "objectID": "W08.html#initiate-a-recipe",
+    "href": "W08.html#initiate-a-recipe",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Initiate a recipe",
+    "text": "Initiate a recipe\n\nemail_rec <- recipe(\n spam ~ .,          # formula\n data = train_data  # data to use for cataloguing names and types of variables\n)\nsummary(email_rec) |> print(n = 21)\n\n# A tibble: 21 × 4\n   variable     type      role      source  \n   <chr>        <list>    <chr>     <chr>   \n 1 to_multiple  <chr [3]> predictor original\n 2 from         <chr [3]> predictor original\n 3 cc           <chr [2]> predictor original\n 4 sent_email   <chr [3]> predictor original\n 5 time         <chr [1]> predictor original\n 6 image        <chr [2]> predictor original\n 7 attach       <chr [2]> predictor original\n 8 dollar       <chr [2]> predictor original\n 9 winner       <chr [3]> predictor original\n10 inherit      <chr [2]> predictor original\n11 viagra       <chr [2]> predictor original\n12 password     <chr [2]> predictor original\n13 num_char     <chr [2]> predictor original\n14 line_breaks  <chr [2]> predictor original\n15 format       <chr [3]> predictor original\n16 re_subj      <chr [3]> predictor original\n17 exclaim_subj <chr [2]> predictor original\n18 urgent_subj  <chr [3]> predictor original\n19 exclaim_mess <chr [2]> predictor original\n20 number       <chr [3]> predictor original\n21 spam         <chr [3]> outcome   original\n\n\nThe object email_rec only includes meta-data (columns names and types)!"
+  },
+  {
+    "objectID": "W08.html#remove-certain-variables",
+    "href": "W08.html#remove-certain-variables",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Remove certain variables",
+    "text": "Remove certain variables\n\nemail_rec |>\n  step_rm(from, sent_email, viagra)"
+  },
+  {
+    "objectID": "W08.html#feature-engineer-date",
+    "href": "W08.html#feature-engineer-date",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Feature engineer date",
+    "text": "Feature engineer date\n\nThe date-time may not be such an interesting predictor.\n\nIt could only bring in a general trend over time\n\nOften decomposing the date to the month or the day of the week (dow) is more interesting.\n\nstep_date can easily extract these\n\n\n\nemail_rec |>\n step_rm(from, sent_email, viagra) |> \n step_date(time, features = c(\"dow\", \"month\")) |>\n step_rm(time)"
+  },
+  {
+    "objectID": "W08.html#create-dummy-variables",
+    "href": "W08.html#create-dummy-variables",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Create dummy variables",
+    "text": "Create dummy variables\n\nUse helper functions like all_nominal or all_outcomes from tidymodels for column selection.\n\n\nemail_rec |>\n step_rm(from, sent_email, viagra) |> \n step_date(time, features = c(\"dow\", \"month\")) |>\n step_rm(time) |> \n step_dummy(all_nominal(), -all_outcomes())"
+  },
+  {
+    "objectID": "W08.html#remove-zero-variance-variables",
+    "href": "W08.html#remove-zero-variance-variables",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Remove zero variance variables",
+    "text": "Remove zero variance variables\nVariables that contain only a single value.\n\nemail_rec |>\n step_rm(from, sent_email, viagra) |> \n step_date(time, features = c(\"dow\", \"month\")) |>\n step_rm(time) |> \n step_dummy(all_nominal(), -all_outcomes()) |> \n step_zv(all_predictors())"
+  },
+  {
+    "objectID": "W08.html#full-recipe",
+    "href": "W08.html#full-recipe",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Full recipe",
+    "text": "Full recipe\n\nemail_rec <- recipe(\n spam ~ .,          # formula\n data = train_data  # data to use for cataloguing names and types of variables\n) |>\n step_rm(from, sent_email, viagra) |> \n step_date(time, features = c(\"dow\", \"month\")) |>\n step_rm(time) |> \n step_dummy(all_nominal(), -all_outcomes()) |> \n step_zv(all_predictors())\nemail_rec\n\nThe object email_rec only includes meta-data of the data frame it shall work on (a formula, columns names and types)!"
+  },
+  {
+    "objectID": "W08.html#define-model",
+    "href": "W08.html#define-model",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Define model",
+    "text": "Define model\n\nemail_mod <- logistic_reg() |> \n  set_engine(\"glm\")\n\nemail_mod\n\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm"
+  },
+  {
+    "objectID": "W08.html#define-workflow",
+    "href": "W08.html#define-workflow",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Define workflow",
+    "text": "Define workflow\nWorkflows bring together models and recipes so that they can be easily applied to both the training and test data.\n\nemail_wflow <- workflow() |> \n  add_model(email_mod) |> \n  add_recipe(email_rec)\nemail_wflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: logistic_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n5 Recipe Steps\n\n• step_rm()\n• step_date()\n• step_rm()\n• step_dummy()\n• step_zv()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLogistic Regression Model Specification (classification)\n\nComputational engine: glm"
+  },
+  {
+    "objectID": "W08.html#fit-model-to-training-data",
+    "href": "W08.html#fit-model-to-training-data",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Fit model to training data",
+    "text": "Fit model to training data\n\nemail_fit <- email_wflow |> \n  fit(data = train_data)\n\ntidy(email_fit) |> print(n = 27)\n\n# A tibble: 27 × 5\n   term            estimate std.error statistic  p.value\n   <chr>              <dbl>     <dbl>     <dbl>    <dbl>\n 1 (Intercept)     -0.651     0.254     -2.57   1.03e- 2\n 2 cc               0.0214    0.0229     0.936  3.49e- 1\n 3 image           -2.99      1.31      -2.28   2.28e- 2\n 4 attach           0.512     0.116      4.41   1.03e- 5\n 5 dollar          -0.0651    0.0307    -2.12   3.40e- 2\n 6 inherit          0.440     0.205      2.15   3.14e- 2\n 7 password        -0.723     0.302     -2.39   1.67e- 2\n 8 num_char         0.0585    0.0240     2.43   1.50e- 2\n 9 line_breaks     -0.00548   0.00139   -3.94   8.24e- 5\n10 exclaim_subj     0.0998    0.268      0.373  7.09e- 1\n11 exclaim_mess     0.0103    0.00198    5.20   2.02e- 7\n12 to_multiple_X1  -2.56      0.339     -7.56   4.11e-14\n13 winner_yes       2.24      0.430      5.21   1.90e- 7\n14 format_X1       -0.953     0.157     -6.06   1.38e- 9\n15 re_subj_X1      -3.00      0.444     -6.76   1.39e-11\n16 urgent_subj_X1   3.69      1.15       3.20   1.37e- 3\n17 number_small    -0.840     0.162     -5.20   1.98e- 7\n18 number_big      -0.0915    0.244     -0.375  7.07e- 1\n19 time_dow_Mon    -0.326     0.303     -1.08   2.82e- 1\n20 time_dow_Tue     0.0813    0.275      0.296  7.67e- 1\n21 time_dow_Wed    -0.260     0.275     -0.946  3.44e- 1\n22 time_dow_Thu    -0.220     0.279     -0.788  4.31e- 1\n23 time_dow_Fri    -0.0612    0.275     -0.223  8.24e- 1\n24 time_dow_Sat     0.0646    0.292      0.221  8.25e- 1\n25 time_month_Feb   0.760     0.178      4.26   2.03e- 5\n26 time_month_Mar   0.506     0.178      2.85   4.40e- 3\n27 time_month_Apr -12.0     394.        -0.0306 9.76e- 1"
+  },
+  {
+    "objectID": "W08.html#make-predictions-for-test-data",
+    "href": "W08.html#make-predictions-for-test-data",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Make predictions for test data",
+    "text": "Make predictions for test data\n\nemail_pred <- predict(email_fit, test_data, type = \"prob\") |> \n  bind_cols(test_data) \n\nemail_pred\n\n# A tibble: 785 × 23\n   .pred_0  .pred_1 spam  to_multiple from     cc sent_email time               \n     <dbl>    <dbl> <fct> <fct>       <fct> <int> <fct>      <dttm>             \n 1   0.993 0.00653  0     1           1         0 1          2012-01-01 18:55:06\n 2   0.998 0.00169  0     0           1         1 1          2012-01-01 20:38:32\n 3   0.987 0.0127   0     0           1         0 0          2012-01-02 06:42:16\n 4   0.999 0.000825 0     0           1         1 0          2012-01-02 16:12:51\n 5   0.991 0.00876  0     0           1         4 0          2012-01-02 17:45:36\n 6   0.878 0.122    0     0           1         0 0          2012-01-02 22:55:03\n 7   0.959 0.0414   0     0           1         0 0          2012-01-03 02:07:17\n 8   0.852 0.148    0     0           1         0 0          2012-01-03 06:41:35\n 9   0.938 0.0619   0     0           1         0 0          2012-01-03 17:02:35\n10   0.896 0.104    0     0           1         0 0          2012-01-03 12:14:51\n# ℹ 775 more rows\n# ℹ 15 more variables: image <dbl>, attach <dbl>, dollar <dbl>, winner <fct>,\n#   inherit <dbl>, viagra <dbl>, password <dbl>, num_char <dbl>,\n#   line_breaks <int>, format <fct>, re_subj <fct>, exclaim_subj <dbl>,\n#   urgent_subj <fct>, exclaim_mess <dbl>, number <fct>"
+  },
+  {
+    "objectID": "W08.html#evaluate-the-performance-2",
+    "href": "W08.html#evaluate-the-performance-2",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Evaluate the performance",
+    "text": "Evaluate the performance\n\nemail_pred |>\n  roc_curve(\n    truth = spam,\n    .pred_1,\n    event_level = \"second\"\n  ) |>\n  autoplot()"
+  },
+  {
+    "objectID": "W08.html#evaluate-the-performance-3",
+    "href": "W08.html#evaluate-the-performance-3",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Evaluate the performance",
+    "text": "Evaluate the performance\n\nemail_pred |>\n  roc_auc(\n    truth = spam,\n    .pred_1,\n    event_level = \"second\"\n  )\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 roc_auc binary         0.860\n\n\nThis is at least slightly better than our former model (without the feature engineering workflow), which had AUC = 0.857."
+  },
+  {
+    "objectID": "W08.html#cutoff-probability-0.5",
+    "href": "W08.html#cutoff-probability-0.5",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Cutoff probability: 0.5",
+    "text": "Cutoff probability: 0.5\nSuppose we decide to label an email as spam if the model predicts the probability of spam to be more than 0.5. (That is the default.)\nConfusion matrix:\n\ncutoff_prob <- 0.5\nemail_pred |>\n  mutate(\n    spam      = if_else(spam == 1, \"Email is spam\", \"Email is not spam\"),\n    spam_pred = if_else(.pred_1 > cutoff_prob, \"Email labelled spam\", \"Email labelled not spam\")\n    ) |>\n  count(spam_pred, spam) |>\n  pivot_wider(names_from = spam, values_from = n) |>\n  knitr::kable(col.names = c(\"\", \"Email is not spam\", \"Email is spam\"))\n\n\n\n\n\nEmail is not spam\nEmail is spam\n\n\n\n\nEmail labelled not spam\n707\n54\n\n\nEmail labelled spam\n10\n14\n\n\n\n\n\nSensitivity: 14/(14+54) = 0.206\nSpecificity: 707/(707+10) = 0.986"
+  },
+  {
+    "objectID": "W08.html#cutoff-probability-0.25",
+    "href": "W08.html#cutoff-probability-0.25",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Cutoff probability: 0.25",
+    "text": "Cutoff probability: 0.25\nSuppose we decide to label an email as spam if the model predicts the probability of spam to be more than 0.25.\nConfusion matrix:\n\n\n\n\n\n\nEmail is not spam\nEmail is spam\n\n\n\n\nEmail labelled not spam\n656\n36\n\n\nEmail labelled spam\n61\n32\n\n\n\n\n\nSensitivity: 32/(32+36) = 0.471\nSpecificity: 656/(656 + 61) = 0.915"
+  },
+  {
+    "objectID": "W08.html#cutoff-probability-0.75",
+    "href": "W08.html#cutoff-probability-0.75",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Cutoff probability: 0.75",
+    "text": "Cutoff probability: 0.75\nSuppose we decide to label an email as spam if the model predicts the probability of spam to be more than 0.75.\nConfusion matrix:\n\n\n\n\n\n\nEmail is not spam\nEmail is spam\n\n\n\n\nEmail labelled not spam\n716\n65\n\n\nEmail labelled spam\n1\n3\n\n\n\n\n\nSensitivity: 3/(3+65) = 0.044\nSpecificity: 716/(716+1) = 0.999"
+  },
+  {
+    "objectID": "W08.html#check-our-very-first-model",
+    "href": "W08.html#check-our-very-first-model",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Check our very first model",
+    "text": "Check our very first model\nWe make a new simple recipe and draw workflow and fitting re-using the same specified logisitc regression model email_mod.\n\nsimple_email_rec <- recipe(\n spam ~ num_char,          # formula\n data = train_data  # data to use for cataloguing names and types of variables\n)\nsimple_email_pred <- \n workflow() |> \n add_model(email_mod) |> \n add_recipe(simple_email_rec) |> \n fit(data = train_data) |> \n predict(test_data, type = \"prob\") |> \n bind_cols(test_data |> select(spam,num_char,time)) \nsimple_email_pred \n\n# A tibble: 785 × 5\n   .pred_0 .pred_1 spam  num_char time               \n     <dbl>   <dbl> <fct>    <dbl> <dttm>             \n 1   0.889  0.111  0        4.84  2012-01-01 18:55:06\n 2   0.936  0.0644 0       15.1   2012-01-01 20:38:32\n 3   0.945  0.0547 0       18.0   2012-01-02 06:42:16\n 4   0.989  0.0113 0       45.8   2012-01-02 16:12:51\n 5   0.922  0.0784 0       11.4   2012-01-02 17:45:36\n 6   0.868  0.132  0        1.48  2012-01-02 22:55:03\n 7   0.933  0.0667 0       14.4   2012-01-03 02:07:17\n 8   0.864  0.136  0        0.978 2012-01-03 06:41:35\n 9   0.905  0.0953 0        7.79  2012-01-03 17:02:35\n10   0.864  0.136  0        0.978 2012-01-03 12:14:51\n# ℹ 775 more rows"
+  },
+  {
+    "objectID": "W08.html#evaluate-the-performance-4",
+    "href": "W08.html#evaluate-the-performance-4",
+    "title": "W#08: Logistic Regression, Classification Problems, Prediction",
+    "section": "Evaluate the performance",
+    "text": "Evaluate the performance\n\nsimple_email_pred |> roc_curve(\n    truth = spam, \n    .pred_1,\n    event_level = \"second\" # this adjusts the location above the diagonal\n  ) |> autoplot()\n\n\n\n\n\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 roc_auc binary         0.753\n\n\nConclusion: It is not as good compared to AUC 0.86\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "hw-02.html",
@@ -599,7 +977,7 @@
     "href": "W12.html#random-number-generator-r",
     "title": "W#12: Probability, Principal Component Analysis",
     "section": "Random number generator r",
-    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1] 10  5 10 10  6  8  6  4  6  7\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
+    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1] 7 4 6 8 9 6 3 6 5 3\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
   },
   {
     "objectID": "W12.html#empirical-distributions",
@@ -844,7 +1222,7 @@
     "href": "W06.html#si-model-simulation-in-r",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "SI-model: Simulation in R",
-    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1] FALSE FALSE FALSE FALSE  TRUE  TRUE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
+    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1] FALSE FALSE  TRUE FALSE FALSE FALSE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
   },
   {
     "objectID": "W06.html#si-model-simulation-in-r-1",
@@ -1362,7 +1740,7 @@
     "href": "W04.html#function-as-objects-in-r",
     "title": "W#04: Math refresh, Function Programming, Descriptive Statistics",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x55c81734b100>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x55c814deb0f8>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x5589892b4040>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x558987940a50>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#define-your-own-functions-in-r",
@@ -1964,14 +2342,14 @@
     "href": "W03.html#dates",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "Dates",
-    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-16.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
+    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-22.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
   },
   {
     "objectID": "W03.html#how-many-days-are-you-old",
     "href": "W03.html#how-many-days-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many days are you old?",
-    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17440 days\n\n# Sys.Date() gives as the current day your computer is set to"
+    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17446 days\n\n# Sys.Date() gives as the current day your computer is set to"
   },
   {
     "objectID": "W03.html#date-times",
@@ -1985,7 +2363,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1506797304"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1507317279"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
@@ -2410,387 +2788,310 @@
   {
     "objectID": "W07.html#recap-linear-model",
     "href": "W07.html#recap-linear-model",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Recap: Linear model",
     "text": "Recap: Linear model\nFlipper length as a function of body mass.\n\n\npenguins |>\n ggplot(aes(x = body_mass_g, \n            y = flipper_length_mm)) +\n geom_point() +\n geom_smooth(method = \"lm\", \n             se = FALSE) + \n theme_classic(base_size = 24)\n\n\n\n\n\n\n\nThe fitting question: How can we get this line?"
   },
   {
     "objectID": "W07.html#recap-a-line",
     "href": "W07.html#recap-a-line",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Recap: A line",
     "text": "Recap: A line\nA line is a shift-scale transformation of the identity function usually written in the form\n\\[f(x) = a\\cdot x + b\\]\nwhere \\(a\\) is the slope, \\(b\\) is the intercept."
   },
   {
     "objectID": "W07.html#recap-terminology",
     "href": "W07.html#recap-terminology",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Recap: Terminology",
     "text": "Recap: Terminology\n\nResponse variable:1 Variable whose behavior or variation you are trying to understand, on the y-axis\nExplanatory variable(s):2 Other variable(s) that you want to use to explain the variation in the response, on the x-axis\nPredicted value: Output of the model function.\n\nThe model function gives the (expected) average value of the response variable conditioning on the explanatory variables\nResidual(s): A measure of how far away a case is from its predicted value (based on the particular model)\nResidual = Observed value - Predicted value\nThe residual tells how far above/below the expected value each case is\n\n\nAlso dependent variable in statistics or empirical social sciences.Also independent variable(s) in statistics or empirical social sciences."
   },
   {
     "objectID": "W07.html#our-goal",
     "href": "W07.html#our-goal",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Our goal",
     "text": "Our goal\nPredict flipper length from body mass\naverage flipper_length_mm \\(= \\beta_0 + \\beta_1\\cdot\\) body_mass_g\n\n\\(\\beta_0\\) is the intercet of the line\n\\(\\beta_1\\) is the slope of the line\n\n\nLater we will have \\(\\beta_2, \\dots, \\beta_m\\) as coefficients for more variables."
   },
   {
     "objectID": "W07.html#fitting-the-model-in-r",
     "href": "W07.html#fitting-the-model-in-r",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Fitting the model in R",
     "text": "Fitting the model in R\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\naverage flipper_length_mm \\(= 136.72956 + 0.01528\\cdot\\) body_mass_g\nInterpretation:\nThe penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted."
   },
   {
     "objectID": "W07.html#parsnip-model-objects",
     "href": "W07.html#parsnip-model-objects",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "parsnip model objects",
     "text": "parsnip model objects\n\npengmod <- linear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins)\nclass(pengmod) # attributes\n\n[1] \"_lm\"       \"model_fit\"\n\ntypeof(pengmod) \n\n[1] \"list\"\n\nnames(pengmod)\n\n[1] \"lvl\"          \"spec\"         \"fit\"          \"preproc\"      \"elapsed\"     \n[6] \"censor_probs\"\n\n\n\nMost interesting for us for now: $fit\n\npengmod$fit\n\n\nCall:\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\nCoefficients:\n(Intercept)  body_mass_g  \n  136.72956      0.01528  \n\n\n\n\nNotice: parsnip model object is now missing in the output."
   },
   {
     "objectID": "W07.html#fit-is-the-object-created-by-lm-base-r",
     "href": "W07.html#fit-is-the-object-created-by-lm-base-r",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "$fit is the object created by lm (base R)",
     "text": "$fit is the object created by lm (base R)\n\nnames(pengmod$fit)\n\n [1] \"coefficients\"  \"residuals\"     \"effects\"       \"rank\"         \n [5] \"fitted.values\" \"assign\"        \"qr\"            \"df.residual\"  \n [9] \"na.action\"     \"xlevels\"       \"call\"          \"terms\"        \n[13] \"model\"        \n\npengmod$fit$call\n\nstats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592 \n\npengmod$fit$fitted.values |> head()\n\n       1        2        3        5        6        7 \n194.0142 194.7780 186.3763 189.4315 192.4867 192.1048 \n\npengmod$fit$residuals |> head()\n\n         1          2          3          5          6          7 \n-13.014243  -8.778039   8.623715   3.568532  -2.486651 -11.104753"
   },
   {
     "objectID": "W07.html#fitting-method-least-squares-regression",
     "href": "W07.html#fitting-method-least-squares-regression",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Fitting method: Least squares regression",
     "text": "Fitting method: Least squares regression\n\nThe regression line shall minimize the sum of the squared residuals\n(or, identically, their mean).\nMathematically: The residual for case \\(i\\) is \\(e_i = \\hat y_i - y_i\\).\nNow we want to minimize \\(\\sum_{i=1}^n e_i^2\\)\n(or equivalently \\(\\frac{1}{n}\\sum_{i=1}^n e_i^2\\) the the mean of squared errors, which we will look at later)."
   },
   {
     "objectID": "W07.html#visualization-of-residuals",
     "href": "W07.html#visualization-of-residuals",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Visualization of residuals",
     "text": "Visualization of residuals\nThe residuals are the gray lines between predictid values on the regression line and the actual values."
   },
   {
     "objectID": "W07.html#check-fitted-values-and-residuals",
     "href": "W07.html#check-fitted-values-and-residuals",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Check: Fitted values and Residuals",
     "text": "Check: Fitted values and Residuals\nRecall: Residual = Observed value - Predicted value\nThe Predicted values are also called Fitted values. Hence:\nResiduals + Fitted values = Observed values\n\n(pengmod$fit$residuals + pengmod$fit$fitted.values) |> \nhead()\n\n  1   2   3   5   6   7 \n181 186 195 193 190 181 \n\n\n\npenguins$flipper_length_mm |> head()\n\n[1] 181 186 195  NA 193 190"
   },
   {
     "objectID": "W07.html#proporties-of-least-squares-regression",
     "href": "W07.html#proporties-of-least-squares-regression",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Proporties of least squares regression",
     "text": "Proporties of least squares regression\nThe regression lines goes through the point (mean(x), mean(y)).\n\nmean(penguins$body_mass_g, na.rm = TRUE)\n\n[1] 4201.754\n\nmean(penguins$flipper_length_mm, na.rm = TRUE)\n\n[1] 200.9152"
   },
   {
     "objectID": "W07.html#proporties-of-least-squares-regression-1",
     "href": "W07.html#proporties-of-least-squares-regression-1",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Proporties of least squares regression",
     "text": "Proporties of least squares regression\nResiduals sum up to zero\n\npengmod <- linear_reg() |>  set_engine(\"lm\") |> fit(flipper_length_mm ~ body_mass_g, data = penguins)\npengmod$fit$residuals |> sum()\n\n[1] -3.765044e-14\n\n\n\nThere is no correlation between residuals and the explanatory variable\n\ncor(pengmod$fit$residuals, na.omit(penguins$body_mass_g))\n\n[1] -1.353445e-16\n\n\n\n\nThe correlation of \\(x\\) and \\(y\\) is the slope \\(b_1\\) corrected by their standard deviations.\n\ncorrelation <- cor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\nsd_flipper <- sd(penguins$flipper_length_mm, na.rm = T)\nsd_mass <- sd(penguins$body_mass_g, na.rm = T)\nc(correlation, sd_flipper, sd_mass)\n\n[1]   0.8712018  14.0617137 801.9545357\n\ncorrelation * sd_flipper / sd_mass\n\n[1] 0.01527592\n\npengmod$fit$coefficients\n\n (Intercept)  body_mass_g \n136.72955927   0.01527592"
   },
   {
     "objectID": "W07.html#correlation-and-linear-regression",
     "href": "W07.html#correlation-and-linear-regression",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Correlation and linear regression",
     "text": "Correlation and linear regression\nWhen the two variables in the linear regression are standardized (standard scores)\n\nthe intercept is zero\nthe coefficient coincides with the correlation"
   },
   {
     "objectID": "W07.html#explanatory-variables-are-categorical",
     "href": "W07.html#explanatory-variables-are-categorical",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Explanatory variables are categorical",
     "text": "Explanatory variables are categorical\nLet’s just try what happens with species as explanatory variable. Remember, we have three species: Adelie, Chinstrap, Gentoo.\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\nWhat happened?\n\nTwo of the three species categories appear as variables now.\n\nCategorical variables are automatically encoded to dummy variables\nEach coefficient describes the expected difference between flipper length of that particular species compared to the baseline level\nWhat is the baseline level? The first category! (Here alphabetically \"Adelie\")"
   },
   {
     "objectID": "W07.html#how-do-dummy-variables-look",
     "href": "W07.html#how-do-dummy-variables-look",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "How do dummy variables look?",
     "text": "How do dummy variables look?\n\n\n\nspecies\nspeciesChinstrap\nspeciesGentoo\n\n\n\n\nAdelie\n0\n0\n\n\nChinstrap\n1\n0\n\n\nGentoo\n0\n1\n\n\n\nThen the fitting of the linear model is as before using the zero-one variables."
   },
   {
     "objectID": "W07.html#interpretation",
     "href": "W07.html#interpretation",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Interpretation",
     "text": "Interpretation\n\nlinear_reg() |> \n    set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ species, data = penguins) |> \n    tidy()\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nFlipper length of the baseline species is the intercept.\n\nAverage flipper length of Adelie is 190 mm\n\nFlipper length of the two other species add their coefficient\n\nAverage flipper length of Chinstrap is 190 + 5.87 mm\nAverage flipper length of Gentoo is 190 + 27.2 mm"
   },
   {
     "objectID": "W07.html#compare-to-a-visualization",
     "href": "W07.html#compare-to-a-visualization",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Compare to a visualization",
     "text": "Compare to a visualization\n\n\n# A tibble: 3 × 5\n  term             estimate std.error statistic   p.value\n  <chr>               <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        190.       0.540    351.   0        \n2 speciesChinstrap     5.87     0.970      6.05 3.79e-  9\n3 speciesGentoo       27.2      0.807     33.8  1.84e-110\n\n\n\nThe red dots are the average values for species."
   },
   {
     "objectID": "W07.html#linear-model",
     "href": "W07.html#linear-model",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Linear model",
     "text": "Linear model\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept) 137.      2.00          68.5 5.71e-201\n2 body_mass_g   0.0153  0.000467      32.7 4.37e-107\n\n\naverage flipper_length_mm \\(= 137 + 0.0153\\cdot\\) body_mass_g\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(bill_depth_mm ~ bill_length_mm, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     20.9       0.844      24.7  4.72e-78\n2 bill_length_mm  -0.0850    0.0191     -4.46 1.12e- 5\n\n\naverage bill_depth_mm \\(= 20.9 -0.085\\cdot\\) bill_length_mm\n\n\nTechnical: The idea of the tidy() function is to turn an object into a tidy tibble. Here, it extracts the coefficients of the linear model (and more statistical information)."
   },
   {
     "objectID": "W07.html#r-squared-of-a-fitted-model",
     "href": "W07.html#r-squared-of-a-fitted-model",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "R-squared of a fitted model",
     "text": "R-squared of a fitted model\n\\(R^2\\) is the percentage of variability in the response explained by the regression model.\nR-squared is also called coefficient of determination.\nDefinition:\n\\(R^2 = 1 - \\frac{SS_\\text{res}}{SS_\\text{tot}}\\)\nwhere \\(SS_\\text{res} = \\sum_i(y_i - f_i)^2 = \\sum_i e_i^2\\) is the sum of the squared residuals, and\n\\(SS_\\text{tot} = \\sum_i(y_i - \\bar y)^2\\) the total sum of squares which is proportional to the variance of \\(y\\). (\\(\\bar y\\) is the mean of \\(y\\).)"
   },
   {
     "objectID": "W07.html#linear-model-r-squared",
     "href": "W07.html#linear-model-r-squared",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Linear model R-squared",
     "text": "Linear model R-squared\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |>\n glance()  # glance shows summary statistics of model fit\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\nInterpretation R-square? 75.8% of the variance of flipper length can be explained by a linear relation with body mass.\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(bill_depth_mm ~ bill_length_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1    0.0552        0.0525  1.92      19.9 0.0000112     1  -708. 1422. 1433.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n5.25% of the variance of bill depth can be explained by a linear relation with bill length.\n\n\nTechnical: The idea of the glance() function is to construct a single row summary “glance” of a model, fit, or other object."
   },
   {
     "objectID": "W07.html#r-squared-and-correlation",
     "href": "W07.html#r-squared-and-correlation",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "R-squared and correlation",
     "text": "R-squared and correlation\nFor a linear model with one predictor, the square of the correlation coefficient is the same as the R-squared of the model.\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\ncor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")\n\n[1] 0.8712018\n\n\n\ncor(penguins$flipper_length_mm, penguins$body_mass_g, use = \"pairwise.complete.obs\")^2\n\n[1] 0.7589925\n\n\n\nHence, the name \\(R^2\\)!"
   },
   {
     "objectID": "W07.html#more-predictors-coefficients",
     "href": "W07.html#more-predictors-coefficients",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "More predictors: Coefficients",
     "text": "More predictors: Coefficients\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept) 137.      2.00          68.5 5.71e-201\n2 body_mass_g   0.0153  0.000467      32.7 4.37e-107\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm, data = penguins) |> \n tidy()\n\n# A tibble: 3 × 5\n  term           estimate std.error statistic   p.value\n  <chr>             <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)    122.      2.86         42.7  1.70e-138\n2 body_mass_g      0.0131  0.000545     23.9  7.56e- 75\n3 bill_length_mm   0.549   0.0801        6.86 3.31e- 11\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm + bill_depth_mm, data = penguins) |> \n tidy()\n\n# A tibble: 4 × 5\n  term           estimate std.error statistic   p.value\n  <chr>             <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)    158.      4.63         34.1  1.80e-111\n2 body_mass_g      0.0109  0.000538     20.3  1.93e- 60\n3 bill_length_mm   0.592   0.0717        8.26 3.42e- 15\n4 bill_depth_mm   -1.68    0.181        -9.29 1.99e- 18"
   },
   {
     "objectID": "W07.html#more-predictors-glance-r-squared",
     "href": "W07.html#more-predictors-glance-r-squared",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "More predictors: glance R-squared",
     "text": "More predictors: glance R-squared\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.759         0.758  6.91     1071. 4.37e-107     1 -1146. 2297. 2309.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.788         0.787  6.49      631. 4.88e-115     2 -1123. 2255. 2270.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + bill_length_mm + bill_depth_mm, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.831         0.830  5.80      556. 2.99e-130     3 -1084. 2179. 2198.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
   },
   {
     "objectID": "W07.html#more-predictors-equations",
     "href": "W07.html#more-predictors-equations",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "More predictors: Equations",
     "text": "More predictors: Equations\naverage flipper_length_mm \\(= 137 + 0.0153\\cdot\\) body_mass_g\n75.8% explained variance\naverage flipper_length_mm \\(= 122 + 0.0131\\cdot\\) body_mass_g \\(+ 0.549\\cdot\\) bill_length_mm\n78.7% explained variance\naverage flipper_length_mm \\(= 158 + 0.0109\\cdot\\) body_mass_g \\(+ 0.592\\cdot\\) bill_length_mm \\(- 1.68\\cdot\\) bill_length_mm\n83.0% explained variance"
   },
   {
     "objectID": "W07.html#adding-a-categorical-variable-as-main-effect",
     "href": "W07.html#adding-a-categorical-variable-as-main-effect",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Adding a categorical variable as main effect",
     "text": "Adding a categorical variable as main effect\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n tidy()\n\n# A tibble: 4 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)      159.       2.39         66.6  2.45e-196\n2 body_mass_g        0.00840  0.000634     13.3  1.40e- 32\n3 speciesChinstrap   5.60     0.788         7.10 7.33e- 12\n4 speciesGentoo     15.7      1.09         14.4  6.80e- 37\n\n\nA main effect by categorical dummy variables allows for different intercepts per species. (However, the slopes are the same.)\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.854         0.853  5.40      659. 7.42e-141     3 -1060. 2129. 2149.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\nAdding species increases R-squared better than adding bill length and bill depth together!"
   },
   {
     "objectID": "W07.html#adding-as-interaction-effect",
     "href": "W07.html#adding-as-interaction-effect",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Adding as interaction effect",
     "text": "Adding as interaction effect\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n tidy()\n\n# A tibble: 6 × 5\n  term                          estimate std.error statistic   p.value\n  <chr>                            <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)                  165.       3.55         46.5  1.56e-148\n2 body_mass_g                    0.00668  0.000952      7.01 1.30e- 11\n3 speciesChinstrap             -13.9      7.30         -1.90 5.84e-  2\n4 speciesGentoo                  6.06     6.05          1.00 3.17e-  1\n5 body_mass_g:speciesChinstrap   0.00523  0.00195       2.68 7.66e-  3\n6 body_mass_g:speciesGentoo      0.00236  0.00135       1.75 8.16e-  2\n\n\n\nNote the * for interaction effect!\nAlso main effects for both variables are in as coefficients.\nAdelie is the baseline species (because it is first in the alphabet).\nAn interaction effect allows for different slopes for each species!"
   },
   {
     "objectID": "W07.html#improvement-through-the-interaction-effects-is-small-here",
     "href": "W07.html#improvement-through-the-interaction-effects-is-small-here",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Improvement through the interaction effects is small here",
     "text": "Improvement through the interaction effects is small here\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g + species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.854         0.853  5.40      659. 7.42e-141     3 -1060. 2129. 2149.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n glance()\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      <dbl>         <dbl> <dbl>     <dbl>     <dbl> <dbl>  <dbl> <dbl> <dbl>\n1     0.857         0.855  5.35      404. 9.60e-140     5 -1056. 2125. 2152.\n# ℹ 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
   },
   {
     "objectID": "W07.html#regression-lines-by-species",
     "href": "W07.html#regression-lines-by-species",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Regression lines by species",
     "text": "Regression lines by species\n\nCompare the slopes to the regression output on the slides before!"
   },
   {
     "objectID": "W07.html#different-equations-for-each-species",
     "href": "W07.html#different-equations-for-each-species",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Different equations for each species!",
     "text": "Different equations for each species!\n\nlinear_reg() |> set_engine(\"lm\") |> \n fit(flipper_length_mm ~ body_mass_g * species, data = penguins) |> \n tidy()\n\n# A tibble: 6 × 5\n  term                          estimate std.error statistic   p.value\n  <chr>                            <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)                  165.       3.55         46.5  1.56e-148\n2 body_mass_g                    0.00668  0.000952      7.01 1.30e- 11\n3 speciesChinstrap             -13.9      7.30         -1.90 5.84e-  2\n4 speciesGentoo                  6.06     6.05          1.00 3.17e-  1\n5 body_mass_g:speciesChinstrap   0.00523  0.00195       2.68 7.66e-  3\n6 body_mass_g:speciesGentoo      0.00236  0.00135       1.75 8.16e-  2\n\n\nAdelie:\naverage flipper_length_mm \\(= 165 + 0.00668\\cdot\\) body_mass_g\nChinstrap:\naverage flipper_length_mm \\(= 165 - 13.6 + (0.00668 + 0.00523)\\cdot\\) body_mass_g\nGentoo:\naverage flipper_length_mm \\(= 165 + 6.06 + (0.00668 + 0.00236)\\cdot\\) body_mass_g"
   },
   {
     "objectID": "W07.html#interaction-effects-more-categoricals",
     "href": "W07.html#interaction-effects-more-categoricals",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Interaction effects more categoricals",
     "text": "Interaction effects more categoricals\nAdding products of variables in the linear model \\(y_i = \\beta_0 + \\beta_1x_1 + \\beta_2x_2 + \\beta_{3}x_1x_2 + \\dots\\).\nFor \\(x_1\\) and \\(x_2\\) being dummy variables for being female and having kids this is for example\n\n\n\n\n\ngndr_f\nhas_kids\ngndr_f_x_has_kids\n\n\n\n\n0\n1\n0\n\n\n1\n0\n0\n\n\n1\n1\n1\n\n\n0\n0\n0\n\n\n\n\n\n\nWhat is the baseline? Being male without kids.\n\nThought experiment:\n\nWhen we estimate a model explaining life satisfaction with these. How would we see if being a mother increases life satisfaction more than being a father? positiv coefficient for gndr_f_x_has_kids"
   },
   {
     "objectID": "W07.html#when-a-linear-model-is-bad",
     "href": "W07.html#when-a-linear-model-is-bad",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "When a linear model is bad",
     "text": "When a linear model is bad\nExample: Total corona cases in Germany in the first wave 2020."
   },
   {
     "objectID": "W07.html#log-transformation",
     "href": "W07.html#log-transformation",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "\\(\\log\\) transformation",
     "text": "\\(\\log\\) transformation\nInstead of Cumulative_cases we look at \\(\\log(\\)Cumulative_cases\\()\\)\n\nAlmost perfect fit of the linear model: \\(\\log(y)=\\log(\\beta_0) + \\beta_1\\cdot x\\)\n(\\(y=\\) Cumulative cases, \\(x=\\) Days)\n\nExponention gives the model: \\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)"
   },
   {
     "objectID": "W07.html#exponential-growth",
     "href": "W07.html#exponential-growth",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Exponential growth!",
     "text": "Exponential growth!\n\\(y=\\beta_0 e^{\\beta_1\\cdot x}\\)\nFor comparison: Logistic function \\(y = \\frac{N \\beta_0 e^{\\beta_1\\cdot x}}{N + \\beta_0 e^{\\beta_1\\cdot x}}\\) for \\(N=200000\\)\n\nLogistic growth (as in the SI model) mimicks exponential growth initially."
   },
   {
     "objectID": "W07.html#log-transformation-1",
     "href": "W07.html#log-transformation-1",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "\\(\\log\\) transformation",
     "text": "\\(\\log\\) transformation\n\nWhat is the difference to the penguin model?\n\n\n\\(x\\) has an ordered structure and no duplicates\n\nThe fit looks so good. Why?\n\n\nBecause there is a mechanistic explanation behind: The SI model."
   },
   {
     "objectID": "W07.html#however-it-works-only-in-a-certain-range",
     "href": "W07.html#however-it-works-only-in-a-certain-range",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "However, it works only in a certain range",
     "text": "However, it works only in a certain range"
   },
   {
     "objectID": "W07.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
     "href": "W07.html#however-it-works-only-in-a-certain-range-log-scale-on-y",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "However, it works only in a certain range (log scale on y)",
     "text": "However, it works only in a certain range (log scale on y)"
   },
   {
     "objectID": "W07.html#what-if-response-is-binary",
     "href": "W07.html#what-if-response-is-binary",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "What if response is binary?",
     "text": "What if response is binary?\n\nExample: Spam filter for emails\n\n\nlibrary(openintro)\nlibrary(tidyverse)\nglimpse(email)\n\nRows: 3,921\nColumns: 21\n$ spam         <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ to_multiple  <fct> 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ from         <fct> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, …\n$ cc           <int> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2, 1, 0, 2, 0, …\n$ sent_email   <fct> 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1, …\n$ time         <dttm> 2012-01-01 07:16:41, 2012-01-01 08:03:59, 2012-01-01 17:…\n$ image        <dbl> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ attach       <dbl> 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ dollar       <dbl> 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 5, 0, 0, …\n$ winner       <fct> no, no, no, no, no, no, no, no, no, no, no, no, no, no, n…\n$ inherit      <dbl> 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ viagra       <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ password     <dbl> 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ num_char     <dbl> 11.370, 10.504, 7.773, 13.256, 1.231, 1.091, 4.837, 7.421…\n$ line_breaks  <int> 202, 202, 192, 255, 29, 25, 193, 237, 69, 68, 25, 79, 191…\n$ format       <fct> 1, 1, 1, 1, 0, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, …\n$ re_subj      <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 1, …\n$ exclaim_subj <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ urgent_subj  <fct> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ exclaim_mess <dbl> 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 20, 0…\n$ number       <fct> big, small, small, small, none, none, big, small, small, …"
   },
   {
     "objectID": "W07.html#multinomial-response-variable",
     "href": "W07.html#multinomial-response-variable",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Multinomial response variable?",
     "text": "Multinomial response variable?\n\nWe will not cover other categorical variables than binary ones here.\nHowever, many of the probabilistic concepts transfer."
   },
   {
     "objectID": "W07.html#variables",
     "href": "W07.html#variables",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Variables",
     "text": "Variables\n?email shows all variable descriptions. For example:\n\nspam Indicator for whether the email was spam.\nfrom Whether the message was listed as from anyone (this is usually set by default for regular outgoing email).\ncc Number of people cc’ed.\ntime Time at which email was sent.\nattach The number of attached files.\ndollar The number of times a dollar sign or the word “dollar” appeared in the email.\nnum_char The number of characters in the email, in thousands.\nre_subj Whether the subject started with “Re:”, “RE:”, “re:”, or “rE:”\n\n\n\nThe development, extraction, or discovery of such variables is called feature engineering, feature extraction or feature discovery. Usually, a combination of domain knowledge and data science skill is needed to do this."
   },
   {
     "objectID": "W07.html#data-exploration",
     "href": "W07.html#data-exploration",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Data exploration",
     "text": "Data exploration\nWould you expect spam to be longer or shorter?\n\n\nemail |> ggplot(aes(x = num_char, y = spam)) + geom_boxplot()\n\n\n\n\n\n\nWould you expect spam subject to start with “Re:” or the like?\n\n\n\nemail |> ggplot(aes(y = re_subj, fill = spam)) + geom_bar()"
   },
   {
     "objectID": "W07.html#linear-models",
     "href": "W07.html#linear-models",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Linear models?",
     "text": "Linear models?\nBoth seem to give some signal. How can we model the relationship?\nWe focus first on just num_char:\n\nemail |> ggplot(aes(x = num_char, y = as.numeric(spam)-1)) + \n geom_point(alpha = 0.2) + geom_smooth(method = \"lm\")\n\n\n\nlinear_reg() |> fit(as.numeric(spam)-1 ~ num_char, data = email)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = as.numeric(spam) - 1 ~ num_char, data = data)\n\nCoefficients:\n(Intercept)     num_char  \n   0.118214    -0.002299  \n\n\nWe would like to have a better concept!"
   },
   {
     "objectID": "W07.html#a-penguins-example",
     "href": "W07.html#a-penguins-example",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "A penguins example",
     "text": "A penguins example\n\npenguins |> na.omit() |> \n ggplot(aes(x = body_mass_g, y = as.numeric(sex)-1)) + \n geom_point(alpha = 0.2) + geom_smooth(method = \"lm\")\n\n\nIt does not make much sense to predict 0-1-values with a linear model."
   },
   {
     "objectID": "W07.html#a-probabilistic-concept",
     "href": "W07.html#a-probabilistic-concept",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "A probabilistic concept",
     "text": "A probabilistic concept\n\nWe treat each outcome (spam and not) as successes and failures arising from separate Bernoulli trials\n\nBernoulli trial: a random experiment with exactly two possible outcomes, success and failure, in which the probability of success is the same every time the experiment is conducted\n\n\n\n\nEach email is treated as Bernoulli trial with separate probability of success\n\n\\[ y_i ∼ \\text{Bernoulli}(p_i) \\]\n\n\n\nWe use the predictor variables to model the Bernoulli parameter \\(p_i\\)\n\n\n\n\nNow we conceptualized a continuous response, but still a linear model does not fit perfectly for \\(p_i\\) (since a probability is between 0 and 1).\nHowever, we can transform the linear model to have the appropriate range."
   },
   {
     "objectID": "W07.html#characterising-glms",
     "href": "W07.html#characterising-glms",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
+    "title": "W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables",
     "section": "Characterising GLMs",
-    "text": "Characterising GLMs\n\nGeneralized linear models (GLMs) are a way of addressing many problems in regression\nLogistic regression is one example\n\nAll GLMs have the following three characteristics:\n\nA probability distribution as a generative model for the outcome variable \\(y_i \\sim \\text{Distribution}(\\text{parameter})\\)\n\n\n\nA linear model \\(\\eta = \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_k X_k\\)\nwhere \\(\\eta\\) is related to a mean parameter of the distribution by the …\n\n\n\n\nLink function that relates the linear model to the parameter of the outcome distribution."
-  },
-  {
-    "objectID": "W07.html#logistic-regression-1",
-    "href": "W07.html#logistic-regression-1",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Logistic regression",
-    "text": "Logistic regression\n\nLogistic regression is a GLM used to model a binary categorical outcome using numerical and categorical predictors.\nThe distribution is the Bernoulli distribution.\nAs link function connecting \\(\\eta_i\\) to \\(p_i\\) we use the logit function.\n\n\n\nLogit function: \\(\\text{logit}: [0,1] \\to \\mathbb{R}\\)\n\n\\[\\text{logit}(p) = \\log\\left(\\frac{p}{1-p}\\right)\\]\n\n\\(\\frac{p}{1-p}\\) is called the odds of a success which happens with probability \\(p\\).\nExample: Roll a six with a die has \\(p=1/6\\). Thus, the odds are \\(\\frac{1/6}{5/6} = 1/5\\). Sometimes written as 1:5. “The odds of success are one to five.”"
-  },
-  {
-    "objectID": "W07.html#properties-of-the-logit",
-    "href": "W07.html#properties-of-the-logit",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Properties of the logit",
-    "text": "Properties of the logit\n\nLogit takes values between 0 and 1 and returns values between \\(-\\infty\\) and \\(\\infty\\)\nThe inverse of the logit function if the logistic function (mapping values from \\(-\\infty\\) and \\(\\infty\\) to values between 0 and 1): \\[\\text{logit}^{-1}(x) = \\text{logistic}(x) = \\frac{e^x}{1+e^x} = \\frac{1}{1+e^{-x}}\\]\nLogit can be interpreted as the log odds of a success – more on this later.\n\n\n\n\nThe logistic function is the solution of the differential equation \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\) which also appears in the SI-model of epidemics (and other models of exponential growth with saturation).\nGood exercises to check your math skills:\n\nShow that \\(\\text{logit}^{-1}(x) = \\text{logistic}(x)\\) or the other way round.\nTransform \\(\\frac{e^x}{1+e^x}\\) into \\(\\frac{1}{1+e^{-x}}\\).\nCheck that \\(\\text{logistic}(x)\\) is a solution to \\(\\frac{d}{dx}f(x) = f(x)(1-f(x))\\).\n\nYou can request hints from me when you get stuck."
-  },
-  {
-    "objectID": "W07.html#logit-and-logistic-function",
-    "href": "W07.html#logit-and-logistic-function",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Logit and logistic function",
-    "text": "Logit and logistic function\n\nggplot() + \n geom_function(fun = function(x) log(x/(1-x)), xlim=c(0.001,0.999), n = 500) + \n geom_function(fun = function(x) 1/(1 + exp(-x)), color = \"red\") +\n scale_x_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n scale_y_continuous(breaks = seq(-5,5,1), limits = c(-5,5)) +\n coord_fixed() + theme_minimal(base_size = 24) + labs(x = \"x\")"
-  },
-  {
-    "objectID": "W07.html#the-logistic-regression-model",
-    "href": "W07.html#the-logistic-regression-model",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "The logistic regression model",
-    "text": "The logistic regression model\n\nBased on the three GLM criteria we have\n\n\\(y_i \\sim \\text{Bernoulli}(p_i)\\)\n\\(\\eta_i = \\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_n x_{n,i}\\)\n\\(\\text{logit}(p_i) = \\eta_i\\)\n\n\n\n\nFrom which we get\n\n\\[p_i = \\frac{e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}{1 + e^{\\beta_0+\\beta_1 x_{1,i} + \\cdots + \\beta_k x_{k,i}}}\\]"
-  },
-  {
-    "objectID": "W07.html#modeling-spam",
-    "href": "W07.html#modeling-spam",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Modeling spam",
-    "text": "Modeling spam\nWith tidymodels we fit a GLM in the same way as a linear model except we\n\nspecify the model with logistic_reg()\nuse \"glm\" instead of \"lm\" as the engine\ndefine family = \"binomial\" for the link function to be used in the model\n\n\nspam_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(spam ~ num_char, data = email, family = \"binomial\")\ntidy(spam_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\n\n\n\nThe family is binomial because the Bernoulli distribution is a special case of the binomial distribution \\(\\text{Binomial}(n,p)\\) with \\(n=1\\).\nThe binomial distribution specifies the probability to have \\(k\\) successes in \\(n\\) Bernoulli trials with the same success probability \\(p\\)."
-  },
-  {
-    "objectID": "W07.html#spam-model",
-    "href": "W07.html#spam-model",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Spam model",
-    "text": "Spam model\n\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic   p.value\n  <chr>          <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139\n2 num_char     -0.0621   0.00801     -7.75 9.50e- 15\n\n\nModel: \\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]"
-  },
-  {
-    "objectID": "W07.html#predicted-probability-examples",
-    "href": "W07.html#predicted-probability-examples",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Predicted probability: Examples",
-    "text": "Predicted probability: Examples\nWe can compute the predicted probability that an email with 2000 character is spam as follows:\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot 2 = -1.9242\\]\n(Note: num_char is in thousands.)\n\\[\\frac{p}{1-p} = e^{-1.9242} = 0.15 \\Rightarrow p = 0.15 \\cdot (1 - p)\\]\n\\[p = 0.15 - 0.15\\cdot p \\Rightarrow 1.15\\cdot p = 0.15\\]\n\\[p = 0.15 / 1.15 = 0.13\\]"
-  },
-  {
-    "objectID": "W07.html#predicted-probability",
-    "href": "W07.html#predicted-probability",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Predicted probability",
-    "text": "Predicted probability\n\nlogistic <- function(t) 1/(1+exp(-t))\npreds <- tibble(x=c(2,15,40), y = logistic(-1.80-0.0621*x))\nemail |> ggplot(aes(x = num_char, y = as.numeric(spam)-1)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-1.80-0.0621*x),color=\"red\") +\n geom_point(data = preds, mapping = aes(x,y), color = \"blue\", size = 3)\n\n\nSpam probability 2,000 characters: 0.1273939\nSpam probability 15,000 characters: 0.06114\nSpam probability 40,000 characters: 0.0135999"
-  },
-  {
-    "objectID": "W07.html#interpretation-of-coefficients",
-    "href": "W07.html#interpretation-of-coefficients",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Interpretation of coefficients",
-    "text": "Interpretation of coefficients\n\\[\\log\\left(\\frac{p}{1-p}\\right) = -1.80-0.0621\\cdot \\text{num_char}\\]\nWhat does an increase by thousand characters (num_char + 1) imply?\n\nLet us assume the predicted probability of an email is \\(p_0\\). Then an increase of num_char by one implied that the log-odds become\n\\[\\log\\left(\\frac{p_0}{1-p_0}\\right) - 0.0621 = \\log\\left(\\frac{p_0}{1-p_0}\\right) - \\log(e^{0.0621})\\]\n\\[ = \\log\\left(\\frac{p_0}{1-p_0}\\right) + \\log(\\frac{1}{e^{0.0621}}) = \\log\\left(\\frac{p_0}{1-p_0} \\frac{1}{e^{0.0621}}\\right) = \\log\\left(\\frac{p_0}{1-p_0} 0.94\\right)\\]\nThat means the odds of being spam decrease by 6%."
-  },
-  {
-    "objectID": "W07.html#penguins-example",
-    "href": "W07.html#penguins-example",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Penguins example",
-    "text": "Penguins example\n\nlibrary(palmerpenguins)\nsex_fit <- logistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(sex ~ body_mass_g, data = na.omit(penguins), family = \"binomial\")\ntidy(sex_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  <chr>          <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept) -5.16     0.724        -7.13 1.03e-12\n2 body_mass_g  0.00124  0.000173      7.18 7.10e-13\n\n\n\nna.omit(penguins) |> ggplot(aes(x = body_mass_g, y = sex)) + \n geom_point(alpha = 0.2) + \n geom_function(fun = function(x) logistic(-5.16+0.00124*x) + 1,color=\"red\") +\n xlim(c(2000,7000))"
-  },
-  {
-    "objectID": "W07.html#summarizing-the-idea-of-logistic-regression",
-    "href": "W07.html#summarizing-the-idea-of-logistic-regression",
-    "title": "W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression",
-    "section": "Summarizing the Idea of Logistic Regression",
-    "text": "Summarizing the Idea of Logistic Regression\n\nWe want to explain/predict a binary response variable.\nWe want to use the concept of linear models.\nTo that end we first interprete each outcome as the outcome of a probabilisitic event happening with probability \\(p_i\\). That way transform the problem to from modeling a binary outcome to a numerical outcome.\nHowever, probabilities are bounded between 0 and 1.\nWe use the logit function to transform the probabilities to the real line. We transform to the log-odds of the probability.\nWe model the log-odds with a linear model.\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
+    "text": "Characterising GLMs\n\nGeneralized linear models (GLMs) are a way of addressing many problems in regression\nLogistic regression is one example\n\nAll GLMs have the following three characteristics:\n\nA probability distribution as a generative model for the outcome variable \\(y_i \\sim \\text{Distribution}(\\text{parameter})\\)\n\n\n\nA linear model \\(\\eta = \\beta_0 + \\beta_1 X_1 + \\cdots + \\beta_k X_k\\)\nwhere \\(\\eta\\) is related to a mean parameter of the distribution by the …\n\n\n\n\nLink function that relates the linear model to the parameter of the outcome distribution.\n\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "socialmedia.html",

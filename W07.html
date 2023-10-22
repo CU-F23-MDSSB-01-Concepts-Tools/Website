@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression</title>
+  <title>Data Science Concepts / Data Science Tools - W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -390,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#07: Fitting Linear Models, More variables, Interaction Effects, Nonlinear Models, Logistic Regression</h1>
+  <h1 class="title">W#07: Fitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1352,194 +1352,11 @@ where <span class="math inline">\(\eta\)</span> is related to a mean parameter o
 <ol start="3" type="1">
 <li><strong>Link function</strong> that relates the linear model to the parameter of the outcome distribution.</li>
 </ol>
-</div>
-</section></section>
-<section>
-<section id="logistic-regression" class="title-slide slide level1 center">
-<h1>Logistic regression</h1>
 
-</section>
-<section id="logistic-regression-1" class="slide level2 smaller">
-<h2>Logistic regression</h2>
-<ul>
-<li><strong>Logistic regression</strong> is a GLM used to model a binary categorical outcome using numerical and categorical predictors.</li>
-<li>The <em>distribution</em> is the Bernoulli distribution.</li>
-<li>As <em>link function</em> connecting <span class="math inline">\(\eta_i\)</span> to <span class="math inline">\(p_i\)</span> we use the <strong>logit function</strong>.</li>
-</ul>
-<div class="fragment">
-<ul>
-<li><strong>Logit function:</strong> <span class="math inline">\(\text{logit}: [0,1] \to \mathbb{R}\)</span></li>
-</ul>
-<p><span class="math display">\[\text{logit}(p) = \log\left(\frac{p}{1-p}\right)\]</span></p>
-<ul>
-<li><span class="math inline">\(\frac{p}{1-p}\)</span> is called the <strong>odds</strong> of a success which happens with probability <span class="math inline">\(p\)</span>.<br>
-Example: Roll a six with a die has <span class="math inline">\(p=1/6\)</span>. Thus, the odds are <span class="math inline">\(\frac{1/6}{5/6} = 1/5\)</span>. Sometimes written as 1:5. <em>“The odds of success are one to five.”</em></li>
-</ul>
-</div>
-</section>
-<section id="properties-of-the-logit" class="slide level2 smaller">
-<h2>Properties of the logit</h2>
-<ul>
-<li>Logit takes values between 0 and 1 and returns values between <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span></li>
-<li>The inverse of the logit function if the <strong>logistic function</strong> (mapping values from <span class="math inline">\(-\infty\)</span> and <span class="math inline">\(\infty\)</span> to values between 0 and 1): <span class="math display">\[\text{logit}^{-1}(x) = \text{logistic}(x) = \frac{e^x}{1+e^x} = \frac{1}{1+e^{-x}}\]</span></li>
-<li>Logit can be interpreted as the log odds of a success – more on this later.</li>
-</ul>
-
-<aside><div>
-<ul>
-<li>The logistic function is the solution of the differential equation <span class="math inline">\(\frac{d}{dx}f(x) = f(x)(1-f(x))\)</span> which also appears in the SI-model of epidemics (and other models of exponential growth with saturation).</li>
-<li>Good exercises to check your math skills:
-<ol type="1">
-<li>Show that <span class="math inline">\(\text{logit}^{-1}(x) = \text{logistic}(x)\)</span> or the other way round.</li>
-<li>Transform <span class="math inline">\(\frac{e^x}{1+e^x}\)</span> into <span class="math inline">\(\frac{1}{1+e^{-x}}\)</span>.</li>
-<li>Check that <span class="math inline">\(\text{logistic}(x)\)</span> is a solution to <span class="math inline">\(\frac{d}{dx}f(x) = f(x)(1-f(x))\)</span>.</li>
-</ol></li>
-<li>You can request hints from me when you get stuck.</li>
-</ul>
-</div></aside></section>
-<section id="logit-and-logistic-function" class="slide level2 smaller">
-<h2>Logit and <span style="color:red;">logistic</span> function</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb91-2"><a href="#cb91-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">log</span>(x<span class="sc">/</span>(<span class="dv">1</span><span class="sc">-</span>x)), <span class="at">xlim=</span><span class="fu">c</span>(<span class="fl">0.001</span>,<span class="fl">0.999</span>), <span class="at">n =</span> <span class="dv">500</span>) <span class="sc">+</span> </span>
-<span id="cb91-3"><a href="#cb91-3"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="sc">-</span>x)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb91-4"><a href="#cb91-4"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">1</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb91-5"><a href="#cb91-5"></a> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>,<span class="dv">1</span>), <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>)) <span class="sc">+</span></span>
-<span id="cb91-6"><a href="#cb91-6"></a> <span class="fu">coord_fixed</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"x"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-53-1.png" width="960" class="r-stretch"></section>
-<section id="the-logistic-regression-model" class="slide level2">
-<h2>The logistic regression model</h2>
-<ul>
-<li>Based on the three GLM criteria we have
-<ul>
-<li><span class="math inline">\(y_i \sim \text{Bernoulli}(p_i)\)</span></li>
-<li><span class="math inline">\(\eta_i = \beta_0+\beta_1 x_{1,i} + \cdots + \beta_n x_{n,i}\)</span></li>
-<li><span class="math inline">\(\text{logit}(p_i) = \eta_i\)</span></li>
-</ul></li>
-</ul>
-<div class="fragment">
-<ul>
-<li>From which we get</li>
-</ul>
-<p><span class="math display">\[p_i = \frac{e^{\beta_0+\beta_1 x_{1,i} + \cdots + \beta_k x_{k,i}}}{1 + e^{\beta_0+\beta_1 x_{1,i} + \cdots + \beta_k x_{k,i}}}\]</span></p>
-</div>
-</section>
-<section id="modeling-spam" class="slide level2 smaller">
-<h2>Modeling spam</h2>
-<p>With <code>tidymodels</code> we fit a GLM in the same way as a linear model except we</p>
-<ul>
-<li>specify the model with <code>logistic_reg()</code></li>
-<li>use <code>"glm"</code> instead of <code>"lm"</code> as the engine</li>
-<li>define <code>family = "binomial"</code> for the link function to be used in the model</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1"></a>spam_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb92-2"><a href="#cb92-2"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb92-3"><a href="#cb92-3"></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> num_char, <span class="at">data =</span> email, <span class="at">family =</span> <span class="st">"binomial"</span>)</span>
-<span id="cb92-4"><a href="#cb92-4"></a><span class="fu">tidy</span>(spam_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139
-2 num_char     -0.0621   0.00801     -7.75 9.50e- 15</code></pre>
-</div>
-</div>
-
-<aside><div>
-<ul>
-<li>The family is <em>binomial</em> because the Bernoulli distribution is a special case of the binomial distribution <span class="math inline">\(\text{Binomial}(n,p)\)</span> with <span class="math inline">\(n=1\)</span>.</li>
-<li>The binomial distribution specifies the probability to have <span class="math inline">\(k\)</span> successes in <span class="math inline">\(n\)</span> Bernoulli trials with the same success probability <span class="math inline">\(p\)</span>.</li>
-</ul>
-</div></aside></section>
-<section id="spam-model" class="slide level2 smaller">
-<h2>Spam model</h2>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic   p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
-1 (Intercept)  -1.80     0.0716     -25.1  2.04e-139
-2 num_char     -0.0621   0.00801     -7.75 9.50e- 15</code></pre>
-</div>
-</div>
-<p>Model: <span class="math display">\[\log\left(\frac{p}{1-p}\right) = -1.80-0.0621\cdot \text{num_char}\]</span></p>
-</section>
-<section id="predicted-probability-examples" class="slide level2 smaller">
-<h2>Predicted probability: Examples</h2>
-<p>We can compute the <strong>predicted probability</strong> that an email with 2000 character is spam as follows:</p>
-<p><span class="math display">\[\log\left(\frac{p}{1-p}\right) = -1.80-0.0621\cdot 2 = -1.9242\]</span></p>
-<p>(Note: <code>num_char</code> is in thousands.)</p>
-<p><span class="math display">\[\frac{p}{1-p} = e^{-1.9242} = 0.15 \Rightarrow p = 0.15 \cdot (1 - p)\]</span></p>
-<p><span class="math display">\[p = 0.15 - 0.15\cdot p \Rightarrow 1.15\cdot p = 0.15\]</span></p>
-<p><span class="math display">\[p = 0.15 / 1.15 = 0.13\]</span></p>
-</section>
-<section id="predicted-probability" class="slide level2 smaller">
-<h2>Predicted probability</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1"></a>logistic <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span><span class="fu">exp</span>(<span class="sc">-</span>t))</span>
-<span id="cb95-2"><a href="#cb95-2"></a>preds <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">15</span>,<span class="dv">40</span>), <span class="at">y =</span> <span class="fu">logistic</span>(<span class="sc">-</span><span class="fl">1.80-0.0621</span><span class="sc">*</span>x))</span>
-<span id="cb95-3"><a href="#cb95-3"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_char, <span class="at">y =</span> <span class="fu">as.numeric</span>(spam)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb95-4"><a href="#cb95-4"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> </span>
-<span id="cb95-5"><a href="#cb95-5"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">logistic</span>(<span class="sc">-</span><span class="fl">1.80-0.0621</span><span class="sc">*</span>x),<span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb95-6"><a href="#cb95-6"></a> <span class="fu">geom_point</span>(<span class="at">data =</span> preds, <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-56-1.png" width="960" class="r-stretch"><p>Spam probability 2,000 characters: 0.1273939<br>
-Spam probability 15,000 characters: 0.06114<br>
-Spam probability 40,000 characters: 0.0135999</p>
-</section>
-<section id="interpretation-of-coefficients" class="slide level2 smaller">
-<h2>Interpretation of coefficients</h2>
-<p><span class="math display">\[\log\left(\frac{p}{1-p}\right) = -1.80-0.0621\cdot \text{num_char}\]</span></p>
-<p>What does an increase by thousand characters (<code>num_char + 1</code>) imply?</p>
-<div class="fragment">
-<p>Let us assume the predicted probability of an email is <span class="math inline">\(p_0\)</span>. Then an increase of <code>num_char</code> by one implied that the log-odds become</p>
-<p><span class="math display">\[\log\left(\frac{p_0}{1-p_0}\right) - 0.0621 = \log\left(\frac{p_0}{1-p_0}\right) - \log(e^{0.0621})\]</span></p>
-<p><span class="math display">\[ = \log\left(\frac{p_0}{1-p_0}\right) + \log(\frac{1}{e^{0.0621}}) = \log\left(\frac{p_0}{1-p_0} \frac{1}{e^{0.0621}}\right) = \log\left(\frac{p_0}{1-p_0} 0.94\right)\]</span></p>
-<p>That means the odds of being spam decrease by 6%.</p>
-</div>
-</section>
-<section id="penguins-example" class="slide level2 smaller">
-<h2>Penguins example</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1"></a><span class="fu">library</span>(palmerpenguins)</span>
-<span id="cb96-2"><a href="#cb96-2"></a>sex_fit <span class="ot">&lt;-</span> <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb96-3"><a href="#cb96-3"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb96-4"><a href="#cb96-4"></a>  <span class="fu">fit</span>(sex <span class="sc">~</span> body_mass_g, <span class="at">data =</span> <span class="fu">na.omit</span>(penguins), <span class="at">family =</span> <span class="st">"binomial"</span>)</span>
-<span id="cb96-5"><a href="#cb96-5"></a><span class="fu">tidy</span>(sex_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2 × 5
-  term        estimate std.error statistic  p.value
-  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept) -5.16     0.724        -7.13 1.03e-12
-2 body_mass_g  0.00124  0.000173      7.18 7.10e-13</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1"></a><span class="fu">na.omit</span>(penguins) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> sex)) <span class="sc">+</span> </span>
-<span id="cb98-2"><a href="#cb98-2"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> </span>
-<span id="cb98-3"><a href="#cb98-3"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">logistic</span>(<span class="sc">-</span><span class="fl">5.16+0.00124</span><span class="sc">*</span>x) <span class="sc">+</span> <span class="dv">1</span>,<span class="at">color=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb98-4"><a href="#cb98-4"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">2000</span>,<span class="dv">7000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-58-1.png" width="960" class="r-stretch"></section>
-<section id="summarizing-the-idea-of-logistic-regression" class="slide level2 smaller">
-<h2>Summarizing the Idea of Logistic Regression</h2>
-<ul>
-<li>We want to explain/predict a binary response variable.</li>
-<li>We want to use the concept of linear models.</li>
-<li>To that end we first interprete each outcome as the outcome of a probabilisitic event happening with probability <span class="math inline">\(p_i\)</span>. That way transform the problem to from modeling a binary outcome to a numerical outcome.</li>
-<li>However, probabilities are bounded between 0 and 1.</li>
-<li>We use the logit function to transform the probabilities to the real line. We transform to the log-odds of the probability.</li>
-<li>We model the log-odds with a linear model.</li>
-</ul>
-
-
-<img src="img/ConstructorUniversity.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<p><img src="img/ConstructorUniversity.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p><a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools">CU-F23-MDSSB-DSCO-02: Data Science Concepts</a></p>
+</div>
 </div>
 </section></section>
 
