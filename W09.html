@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.2.269">
 
   <meta name="author" content="Jan Lorenz">
-  <title>Data Science Concepts / Data Science Tools - W#09: Probability and Statistics, Random Variables and Distributions</title>
+  <title>Data Science Concepts / Data Science Tools - W#09: Hypothesis Testing, Probability for Data Science</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,7 +390,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">W#09: Probability and Statistics, Random Variables and Distributions</h1>
+  <h1 class="title">W#09: Hypothesis Testing, Probability for Data Science</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -337,14 +401,453 @@ Jan Lorenz
 </div>
 
 </section>
-<section class="slide level2">
+<section>
+<section id="hypothesis-testing" class="title-slide slide level1 center">
+<h1>Hypothesis testing</h1>
+<p>Large part of the content adapted from <a href="http://datasciencebox.org" class="uri">http://datasciencebox.org</a>.</p>
+</section>
+<section id="organ-donors" class="slide level2 smaller">
+<h2>Organ donors</h2>
+<p>People providing an organ for donation sometimes seek the help of a special “medical consultant”. These consultants assist the patient in all aspects of the surgery, with the goal of reducing the possibility of complications during the medical procedure and recovery. Patients might choose a consultant based in part on the historical complication rate of the consultant’s clients.</p>
+<p>One consultant tried to attract patients by noting that the average complication rate for liver donor surgeries in the US is about 10%, but her clients have only had 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!).</p>
+</section>
+<section id="data" class="slide level2 smaller">
+<h2>Data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>organ_donor <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="at">outcome =</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">"complication"</span>, <span class="dv">3</span>), <span class="fu">rep</span>(<span class="st">"no complication"</span>, <span class="dv">59</span>))</span>
+<span id="cb1-3"><a href="#cb1-3"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>organ_donor <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="fu">count</span>(outcome)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  outcome             n
+  &lt;chr&gt;           &lt;int&gt;
+1 complication        3
+2 no complication    59</code></pre>
+</div>
+</div>
+</section>
+<section id="parameter-vs.-statistic" class="slide level2 smaller">
+<h2>Parameter vs.&nbsp;statistic</h2>
+<p>A <strong>parameter</strong> for a hypothesis test is the “true” value of interest. We typically estimate the parameter using a <strong>sample statistic</strong> as a <strong>point estimate</strong>.</p>
+<p><span class="math inline">\(p\)</span>: true rate of complication, here 0.1 (10% complication rate in US)</p>
+<p><span class="math inline">\(\hat{p}\)</span>: rate of complication in the sample = <span class="math inline">\(\frac{3}{62}\)</span> = 0.048</p>
+</section>
+<section id="correlation-vs.-causation" class="slide level2 smaller">
+<h2>Correlation vs.&nbsp;causation</h2>
+<p><strong>Is it possible to assess the consultant’s claim using the data?</strong></p>
+<p>No.&nbsp;The claim is: There is a causal connection, but the data are observational. For example, maybe patients who can afford a medical consultant can afford better medical care, which can also lead to a lower complication rate (for example).</p>
+<div class="fragment">
+<p>While it is not possible to assess the causal claim, it is still possible to test for an association using these data. For this question we ask, <strong>could the low complication rate of <span class="math inline">\(\hat{p}\)</span> = 0.048 be due to chance?</strong></p>
+</div>
+</section>
+<section id="two-claims" class="slide level2">
+<h2>Two claims</h2>
+<ul>
+<li><strong>Null hypothesis:</strong> “There is nothing going on”</li>
+</ul>
+<p>Complication rate for this consultant is no different than the US average of 10%</p>
+<ul>
+<li><strong>Alternative hypothesis:</strong> “There is something going on”</li>
+</ul>
+<p>Complication rate for this consultant is <strong>lower</strong> than the US average of 10%</p>
+</section>
+<section id="hypothesis-testing-as-a-court-trial" class="slide level2 smaller">
+<h2>Hypothesis testing as a court trial</h2>
+<ul>
+<li><p><strong>Null hypothesis</strong>, <span class="math inline">\(H_0\)</span>: Defendant is innocent</p></li>
+<li><p><strong>Alternative hypothesis</strong>, <span class="math inline">\(H_A\)</span>: Defendant is guilty</p></li>
+<li><p><strong>Present the evidence:</strong> Collect data</p></li>
+<li><p><strong>Judge the evidence:</strong> “Could these data plausibly have happened by chance if the null hypothesis were true?”</p>
+<ul>
+<li>Yes: Fail to reject <span class="math inline">\(H_0\)</span></li>
+<li>No: Reject <span class="math inline">\(H_0\)</span></li>
+</ul></li>
+</ul>
+</section>
+<section id="hypothesis-testing-framework" class="slide level2 smaller">
+<h2>Hypothesis testing framework</h2>
+<ul>
+<li><p>Start with a null hypothesis, <span class="math inline">\(H_0\)</span>, that represents the status quo</p></li>
+<li><p>Set an alternative hypothesis, <span class="math inline">\(H_A\)</span>, that represents the research question, i.e.&nbsp;what we are testing for</p></li>
+<li><p>Conduct a hypothesis test under the assumption that the null hypothesis is true and calculate a <strong>p-value</strong>.<br>
+<strong>Definition:</strong> <em>Probability of observed or more extreme outcome given that the null hypothesis is true.</em></p>
+<ul>
+<li>if the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, stick with the null hypothesis</li>
+<li>if they do, then reject the null hypothesis in favor of the alternative</li>
+</ul></li>
+</ul>
+</section>
+<section id="setting-the-hypotheses" class="slide level2 smaller">
+<h2>Setting the hypotheses</h2>
+<p>Which of the following is the correct set of hypotheses for the claim that the consultant has lower complication rates?</p>
+<ol type="a">
+<li><p><span class="math inline">\(H_0: p = 0.10\)</span>; <span class="math inline">\(H_A: p \ne 0.10\)</span></p></li>
+<li><p><span class="math inline">\(H_0: p = 0.10\)</span>; <span class="math inline">\(H_A: p &gt; 0.10\)</span></p></li>
+<li><p><span class="math inline">\(H_0: p = 0.10\)</span>; <span class="math inline">\(H_A: p &lt; 0.10\)</span></p></li>
+<li><p><span class="math inline">\(H_0: \hat{p} = 0.10\)</span>; <span class="math inline">\(H_A: \hat{p} \ne 0.10\)</span></p></li>
+<li><p><span class="math inline">\(H_0: \hat{p} = 0.10\)</span>; <span class="math inline">\(H_A: \hat{p} &gt; 0.10\)</span></p></li>
+<li><p><span class="math inline">\(H_0: \hat{p} = 0.10\)</span>; <span class="math inline">\(H_A: \hat{p} &lt; 0.10\)</span></p></li>
+</ol>
+<div class="fragment">
+<p>Correct is c.&nbsp;Hypotheses are about the true rate of complication <span class="math inline">\(p\)</span> not the observed ones <span class="math inline">\(\hat{p}\)</span></p>
+</div>
+</section>
+<section id="simulating-the-null-distribution" class="slide level2 smaller">
+<h2>Simulating the null distribution</h2>
+<p>Since <span class="math inline">\(H_0: p = 0.10\)</span>, we need to simulate a null distribution where the probability of success (complication) for each trial (patient) is 0.10.</p>
+<p><strong>How should we simulate the null distribution for this study using a bag of chips?</strong></p>
+<ul>
+<li>How many chips? <span class="fragment" style="color:red;">For example 10 which makes 10% choices possible</span></li>
+<li>How many colors? <span class="fragment" style="color:red;">2</span></li>
+<li>What should colors represent? <span class="fragment" style="color:red;">“complication”, “no complication”</span></li>
+<li>How many draws? <span class="fragment" style="color:red;">62 as the data</span></li>
+<li>With replacement or without replacement? <span class="fragment" style="color:red;">With replacement</span></li>
+</ul>
+<p>When sampling from the null distribution, what would be the expected proportion of “complications”? <span class="fragment" style="color:red;">0.1</span></p>
+</section>
+<section id="simulation" class="slide level2 smaller">
+<h2>Simulation!</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb4-2"><a href="#cb4-2"></a>outcomes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"complication"</span>, <span class="st">"no complication"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>sim1 <span class="ot">&lt;-</span> <span class="fu">sample</span>(outcomes, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>sim1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "no complication" "no complication" "no complication" "no complication"
+ [5] "no complication" "no complication" "no complication" "no complication"
+ [9] "no complication" "no complication" "no complication" "no complication"
+[13] "no complication" "complication"    "no complication" "no complication"
+[17] "no complication" "no complication" "no complication" "no complication"
+[21] "no complication" "no complication" "no complication" "no complication"
+[25] "no complication" "no complication" "no complication" "complication"   
+[29] "no complication" "no complication" "no complication" "no complication"
+[33] "no complication" "no complication" "no complication" "no complication"
+[37] "no complication" "no complication" "complication"    "no complication"
+[41] "no complication" "no complication" "no complication" "no complication"
+[45] "no complication" "no complication" "no complication" "no complication"
+[49] "no complication" "no complication" "no complication" "no complication"
+[53] "no complication" "no complication" "no complication" "no complication"
+[57] "no complication" "no complication" "no complication" "no complication"
+[61] "no complication" "no complication"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">sum</span>(sim1 <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0483871</code></pre>
+</div>
+</div>
+<p>Oh OK, this was is pretty close to the consultant’s rate. But maybe it was a rare event?</p>
+</section>
+<section id="more-simulation" class="slide level2 smaller">
+<h2>More simulation!</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>one_sim <span class="ot">&lt;-</span> <span class="cf">function</span>() <span class="fu">sample</span>(outcomes, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.9</span>), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1290323</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1290323</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09677419</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.09677419</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1774194</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1129032</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">sum</span>(<span class="fu">one_sim</span>() <span class="sc">==</span> <span class="st">"complication"</span>)<span class="sc">/</span><span class="dv">62</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1129032</code></pre>
+</div>
+</div>
+</section>
+<section id="automating-with-tidymodels" class="slide level2 smaller">
+<h2>Automating with <code>tidymodels</code><sup>1</sup></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>organ_donor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 62 × 1
+   outcome        
+   &lt;chr&gt;          
+ 1 complication   
+ 2 complication   
+ 3 complication   
+ 4 no complication
+ 5 no complication
+ 6 no complication
+ 7 no complication
+ 8 no complication
+ 9 no complication
+10 no complication
+# ℹ 52 more rows</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">set.seed</span>(<span class="dv">10</span>)</span>
+<span id="cb24-2"><a href="#cb24-2"></a>null_dist <span class="ot">&lt;-</span> organ_donor <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">specify</span>(<span class="at">response =</span> outcome, <span class="at">success =</span> <span class="st">"complication"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"point"</span>, </span>
+<span id="cb24-5"><a href="#cb24-5"></a>              <span class="at">p =</span> <span class="fu">c</span>(<span class="st">"complication"</span> <span class="ot">=</span> <span class="fl">0.10</span>, <span class="st">"no complication"</span> <span class="ot">=</span> <span class="fl">0.90</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-6"><a href="#cb24-6"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"draw"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-7"><a href="#cb24-7"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"prop"</span>)</span>
+<span id="cb24-8"><a href="#cb24-8"></a>null_dist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: outcome (factor)
+Null Hypothesis: point
+# A tibble: 100 × 2
+   replicate   stat
+       &lt;int&gt;  &lt;dbl&gt;
+ 1         1 0.0323
+ 2         2 0.0645
+ 3         3 0.0968
+ 4         4 0.0161
+ 5         5 0.161 
+ 6         6 0.0968
+ 7         7 0.0645
+ 8         8 0.129 
+ 9         9 0.161 
+10        10 0.0968
+# ℹ 90 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Of course, you can also do it in your own way without packages.</p></li></ol></aside></section>
+<section id="visualizing-the-null-distribution" class="slide level2 smaller">
+<h2>Visualizing the null distribution</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> null_dist, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> stat)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Null distribution"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
+</div>
+<img data-src="W09_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="calculating-the-p-value-visually" class="slide level2 smaller">
+<h2>Calculating the p-value, visually</h2>
+<p><strong>What is the p-value:</strong><sup>1</sup> <em>How often was the simulated sample proportion at least as extreme as the observed sample proportion?</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> null_dist, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> stat)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Null distribution"</span>)  <span class="sc">+</span></span>
+<span id="cb27-4"><a href="#cb27-4"></a> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">62</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img data-src="W09_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</div>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>The name p-value has nothing to do with the value <span class="math inline">\(p\)</span> we are currently trying to use as population parameter.</p></li></ol></aside></section>
+<section id="calculating-the-p-value-directly" class="slide level2">
+<h2>Calculating the p-value, directly</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb28-2"><a href="#cb28-2"></a> <span class="fu">summarise</span>(<span class="at">p_value =</span> <span class="fu">sum</span>(stat <span class="sc">&lt;=</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">62</span>)<span class="sc">/</span><span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  p_value
+    &lt;dbl&gt;
+1    0.13</code></pre>
+</div>
+</div>
+<p>This is the fraction of simulations where complications was equal or below 0.0483871.</p>
+</section>
+<section id="significance-level" class="slide level2 smaller">
+<h2>Significance level</h2>
+<ul>
+<li><p>A <strong>significance level</strong> <span class="math inline">\(\alpha\)</span> is a threshold we make up to make our judgment about the plausibility of the null hypothesis being true given the observed data.</p></li>
+<li><p>We often use <span class="math inline">\(\alpha = 0.05 = 5\%\)</span> as the cutoff for whether the p-value is low enough that the data are unlikely to have come from the null model.</p></li>
+<li><p>If p-value &lt; <span class="math inline">\(\alpha\)</span>, reject <span class="math inline">\(H_0\)</span> in favor of <span class="math inline">\(H_A\)</span>: The data provide convincing evidence for the alternative hypothesis.</p></li>
+<li><p>If p-value &gt; <span class="math inline">\(\alpha\)</span>, fail to reject <span class="math inline">\(H_0\)</span> in favor of <span class="math inline">\(H_A\)</span>: The data do not provide convincing evidence for the alternative hypothesis.</p></li>
+</ul>
+<p><strong>What is the conclusion of the hypothesis test?</strong></p>
+<p>Since the p-value is greater than the significance level, we fail to reject the null hypothesis. These data do not provide convincing evidence that this consultant incurs a lower complication rate than the 10% overall US complication rate.</p>
+</section>
+<section id="simulations-is-not-sufficient" class="slide level2 smaller">
+<h2>100 simulations is not sufficient</h2>
+<ul>
+<li>We simulate 15,000 times to get an accurate distribution.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>null_dist <span class="ot">&lt;-</span> organ_donor <span class="sc">|&gt;</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">specify</span>(<span class="at">response =</span> outcome, <span class="at">success =</span> <span class="st">"complication"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">hypothesize</span>(<span class="at">null =</span> <span class="st">"point"</span>, </span>
+<span id="cb30-4"><a href="#cb30-4"></a>              <span class="at">p =</span> <span class="fu">c</span>(<span class="st">"complication"</span> <span class="ot">=</span> <span class="fl">0.10</span>, <span class="st">"no complication"</span> <span class="ot">=</span> <span class="fl">0.90</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb30-5"><a href="#cb30-5"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">15000</span>, <span class="at">type =</span> <span class="st">"simulate"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb30-6"><a href="#cb30-6"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"prop"</span>)</span>
+<span id="cb30-7"><a href="#cb30-7"></a><span class="fu">ggplot</span>(<span class="at">data =</span> null_dist, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> stat)) <span class="sc">+</span></span>
+<span id="cb30-8"><a href="#cb30-8"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span></span>
+<span id="cb30-9"><a href="#cb30-9"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">62</span>, <span class="at">color =</span> <span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="W09_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="our-more-robust-p-value" class="slide level2">
+<h2>Our more robust p-value</h2>
+<p>For the null distribution with 15,000 simulations</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>null_dist <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">filter</span>(stat <span class="sc">&lt;=</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">62</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">summarise</span>(<span class="at">p_value =</span> <span class="fu">n</span>()<span class="sc">/</span><span class="fu">nrow</span>(null_dist))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  p_value
+    &lt;dbl&gt;
+1   0.125</code></pre>
+</div>
+</div>
+<p>Oh OK, our fist p-value was much more borderline in favor of the alternative hypothesis.</p>
+</section>
+<section id="xkcd-on-p-values" class="slide level2 smaller">
+<h2>xkcd on p-values</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><a href="https://xkcd.com/1478/"><img data-src="https://imgs.xkcd.com/comics/p_values_2x.png" height="500"></a> <a href="https://xkcd.com/882/"><img data-src="https://imgs.xkcd.com/comics/significant.png" height="500"></a></p>
+</div><div class="column" style="width:40%;">
+<div class="fragment">
+<ul>
+<li>Significance levels are fairly arbitrary. Sometimes they are used (wrongly) as definitive judgments</li>
+<li>They can even be used to do <em>p-hacking</em>: Searching for “significant” effects in observational data</li>
+<li>In parts of science it has become a “gamed” performance metric.</li>
+<li>The p-value says nothing about effect size!</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="p-value-misinterpretation" class="slide level2 smaller">
+<h2>p-value misinterpretation</h2>
+<p>p-values do not measure<sup>1</sup></p>
+<ul>
+<li>the probability that the studied hypothesis is true</li>
+<li>the probability that the data were produced by random chance alone</li>
+<li>the size of an effect</li>
+<li>the importance of a result” or “evidence regarding a model or hypothesis”.</li>
+</ul>
+<div class="fragment">
+<p>Correct:<br>
+The p-value is the probability of obtaining test results at least as extreme as the result actually observed, under the assumption that the null hypothesis is correct.</p>
+<p>p-values and significance tests, when properly applied and interpreted, increase the rigor of the conclusions drawn from data.<sup>2</sup></p>
+</div>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>From the American Statistical Association (ASA) 2016</p></li><li id="fn4"><p>From the American Statistical Association (ASA) 2019</p></li></ol></aside></section>
+<section id="p-value-in-model-outputs" class="slide level2 smaller">
+<h2>p-value in model outputs</h2>
+<p>Model output for a linear model with palmer penguins.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb33-2"><a href="#cb33-2"></a>    <span class="fu">fit</span>(bill_length_mm <span class="sc">~</span> bill_depth_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb33-3"><a href="#cb33-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term          estimate std.error statistic  p.value
+  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     55.1       2.52      21.9  6.91e-67
+2 bill_depth_mm   -0.650     0.146     -4.46 1.12e- 5</code></pre>
+</div>
+</div>
+<p>Model output for a logistic regression model with email from <a href="https://www.openintro.org/data/index.php?data=email">openintro</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">fit</span>(spam <span class="sc">~</span> from <span class="sc">+</span> cc, <span class="at">data =</span> email, <span class="at">family =</span> <span class="st">"binomial"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  term         estimate std.error statistic p.value
+  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+1 (Intercept)  13.6      309.        0.0439   0.965
+2 from1       -15.8      309.       -0.0513   0.959
+3 cc            0.00423    0.0193    0.220    0.826</code></pre>
+</div>
+</div>
+<p>What do the p-values mean? What is the null hypothesis?</p>
+<div class="fragment">
+<p>Null-Hypothesis: There is no relationship between the predictor variable and the response variable, that means that the coefficient is equal to zero.</p>
+</div>
+</section></section>
+<section>
+<section id="probability-for-data-science-introduction" class="title-slide slide level1 center" data-background-color="aquamarine">
+<h1>Probability for Data Science (Introduction)</h1>
+
+</section>
+<section id="probability-topics-for-data-science" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Probability Topics for Data Science</h2>
+<div>
+<ul>
+<li class="fragment">The concept of probability from the mathematical perspective.
+<ul>
+<li class="fragment">What are probabilistic events, probability functions and random variables.</li>
+</ul></li>
+<li class="fragment">Random variables: A probabilistic view on variables in a data frame</li>
+<li class="fragment">Probabilistic simulations. For example resampling and cross-validation.</li>
+<li class="fragment">The confusion matrix from a probabilistic view: Conditional probabilities</li>
+<li class="fragment">Modeling distributions of variables: The concepts of discrete and continuous probability distributionsa and some examples.</li>
+<li class="fragment">The central limit theorem or why the normal distribution is so important.</li>
+<li class="fragment">Probability theory and statistics</li>
+</ul>
+</div>
+</section>
+<section id="what-is-probability" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>What is probability</h2>
+<div>
+<ul>
+<li class="fragment">The systematic and rigorous treatment of uncertainty.</li>
+<li class="fragment">We have a certain intuition of probability visible in sentences like:
+<ul>
+<li class="fragment">“That’s not very probable.”</li>
+<li class="fragment">“That is likely.”</li>
+<li class="fragment">“I don’t have a prior for that.”</li>
+</ul></li>
+<li class="fragment">We can call it a <strong>model for uncertainty</strong>: A simplified but formalized way to think about uncertain events.</li>
+<li class="fragment">The model of probability is one of the most successful mathematical models. It is used in many domains.</li>
+</ul>
+</div>
+</section>
+<section id="two-different-flavors" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Two different flavors</h2>
+<ul>
+<li>Model for uncertainty as <em>subjective</em> or <em>objective</em> probability of an uncertain event.</li>
+<li>They are also called <em>Bayesian</em> vs.&nbsp;<em>Frequentist</em> interpretation of probability. * They differ in the way of reasoning, the interpretation what is random, and in terminology.</li>
+</ul>
+</section>
+<section id="objective-interpretation" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Objective interpretation</h2>
+<p>Probability is <em>relative frequency</em> in the limit of indefinite sampling. It is the long run behavior of non-deterministic outcomes.</p>
+<ul>
+<li>If we flip the same coin several times the relative frequency of the number of HEADS converges to the probability of HEADS.</li>
+<li>If we draw people at random the relative frequency of people with heights between 1.70m and 1.75m converges to the probability that a person is in this range.</li>
+<li>In this frequentist philosophy the parameters of the population we sample from is fixed and the data is a random selection.</li>
+</ul>
+</section>
+<section id="subjective-interpretation" class="slide level2 smaller" data-background-color="aquamarine">
+<h2>Subjective interpretation</h2>
+<p>Probability is a belief a person has about the likelihood that an event occurs. This can be formalized by the condition under which a person would make a bet.</p>
+<ul>
+<li>If say we flip a coin, we can offer a person a bet for HEADS, e.g.&nbsp;you gain 1€ when the outcome is heads and you lose 2€ when it is TAILS. The person would be indifferent between accepting and rejecting the bet if their subjective belief is that HEADS will come two times more likely than TAILS (odds 2:1 or probability 2/3). The subjective probability is the probability where the person is indifferent.</li>
+<li>We can make up similar bets for the heights of randomly drawn people.</li>
+<li>In Bayesian philosophy the data we know is fixed but the parameters of the population are random and associated with probabilities.</li>
+</ul>
+<p><span style="color:red;">The objective and subjective views are not mutually exclusive and it is not important to take a side.</span></p>
 
 
 <img src="img/ConstructorUniversity.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://github.com/CU-F23-MDSSB-01-Concepts-Tools">CU-F23-MDSSB-DSCO-02: Data Science Concepts</a></p>
 </div>
-</section>
+</section></section>
+
     </div>
   </div>
 
@@ -558,6 +1061,44 @@ Jan Lorenz
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

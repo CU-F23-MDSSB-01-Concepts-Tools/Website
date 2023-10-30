@@ -375,7 +375,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n7\n10-16, 10-19\nFitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables  Slides Week 7\nR\n\n\n8\n10-23, 10-26\nLogistic Regression, Classification Problems, Prediction  Slides Week 8\n\n\n\n9\n10-30, 11-02\nProbability, Random Variables, Statistics, Hypothesis Testing, Simulating Data\nR\n\n\n10\n11-06, 11-09\nModeling Mindsets, Cluster Analysis\npython\n\n\n11\n11-13, 11-16\nDomain Knowledge, Communication\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
+    "text": "Developing Schedule\n\n\n\n\n\nThe schedule is tentative it will be continuously updated also with readings/viewings, homework and learnings.\nImportant Links:\nGitHub organization of the course: https://github.com/CU-F23-MDSSB-01-Concepts-Tools\nOrganization repository with non-public information and FAQ in Discussions: https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization\n\n\n\n\nTabular Schedule\n\n\n\n\n\n\n\n\n\nWeek\nDates\nTopic\nTools Course\n\n\n\n\n1\n09-04, 09-07\nWhat is Data Science? Course Organization, Our software toolkit  Slides Week 1, Achievements Week 1\nR\n\n\n2\n09-11, 09-14\nData Visualization, Data Formats  Slides Week 2 Intro, Slides Week 2 Main Part, Repo with Example Visualization of our data science profiles Achievements Week 2\nR\n\n\n3\n09-18, 09-21\nData Import, Data Wrangling, Relational Data  Slides Week 3\npython\n\n\n4\n09-25, 09-28\nMath refresh, Function Programming, Descriptive Statistics  Slides Week 4\npython\n\n\n5\n10-02, 10-05\nSummary Statistics, Exploratory Data Analysis, Principle Component Analysis  Slides Week 5\nR\n\n\n6\n10-09, 10-12\nEpidemic Modeling, Calculus, Linear Model, Fitting a Linear Model  Slides Week 6\npython\n\n\n7\n10-16, 10-19\nFitting Linear Models, Interaction Effects, Nonlinear Models, Predicting Categorical Variables  Slides Week 7\nR\n\n\n8\n10-23, 10-26\nLogistic Regression, Classification Problems, Prediction  Slides Week 8\n\n\n\n9\n10-30, 11-02\nIntroduction to Project Reports (in Organization repo) Hypothesis Testing  Slides Week 9\nR\n\n\n10\n11-06, 11-09\nProbability, Random Variables, Statistics, Cluster Analysis\npython\n\n\n11\n11-13, 11-16\nModeling Mindsets, Domain Knowledge, Communication\nR\n\n\n12\n11-20, 11-23\nTo be decided\npython\n\n\n13\n11-27, 11-30\nTo be decided\nR / python\n\n\n14\n12-04, 12-07\nCourse Review, Exam Preparation\nPresentations\n\n\n\n\n\n\n\n\n\nNote\n\n\n\n\n\nAll topics in the future are subject to change and adaptation to student needs. Topics in italics are tentative.\n\n\n\n\n\n1 Achievements Week 1\nYou have\n\nread the Syllabus and understood the course organization\na running R with RStudio installation an you computer\ndone the git-GitHub dance and know what the tools are in principle\nrendered quarto documents and understood its idea\nmade your first steps with R\nfinished Homework 01 (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)\n\nAdditional material:\n\nQuarto: Watch https://www.youtube.com/watch?v=_f3latmOhew from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).\nR: Read the following sections in R for Data Science\n\nCh 1:Introduction\nWhole Game (the outline of the part)\n\n\n\n\n2 Achievements Week 2\nYou have\nTo be completed\nAdditional material:\n\nggplot: Read the following sections in R for Data Science\n\nCh 2: Data Visualization\nIf you want to go deeper already now, read the chapter Ch 10: Layers\n\n\nTo be completed\n\n\n3 Achievements Week 3\nYou have To be completed\nAdditional material:\nRead the following sections in R for Data Science\n\nCh 6: Tidy Data\nCh 8: Data Import\nCh 20: Joins\n\n\n\n4 Achievements Week 4\nYou have To be completed\nAdditional material:\nLeek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. https://doi.org/10.1126/science.aaa6146.\nRead the following sections in R for Data Science\n\nCh 26: Functions\nCh 27: Iteration\nCh 11: Exploratory Data Analysis"
   },
   {
     "objectID": "reports.html",
@@ -404,6 +404,188 @@
     "title": "Create a homework report",
     "section": "3 Structuring your report",
     "text": "3 Structuring your report\nMake headers with # and maybe ## for second level headers."
+  },
+  {
+    "objectID": "W09.html#organ-donors",
+    "href": "W09.html#organ-donors",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Organ donors",
+    "text": "Organ donors\nPeople providing an organ for donation sometimes seek the help of a special “medical consultant”. These consultants assist the patient in all aspects of the surgery, with the goal of reducing the possibility of complications during the medical procedure and recovery. Patients might choose a consultant based in part on the historical complication rate of the consultant’s clients.\nOne consultant tried to attract patients by noting that the average complication rate for liver donor surgeries in the US is about 10%, but her clients have only had 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!)."
+  },
+  {
+    "objectID": "W09.html#data",
+    "href": "W09.html#data",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Data",
+    "text": "Data\n\norgan_donor <- tibble(\n  outcome = c(rep(\"complication\", 3), rep(\"no complication\", 59))\n)\n\n\norgan_donor |>\n  count(outcome)\n\n# A tibble: 2 × 2\n  outcome             n\n  <chr>           <int>\n1 complication        3\n2 no complication    59"
+  },
+  {
+    "objectID": "W09.html#parameter-vs.-statistic",
+    "href": "W09.html#parameter-vs.-statistic",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Parameter vs. statistic",
+    "text": "Parameter vs. statistic\nA parameter for a hypothesis test is the “true” value of interest. We typically estimate the parameter using a sample statistic as a point estimate.\n\\(p\\): true rate of complication, here 0.1 (10% complication rate in US)\n\\(\\hat{p}\\): rate of complication in the sample = \\(\\frac{3}{62}\\) = 0.048"
+  },
+  {
+    "objectID": "W09.html#correlation-vs.-causation",
+    "href": "W09.html#correlation-vs.-causation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Correlation vs. causation",
+    "text": "Correlation vs. causation\nIs it possible to assess the consultant’s claim using the data?\nNo. The claim is: There is a causal connection, but the data are observational. For example, maybe patients who can afford a medical consultant can afford better medical care, which can also lead to a lower complication rate (for example).\n\nWhile it is not possible to assess the causal claim, it is still possible to test for an association using these data. For this question we ask, could the low complication rate of \\(\\hat{p}\\) = 0.048 be due to chance?"
+  },
+  {
+    "objectID": "W09.html#two-claims",
+    "href": "W09.html#two-claims",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Two claims",
+    "text": "Two claims\n\nNull hypothesis: “There is nothing going on”\n\nComplication rate for this consultant is no different than the US average of 10%\n\nAlternative hypothesis: “There is something going on”\n\nComplication rate for this consultant is lower than the US average of 10%"
+  },
+  {
+    "objectID": "W09.html#hypothesis-testing-as-a-court-trial",
+    "href": "W09.html#hypothesis-testing-as-a-court-trial",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Hypothesis testing as a court trial",
+    "text": "Hypothesis testing as a court trial\n\nNull hypothesis, \\(H_0\\): Defendant is innocent\nAlternative hypothesis, \\(H_A\\): Defendant is guilty\nPresent the evidence: Collect data\nJudge the evidence: “Could these data plausibly have happened by chance if the null hypothesis were true?”\n\nYes: Fail to reject \\(H_0\\)\nNo: Reject \\(H_0\\)"
+  },
+  {
+    "objectID": "W09.html#hypothesis-testing-framework",
+    "href": "W09.html#hypothesis-testing-framework",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Hypothesis testing framework",
+    "text": "Hypothesis testing framework\n\nStart with a null hypothesis, \\(H_0\\), that represents the status quo\nSet an alternative hypothesis, \\(H_A\\), that represents the research question, i.e. what we are testing for\nConduct a hypothesis test under the assumption that the null hypothesis is true and calculate a p-value.\nDefinition: Probability of observed or more extreme outcome given that the null hypothesis is true.\n\nif the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, stick with the null hypothesis\nif they do, then reject the null hypothesis in favor of the alternative"
+  },
+  {
+    "objectID": "W09.html#setting-the-hypotheses",
+    "href": "W09.html#setting-the-hypotheses",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Setting the hypotheses",
+    "text": "Setting the hypotheses\nWhich of the following is the correct set of hypotheses for the claim that the consultant has lower complication rates?\n\n\\(H_0: p = 0.10\\); \\(H_A: p \\ne 0.10\\)\n\\(H_0: p = 0.10\\); \\(H_A: p > 0.10\\)\n\\(H_0: p = 0.10\\); \\(H_A: p < 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} \\ne 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} > 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} < 0.10\\)\n\n\nCorrect is c. Hypotheses are about the true rate of complication \\(p\\) not the observed ones \\(\\hat{p}\\)"
+  },
+  {
+    "objectID": "W09.html#simulating-the-null-distribution",
+    "href": "W09.html#simulating-the-null-distribution",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Simulating the null distribution",
+    "text": "Simulating the null distribution\nSince \\(H_0: p = 0.10\\), we need to simulate a null distribution where the probability of success (complication) for each trial (patient) is 0.10.\nHow should we simulate the null distribution for this study using a bag of chips?\n\nHow many chips? For example 10 which makes 10% choices possible\nHow many colors? 2\nWhat should colors represent? “complication”, “no complication”\nHow many draws? 62 as the data\nWith replacement or without replacement? With replacement\n\nWhen sampling from the null distribution, what would be the expected proportion of “complications”? 0.1"
+  },
+  {
+    "objectID": "W09.html#simulation",
+    "href": "W09.html#simulation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Simulation!",
+    "text": "Simulation!\n\nset.seed(1234)\noutcomes <- c(\"complication\", \"no complication\")\nsim1 <- sample(outcomes, size = 62, prob = c(0.1, 0.9), replace = TRUE)\nsim1\n\n [1] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n [5] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n [9] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[13] \"no complication\" \"complication\"    \"no complication\" \"no complication\"\n[17] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[21] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[25] \"no complication\" \"no complication\" \"no complication\" \"complication\"   \n[29] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[33] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[37] \"no complication\" \"no complication\" \"complication\"    \"no complication\"\n[41] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[45] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[49] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[53] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[57] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[61] \"no complication\" \"no complication\"\n\nsum(sim1 == \"complication\")/62\n\n[1] 0.0483871\n\n\nOh OK, this was is pretty close to the consultant’s rate. But maybe it was a rare event?"
+  },
+  {
+    "objectID": "W09.html#more-simulation",
+    "href": "W09.html#more-simulation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "More simulation!",
+    "text": "More simulation!\n\none_sim <- function() sample(outcomes, size = 62, prob = c(0.1, 0.9), replace = TRUE)\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1290323\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1290323\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.09677419\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.09677419\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1774194\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1129032\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1129032"
+  },
+  {
+    "objectID": "W09.html#automating-with-tidymodels",
+    "href": "W09.html#automating-with-tidymodels",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Automating with tidymodels1",
+    "text": "Automating with tidymodels1\n\n\n\norgan_donor\n\n# A tibble: 62 × 1\n   outcome        \n   <chr>          \n 1 complication   \n 2 complication   \n 3 complication   \n 4 no complication\n 5 no complication\n 6 no complication\n 7 no complication\n 8 no complication\n 9 no complication\n10 no complication\n# ℹ 52 more rows\n\n\n\n\nset.seed(10)\nnull_dist <- organ_donor |>\n  specify(response = outcome, success = \"complication\") |>\n  hypothesize(null = \"point\", \n              p = c(\"complication\" = 0.10, \"no complication\" = 0.90)) |> \n  generate(reps = 100, type = \"draw\") |> \n  calculate(stat = \"prop\")\nnull_dist\n\nResponse: outcome (factor)\nNull Hypothesis: point\n# A tibble: 100 × 2\n   replicate   stat\n       <int>  <dbl>\n 1         1 0.0323\n 2         2 0.0645\n 3         3 0.0968\n 4         4 0.0161\n 5         5 0.161 \n 6         6 0.0968\n 7         7 0.0645\n 8         8 0.129 \n 9         9 0.161 \n10        10 0.0968\n# ℹ 90 more rows\n\n\n\n\nOf course, you can also do it in your own way without packages."
+  },
+  {
+    "objectID": "W09.html#visualizing-the-null-distribution",
+    "href": "W09.html#visualizing-the-null-distribution",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Visualizing the null distribution",
+    "text": "Visualizing the null distribution\n\nggplot(data = null_dist, mapping = aes(x = stat)) +\n  geom_histogram(binwidth = 0.01) +\n  labs(title = \"Null distribution\")"
+  },
+  {
+    "objectID": "W09.html#calculating-the-p-value-visually",
+    "href": "W09.html#calculating-the-p-value-visually",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Calculating the p-value, visually",
+    "text": "Calculating the p-value, visually\nWhat is the p-value:1 How often was the simulated sample proportion at least as extreme as the observed sample proportion?\n\nggplot(data = null_dist, mapping = aes(x = stat)) +\n  geom_histogram(binwidth = 0.01) +\n  labs(title = \"Null distribution\")  +\n geom_vline(xintercept = 3/62, color = \"red\")\n\n\n\n\nThe name p-value has nothing to do with the value \\(p\\) we are currently trying to use as population parameter."
+  },
+  {
+    "objectID": "W09.html#calculating-the-p-value-directly",
+    "href": "W09.html#calculating-the-p-value-directly",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Calculating the p-value, directly",
+    "text": "Calculating the p-value, directly\n\nnull_dist |>\n summarise(p_value = sum(stat <= 3/62)/n())\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1    0.13\n\n\nThis is the fraction of simulations where complications was equal or below 0.0483871."
+  },
+  {
+    "objectID": "W09.html#significance-level",
+    "href": "W09.html#significance-level",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Significance level",
+    "text": "Significance level\n\nA significance level \\(\\alpha\\) is a threshold we make up to make our judgment about the plausibility of the null hypothesis being true given the observed data.\nWe often use \\(\\alpha = 0.05 = 5\\%\\) as the cutoff for whether the p-value is low enough that the data are unlikely to have come from the null model.\nIf p-value < \\(\\alpha\\), reject \\(H_0\\) in favor of \\(H_A\\): The data provide convincing evidence for the alternative hypothesis.\nIf p-value > \\(\\alpha\\), fail to reject \\(H_0\\) in favor of \\(H_A\\): The data do not provide convincing evidence for the alternative hypothesis.\n\nWhat is the conclusion of the hypothesis test?\nSince the p-value is greater than the significance level, we fail to reject the null hypothesis. These data do not provide convincing evidence that this consultant incurs a lower complication rate than the 10% overall US complication rate."
+  },
+  {
+    "objectID": "W09.html#simulations-is-not-sufficient",
+    "href": "W09.html#simulations-is-not-sufficient",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "100 simulations is not sufficient",
+    "text": "100 simulations is not sufficient\n\nWe simulate 15,000 times to get an accurate distribution.\n\n\nnull_dist <- organ_donor |>\n  specify(response = outcome, success = \"complication\") |>\n  hypothesize(null = \"point\", \n              p = c(\"complication\" = 0.10, \"no complication\" = 0.90)) |> \n  generate(reps = 15000, type = \"simulate\") |> \n  calculate(stat = \"prop\")\nggplot(data = null_dist, mapping = aes(x = stat)) +\n  geom_histogram(binwidth = 0.01) +\n  geom_vline(xintercept = 3/62, color = \"red\")"
+  },
+  {
+    "objectID": "W09.html#our-more-robust-p-value",
+    "href": "W09.html#our-more-robust-p-value",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Our more robust p-value",
+    "text": "Our more robust p-value\nFor the null distribution with 15,000 simulations\n\nnull_dist |>\n  filter(stat <= 3/62) |>\n  summarise(p_value = n()/nrow(null_dist))\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.125\n\n\nOh OK, our fist p-value was much more borderline in favor of the alternative hypothesis."
+  },
+  {
+    "objectID": "W09.html#xkcd-on-p-values",
+    "href": "W09.html#xkcd-on-p-values",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "xkcd on p-values",
+    "text": "xkcd on p-values\n\n\n \n\n\n\nSignificance levels are fairly arbitrary. Sometimes they are used (wrongly) as definitive judgments\nThey can even be used to do p-hacking: Searching for “significant” effects in observational data\nIn parts of science it has become a “gamed” performance metric.\nThe p-value says nothing about effect size!"
+  },
+  {
+    "objectID": "W09.html#p-value-misinterpretation",
+    "href": "W09.html#p-value-misinterpretation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "p-value misinterpretation",
+    "text": "p-value misinterpretation\np-values do not measure1\n\nthe probability that the studied hypothesis is true\nthe probability that the data were produced by random chance alone\nthe size of an effect\nthe importance of a result” or “evidence regarding a model or hypothesis”.\n\n\nCorrect:\nThe p-value is the probability of obtaining test results at least as extreme as the result actually observed, under the assumption that the null hypothesis is correct.\np-values and significance tests, when properly applied and interpreted, increase the rigor of the conclusions drawn from data.2\n\nFrom the American Statistical Association (ASA) 2016From the American Statistical Association (ASA) 2019"
+  },
+  {
+    "objectID": "W09.html#p-value-in-model-outputs",
+    "href": "W09.html#p-value-in-model-outputs",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "p-value in model outputs",
+    "text": "p-value in model outputs\nModel output for a linear model with palmer penguins.\n\nlinear_reg() |> set_engine(\"lm\") |> \n    fit(bill_length_mm ~ bill_depth_mm, data = penguins) |> \n tidy()\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic  p.value\n  <chr>            <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     55.1       2.52      21.9  6.91e-67\n2 bill_depth_mm   -0.650     0.146     -4.46 1.12e- 5\n\n\nModel output for a logistic regression model with email from openintro\n\nlogistic_reg() |>  set_engine(\"glm\") |>\n  fit(spam ~ from + cc, data = email, family = \"binomial\") |>\n  tidy()\n\n# A tibble: 3 × 5\n  term         estimate std.error statistic p.value\n  <chr>           <dbl>     <dbl>     <dbl>   <dbl>\n1 (Intercept)  13.6      309.        0.0439   0.965\n2 from1       -15.8      309.       -0.0513   0.959\n3 cc            0.00423    0.0193    0.220    0.826\n\n\nWhat do the p-values mean? What is the null hypothesis?\n\nNull-Hypothesis: There is no relationship between the predictor variable and the response variable, that means that the coefficient is equal to zero."
+  },
+  {
+    "objectID": "W09.html#probability-topics-for-data-science",
+    "href": "W09.html#probability-topics-for-data-science",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Probability Topics for Data Science",
+    "text": "Probability Topics for Data Science\n\n\nThe concept of probability from the mathematical perspective.\n\nWhat are probabilistic events, probability functions and random variables.\n\nRandom variables: A probabilistic view on variables in a data frame\nProbabilistic simulations. For example resampling and cross-validation.\nThe confusion matrix from a probabilistic view: Conditional probabilities\nModeling distributions of variables: The concepts of discrete and continuous probability distributionsa and some examples.\nThe central limit theorem or why the normal distribution is so important.\nProbability theory and statistics"
+  },
+  {
+    "objectID": "W09.html#what-is-probability",
+    "href": "W09.html#what-is-probability",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "What is probability",
+    "text": "What is probability\n\n\nThe systematic and rigorous treatment of uncertainty.\nWe have a certain intuition of probability visible in sentences like:\n\n“That’s not very probable.”\n“That is likely.”\n“I don’t have a prior for that.”\n\nWe can call it a model for uncertainty: A simplified but formalized way to think about uncertain events.\nThe model of probability is one of the most successful mathematical models. It is used in many domains."
+  },
+  {
+    "objectID": "W09.html#two-different-flavors",
+    "href": "W09.html#two-different-flavors",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Two different flavors",
+    "text": "Two different flavors\n\nModel for uncertainty as subjective or objective probability of an uncertain event.\nThey are also called Bayesian vs. Frequentist interpretation of probability. * They differ in the way of reasoning, the interpretation what is random, and in terminology."
+  },
+  {
+    "objectID": "W09.html#objective-interpretation",
+    "href": "W09.html#objective-interpretation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Objective interpretation",
+    "text": "Objective interpretation\nProbability is relative frequency in the limit of indefinite sampling. It is the long run behavior of non-deterministic outcomes.\n\nIf we flip the same coin several times the relative frequency of the number of HEADS converges to the probability of HEADS.\nIf we draw people at random the relative frequency of people with heights between 1.70m and 1.75m converges to the probability that a person is in this range.\nIn this frequentist philosophy the parameters of the population we sample from is fixed and the data is a random selection."
+  },
+  {
+    "objectID": "W09.html#subjective-interpretation",
+    "href": "W09.html#subjective-interpretation",
+    "title": "W#09: Hypothesis Testing, Probability for Data Science",
+    "section": "Subjective interpretation",
+    "text": "Subjective interpretation\nProbability is a belief a person has about the likelihood that an event occurs. This can be formalized by the condition under which a person would make a bet.\n\nIf say we flip a coin, we can offer a person a bet for HEADS, e.g. you gain 1€ when the outcome is heads and you lose 2€ when it is TAILS. The person would be indifferent between accepting and rejecting the bet if their subjective belief is that HEADS will come two times more likely than TAILS (odds 2:1 or probability 2/3). The subjective probability is the probability where the person is indifferent.\nWe can make up similar bets for the heights of randomly drawn people.\nIn Bayesian philosophy the data we know is fixed but the parameters of the population are random and associated with probabilities.\n\nThe objective and subjective views are not mutually exclusive and it is not important to take a side.\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "W08.html#logistic-regression-1",
@@ -1012,7 +1194,7 @@
     "href": "W12.html#random-number-generator-r",
     "title": "W#12: Probability, Principal Component Analysis",
     "section": "Random number generator r",
-    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  7  3  4 11  5  7  6  4  7  9\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
+    "text": "Random number generator r\n\nRandom binomial numbers are drawn with rbinom\n\n\n# 10 random binomial numbers for 62 trials with success probability 0.1\nrbinom(10, size = 62, prob = 0.1)\n\n [1]  5  8  6  8  6  5  9  7 10  6\n\n\n\nWe can reproduce the null distribution from hypothesis testing with 62 organ donations and 10% complication probability this way.\n\nWe produce 100,000 random consultants\nThen we compute the fraction of which have 3 or less complications\n\n\n\nset.seed(2022)\ns <- rbinom(100000, size = 62, prob = 0.1)\nsum(s<=3)/100000\n\n[1] 0.12038\n\n# Two other samples\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.11918\n\nsum(rbinom(100000, size = 62, prob = 0.1)<=3)/100000\n\n[1] 0.12034"
   },
   {
     "objectID": "W12.html#empirical-distributions",
@@ -1257,7 +1439,7 @@
     "href": "W06.html#si-model-simulation-in-r",
     "title": "W#06: Epidemic Modeling, Calculus, Linear Model, Fitting a Linear Model",
     "section": "SI-model: Simulation in R",
-    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1] FALSE FALSE FALSE FALSE FALSE  TRUE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
+    "text": "SI-model: Simulation in R\n\nWe produce a vector of length \\(N\\) with entries representing the state of each individual as \"S\" or \"I\".\nWe model the random infection process in each step of unit time\n\nSetup\nParameters: \\(N=150, \\beta=0.3\\), a function to produce randomly infect individuals\n\n\nN <- 150\nbeta <- 0.3\nrandomly_infect <- function(N, prob) { \n runif(N) < prob \n # Gives a logical vector of length N\n # where TRUE appears with probability beta\n}\n# Test\nrandomly_infect(N, beta) |> head() # First 6\n\n\n[1]  TRUE FALSE  TRUE FALSE FALSE  TRUE\n\n\n\n\n\ninit <- rep(\"S\",N) # All susceptible\ninit[1] <- \"I\" # Infect one individual\ninit |> head() # First 6\n\n\n[1] \"I\" \"S\" \"S\" \"S\" \"S\" \"S\""
   },
   {
     "objectID": "W06.html#si-model-simulation-in-r-1",
@@ -1880,175 +2062,7 @@
     "href": "W10.html#what-is-a-wise-crowd",
     "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
     "section": "What is a wise crowd?",
-    "text": "What is a wise crowd?\nAssume the dots are estimates. Which is a wise crowd?\n\n\n\nOf course, high trueness and high precision! But, …\nFocusing on the crowd being wise instead of its individuals: High trueness, low precision."
-  },
-  {
-    "objectID": "W10.html#organ-donors",
-    "href": "W10.html#organ-donors",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Organ donors",
-    "text": "Organ donors\nPeople providing an organ for donation sometimes seek the help of a special “medical consultant”. These consultants assist the patient in all aspects of the surgery, with the goal of reducing the possibility of complications during the medical procedure and recovery. Patients might choose a consultant based in part on the historical complication rate of the consultant’s clients.\nOne consultant tried to attract patients by noting that the average complication rate for liver donor surgeries in the US is about 10%, but her clients have only had 3 complications in the 62 liver donor surgeries she has facilitated. She claims this is strong evidence that her work meaningfully contributes to reducing complications (and therefore she should be hired!)."
-  },
-  {
-    "objectID": "W10.html#data",
-    "href": "W10.html#data",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Data",
-    "text": "Data\n\norgan_donor <- tibble(\n  outcome = c(rep(\"complication\", 3), rep(\"no complication\", 59))\n)\n\n\norgan_donor |>\n  count(outcome)\n\n# A tibble: 2 × 2\n  outcome             n\n  <chr>           <int>\n1 complication        3\n2 no complication    59"
-  },
-  {
-    "objectID": "W10.html#parameter-vs.-statistic",
-    "href": "W10.html#parameter-vs.-statistic",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Parameter vs. statistic",
-    "text": "Parameter vs. statistic\nA parameter for a hypothesis test is the “true” value of interest. We typically estimate the parameter using a sample statistic as a point estimate.\n\\(p\\): true rate of complication, here 0.1 (10% complication rate in US)\n\\(\\hat{p}\\): rate of complication in the sample = \\(\\frac{3}{62}\\) = 0.048"
-  },
-  {
-    "objectID": "W10.html#correlation-vs.-causation",
-    "href": "W10.html#correlation-vs.-causation",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Correlation vs. causation",
-    "text": "Correlation vs. causation\nIs it possible to assess the consultant’s claim using the data?\nNo. The claim is: There is a causal connection, but the data are observational. For example, maybe patients who can afford a medical consultant can afford better medical care, which can also lead to a lower complication rate (for example).\nWhile it is not possible to assess the causal claim, it is still possible to test for an association using these data. For this question we ask, could the low complication rate of \\(\\hat{p}\\) = 0.048 be due to chance?"
-  },
-  {
-    "objectID": "W10.html#two-claims",
-    "href": "W10.html#two-claims",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Two claims",
-    "text": "Two claims\n\nNull hypothesis: “There is nothing going on”\n\nComplication rate for this consultant is no different than the US average of 10%\n\nAlternative hypothesis: “There is something going on”\n\nComplication rate for this consultant is lower than the US average of 10%"
-  },
-  {
-    "objectID": "W10.html#hypothesis-testing-as-a-court-trial",
-    "href": "W10.html#hypothesis-testing-as-a-court-trial",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Hypothesis testing as a court trial",
-    "text": "Hypothesis testing as a court trial\n\nNull hypothesis, \\(H_0\\): Defendant is innocent\nAlternative hypothesis, \\(H_A\\): Defendant is guilty\nPresent the evidence: Collect data\nJudge the evidence: “Could these data plausibly have happened by chance if the null hypothesis were true?”\n\nYes: Fail to reject \\(H_0\\)\nNo: Reject \\(H_0\\)"
-  },
-  {
-    "objectID": "W10.html#hypothesis-testing-framework",
-    "href": "W10.html#hypothesis-testing-framework",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Hypothesis testing framework",
-    "text": "Hypothesis testing framework\n\nStart with a null hypothesis, \\(H_0\\), that represents the status quo\nSet an alternative hypothesis, \\(H_A\\), that represents the research question, i.e. what we are testing for\nConduct a hypothesis test under the assumption that the null hypothesis is true and calculate a p-value.\nDefinition: Probability of observed or more extreme outcome given that the null hypothesis is true.\n\nif the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, stick with the null hypothesis\nif they do, then reject the null hypothesis in favor of the alternative"
-  },
-  {
-    "objectID": "W10.html#setting-the-hypotheses",
-    "href": "W10.html#setting-the-hypotheses",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Setting the hypotheses",
-    "text": "Setting the hypotheses\nWhich of the following is the correct set of hypotheses for the claim that the consultant has lower complication rates?\n\n\\(H_0: p = 0.10\\); \\(H_A: p \\ne 0.10\\)\n\\(H_0: p = 0.10\\); \\(H_A: p > 0.10\\)\n\\(H_0: p = 0.10\\); \\(H_A: p < 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} \\ne 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} > 0.10\\)\n\\(H_0: \\hat{p} = 0.10\\); \\(H_A: \\hat{p} < 0.10\\)\n\n\nCorrect is c. Hypotheses are be about the true rate of complication \\(p\\) not the observed ones \\(\\hat{p}\\)"
-  },
-  {
-    "objectID": "W10.html#simulating-the-null-distribution",
-    "href": "W10.html#simulating-the-null-distribution",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Simulating the null distribution",
-    "text": "Simulating the null distribution\nSince \\(H_0: p = 0.10\\), we need to simulate a null distribution where the probability of success (complication) for each trial (patient) is 0.10.\nHow should we simulate the null distribution for this study using a bag of chips?\n\nHow many chips? For example 10 which makes 10% choices possible\nHow many colors? 2\nWhat should colors represent? “complication”, “no complication”\nHow many draws? 62 as the data\nWith replacement or without replacement? With replacement\n\nWhen sampling from the null distribution, what would be the expected proportion of “complications”? 0.1"
-  },
-  {
-    "objectID": "W10.html#simulation",
-    "href": "W10.html#simulation",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Simulation!",
-    "text": "Simulation!\n\nset.seed(1234)\noutcomes <- c(\"complication\", \"no complication\")\nsim1 <- sample(outcomes, size = 62, prob = c(0.1, 0.9), replace = TRUE)\nsim1\n\n [1] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n [5] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n [9] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[13] \"no complication\" \"complication\"    \"no complication\" \"no complication\"\n[17] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[21] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[25] \"no complication\" \"no complication\" \"no complication\" \"complication\"   \n[29] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[33] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[37] \"no complication\" \"no complication\" \"complication\"    \"no complication\"\n[41] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[45] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[49] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[53] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[57] \"no complication\" \"no complication\" \"no complication\" \"no complication\"\n[61] \"no complication\" \"no complication\"\n\nsum(sim1 == \"complication\")/62\n\n[1] 0.0483871\n\n\nOh OK, this was is pretty close to the consultant’s rate. But maybe it was a rare event?"
-  },
-  {
-    "objectID": "W10.html#more-simulation",
-    "href": "W10.html#more-simulation",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "More simulation!",
-    "text": "More simulation!\n\none_sim <- function() sample(outcomes, size = 62, prob = c(0.1, 0.9), replace = TRUE)\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1290323\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1290323\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.09677419\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.09677419\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1774194\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1129032\n\nsum(one_sim() == \"complication\")/62\n\n[1] 0.1129032"
-  },
-  {
-    "objectID": "W10.html#automating-with-tidymodels",
-    "href": "W10.html#automating-with-tidymodels",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Automating with tidymodels1",
-    "text": "Automating with tidymodels1\n\n\n\norgan_donor\n\n# A tibble: 62 × 1\n   outcome        \n   <chr>          \n 1 complication   \n 2 complication   \n 3 complication   \n 4 no complication\n 5 no complication\n 6 no complication\n 7 no complication\n 8 no complication\n 9 no complication\n10 no complication\n# ℹ 52 more rows\n\n\n\n\nset.seed(10)\nnull_dist <- organ_donor |>\n  specify(response = outcome, success = \"complication\") |>\n  hypothesize(null = \"point\", \n              p = c(\"complication\" = 0.10, \"no complication\" = 0.90)) |> \n  generate(reps = 100, type = \"draw\") |> \n  calculate(stat = \"prop\")\nnull_dist\n\nResponse: outcome (factor)\nNull Hypothesis: point\n# A tibble: 100 × 2\n   replicate   stat\n       <int>  <dbl>\n 1         1 0.0323\n 2         2 0.0645\n 3         3 0.0968\n 4         4 0.0161\n 5         5 0.161 \n 6         6 0.0968\n 7         7 0.0645\n 8         8 0.129 \n 9         9 0.161 \n10        10 0.0968\n# ℹ 90 more rows\n\n\n\n\nOf course, you can also do it in your own way without packages."
-  },
-  {
-    "objectID": "W10.html#visualizing-the-null-distribution",
-    "href": "W10.html#visualizing-the-null-distribution",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Visualizing the null distribution",
-    "text": "Visualizing the null distribution\n\nggplot(data = null_dist, mapping = aes(x = stat)) +\n  geom_histogram(binwidth = 0.01) +\n  labs(title = \"Null distribution\")"
-  },
-  {
-    "objectID": "W10.html#calculating-the-p-value-visually",
-    "href": "W10.html#calculating-the-p-value-visually",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Calculating the p-value, visually",
-    "text": "Calculating the p-value, visually\nWhat is the p-value: How often was the simulated sample proportion at least as extreme as the observed sample proportion?"
-  },
-  {
-    "objectID": "W10.html#calculating-the-p-value-directly",
-    "href": "W10.html#calculating-the-p-value-directly",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Calculating the p-value, directly",
-    "text": "Calculating the p-value, directly\n\nnull_dist |>\n summarise(p_value = sum(stat <= 3/62)/n())\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1    0.13\n\n\nThis is the fraction of simulations where complications was equal or below 0.0483871."
-  },
-  {
-    "objectID": "W10.html#significance-level",
-    "href": "W10.html#significance-level",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Significance level",
-    "text": "Significance level\n\nA significance level \\(\\alpha\\) is a threshold we make up to make our judgment about the plausibility of the null hypothesis being true given the observed data.\nWe often use \\(\\alpha = 0.05 = 5\\%\\) as the cutoff for whether the p-value is low enough that the data are unlikely to have come from the null model.\nIf p-value < \\(\\alpha\\), reject \\(H_0\\) in favor of \\(H_A\\): The data provide convincing evidence for the alternative hypothesis.\nIf p-value > \\(\\alpha\\), fail to reject \\(H_0\\) in favor of \\(H_A\\): The data do not provide convincing evidence for the alternative hypothesis.\n\nWhat is the conclusion of the hypothesis test?\nSince the p-value is greater than the significance level, we fail to reject the null hypothesis. These data do not provide convincing evidence that this consultant incurs a lower complication rate than the 10% overall US complication rate."
-  },
-  {
-    "objectID": "W10.html#simulations-is-not-sufficient",
-    "href": "W10.html#simulations-is-not-sufficient",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "100 simulations is not sufficient",
-    "text": "100 simulations is not sufficient\n\nWe simulate 15,000 times to get an accurate distribution.\n\n\nnull_dist <- organ_donor |>\n  specify(response = outcome, success = \"complication\") |>\n  hypothesize(null = \"point\", \n              p = c(\"complication\" = 0.10, \"no complication\" = 0.90)) |> \n  generate(reps = 15000, type = \"simulate\") |> \n  calculate(stat = \"prop\")\nggplot(data = null_dist, mapping = aes(x = stat)) +\n  geom_histogram(binwidth = 0.01) +\n  geom_vline(xintercept = 3/62, color = \"red\")"
-  },
-  {
-    "objectID": "W10.html#our-more-robust-p-value",
-    "href": "W10.html#our-more-robust-p-value",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Our more robust p-value",
-    "text": "Our more robust p-value\nFor the null distribution with 15,000 simulations\n\nnull_dist |>\n  filter(stat <= 3/62) |>\n  summarise(p_value = n()/nrow(null_dist))\n\n# A tibble: 1 × 1\n  p_value\n    <dbl>\n1   0.125\n\n\nOh OK, our fist p-value was much more borderline in favor of the alternative hypothesis."
-  },
-  {
-    "objectID": "W10.html#xkcd-on-p-values",
-    "href": "W10.html#xkcd-on-p-values",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "xkcd on p-values",
-    "text": "xkcd on p-values\n\n\n \n\n\n\nSignificance levels are fairly arbitrary. Sometimes they are used (wrongly) as definitive judgments\nThey can even be used to do p-hacking: Searching for “significant” effects in observational data\nIn parts of science it has become a “gamed” performance metric.\nThe p-value syas nothing about effect size!"
-  },
-  {
-    "objectID": "W10.html#probability-topics-for-data-science",
-    "href": "W10.html#probability-topics-for-data-science",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Probability Topics for Data Science",
-    "text": "Probability Topics for Data Science\nSome concepts and topics\n\n\nThe concept of probability form the mathematical perspective.\nWhat are probabilistic events, probability functions and random variables.\nHow do random variables relate to data?\nProbabilistic simulations. For example bootstrapping.\nConditional probabilities and their relation to the confusion matrix.\nContinuous random variables and some theoretical distributions.\nThe central limit theorem.\nWhat is the difference between probability theory and statistics?"
-  },
-  {
-    "objectID": "W10.html#what-is-probability",
-    "href": "W10.html#what-is-probability",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "What is probability",
-    "text": "What is probability\n\n\nThe systematic and rigorous treatment of uncertainty.\nWe have a certain intuition of probability visible in sentences like:\n\n“That’s not very probable.”\n“That is likely.”\n“I don’t have a prior for that.”\n\nWe can call it a model for uncertainty: A simplified but formalized way to think about uncertain events.\nThe model of probability is one of the most successful mathematical models. It is used in many domains."
-  },
-  {
-    "objectID": "W10.html#two-different-flavors",
-    "href": "W10.html#two-different-flavors",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Two different flavors",
-    "text": "Two different flavors\n\nModel for uncertainty as subjective or objective probability of an uncertain event.\nThey are also called Bayesian vs. Frequentist interpretation of probability. * They differ in the way of reasoning, the interpretation what is random, and in terminology."
-  },
-  {
-    "objectID": "W10.html#objective-interpretation",
-    "href": "W10.html#objective-interpretation",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Objective interpretation",
-    "text": "Objective interpretation\nProbability is relative frequency in the limit of indefinite sampling. It is the long run behavior of non-deterministic outcomes.\n\nIf we flip the same coin several times the relative frequency of the number of HEADS converges to the probability of HEADS.\nIf we draw people at random the relative frequency of people with heights between 1.70m and 1.75m converges to the probability that a person is in this range.\nIn this frequentist philosophy the parameters of the population we sample from is fixed and the data is a random selection."
-  },
-  {
-    "objectID": "W10.html#subjective-interpretation",
-    "href": "W10.html#subjective-interpretation",
-    "title": "W#10: Performance Metrics, Cross validation, Hypothesis testing, Math: Probability",
-    "section": "Subjective interpretation",
-    "text": "Subjective interpretation\nProbability is a belief a person has about the likelihood that an event occurs. This can be formalized by the condition under which a person would make a bet.\n\nIf say we flip a coin, we can offer a person a bet for HEADS, e.g. you gain 1€ when the outcome is heads and you lose 2€ when it is TAILS. The person would be indifferent between accepting and rejecting the bet if their subjective belief is that HEADS will come two times more likely than TAILS (odds 2:1 or probability 2/3). The subjective probability is the probability where the person is indifferent.\nWe can make up similar bets for the heights of randomly drawn people.\nIn Bayesian philosophy the data we know is fixed but the parameters of the population are random and associated with probabilities.\n\nThe objective and subjective views are not mutually exclusive and it is not important to take a side.\n\n\n\nJU-F22-MDSSB-DSCO-02: Data Science Concepts"
+    "text": "What is a wise crowd?\nAssume the dots are estimates. Which is a wise crowd?\n\n\n\nOf course, high trueness and high precision! But, …\nFocusing on the crowd being wise instead of its individuals: High trueness, low precision.\n\n\n\n\nJU-F22-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "W04.html#definition-sets-and-vectors",
@@ -2181,7 +2195,7 @@
     "href": "W04.html#function-as-objects-in-r",
     "title": "W#04: Math refresh, Function Programming, Descriptive Statistics",
     "section": "Function as objects in R",
-    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x55650164e890>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x5564ffcc1f50>\n<environment: namespace:ggplot2>"
+    "text": "Function as objects in R\nfunction is a class of an object in R\n\nclass(c)\n\n[1] \"function\"\n\nclass(ggplot2::ggplot)\n\n[1] \"function\"\n\n\nCalling the function without brackets writes its code or some information.\n\nsd # This function is written in R, and we see its code\n\nfunction (x, na.rm = FALSE) \nsqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), \n    na.rm = na.rm))\n<bytecode: 0x56366fe472d0>\n<environment: namespace:stats>\n\nc # This function is not written in R but is a R primitive\n\nfunction (...)  .Primitive(\"c\")\n\nggplot2::ggplot # This function is not written solely in R\n\nfunction (data = NULL, mapping = aes(), ..., environment = parent.frame()) \n{\n    UseMethod(\"ggplot\")\n}\n<bytecode: 0x56366e396c50>\n<environment: namespace:ggplot2>"
   },
   {
     "objectID": "W04.html#define-your-own-functions-in-r",
@@ -2447,7 +2461,7 @@
     "href": "index.html#artifical-intelligence-ai-use-policy",
     "title": "Data Science Concepts / Data Science Tools",
     "section": "10 Artifical Intelligence (AI) Use Policy",
-    "text": "10 Artifical Intelligence (AI) Use Policy\nThis policy covers any generative AI tool, such as ChatGPT, Elicit, etc. This includes text, code, slides, artwork/graphics/video/audio and other products.\nWe instructors encouraged to using and exploring AI tools for these purposes:\n\nLearning by dialog with a chatbot. AI chatbots can be very helpful to explain you concepts on your desired level and get a feeling about how certain topics are treated. You can ask for an easier or more detailed explanation or focus on certain aspects. Note: The capabilities are limited and you likely receive a lot of false information! Using chatbots should remain a small part of your learning process. Rule of thumb: Spend not more than 25% of the learing time with chatting. There is no way around reading textbooks, reading software documentation, learning and understanding concepts, searching for help online, asking instructors or fellow students.\nHave code snippets written. Tools like GitHub Copilot (free to use for students and teachers in VSCode) are heavily used and currently revolutionize code writting a bit. They can speed up writung your code. However, they do not deliver always correct solutions. There is no way around understanding yourself what a code is doing! Do not spend endless hours asking for new code with new prompts, spend time understanding a language and the functions and objects you are using! Copilots can be a great help to get a skeleton of code and an idea how your solution might look, they rarely deliver the complete code, expect that the code does not work, expect that the code seems to works but the results are wrong. You are 100% accountable for the code you produce, with or without the help of a copilot!\nHave a draft text snippet written. Data science is also about formulating and describing research questions, describing data, documenting code, interpreting results, and deriving conclusion form the results. This is all verbal text and chatbots are good in writing text which often appears as well readable. You can use this inspire you and to polish and improve your texts. However, you are 100% accountable for the text you deliver. You are expected to know what your text is about and to be able to answer questions about what your text means! Text generated purely by chatbots, it often becomes evident that you do not. We consider such cases worse than incomplete but sensible text. Also text written by chatbots is often very generic and less specific. In general, we value more specific text higher than generic text. Large parts of very generic text is considered worse than a shorter more specific text. In extreme case, we may a long very generic text will be considered worse than no text at all\nNote: Philosophical and legal questions around the training and use of chatbots and code copilots are controversially contested and re-examined constantly! We encourage to engage with such questions and become aware of arguments and debates.\n\nIf any part of this AI policy is confusing or uncertain, please reach out to us for a conversation before submitting your work."
+    "text": "10 Artifical Intelligence (AI) Use Policy\nThis policy covers any generative AI tool, such as ChatGPT, Elicit, etc. This includes text, code, slides, artwork/graphics/video/audio and other products.\nWe instructors encouraged to using and exploring AI tools for these purposes:\n\nLearning by dialog with a chatbot. AI chatbots can be very helpful to explain you concepts on your desired level and get a feeling about how certain topics are treated. You can ask for an easier or more detailed explanation or focus on certain aspects. Note: The capabilities are limited and you likely receive a lot of false information! Using chatbots should remain a small part of your learning process. Rule of thumb: Spend not more than 25% of the learning time with chatting. There is no way around reading textbooks, reading software documentation, learning and understanding concepts, searching for help online, asking instructors or fellow students.\nHave code snippets written. Tools like GitHub Copilot (free to use for students and teachers in VSCode) are heavily used and currently change code-writing. They can speed up writing your code. However, they do not deliver always correct solutions. There is no way around understanding yourself what a code is doing! Do not spend endless hours asking for new code with new prompts, spend time understanding a language and the functions and objects you are using! Copilots can be a great help to get a skeleton of code and an idea how your solution might look, they rarely deliver the complete code. Expect that the code does not work, expect that the code seems to works but the results are wrong. You are 100% accountable for the code you produce, with or without the help of a copilot!\nHave a draft text snippet written. Data science is also about formulating and describing research questions, describing data, documenting code, interpreting results, and deriving conclusion form the results. This is all verbal text and chatbots are good in writing text which often appears well readable. You can use this to inspire yourself and to polish and improve your texts. However, you are 100% accountable for the text you deliver. You are expected to know what your text is about and to be able to answer questions about what your text means! In text generated purely by a chatbot it is often evident that you do not. We consider such cases worse than incomplete but sensible text. Also text written by chatbots is often very generic and less specific. In general, we value more specific text higher than generic text. Large parts of very generic text is considered worse than a shorter more specific text. In extreme case, a long very generic text will be considered worse than no text at all\nNote: Philosophical and legal questions around the training and use of chatbots and code copilots are controversially contested and re-examined constantly! We encourage to engage with such questions and become aware of arguments and debates.\n\nIf any part of this AI policy is confusing or uncertain, please reach out to us for a conversation before submitting your work."
   },
   {
     "objectID": "index.html#schedule-and-homework",
@@ -2783,14 +2797,14 @@
     "href": "W03.html#dates",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "Dates",
-    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-29.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
+    "text": "Dates\n\n\n\nISO 8601 standard for dates: YYYY-MM-DD. Today: 2023-10-30.\nDates in R are numeric vectors that represent the number of days since 1 January 1970.\n\n\ny <- as.Date(\"2020-01-01\"); y\n\n[1] \"2020-01-01\"\n\ntypeof(y)\n\n[1] \"double\"\n\nattributes(y)\n\n$class\n[1] \"Date\"\n\nas.double(y)\n\n[1] 18262\n\nas.double(as.Date(\"1970-01-01\"))\n\n[1] 0\n\nas.double(as.Date(\"1969-01-01\"))\n\n[1] -365\n\n\n\n\nhttps://social.coop/@mattl/110509557203534941"
   },
   {
     "objectID": "W03.html#how-many-days-are-you-old",
     "href": "W03.html#how-many-days-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many days are you old?",
-    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17453 days\n\n# Sys.Date() gives as the current day your computer is set to"
+    "text": "How many days are you old?\n\n\nSys.Date() - as.Date(\"1976-01-16\") \n\nTime difference of 17454 days\n\n# Sys.Date() gives as the current day your computer is set to"
   },
   {
     "objectID": "W03.html#date-times",
@@ -2804,7 +2818,7 @@
     "href": "W03.html#how-many-seconds-are-you-old",
     "title": "W#03 Data Import, Data Wrangling, Relational Data, Exploratory Data Analysis",
     "section": "How many seconds are you old?",
-    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1507955619"
+    "text": "How many seconds are you old?\n\nas.double(lubridate::now()) - \n as.double(lubridate::ymd_hm(\"1976-01-16_12:04\"))\n\n[1] 1508013674"
   },
   {
     "objectID": "W03.html#summary-on-factors-and-dates",
