@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.269">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -17,7 +17,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -55,10 +55,13 @@ ul.task-list li input[type="checkbox"] {
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -74,25 +77,32 @@ ul.task-list li input[type="checkbox"] {
     <span class="navbar-title">Data Science Concepts / Data Science Tools</span>
     </a>
   </div>
+            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page">
+    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Syllabus</span></a>
   </li>  
 </ul>
-              <div id="quarto-search" class="" title="Search"></div>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Schedule</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html"><strong>Schedule</strong></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -100,55 +110,63 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
-      <div class="mt-2 flex-shrink-0 align-items-center">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Syllabus</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link active"><strong>Schedule</strong></a>
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><strong>Schedule</strong></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./literature.html" class="sidebar-item-text sidebar-link">Learning Resources</a>
+  <a href="./literature.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Resources</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Homework</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Homework</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw-01.html" class="sidebar-item-text sidebar-link">Homework 01</a>
+  <a href="./hw-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 01</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hw-02.html" class="sidebar-item-text sidebar-link">Homework 02</a>
+  <a href="./hw-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homework 02</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./help.html" class="sidebar-item-text sidebar-link">Need help for Homework?</a>
+  <a href="./help.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Need help for Homework?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reports.html" class="sidebar-item-text sidebar-link">Create a homework report</a>
+  <a href="./reports.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Create a homework report</span></a>
   </div>
 </li>
       </ul>
@@ -156,6 +174,7 @@ ul.task-list li input[type="checkbox"] {
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -163,10 +182,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#tabular-schedule" id="toc-tabular-schedule" class="nav-link active" data-scroll-target="#tabular-schedule">Tabular Schedule</a></li>
-  <li><a href="#sec-week1" id="toc-sec-week1" class="nav-link" data-scroll-target="#sec-week1"><span class="toc-section-number">1</span>  Achievements Week 1</a></li>
-  <li><a href="#sec-week2" id="toc-sec-week2" class="nav-link" data-scroll-target="#sec-week2"><span class="toc-section-number">2</span>  Achievements Week 2</a></li>
-  <li><a href="#sec-week3" id="toc-sec-week3" class="nav-link" data-scroll-target="#sec-week3"><span class="toc-section-number">3</span>  Achievements Week 3</a></li>
-  <li><a href="#sec-week3" id="toc-sec-week3" class="nav-link" data-scroll-target="#sec-week3"><span class="toc-section-number">4</span>  Achievements Week 4</a></li>
+  <li><a href="#sec-week1" id="toc-sec-week1" class="nav-link" data-scroll-target="#sec-week1"><span class="header-section-number">1</span> Achievements Week 1</a></li>
+  <li><a href="#sec-week2" id="toc-sec-week2" class="nav-link" data-scroll-target="#sec-week2"><span class="header-section-number">2</span> Achievements Week 2</a></li>
+  <li><a href="#sec-week3" id="toc-sec-week3" class="nav-link" data-scroll-target="#sec-week3"><span class="header-section-number">3</span> Achievements Week 3</a></li>
+  <li><a href="#sec-week4" id="toc-sec-week4" class="nav-link" data-scroll-target="#sec-week4"><span class="header-section-number">4</span> Achievements Week 4</a></li>
+  <li><a href="#sec-week5" id="toc-sec-week5" class="nav-link" data-scroll-target="#sec-week5"><span class="header-section-number">5</span> Achievements Week 5</a></li>
+  <li><a href="#sec-week6" id="toc-sec-week6" class="nav-link" data-scroll-target="#sec-week6"><span class="header-section-number">6</span> Achievements Week 6</a></li>
   </ul>
 </nav>
     </div>
@@ -175,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Schedule</h1>
+<h1 class="title">Schedule</h1>
 </div>
 
 
@@ -190,12 +211,12 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Developing Schedule
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -273,7 +294,7 @@ Organization repository with non-public information and FAQ in Discussions: <a h
 <td>8</td>
 <td>10-23, 10-26</td>
 <td>Logistic Regression, Classification Problems, Prediction <br> <a href="./W08.html">Slides Week 8</a></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">python</td>
 </tr>
 <tr class="odd">
 <td>9</td>
@@ -284,7 +305,7 @@ Organization repository with non-public information and FAQ in Discussions: <a h
 <tr class="even">
 <td>10</td>
 <td>11-06, 11-09</td>
-<td><em>Probability, Random Variables, Statistics, Cluster Analysis</em></td>
+<td>p-value, Decision Trees, RMSE, Overfitting, Bias-Variance in Crowd Wisdom <br> <a href="./W10.html">Slides Week 10</a></td>
 <td style="text-align: center;">python</td>
 </tr>
 <tr class="odd">
@@ -313,12 +334,12 @@ Organization repository with non-public information and FAQ in Discussions: <a h
 </tr>
 </tbody>
 </table>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
@@ -332,19 +353,19 @@ Note
 </section>
 <section id="sec-week1" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Achievements Week 1</h1>
-<p>You have</p>
+<p>You</p>
 <ul>
-<li>read the <a href="./index.html">Syllabus</a> and understood the course organization</li>
-<li>a running R with RStudio installation an you computer</li>
-<li>done the <em>git-GitHub dance</em> and know what the tools are in principle</li>
-<li>rendered quarto documents and understood its idea</li>
-<li>made your first steps with R</li>
-<li>finished <a href="./hw-01.html">Homework 01</a> (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)</li>
+<li>have read the <a href="./index.html">Syllabus</a> and understood the course organization</li>
+<li>have a running R with RStudio installation an you computer</li>
+<li>have done the <em>git-GitHub dance</em> and know what the tools are in principle</li>
+<li>have rendered quarto documents and understood its idea</li>
+<li>have made your first steps with R</li>
+<li>have finished <a href="./hw-01.html">Homework 01</a> (double check your if your html-file looks nice and that all files including all necessary figure are also in the repository on GitHub)</li>
 </ul>
-<p>Additional material:</p>
+<p>Additional reading:</p>
 <ul>
 <li>Quarto: Watch <a href="https://www.youtube.com/watch?v=_f3latmOhew" class="uri">https://www.youtube.com/watch?v=_f3latmOhew</a> from Mine Çetinkaya-Rundel (co-developer of quarto, R for Data Science, datasciencebox).</li>
-<li>R: Read the following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a>
+<li>R: The following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a>
 <ul>
 <li><a href="https://r4ds.hadley.nz/intro">Ch 1:Introduction</a></li>
 <li><a href="https://r4ds.hadley.nz/whole-game">Whole Game (the outline of the part)</a></li>
@@ -353,39 +374,112 @@ Note
 </section>
 <section id="sec-week2" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Achievements Week 2</h1>
-<p>You have</p>
-<p><span style="color:red;">To be completed</span></p>
-<p>Additional material:</p>
+<p>You</p>
 <ul>
-<li>ggplot: Read the following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a>
+<li>have understood the <em>data science process</em>, in particular you can describe with examples what is understood as <em>data wrangling</em> and <em>data exploration</em>, and you can describe two different purposes of data visualization in the data science process</li>
+<li>have identified and can explain when a pie chart is a bad visualization (when the pieces do not add up to 100%) and when a truncated y-axis is a bad visualization (when it is used to make a small difference look big).</li>
+<li>have understood the basic idea of the grammar of graphics and can explain what the role of a mapping and and geom is</li>
+<li>have made a bar chart, a scatter plot, and a line plot with ggplot</li>
+<li>know how many rows and columns an <span class="math inline">\(m\times n\)</span> data frame has</li>
+<li>can explain the basic data types, in particular <code>character</code>, <code>logical</code>, and <code>double</code></li>
+<li>know what coercion of data is (what happens when different data types are combined in a vector)</li>
+<li>have understood the concept of the tidy data format and can argue why a certain form of data representation is more or less tidy</li>
+<li>made a data frame longer and wider</li>
+</ul>
+<p>Additional reading:</p>
+<ul>
+<li>ggplot: The following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a>
 <ul>
 <li><a href="https://r4ds.hadley.nz/data-visualize">Ch 2: Data Visualization</a></li>
-<li>If you want to go deeper already now, read the chapter <a href="https://r4ds.hadley.nz/layers">Ch 10: Layers</a></li>
+<li>If you want to go deeper already now, chapter <a href="https://r4ds.hadley.nz/layers">Ch 10: Layers</a></li>
 </ul></li>
 </ul>
-<p><span style="color:red;">To be completed</span></p>
 </section>
 <section id="sec-week3" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Achievements Week 3</h1>
-<p>You have <span style="color:red;">To be completed</span></p>
-<p>Additional material:</p>
-<p>Read the following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a></p>
+<p>You</p>
+<ul>
+<li>have read in csv-file, you can interpret the output of column type guessing, and use it to adjust and correct it for your needs if necessary</li>
+<li>can take a statement with a pipe operator and translate it into a nested function call without the pipe operator (and the other way round)</li>
+<li>you have used the <code>dplyr</code> functions <code>select</code>, <code>slice</code>, and <code>filter</code></li>
+<li>you understood the concept of logical indexing, vectorized logical operation (in particular AND, OR, and NOT), and how it relates to filtering data</li>
+<li>you know if R or python is 0- or 1-indexed and what this means</li>
+<li>you have used the <code>dplyr</code> functions <code>distinct</code>, and <code>arrange</code></li>
+<li>you understood how you use <code>mutate</code> and <code>summarize</code> to gather with <code>group_by</code> to create new variables and data frames with aggregated data</li>
+<li>you know about the practical importance of the special data types <code>factor</code> and <code>date</code></li>
+<li>you know the difference between <code>NaN</code> and <code>NA</code></li>
+<li>you have used the <code>dplyr</code> functions <code>left_join</code>, and <code>full_join</code> to combine data frames</li>
+</ul>
+<p>Additional reading:</p>
+<p>The following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a></p>
 <ul>
 <li><a href="https://r4ds.hadley.nz/data-tidy">Ch 6: Tidy Data</a></li>
 <li><a href="https://r4ds.hadley.nz/data-import">Ch 8: Data Import</a></li>
 <li><a href="https://r4ds.hadley.nz/joins">Ch 20: Joins</a></li>
 </ul>
 </section>
-<section id="sec-week3" class="level1" data-number="4">
+<section id="sec-week4" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Achievements Week 4</h1>
-<p>You have <span style="color:red;">To be completed</span></p>
-<p>Additional material:</p>
-<p>Leek, Jeffery T., and Roger D. Peng. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
-<p>Read the following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a></p>
+<p>You</p>
+<ul>
+<li>know the difference between a vector and a set (no order no duplicates) and have used the functions <code>unique</code>, <code>union</code>, <code>intersect</code>, and <code>setdiff</code></li>
+<li>can program a function with various arguments and default values</li>
+<li>can program a function which does a shift and scale transformation to data</li>
+<li>can handle computations with exponents and logarithms</li>
+<li>understood why logarithms appear mostly as the natural logarithm (with base <span class="math inline">\(e = 2.718...\)</span>) or the logarithm with base 10</li>
+<li>can interpret the numbers in a vector after a <span class="math inline">\(\log_{10}\)</span> transformation</li>
+<li>know about the value of vectorized functions for data operations</li>
+<li>have used the concept of the function <code>map</code> (for iteration over values of a list or vector) and <code>reduce</code> (for aggregation over values of a list or vector)</li>
+<li>can compute and interpret the mean, median, variance, and standard deviation of vector of numbers</li>
+</ul>
+<p>Additional reading:</p>
+<p>Sections in <a href="http://r4ds.hadley.nz">R for Data Science</a></p>
 <ul>
 <li><a href="https://r4ds.hadley.nz/functions">Ch 26: Functions</a></li>
 <li><a href="https://r4ds.hadley.nz/iteration">Ch 27: Iteration</a></li>
+</ul>
+</section>
+<section id="sec-week5" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Achievements Week 5</h1>
+<p>You</p>
+<ul>
+<li>can create and interpret histogram plots</li>
+<li>can compute and interpret quantiles of a data set</li>
+<li>can create and interpret boxplots</li>
+<li>can compute and interpret the correlation between two vectors of numbers</li>
+<li>you have done a first exploratory data analysis and have a first feeling of why it is not a fully standardized process</li>
+<li>you can classify data science research questions accoring to the six types of questions of Leek and Peng (2015)</li>
+<li>you can create and interpret a principal component analysis (in particular you can look at the principle components, the data in PCA coordinates, and the explained variance of the principle components and relate them to each other)</li>
+</ul>
+<p>Additional reading:</p>
+<p>Leek, Jeffery T., and Peng, Roger D. 2015. “What Is the Question?” Science 347 (6228): 1314–15. <a href="https://doi.org/10.1126/science.aaa6146" class="uri">https://doi.org/10.1126/science.aaa6146</a>.</p>
+<p>Read the following sections in <a href="http://r4ds.hadley.nz">R for Data Science</a></p>
+<ul>
 <li><a href="https://r4ds.hadley.nz/eda">Ch 11: Exploratory Data Analysis</a></li>
+</ul>
+</section>
+<section id="sec-week6" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Achievements Week 6</h1>
+<p>You</p>
+<ul>
+<li>can operationalize the concept of differentiation and integration of calculus to data science operations, e.g.&nbsp;with time series data:
+<ul>
+<li>You can visualize on paper the idea the derivative represents the slope of a function at a certain <span class="math inline">\(x\)</span>-value and the integral the area under the curve of a function up to a certain <span class="math inline">\(x\)</span>-value.</li>
+<li>With time series data you can compute the change and the cumulative sum of a variable over time.</li>
+</ul></li>
+<li>know how the fundamental theorem of calculus relates the derivative and the integral of a function and how you can show it with data.</li>
+<li>can explain, and interpret the coefficients of a linear model</li>
+<li>can define and fit a linear model (in R and/or python)</li>
+<li>know which part of a linear model output relates to explanation and prediction</li>
+<li>know what residuals are</li>
+<li>can interpret the residuals of a linear model</li>
+<li>have an own idea what “All models are wrong, but some are useful” means</li>
+<li>know the difference between a the <span class="math inline">\(\beta\)</span>’s (population parameters which we do not know) and the <span class="math inline">\(b\)</span>’s (the estimated parameters from the data) and how this relates to a <em>inferential</em> research questions</li>
+</ul>
+<p>Additional reading:</p>
+<p>Read the following section in <a href="https://openintro-ims.netlify.app/">Introduction to Modern Statistics</a>:</p>
+<ul>
+<li><a href="https://openintro-ims.netlify.app/model-slr">Ch 7: Linear regression with a single predictor</a></li>
 </ul>
 
 
@@ -419,9 +513,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -486,6 +594,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
