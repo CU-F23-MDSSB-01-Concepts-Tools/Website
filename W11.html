@@ -888,7 +888,7 @@ The true value of the statistic is expected to lie with the CI with certain prob
 </section>
 <section id="some-coefficient-distributions" class="slide level2 smaller">
 <h2>Some coefficient distributions</h2>
-<div class="cell" data-hash="W11_cache/revealjs/unnamed-chunk-23_9587e404a28ce822ed2a15b2b894269b">
+<div class="cell" data-hash="W11_cache/revealjs/unnamed-chunk-23_c3475ea81506b5fbc2ff63b79f694255">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">library</span>(patchwork)</span>
 <span id="cb47-2"><a href="#cb47-2"></a>g1 <span class="ot">&lt;-</span> boots_peng <span class="sc">|&gt;</span> <span class="fu">unnest</span>(coefs) <span class="sc">|&gt;</span> <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"islandDream"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb47-3"><a href="#cb47-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> estimate)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"coefficients islandDream"</span>) <span class="sc">+</span></span>
@@ -902,17 +902,17 @@ The true value of the statistic is expected to lie with the CI with certain prob
 <span id="cb47-11"><a href="#cb47-11"></a>g1 <span class="sc">|</span> g2 <span class="sc">|</span> g3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W11_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"><ul>
+<img data-src="W11_files/figure-revealjs/unnamed-chunk-23-1.png" width="1152" class="r-stretch"><ul>
 <li>We can derive <em>bootstrapped p-values</em> from these distributions. No deeper analysis today.</li>
 </ul>
 </section>
-<section id="p-values-from-each-fit" class="slide level2">
+<section id="p-values-from-each-fit" class="slide level2 smaller">
 <h2>p-values from each fit</h2>
 <ul>
 <li>Each bootstrap fit also delivers p-values for each coefficients. These are computed based on theoretical assumptions with the help of t-tests and t-distributions.</li>
 <li>Let us look how these p-values differ in resamples</li>
 </ul>
-<div class="cell" data-hash="W11_cache/revealjs/unnamed-chunk-24_a66c3dfd833e020f1375fa34d4dedd8f">
+<div class="cell" data-hash="W11_cache/revealjs/unnamed-chunk-24_9aa9fe460b49b34f2e7c248dc7502b3e">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>g1 <span class="ot">&lt;-</span> boots_peng <span class="sc">|&gt;</span> <span class="fu">unnest</span>(coefs) <span class="sc">|&gt;</span> <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"islandDream"</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb48-2"><a href="#cb48-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> p.value)) <span class="sc">+</span> <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">xlab</span>(<span class="st">"coefficients islandDream"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span>
 <span id="cb48-3"><a href="#cb48-3"></a>g2 <span class="ot">&lt;-</span> boots_peng <span class="sc">|&gt;</span> <span class="fu">unnest</span>(coefs) <span class="sc">|&gt;</span> <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"bill_length_mm"</span>) <span class="sc">|&gt;</span> </span>
@@ -922,7 +922,7 @@ The true value of the statistic is expected to lie with the CI with certain prob
 <span id="cb48-7"><a href="#cb48-7"></a>g1 <span class="sc">|</span> g2 <span class="sc">|</span> g3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W11_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"><ul>
+<img data-src="W11_files/figure-revealjs/unnamed-chunk-24-1.png" width="1152" class="r-stretch"><ul>
 <li>Where the <em>bootstrapped p-values</em> are large (showing insignificance) the p-values from the different resamples vary widely! See <code>islandDream</code> with p-values spanning all probabilities almost uniformly.</li>
 </ul>
 </section></section>
