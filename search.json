@@ -4022,42 +4022,7 @@
     "href": "W11.html#clustering-summary",
     "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
     "section": "Clustering Summary",
-    "text": "Clustering Summary\n\n\nWe have seen two clustering methods: K-means and hierarchical clustering.\nK-means is a partitioning method, hierarchical clustering is a nested method.\nK-means clusterings may differ from run to run, hierarchical clusterings uniquely deliver a hierarchy of clusters\nHowever, hierarchical clusterings may change substantially with time changes in the data (not practically shown here)\nThe choice of the number of clusters is a difficult one. There are some quantitative methods (not shown in detail), but in the end it often involves qualitative criteria.\n\n\n\nTip: For visualization purposes it could make sense to plot the data in principal component space with dimensions PC1 and PC2 and on top show the clustering with colors."
-  },
-  {
-    "objectID": "W11.html#probability-topics-for-data-science",
-    "href": "W11.html#probability-topics-for-data-science",
-    "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
-    "section": "Probability Topics for Data Science",
-    "text": "Probability Topics for Data Science\n\n\nThe concept of probability from the mathematical perspective.\n\nWhat are probabilistic events, probability functions and random variables.\n\nRandom variables: A probabilistic view on variables in a data frame\nProbabilistic simulations. For example resampling and cross-validation.\nThe confusion matrix from a probabilistic view: Conditional probabilities\nModeling distributions of variables: The concepts of discrete and continuous probability distributionsa and some examples.\nThe central limit theorem or why the normal distribution is so important.\nProbability theory and statistics"
-  },
-  {
-    "objectID": "W11.html#what-is-probability",
-    "href": "W11.html#what-is-probability",
-    "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
-    "section": "What is probability",
-    "text": "What is probability\n\n\nThe systematic and rigorous treatment of uncertainty.\nWe have a certain intuition of probability visible in sentences like:\n\n“That’s not very probable.”\n“That is likely.”\n“I don’t have a prior for that.”\n\nWe can call it a model for uncertainty: A simplified but formalized way to think about uncertain events.\nThe model of probability is one of the most successful mathematical models. It is used in many domains."
-  },
-  {
-    "objectID": "W11.html#two-different-flavors",
-    "href": "W11.html#two-different-flavors",
-    "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
-    "section": "Two different flavors",
-    "text": "Two different flavors\n\nModel for uncertainty as subjective or objective probability of an uncertain event.\nThey are also called Bayesian vs. Frequentist interpretation of probability. * They differ in the way of reasoning, the interpretation what is random, and in terminology."
-  },
-  {
-    "objectID": "W11.html#objective-interpretation",
-    "href": "W11.html#objective-interpretation",
-    "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
-    "section": "Objective interpretation",
-    "text": "Objective interpretation\nProbability is relative frequency in the limit of indefinite sampling. It is the long run behavior of non-deterministic outcomes.\n\nIf we flip the same coin several times the relative frequency of the number of HEADS converges to the probability of HEADS.\nIf we draw people at random the relative frequency of people with heights between 1.70m and 1.75m converges to the probability that a person is in this range.\nIn this frequentist philosophy the parameters of the population we sample from is fixed and the data is a random selection."
-  },
-  {
-    "objectID": "W11.html#subjective-interpretation",
-    "href": "W11.html#subjective-interpretation",
-    "title": "W#11: Bootstrapping, Cross validation (idea), Clustering",
-    "section": "Subjective interpretation",
-    "text": "Subjective interpretation\nProbability is a belief a person has about the likelihood that an event occurs. This can be formalized by the condition under which a person would make a bet.\n\nIf say we flip a coin, we can offer a person a bet for HEADS, e.g. you gain 1€ when the outcome is heads and you lose 2€ when it is TAILS. The person would be indifferent between accepting and rejecting the bet if their subjective belief is that HEADS will come two times more likely than TAILS (odds 2:1 or probability 2/3). The subjective probability is the probability where the person is indifferent.\nWe can make up similar bets for the heights of randomly drawn people.\nIn Bayesian philosophy the data we know is fixed but the parameters of the population are random and associated with probabilities.\n\nThe objective and subjective views are not mutually exclusive and it is not important to take a side.\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
+    "text": "Clustering Summary\n\n\nWe have seen two clustering methods: K-means and hierarchical clustering.\nK-means is a partitioning method, hierarchical clustering is a nested method.\nK-means clusterings may differ from run to run, hierarchical clusterings uniquely deliver a hierarchy of clusters\nHowever, hierarchical clusterings may change substantially with time changes in the data (not practically shown here)\nThe choice of the number of clusters is a difficult one. There are some quantitative methods (not shown in detail), but in the end it often involves qualitative criteria.\n\n\n\nTip: For visualization purposes it could make sense to plot the data in principal component space with dimensions PC1 and PC2 and on top show the clustering with colors.\n\n\n\nCU-F23-MDSSB-DSCO-02: Data Science Concepts"
   },
   {
     "objectID": "W02.html#git-and-github",
