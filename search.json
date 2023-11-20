@@ -1369,7 +1369,7 @@
     "href": "W12.html#example-questions-1",
     "title": "W#12: Collaborative Git, Data Science Projects, Probability",
     "section": "Example questions",
-    "text": "Example questions\n\n\nCOVID19 Cases and Deaths\n\n\nDid new cases in the first wave show similar exponential growth growth rates in different countries?\nHow did the relation between new cases and deaths change from wave to wave?\nHow are world development indicators associated to the number of total deaths per million in a country?\n\n\n\nHousing\n\n\nHow much can we improve house price predictions by using decision trees and random forests?\nHow can we make use of the spatial information to engineer features to improve the prediction?"
+    "text": "Example questions\n\n\nCOVID-19 Cases and Deaths\n\n\nDid new cases in the first wave show similar exponential growth growth rates in different countries?\nHow did the relation between new cases and deaths change from wave to wave?\nHow are world development indicators associated to the number of total deaths per million in a country?\n\n\n\nHousing\n\n\nHow much can we improve house price predictions by using decision trees and random forests?\nHow can we make use of the spatial information to engineer features to improve the prediction?"
   },
   {
     "objectID": "W12.html#probability-topics-for-data-science",
@@ -1404,7 +1404,7 @@
     "href": "W12.html#questions-for-three-coin-tosses",
     "title": "W#12: Collaborative Git, Data Science Projects, Probability",
     "section": "Questions for three coin tosses",
-    "text": "Questions for three coin tosses\n\n“The coins show one HEAD” = \\(\\{HTT, THT, TTH\\}\\)\n“The first and the third coin are not HEAD?” = \\(\\{THT, TTT\\}\\)\nHow many atomic events exist for three coin tosses? \\(2^3=8\\)\n\n\nFor selecting one random person:\nEvent \\(\\{2,5,6\\}\\) = The selected person is either 2, 5, or 6.\n(Not all three people which is a different random variable!)\n\n\nFor COVID-19 testing:\n\nEvent \\(\\{TP, FP\\}\\) = The test is positive.\nEvent \\(\\{TN, FP\\}\\) = The person does not have COVID-19.\nEvent \\(\\{TP, TN\\}\\) = The test delivers the correct result."
+    "text": "Questions for three coin tosses\n\n“The coins show one HEAD” = \\(\\{HTT, THT, TTH\\}\\)\n“The first and the third coin are not HEAD?” = \\(\\{THT, TTT\\}\\)\nHow many atomic events exist for three coin tosses? \\(2^3=8\\)\n\n\nFor selecting one random person:\nEvent \\(\\{2,5,6\\}\\) = The selected person is either 2, 5, or 6.\n(Not all three people which is a different random variable!)\n\n\nFor COVID-19 testing:\n\nEvent \\(\\{TP, FP\\}\\) = The test is positive.\nEvent \\(\\{TN, FP\\}\\) = The person does not have COVID-19.\nEvent \\(\\{TP, TN\\}\\) = The rapid test delivers the correct result."
   },
   {
     "objectID": "W12.html#the-set-of-all-events",
@@ -1439,7 +1439,7 @@
     "href": "W12.html#conditional-probability",
     "title": "W#12: Collaborative Git, Data Science Projects, Probability",
     "section": "Conditional probability",
-    "text": "Conditional probability\n\n\nDefinition: The conditional probability of an event \\(A\\) given an event \\(B\\) (write “\\(A | B\\)”) is defined as\n\\[\\text{Pr}(A|B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\]\n\n\n\n\nWe want to know the probability of \\(A\\) given that we know that \\(B\\) has happened (or is happening for sure).\nTwo coin flips: \\(A\\) = “first coin is HEAD”, \\(B\\) = “one or zero HEADS in total”.\n\\(A\\) = {HH, HT}, \\(B\\) = {HH, HT, TH} \\(\\to\\) \\(\\text{Pr}(A|B) = \\frac{1/4}{3/4} = \\frac{1}{3}\\)"
+    "text": "Conditional probability\n\n\nDefinition: The conditional probability of an event \\(A\\) given an event \\(B\\) (write “\\(A | B\\)”) is defined as\n\\[\\text{Pr}(A|B) = \\frac{\\text{Pr}(A \\cap B)}{\\text{Pr}(B)}\\]\n\n\n\n\nWe want to know the probability of \\(A\\) given that we know that \\(B\\) has happened (or is happening for sure).\nTwo coin flips: \\(A\\) = “first coin is HEAD”, \\(B\\) = “one or zero HEADS in total”. What is \\(\\text{Pr}(A|B)\\)? \\(A\\) = {HH, HT}, \\(B\\) = {TT, HT, TH} \\(\\to\\) \\(A \\cap B = \\{HT\\}\\)\n\\(\\to\\) \\(\\text{Pr}(A\\cap B) = \\frac{3}{4}\\), \\(\\text{Pr}(A\\cap B) = \\frac{1}{4}\\)\n\\(\\to\\) \\(\\text{Pr}(A|B) = \\frac{1/4}{3/4} = \\frac{1}{3}\\)"
   },
   {
     "objectID": "W12.html#more-examples-of-conditional-probability",
