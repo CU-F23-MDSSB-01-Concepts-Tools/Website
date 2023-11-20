@@ -1341,14 +1341,14 @@
     "href": "W12.html#what-are-good-questions",
     "title": "W#12: Collaborative Git, Data Science Projects, Probability",
     "section": "What are good questions?",
-    "text": "What are good questions?\nA good question\n\nis not too broad (but also not too specific)\ncan be answered (or at least approached) with data\ncall for one of the different types of data analysis:\n\ndescriptive\nexplanatory\ninferential\npredictive\n(causal or mechanistic – not the typical choices for a short term data analysis projects. They should not be central but may be touched.)"
+    "text": "What are good questions?\nA good question\n\nis not too broad (but also not too specific)\ncan be answered (or at least approached) with data\ncall for one of the different types of data analysis:\n\ndescriptive\nexploratory\ninferential\npredictive\n(causal or mechanistic – not the typical choices for a short term data analysis projects. They should not be central but may be touched.)"
   },
   {
     "objectID": "W12.html#tools-and-advice-for-questions",
     "href": "W12.html#tools-and-advice-for-questions",
     "title": "W#12: Collaborative Git, Data Science Projects, Probability",
     "section": "Tools and advice for questions",
-    "text": "Tools and advice for questions\n\n\nDescriptive\n\n\nWhat is an observation?\nWhat are the variables?\nSummary statistics and basic visualizations\nCategory frequencies and numerical distributions\n\n\n\nExplanatory\n\n\nQuestions specific to the topic\nCompute/summarize relevant variables: percentages, ratios, differences, …)\nScatter plots\nCorrelations\nCrafted computations and visualizations for your particular questions"
+    "text": "Tools and advice for questions\n\n\nDescriptive\n\n\nWhat is an observation?\nWhat are the variables?\nSummary statistics and basic visualizations\nCategory frequencies and numerical distributions\n\n\n\nExploratory\n\n\nQuestions specific to the topic\nCompute/summarize relevant variables: percentages, ratios, differences, …)\nScatter plots\nCorrelations\nCluster Analysis\nCrafted computations and visualizations for your particular questions"
   },
   {
     "objectID": "W12.html#tools-and-advice-for-questions-1",
