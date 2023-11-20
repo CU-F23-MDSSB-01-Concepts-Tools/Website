@@ -407,22 +407,65 @@ Jan Lorenz
 <section id="fitting-models-part-2" class="title-slide slide level1 center">
 <h1>Fitting Models (Part 2)</h1>
 <p>Today: The linear model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.3     ✔ readr     2.1.4
+✔ forcats   1.0.0     ✔ stringr   1.5.0
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.0
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(palmerpenguins)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ────────────────────────────────────── tidymodels 1.1.1 ──
+✔ broom        1.0.5     ✔ rsample      1.2.0
+✔ dials        1.2.0     ✔ tune         1.1.2
+✔ infer        1.0.5     ✔ workflows    1.1.3
+✔ modeldata    1.2.0     ✔ workflowsets 1.0.1
+✔ parsnip      1.1.1     ✔ yardstick    1.2.0
+✔ recipes      1.0.8     
+── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
+✖ scales::discard() masks purrr::discard()
+✖ dplyr::filter()   masks stats::filter()
+✖ recipes::fixed()  masks stringr::fixed()
+✖ dplyr::lag()      masks stats::lag()
+✖ yardstick::spec() masks readr::spec()
+✖ recipes::step()   masks stats::step()
+• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
+</div>
+</div>
 </section>
 <section id="recap-linear-model" class="slide level2 smaller">
 <h2>Recap: Linear model</h2>
 <p><strong>Flipper length</strong> as a function of <strong>body mass</strong>.</p>
 <div class="cell columns column-output-location">
 <div class="column">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>penguins <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
-<span id="cb1-3"><a href="#cb1-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
-<span id="cb1-4"><a href="#cb1-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
-<span id="cb1-6"><a href="#cb1-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
-<span id="cb1-7"><a href="#cb1-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>penguins <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>            <span class="at">y =</span> flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, </span>
+<span id="cb5-6"><a href="#cb5-6"></a>             <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> </span>
+<span id="cb5-7"><a href="#cb5-7"></a> <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
 <div class="cell-output-display">
-<p><img data-src="W07_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<p><img data-src="W07_files/figure-html/unnamed-chunk-2-1.png" width="672"></p>
 </div>
 </div>
 </div>
@@ -435,8 +478,32 @@ Jan Lorenz
 <p>A <em>line</em> is a shift-scale transformation of the identity function usually written in the form</p>
 <p><span class="math display">\[f(x) = a\cdot x + b\]</span></p>
 <p>where <span style="color:red;"><span class="math inline">\(a\)</span> is the <em>slope</em></span>, <span style="color:blue;"><span class="math inline">\(b\)</span> is the <em>intercept</em></span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>a <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>b <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>func <span class="ot">&lt;-</span> <span class="cf">function</span>(x) a<span class="sc">*</span>x <span class="sc">+</span> b</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="fu">ggplot</span>() <span class="sc">+</span> <span class="fu">geom_function</span>(<span class="at">fun =</span> func, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a> <span class="co"># Set axis limits and make axis equal</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">coord_fixed</span>() <span class="sc">+</span> </span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="fu">geom_line</span>( <span class="co"># intercept line:</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>     <span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>)), </span>
+<span id="cb9-9"><a href="#cb9-9"></a>     <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), </span>
+<span id="cb9-10"><a href="#cb9-10"></a>     <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>    <span class="fu">geom_line</span>( <span class="co"># slope:</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a>     <span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">1.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.75</span>)), </span>
+<span id="cb9-13"><a href="#cb9-13"></a>     <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), </span>
+<span id="cb9-14"><a href="#cb9-14"></a>     <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="fu">geom_line</span>( <span class="co"># x-interval of length one:</span></span>
+<span id="cb9-16"><a href="#cb9-16"></a>     <span class="at">data=</span><span class="fu">tibble</span>(<span class="at">x=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">1.5</span>),<span class="at">y=</span><span class="fu">c</span>(<span class="fl">1.25</span>,<span class="fl">1.25</span>)), </span>
+<span id="cb9-17"><a href="#cb9-17"></a>     <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"gray"</span>) <span class="sc">+</span></span>
+<span id="cb9-18"><a href="#cb9-18"></a>    <span class="fu">theme_classic</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-3-1.png" width="672" class="r-stretch"></section>
 <section id="recap-terminology" class="slide level2 smaller" data-background-color="khaki">
 <h2>Recap: Terminology</h2>
 <ul>
@@ -466,9 +533,9 @@ The residual tells how far above/below the expected value each case is</li>
 <section id="fitting-the-model-in-r" class="slide level2 smaller">
 <h2>Fitting the model in R</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a href="#cb2-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb2-3"><a href="#cb2-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>parsnip model object
 
@@ -483,23 +550,23 @@ Coefficients:
 </div>
 <p>average <code>flipper_length_mm</code> <span class="math inline">\(= 136.72956 + 0.01528\cdot\)</span> <code>body_mass_g</code></p>
 <p><strong>Interpretation:</strong><br>
-The penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 138 mm. However, this is not in the range where the model was fitted.</p>
+The penguins have a flipper length of 136.7 mm plus 0.01528 mm for each gram of body mass (that is 15.28 mm per kg). Penguins with zero mass have a flipper length of 136.7 mm. However, this is not in the range where the model was fitted.</p>
 </section>
 <section id="parsnip-model-objects" class="slide level2 smaller">
 <h2><code>parsnip</code> model objects</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="fu">class</span>(pengmod) <span class="co"># attributes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="fu">class</span>(pengmod) <span class="co"># attributes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "_lm"       "model_fit"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">typeof</span>(pengmod) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">typeof</span>(pengmod) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">names</span>(pengmod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">names</span>(pengmod)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "lvl"          "spec"         "fit"          "preproc"      "elapsed"     
 [6] "censor_probs"</code></pre>
@@ -508,7 +575,7 @@ The penguins have a flipper length of 138 mm plus 0.01528 mm for each gram of bo
 <div class="fragment">
 <p>Most interesting for us for now: <code>$fit</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>pengmod<span class="sc">$</span>fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>pengmod<span class="sc">$</span>fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -527,28 +594,28 @@ Coefficients:
 <section id="fit-is-the-object-created-by-lm-base-r" class="slide level2 smaller">
 <h2><code>$fit</code> is the object created by <code>lm</code> (base R)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">names</span>(pengmod<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">names</span>(pengmod<span class="sc">$</span>fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "coefficients"  "residuals"     "effects"       "rank"         
  [5] "fitted.values" "assign"        "qr"            "df.residual"  
  [9] "na.action"     "xlevels"       "call"          "terms"        
 [13] "model"        </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>call</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>call</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>stats::lm(formula = flipper_length_mm ~ body_mass_g, data = data)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> (Intercept)  body_mass_g 
 136.72955927   0.01527592 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>fitted.values <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>fitted.values <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       1        2        3        5        6        7 
 194.0142 194.7780 186.3763 189.4315 192.4867 192.1048 </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         1          2          3          5          6          7 
 -13.014243  -8.778039   8.623715   3.568532  -2.486651 -11.104753 </code></pre>
@@ -568,23 +635,48 @@ Coefficients:
 <section id="visualization-of-residuals" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Visualization of residuals</h2>
 <p>The residuals are the gray lines between predictid values on the regression line and the actual values.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>pengmod <span class="ot">&lt;-</span> </span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
+<span id="cb31-5"><a href="#cb31-5"></a>penguins <span class="sc">|&gt;</span> <span class="fu">bind_cols</span>(<span class="fu">predict</span>(pengmod,penguins)) <span class="sc">|&gt;</span> </span>
+<span id="cb31-6"><a href="#cb31-6"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(body_mass_g, flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb31-7"><a href="#cb31-7"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> flipper_length_mm, <span class="at">xend =</span> body_mass_g, <span class="at">yend =</span> .pred), <span class="at">color =</span> <span class="st">"gray"</span>) <span class="sc">+</span></span>
+<span id="cb31-8"><a href="#cb31-8"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb31-9"><a href="#cb31-9"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>) <span class="sc">+</span> </span>
+<span id="cb31-10"><a href="#cb31-10"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>.pred), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">alpha =</span>  <span class="fl">0.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_segment()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).
+Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-8-1.png" width="672" class="r-stretch"></section>
 <section id="check-fitted-values-and-residuals" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Check: Fitted values and Residuals</h2>
 <p>Recall: <strong>Residual = Observed value - Predicted value</strong></p>
 <p>The <em>Predicted values</em> are also called <em>Fitted values</em>. Hence:</p>
 <p>Residuals + Fitted values = Observed values</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">+</span> pengmod<span class="sc">$</span>fit<span class="sc">$</span>fitted.values) <span class="sc">|&gt;</span> </span>
-<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">+</span> pengmod<span class="sc">$</span>fit<span class="sc">$</span>fitted.values) <span class="sc">|&gt;</span> </span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  1   2   3   5   6   7 
 181 186 195 193 190 181 </code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>penguins<span class="sc">$</span>flipper_length_mm <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>penguins<span class="sc">$</span>flipper_length_mm <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 181 186 195  NA 193 190</code></pre>
 </div>
@@ -594,23 +686,46 @@ Coefficients:
 <h2>Proporties of least squares regression</h2>
 <p>The regression lines goes through the point (<code>mean(x)</code>, <code>mean(y)</code>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4201.754</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 200.9152</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">bind_cols</span>(<span class="fu">predict</span>(pengmod,penguins)) <span class="sc">|&gt;</span> </span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(body_mass_g, flipper_length_mm)) <span class="sc">+</span></span>
+<span id="cb44-3"><a href="#cb44-3"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> flipper_length_mm, <span class="at">xend =</span> body_mass_g, <span class="at">yend =</span> .pred), <span class="at">color =</span> <span class="st">"gray"</span>) <span class="sc">+</span></span>
+<span id="cb44-4"><a href="#cb44-4"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.3</span>) <span class="sc">+</span></span>
+<span id="cb44-5"><a href="#cb44-5"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>) <span class="sc">+</span> </span>
+<span id="cb44-6"><a href="#cb44-6"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">y=</span>.pred), <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">alpha =</span>  <span class="fl">0.3</span>) <span class="sc">+</span> </span>
+<span id="cb44-7"><a href="#cb44-7"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">mean</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> T), <span class="at">y =</span> <span class="fu">mean</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> T)), </span>
+<span id="cb44-8"><a href="#cb44-8"></a>                                            <span class="at">mapping =</span> <span class="fu">aes</span>(x,y), <span class="at">color =</span> <span class="st">"green"</span>, <span class="at">size =</span> <span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_segment()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).
+Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-12-1.png" width="672" class="r-stretch"></section>
 <section id="proporties-of-least-squares-regression-1" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Proporties of least squares regression</h2>
 <p>Residuals sum up to zero</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
-<span id="cb30-2"><a href="#cb30-2"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>pengmod <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins)</span>
+<span id="cb49-2"><a href="#cb49-2"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -3.765044e-14</code></pre>
 </div>
@@ -618,27 +733,27 @@ Coefficients:
 <div class="fragment">
 <p>There is no correlation between residuals and the explanatory variable</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">cor</span>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals, <span class="fu">na.omit</span>(penguins<span class="sc">$</span>body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">cor</span>(pengmod<span class="sc">$</span>fit<span class="sc">$</span>residuals, <span class="fu">na.omit</span>(penguins<span class="sc">$</span>body_mass_g))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -1.353445e-16</code></pre>
 </div>
 </div>
 </div>
 <div class="fragment">
-<p>The correlation of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is the slope <span class="math inline">\(b_1\)</span> corrected by their standard deviations.</p>
+<p>The correlation of <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is the slope <span class="math inline">\(\beta_1\)</span> corrected by their standard deviations.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span>
-<span id="cb34-2"><a href="#cb34-2"></a>sd_flipper <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> T)</span>
-<span id="cb34-3"><a href="#cb34-3"></a>sd_mass <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> T)</span>
-<span id="cb34-4"><a href="#cb34-4"></a><span class="fu">c</span>(correlation, sd_flipper, sd_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span>
+<span id="cb53-2"><a href="#cb53-2"></a>sd_flipper <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>flipper_length_mm, <span class="at">na.rm =</span> T)</span>
+<span id="cb53-3"><a href="#cb53-3"></a>sd_mass <span class="ot">&lt;-</span> <span class="fu">sd</span>(penguins<span class="sc">$</span>body_mass_g, <span class="at">na.rm =</span> T)</span>
+<span id="cb53-4"><a href="#cb53-4"></a><span class="fu">c</span>(correlation, sd_flipper, sd_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]   0.8712018  14.0617137 801.9545357</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>correlation <span class="sc">*</span> sd_flipper <span class="sc">/</span> sd_mass</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>correlation <span class="sc">*</span> sd_flipper <span class="sc">/</span> sd_mass</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.01527592</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>pengmod<span class="sc">$</span>fit<span class="sc">$</span>coefficients</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> (Intercept)  body_mass_g 
 136.72955927   0.01527592 </code></pre>
@@ -663,10 +778,10 @@ Coefficients:
 <h2>Explanatory variables are categorical</h2>
 <p>Let’s just try what happens with <code>species</code> as explanatory variable. Remember, we have three species: Adelie, Chinstrap, Gentoo.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb40-2"><a href="#cb40-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb40-3"><a href="#cb40-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb40-4"><a href="#cb40-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb59-2"><a href="#cb59-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb59-3"><a href="#cb59-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb59-4"><a href="#cb59-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term             estimate std.error statistic   p.value
@@ -719,10 +834,10 @@ Coefficients:
 <section id="interpretation" class="slide level2 smaller" data-background-color="khaki">
 <h2>Interpretation</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb42-2"><a href="#cb42-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb42-3"><a href="#cb42-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb42-4"><a href="#cb42-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb61-2"><a href="#cb61-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb61-3"><a href="#cb61-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb61-4"><a href="#cb61-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term             estimate std.error statistic   p.value
@@ -747,6 +862,10 @@ Coefficients:
 <section id="compare-to-a-visualization" class="slide level2 smaller">
 <h2>Compare to a visualization</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb63-2"><a href="#cb63-2"></a>    <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb63-3"><a href="#cb63-3"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb63-4"><a href="#cb63-4"></a>    <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term             estimate std.error statistic   p.value
@@ -756,8 +875,23 @@ Coefficients:
 3 speciesGentoo       27.2      0.807     33.8  1.84e-110</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb65-2"><a href="#cb65-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(species, flipper_length_mm)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb65-3"><a href="#cb65-3"></a>    <span class="fu">stat_summary</span>(<span class="at">fun.y=</span>mean, <span class="at">geom=</span><span class="st">"point"</span>, <span class="at">size=</span><span class="dv">5</span>, <span class="at">color=</span><span class="st">"red"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The `fun.y` argument of `stat_summary()` is deprecated as of ggplot2 3.3.0.
+ℹ Please use the `fun` argument instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_boxplot()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_summary()`).</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-19-1.png" width="288" class="r-stretch"><p>The red dots are the average values for species.</p>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-19-1.png" width="288" class="r-stretch"><p>The red dots are the average values for species.</p>
 </section></section>
 <section>
 <section id="linear-models-and-r-squared" class="title-slide slide level1 center">
@@ -767,9 +901,9 @@ Coefficients:
 <section id="linear-model" class="slide level2 smaller">
 <h2>Linear model</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb45-2"><a href="#cb45-2"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb45-3"><a href="#cb45-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb69-2"><a href="#cb69-2"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb69-3"><a href="#cb69-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic   p.value
@@ -781,9 +915,9 @@ Coefficients:
 <p>average <code>flipper_length_mm</code> <span class="math inline">\(= 137 + 0.0153\cdot\)</span> <code>body_mass_g</code></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb47-2"><a href="#cb47-2"></a>    <span class="fu">fit</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb47-3"><a href="#cb47-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb71-2"><a href="#cb71-2"></a>    <span class="fu">fit</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb71-3"><a href="#cb71-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term           estimate std.error statistic  p.value
@@ -811,9 +945,9 @@ Coefficients:
 <section id="linear-model-r-squared" class="slide level2 smaller">
 <h2>Linear model R-squared</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb49-2"><a href="#cb49-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
-<span id="cb49-3"><a href="#cb49-3"></a> <span class="fu">glance</span>()  <span class="co"># glance shows summary statistics of model fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb73-2"><a href="#cb73-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span></span>
+<span id="cb73-3"><a href="#cb73-3"></a> <span class="fu">glance</span>()  <span class="co"># glance shows summary statistics of model fit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -822,12 +956,12 @@ Coefficients:
 # ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
 </div>
 </div>
-<p><strong>Interpretation R-square?</strong> <span class="fragment">75.8% of the variance of flipper length can be explained by a linear relation with body mass.</span></p>
+<p><strong>Interpretation R-squared?</strong> <span class="fragment">75.9% of the variance of flipper length can be explained by a linear relation with body mass.</span></p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb51-2"><a href="#cb51-2"></a>    <span class="fu">fit</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb51-3"><a href="#cb51-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb75-2"><a href="#cb75-2"></a>    <span class="fu">fit</span>(bill_depth_mm <span class="sc">~</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb75-3"><a href="#cb75-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -836,7 +970,7 @@ Coefficients:
 # ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
 </div>
 </div>
-<p>5.25% of the variance of bill depth can be explained by a linear relation with bill length.</p>
+<p>5.52% of the variance of bill depth can be explained by a linear relation with bill length.</p>
 </div>
 <div class="fragment">
 <p><strong>Technical:</strong> The idea of the <code>glance()</code> function is to construct a single row summary “glance” of a model, fit, or other object.</p>
@@ -846,9 +980,9 @@ Coefficients:
 <h2>R-squared and correlation</h2>
 <p>For a linear model with one predictor, the square of the correlation coefficient is the same as the R-squared of the model.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb53-2"><a href="#cb53-2"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb53-3"><a href="#cb53-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb77-2"><a href="#cb77-2"></a>    <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb77-3"><a href="#cb77-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -858,13 +992,13 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.8712018</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1"></a><span class="fu">cor</span>(penguins<span class="sc">$</span>flipper_length_mm, penguins<span class="sc">$</span>body_mass_g, <span class="at">use =</span> <span class="st">"pairwise.complete.obs"</span>)<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7589925</code></pre>
 </div>
@@ -881,9 +1015,9 @@ Coefficients:
 <section id="more-predictors-coefficients" class="slide level2 smaller">
 <h2>More predictors: Coefficients</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb59-2"><a href="#cb59-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb59-3"><a href="#cb59-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb83-2"><a href="#cb83-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb83-3"><a href="#cb83-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic   p.value
@@ -893,9 +1027,9 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb61-2"><a href="#cb61-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb61-3"><a href="#cb61-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb85-2"><a href="#cb85-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb85-3"><a href="#cb85-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term           estimate std.error statistic   p.value
@@ -906,9 +1040,9 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb63-2"><a href="#cb63-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm <span class="sc">+</span> bill_depth_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb63-3"><a href="#cb63-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb87-2"><a href="#cb87-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm <span class="sc">+</span> bill_depth_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb87-3"><a href="#cb87-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term           estimate std.error statistic   p.value
@@ -923,9 +1057,9 @@ Coefficients:
 <section id="more-predictors-glance-r-squared" class="slide level2 smaller">
 <h2>More predictors: <code>glance</code> R-squared</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb65-2"><a href="#cb65-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb65-3"><a href="#cb65-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb89-2"><a href="#cb89-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb89-3"><a href="#cb89-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -935,9 +1069,9 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb67-2"><a href="#cb67-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb67-3"><a href="#cb67-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb91-2"><a href="#cb91-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb91-3"><a href="#cb91-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -947,9 +1081,9 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb69-2"><a href="#cb69-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm <span class="sc">+</span> bill_depth_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb69-3"><a href="#cb69-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb93-2"><a href="#cb93-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> bill_length_mm <span class="sc">+</span> bill_depth_mm, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb93-3"><a href="#cb93-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -962,18 +1096,18 @@ Coefficients:
 <section id="more-predictors-equations" class="slide level2 smaller">
 <h2>More predictors: Equations</h2>
 <p>average <code>flipper_length_mm</code> <span class="math inline">\(= 137 + 0.0153\cdot\)</span> <code>body_mass_g</code><br>
-75.8% explained variance</p>
+75.9% explained variance</p>
 <p>average <code>flipper_length_mm</code> <span class="math inline">\(= 122 + 0.0131\cdot\)</span> <code>body_mass_g</code> <span class="math inline">\(+ 0.549\cdot\)</span> <code>bill_length_mm</code><br>
-78.7% explained variance</p>
+78.8% explained variance</p>
 <p>average <code>flipper_length_mm</code> <span class="math inline">\(= 158 + 0.0109\cdot\)</span> <code>body_mass_g</code> <span class="math inline">\(+ 0.592\cdot\)</span> <code>bill_length_mm</code> <span class="math inline">\(- 1.68\cdot\)</span> <code>bill_length_mm</code><br>
-83.0% explained variance</p>
+83.1% explained variance</p>
 </section>
 <section id="adding-a-categorical-variable-as-main-effect" class="slide level2 smaller">
 <h2>Adding a categorical variable as main effect</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb71-2"><a href="#cb71-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb71-3"><a href="#cb71-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb95-2"><a href="#cb95-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb95-3"><a href="#cb95-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term              estimate std.error statistic   p.value
@@ -986,9 +1120,9 @@ Coefficients:
 </div>
 <p>A <strong>main effect</strong> by categorical dummy variables allows for different intercepts per species. (However, the slopes are the same.)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb73-2"><a href="#cb73-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb73-3"><a href="#cb73-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb97-2"><a href="#cb97-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb97-3"><a href="#cb97-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -1002,9 +1136,9 @@ Coefficients:
 <section id="adding-as-interaction-effect" class="slide level2 smaller">
 <h2>Adding as interaction effect</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb75-2"><a href="#cb75-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb75-3"><a href="#cb75-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb99-2"><a href="#cb99-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb99-3"><a href="#cb99-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   term                          estimate std.error statistic   p.value
@@ -1027,9 +1161,9 @@ Coefficients:
 <section id="improvement-through-the-interaction-effects-is-small-here" class="slide level2 smaller">
 <h2>Improvement through the interaction effects is small here</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb77-2"><a href="#cb77-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb77-3"><a href="#cb77-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb101-2"><a href="#cb101-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">+</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb101-3"><a href="#cb101-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -1039,9 +1173,9 @@ Coefficients:
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb79-2"><a href="#cb79-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb79-3"><a href="#cb79-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb103-2"><a href="#cb103-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb103-3"><a href="#cb103-3"></a> <span class="fu">glance</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
   r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC
@@ -1053,15 +1187,30 @@ Coefficients:
 </section>
 <section id="regression-lines-by-species" class="slide level2 smaller">
 <h2>Regression lines by species</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb105-2"><a href="#cb105-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> flipper_length_mm, <span class="at">color =</span> species)) <span class="sc">+</span></span>
+<span id="cb105-3"><a href="#cb105-3"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb105-4"><a href="#cb105-4"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_point()`).</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"><p>Compare the slopes to the regression output on the slides before!</p>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-38-1.png" width="672" class="r-stretch"><p>Compare the slopes to the regression output on the slides before!</p>
 </section>
 <section id="different-equations-for-each-species" class="slide level2 smaller">
 <h2>Different equations for each species!</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb81-2"><a href="#cb81-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
-<span id="cb81-3"><a href="#cb81-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb109"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb109-1"><a href="#cb109-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb109-2"><a href="#cb109-2"></a> <span class="fu">fit</span>(flipper_length_mm <span class="sc">~</span> body_mass_g <span class="sc">*</span> species, <span class="at">data =</span> penguins) <span class="sc">|&gt;</span> </span>
+<span id="cb109-3"><a href="#cb109-3"></a> <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   term                          estimate std.error statistic   p.value
@@ -1086,6 +1235,9 @@ average <code>flipper_length_mm</code> <span class="math inline">\(= 165 + 6.06 
 <p>Adding products of variables in the linear model <span class="math inline">\(y_i = \beta_0 + \beta_1x_1 + \beta_2x_2 + \beta_{3}x_1x_2 + \dots\)</span>.</p>
 <p>For <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> being dummy variables for <em>being female</em> and <em>having kids</em> this is for example</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb111"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb111-1"><a href="#cb111-1"></a><span class="fu">tibble</span>(<span class="at">gndr_f =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">0</span>), <span class="at">has_kids =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">0</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb111-2"><a href="#cb111-2"></a> <span class="fu">mutate</span>(<span class="at">gndr_f_x_has_kids =</span> gndr_f <span class="sc">*</span> has_kids) <span class="sc">|&gt;</span> </span>
+<span id="cb111-3"><a href="#cb111-3"></a> knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <thead>
@@ -1136,29 +1288,67 @@ average <code>flipper_length_mm</code> <span class="math inline">\(= 165 + 6.06 
 <section id="when-a-linear-model-is-bad" class="slide level2">
 <h2>When a linear model is bad</h2>
 <p>Example: Total corona cases in Germany in the first wave 2020.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb112"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb112-1"><a href="#cb112-1"></a>whofull <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/WHO-COVID-19-global-data.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb112-2"><a href="#cb112-2"></a>    <span class="fu">filter</span>(Country <span class="sc">==</span> <span class="st">"Germany"</span>) </span>
+<span id="cb112-3"><a href="#cb112-3"></a>who <span class="ot">&lt;-</span> whofull <span class="sc">|&gt;</span> </span>
+<span id="cb112-4"><a href="#cb112-4"></a>    <span class="fu">filter</span>(Date_reported <span class="sc">&lt;</span> <span class="st">"2020-03-20"</span>, Date_reported <span class="sc">&gt;</span> <span class="st">"2020-02-25"</span>) </span>
+<span id="cb112-5"><a href="#cb112-5"></a>who <span class="sc">|&gt;</span> </span>
+<span id="cb112-6"><a href="#cb112-6"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, Cumulative_cases)) <span class="sc">+</span> </span>
+<span id="cb112-7"><a href="#cb112-7"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-41-1.png" width="672" class="r-stretch"></section>
 <section id="log-transformation" class="slide level2 smaller">
 <h2><span class="math inline">\(\log\)</span> transformation</h2>
 <p>Instead of <code>Cumulative_cases</code> we look at <span class="math inline">\(\log(\)</span><code>Cumulative_cases</code><span class="math inline">\()\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb114"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb114-1"><a href="#cb114-1"></a>    who <span class="sc">|&gt;</span> </span>
+<span id="cb114-2"><a href="#cb114-2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, <span class="fu">log</span>(Cumulative_cases))) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb114-3"><a href="#cb114-3"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"><p>Almost perfect fit of the linear model: <span class="math inline">\(\log(y)=\log(\beta_0) + \beta_1\cdot x\)</span><br>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-42-1.png" width="672" class="r-stretch"><p>Almost perfect fit of the linear model: <span class="math inline">\(\log(y)=\log(\beta_0) + \beta_1\cdot x\)</span><br>
 (<span class="math inline">\(y=\)</span> <code>Cumulative cases</code>, <span class="math inline">\(x=\)</span> Days)</p>
 <div class="fragment">
-<p>Exponention gives the model: <span class="math inline">\(y=\beta_0 e^{\beta_1\cdot x}\)</span></p>
+<p>Exponentiation gives the model: <span class="math inline">\(y=\beta_0 e^{\beta_1\cdot x}\)</span> (Check <span class="math inline">\(e^{\log(\beta_0) + \beta_1\cdot x} = e^{\log(\beta_0)} e^{\beta_1\cdot x} = \beta_0 e^{\beta_1\cdot x}\)</span>)</p>
 </div>
 </section>
 <section id="exponential-growth" class="slide level2 smaller">
 <h2>Exponential growth!</h2>
 <p><span style="color:red;"><span class="math inline">\(y=\beta_0 e^{\beta_1\cdot x}\)</span></span><br>
 For comparison: Logistic function <span style="color:blue;"><span class="math inline">\(y = \frac{N \beta_0 e^{\beta_1\cdot x}}{N + \beta_0 e^{\beta_1\cdot x}}\)</span></span> for <span class="math inline">\(N=200000\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb116"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb116-1"><a href="#cb116-1"></a>wholm <span class="ot">&lt;-</span>    who <span class="sc">|&gt;</span> </span>
+<span id="cb116-2"><a href="#cb116-2"></a> <span class="fu">lm</span>(<span class="fu">log</span>(Cumulative_cases) <span class="sc">~</span> Date_reported, <span class="at">data =</span> _) </span>
+<span id="cb116-3"><a href="#cb116-3"></a>who <span class="sc">|&gt;</span> </span>
+<span id="cb116-4"><a href="#cb116-4"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, Cumulative_cases)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb116-5"><a href="#cb116-5"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb116-6"><a href="#cb116-6"></a> <span class="fu">geom_function</span>(</span>
+<span id="cb116-7"><a href="#cb116-7"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">200000</span><span class="sc">*</span><span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))<span class="sc">/</span>(<span class="dv">200000</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb116-8"><a href="#cb116-8"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"><p>Logistic growth (as in the SI model) mimicks exponential growth initially.</p>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-43-1.png" width="672" class="r-stretch"><p>Logistic growth (as in the SI model) mimicks exponential growth initially.</p>
 </section>
 <section id="log-transformation-1" class="slide level2 smaller">
 <h2><span class="math inline">\(\log\)</span> transformation</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb117"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb117-1"><a href="#cb117-1"></a>    who <span class="sc">|&gt;</span> </span>
+<span id="cb117-2"><a href="#cb117-2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, <span class="fu">log10</span>(Cumulative_cases))) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb117-3"><a href="#cb117-3"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><p>What is the difference to the penguin model?</p>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-44-1.png" width="672" class="r-stretch"><p>What is the difference to the penguin model?</p>
 <div class="fragment">
 <ul>
 <li><span class="math inline">\(x\)</span> has an ordered structure and no duplicates</li>
@@ -1171,12 +1361,41 @@ For comparison: Logistic function <span style="color:blue;"><span class="math in
 </section>
 <section id="however-it-works-only-in-a-certain-range" class="slide level2 smaller">
 <h2>However, it works only in a certain range</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb119"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb119-1"><a href="#cb119-1"></a>who <span class="sc">|&gt;</span> </span>
+<span id="cb119-2"><a href="#cb119-2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, Cumulative_cases)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb119-3"><a href="#cb119-3"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb119-4"><a href="#cb119-4"></a> <span class="fu">geom_function</span>(</span>
+<span id="cb119-5"><a href="#cb119-5"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">200000</span><span class="sc">*</span><span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))<span class="sc">/</span>(<span class="dv">200000</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb119-6"><a href="#cb119-6"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb119-7"><a href="#cb119-7"></a> <span class="fu">geom_line</span>(<span class="at">data =</span> whofull <span class="sc">|&gt;</span> <span class="fu">filter</span>(Date_reported <span class="sc">&lt;</span> <span class="st">"2020-06-30"</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">300000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 52 rows containing missing values (`geom_function()`).</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-45-1.png" width="672" class="r-stretch"></section>
 <section id="however-it-works-only-in-a-certain-range-log-scale-on-y" class="slide level2 smaller">
 <h2>However, it works only in a certain range (log scale on y)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb121"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb121-1"><a href="#cb121-1"></a>who <span class="sc">|&gt;</span> </span>
+<span id="cb121-2"><a href="#cb121-2"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(Date_reported, Cumulative_cases)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb121-3"><a href="#cb121-3"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> </span>
+<span id="cb121-4"><a href="#cb121-4"></a> <span class="fu">geom_function</span>(</span>
+<span id="cb121-5"><a href="#cb121-5"></a>  <span class="at">fun =</span> <span class="cf">function</span>(x) <span class="dv">200000</span><span class="sc">*</span><span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))<span class="sc">/</span>(<span class="dv">200000</span> <span class="sc">+</span> <span class="fu">exp</span>(<span class="fu">coef</span>(wholm)[<span class="dv">1</span>] <span class="sc">+</span> <span class="fu">coef</span>(wholm)[<span class="dv">2</span>]<span class="sc">*</span><span class="fu">as.numeric</span>(x))), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb121-6"><a href="#cb121-6"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb121-7"><a href="#cb121-7"></a> <span class="fu">geom_line</span>(<span class="at">data =</span> whofull <span class="sc">|&gt;</span> <span class="fu">filter</span>(Date_reported <span class="sc">&lt;</span> <span class="st">"2020-06-30"</span>)) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">300000</span>)) <span class="sc">+</span></span>
+<span id="cb121-8"><a href="#cb121-8"></a> <span class="fu">scale_y_log10</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Scale for y is already present.
+Adding another scale for y, which will replace the existing scale.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Transformation introduced infinite values in continuous y-axis</code></pre>
+</div>
 
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section></section>
+</div>
+<img data-src="W07_files/figure-html/unnamed-chunk-46-1.png" width="672" class="r-stretch"></section></section>
 <section>
 <section id="predicting-categorical-data" class="title-slide slide level1 center">
 <h1>Predicting Categorical Data</h1>
@@ -1188,9 +1407,27 @@ For comparison: Logistic function <span style="color:blue;"><span class="math in
 <li>Example: <strong>Spam filter</strong> for emails</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a href="#cb83-1"></a><span class="fu">library</span>(openintro)</span>
-<span id="cb83-2"><a href="#cb83-2"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb83-3"><a href="#cb83-3"></a><span class="fu">glimpse</span>(email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb124"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb124-1"><a href="#cb124-1"></a><span class="fu">library</span>(openintro)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: airports</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: cherryblossom</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: usdata</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'openintro'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>The following object is masked from 'package:modeldata':
+
+    ames</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb130"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb130-1"><a href="#cb130-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb130-2"><a href="#cb130-2"></a><span class="fu">glimpse</span>(email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 3,921
 Columns: 21
@@ -1247,9 +1484,9 @@ $ number       &lt;fct&gt; big, small, small, small, none, none, big, small, sma
 <p>Would you expect spam to be longer or shorter?</p>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb85-1"><a href="#cb85-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_char, <span class="at">y =</span> spam)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb132"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb132-1"><a href="#cb132-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_char, <span class="at">y =</span> spam)) <span class="sc">+</span> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W07_files/figure-revealjs/unnamed-chunk-48-1.png" width="960"></p>
+<p><img data-src="W07_files/figure-html/unnamed-chunk-48-1.png" width="672"></p>
 </div>
 </div>
 </div>
@@ -1258,9 +1495,9 @@ $ number       &lt;fct&gt; big, small, small, small, none, none, big, small, sma
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> re_subj, <span class="at">fill =</span> spam)) <span class="sc">+</span> <span class="fu">geom_bar</span>()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb133"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb133-1"><a href="#cb133-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> re_subj, <span class="at">fill =</span> spam)) <span class="sc">+</span> <span class="fu">geom_bar</span>()  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W07_files/figure-revealjs/unnamed-chunk-49-1.png" width="960"></p>
+<p><img data-src="W07_files/figure-html/unnamed-chunk-49-1.png" width="672"></p>
 </div>
 </div>
 </div>
@@ -1270,12 +1507,15 @@ $ number       &lt;fct&gt; big, small, small, small, none, none, big, small, sma
 <p>Both seem to give some signal. <strong>How can we model the relationship?</strong></p>
 <p>We focus first on just <code>num_char</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_char, <span class="at">y =</span> <span class="fu">as.numeric</span>(spam)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb87-2"><a href="#cb87-2"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb134"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb134-1"><a href="#cb134-1"></a>email <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> num_char, <span class="at">y =</span> <span class="fu">as.numeric</span>(spam)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb134-2"><a href="#cb134-2"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
 </div>
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-50-1.png" width="960" class="r-stretch"><div class="cell">
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">fit</span>(<span class="fu">as.numeric</span>(spam)<span class="sc">-</span><span class="dv">1</span> <span class="sc">~</span> num_char, <span class="at">data =</span> email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<img data-src="W07_files/figure-html/unnamed-chunk-50-1.png" width="672" class="r-stretch"><div class="cell">
+<div class="sourceCode cell-code" id="cb136"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb136-1"><a href="#cb136-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> <span class="fu">fit</span>(<span class="fu">as.numeric</span>(spam)<span class="sc">-</span><span class="dv">1</span> <span class="sc">~</span> num_char, <span class="at">data =</span> email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>parsnip model object
 
@@ -1293,12 +1533,15 @@ Coefficients:
 <section id="a-penguins-example" class="slide level2 smaller">
 <h2>A penguins example</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb90-2"><a href="#cb90-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> <span class="fu">as.numeric</span>(sex)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span> </span>
-<span id="cb90-3"><a href="#cb90-3"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb138"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb138-1"><a href="#cb138-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">na.omit</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb138-2"><a href="#cb138-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> body_mass_g, <span class="at">y =</span> <span class="fu">as.numeric</span>(sex)<span class="sc">-</span><span class="dv">1</span>)) <span class="sc">+</span> </span>
+<span id="cb138-3"><a href="#cb138-3"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 
 </div>
-<img data-src="W07_files/figure-revealjs/unnamed-chunk-52-1.png" width="960" class="r-stretch"><p><span style="color:red;">It does not make much sense to predict 0-1-values with a linear model.</span></p>
+<img data-src="W07_files/figure-html/unnamed-chunk-52-1.png" width="672" class="r-stretch"><p><span style="color:red;">It does not make much sense to predict 0-1-values with a linear model.</span></p>
 </section>
 <section id="a-probabilistic-concept" class="slide level2 smaller">
 <h2>A probabilistic concept</h2>
@@ -1572,44 +1815,6 @@ where <span class="math inline">\(\eta\)</span> is related to a mean parameter o
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
