@@ -545,7 +545,7 @@ Complication rate for this consultant is <strong>lower</strong> than the US aver
 <pre><code>[1] 0.0483871</code></pre>
 </div>
 </div>
-<p>Oh OK, this was is pretty close to the consultant’s rate. But maybe it was a rare event?</p>
+<p>Oh OK, this is the same as the consultant’s rate. But maybe it was a rare event?</p>
 </section>
 <section id="more-simulation" class="slide level2 smaller">
 <h2>More simulation!</h2>
@@ -581,6 +581,7 @@ Complication rate for this consultant is <strong>lower</strong> than the US aver
 <pre><code>[1] 0.1129032</code></pre>
 </div>
 </div>
+<p>Oh OK, our fist simulation with 0.0483871 seems to be comparably low.</p>
 </section>
 <section id="automating-with-tidymodels" class="slide level2 smaller">
 <h2>Automating with <code>tidymodels</code><sup>1</sup></h2>
@@ -659,9 +660,9 @@ Null Hypothesis: point
 <p><img data-src="W10_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>The name p-value has nothing to do with the value <span class="math inline">\(p\)</span> we are currently trying to use as population parameter.</p></li></ol></aside></section>
-<section id="calculating-the-p-value-directly" class="slide level2">
-<h2>Calculating the p-value, directly</h2>
+<aside><ol class="aside-footnotes"><li id="fn2"><p><span style="color:red;">Warning:</span> The name p-value has nothing to do with the value <span class="math inline">\(p\)</span> we are currently trying to use as population parameter.</p></li></ol></aside></section>
+<section id="calculating-the-p-value-directly" class="slide level2 smaller">
+<h2>Calculating the p-value directly</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>null_dist <span class="sc">|&gt;</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a> <span class="fu">summarise</span>(<span class="at">p_value =</span> <span class="fu">sum</span>(stat <span class="sc">&lt;=</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">62</span>)<span class="sc">/</span><span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -672,7 +673,7 @@ Null Hypothesis: point
 1    0.13</code></pre>
 </div>
 </div>
-<p>This is the fraction of simulations where complications was equal or below 0.0483871.</p>
+<p>This is the fraction of simulations where the rate of complications was equal or below <span class="math inline">\(\frac{3}{62} =\)</span> 0.0483871.</p>
 </section>
 <section id="significance-level" class="slide level2 smaller">
 <h2>Significance level</h2>
@@ -703,7 +704,7 @@ Null Hypothesis: point
 
 </div>
 <img data-src="W10_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="our-more-robust-p-value" class="slide level2">
+<section id="our-more-robust-p-value" class="slide level2 smaller">
 <h2>Our more robust p-value</h2>
 <p>For the null distribution with 15,000 simulations</p>
 <div class="cell">
@@ -717,7 +718,6 @@ Null Hypothesis: point
 1   0.125</code></pre>
 </div>
 </div>
-<p>Oh OK, our fist p-value was much more borderline in favor of the alternative hypothesis.</p>
 </section>
 <section id="p-value-in-model-outputs" class="slide level2 smaller">
 <h2>p-value in model outputs</h2>
@@ -787,7 +787,7 @@ Null Hypothesis: point
 <li>the importance of a result” or “evidence regarding a model or hypothesis” (it is only against the null hypothesis).</li>
 </ul>
 <div class="fragment">
-<p>Correct:<br>
+<p><strong>Correct explanation:</strong><br>
 The p-value is the probability of obtaining test results at least as extreme as the result actually observed, under the assumption that the null hypothesis is correct.</p>
 <p>p-values and significance tests, when properly applied and interpreted, increase the rigor of the conclusions drawn from data.<sup>2</sup></p>
 </div>
@@ -905,7 +905,7 @@ The p-value is the probability of obtaining test results at least as extreme as 
 </div>
 </div>
 <div class="fragment">
-<p><strong>Categorical predictors:</strong> We 3 <code>species</code>, 3 <code>islands</code>. So, we see 4 new variables, 2 for <code>species</code> and 2 for <code>islands</code> (the third is the reference category). Species are significant (p &lt; 0.05), but not the island.</p>
+<p><strong>Categorical predictors:</strong> We have 3 <code>species</code>, 3 <code>island</code>. So, we see 4 new variables, 2 for <code>species</code> and 2 for <code>island</code> (the third is the reference category). Species are significant (p &lt; 0.05), but islands not.</p>
 <p><strong>Numerical predictors:</strong> <code>flipper_length_mm</code> is insignificant, though its coefficient is larger than for <code>body_mass_g</code>. Reason: values of <code>body_mass_g</code> are larger than those of <code>flipper_length_mm</code>. Body mass differs by much more grams than flipper length differs by millimeters.</p>
 </div>
 </section>
@@ -971,10 +971,10 @@ node), split, n, loss, yval, (yprob)
 </div>
 </div>
 <ul>
-<li>The first two rules would predict <code>female</code> for all observations</li>
-<li>The last two rules would predict <code>male</code> for all observations</li>
+<li>The first three rules would predict <code>female</code> for all observations</li>
+<li>The last five rules would predict <code>male</code> for all observations</li>
 </ul>
-<p>(The order of <code>male</code> and <code>female</code> is because <code>sex</code> is a factor with the first level <code>female</code> and the second level <code>male</code>. The probabilities are for the second level <code>male</code>.)</p>
+<p>The order of <code>male</code> and <code>female</code> is because <code>sex</code> is a factor with the first level <code>female</code> and the second level <code>male</code>. The probabilities in front of the rule-text are for the second level: <code>male</code>.</p>
 </section>
 <section id="visualize-tree" class="slide level2 smaller">
 <h2>Visualize tree</h2>
@@ -1026,7 +1026,7 @@ Prediction female male
 </div>
 <ul>
 <li>The logistic regression has more correct predictions.</li>
-<li><span style="color:red;">Warning:</span> <code>conf_mat</code> is a cool function from <code>yardstick</code> of <code>tidymodels</code>. Unfortunately, the confusion matrix is transposed (rows become columns) compared with <a href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia:Confusion Matrix</a>. In <code>conf_mat</code>, the <em>true conditions</em> are in columns. The wikipedia convention is that these are the <em>predicted conditions</em>.</li>
+<li><span style="color:red;">Warning:</span> The function <code>conf_mat</code> (from <code>yardstick</code> of <code>tidymodels</code>) shows the transposed confusion matrix compared with <a href="https://en.wikipedia.org/wiki/Confusion_matrix">Wikipedia:Confusion Matrix</a>. In <code>conf_mat</code>, the <em>true conditions</em> are in columns. The wikipedia convention is that columns are the <em>predicted conditions</em>.</li>
 </ul>
 </section></section>
 <section>
@@ -1036,17 +1036,17 @@ Prediction female male
 </section>
 <section id="model-in-statistical-learning" class="slide level2 smaller">
 <h2>“Model” in Statistical Learning</h2>
-<p>We already had the difference between <em>variable-based</em> and <em>agent-based</em> models.</p>
+<p>We already had the difference between <em>variable-based</em> and <em>agent-based</em> models in earlier lectures.</p>
 <p>But even in the variable-based model setting of <strong>statistical learning</strong>, the term <em>model</em> can be more or less abstract:</p>
 <ol type="1">
 <li>Very general: <span class="math inline">\(Y = f(X_1, \dots, X_m) + \varepsilon\)</span> where <span class="math inline">\(Y\)</span> is the response variable and <span class="math inline">\(X_i\)</span> are features which we put in our <strong>model</strong>: the abstract and unknown function <span class="math inline">\(f\)</span>. <span class="math inline">\(\varepsilon\)</span> is the error which can never explain and which we also usually do not know.</li>
-<li>More specific: The <strong>model</strong> <span class="math inline">\(f\)</span> could already be of a specific type, like <em>linear regression</em>, <em>logistic regression</em>, or a <em>decision tree</em> or other functional forms. As this this need not be the <em>real</em> function we may call it <em>assumed model</em> <span class="math inline">\(\hat f\)</span> For example a linear model <span class="math inline">\(\hat f(X_1, \dots, X_m) = \beta_0 + \beta_1 X_1 + \dots + \beta_m X_m + \varepsilon\)</span>. Now, the model has specified parameters which values are unknown.</li>
+<li>More specific: The <strong>model</strong> <span class="math inline">\(f\)</span> could already be of a specific type, like <em>linear regression</em>, <em>logistic regression</em>, or a <em>decision tree</em> or other functional forms. As this need not be the <em>real</em> function we may call it <em>assumed model</em> <span class="math inline">\(\hat f\)</span> For example a linear model <span class="math inline">\(\hat f(X_1, \dots, X_m) = \beta_0 + \beta_1 X_1 + \dots + \beta_m X_m + \varepsilon\)</span>. Now, the model has specified parameters which values are unknown.</li>
 </ol>
 </section>
 <section id="more-specific-fitted-model" class="slide level2 smaller">
 <h2>More specific: Fitted model</h2>
 <ol start="3" type="1">
-<li>Fitted model: When we have a data set with values for <span class="math inline">\(Y, X_1, \dots, X_m\)</span> we can fit values for the parameters <span class="math inline">\(\hat\beta_0, \dots, \hat\beta_m\)</span> to the data. This is the <em>fitted model</em> <span class="math inline">\(\hat f\)</span>. This is called parameter estimation: We estimate <span class="math inline">\(\hat\beta_0, \dots, \hat\beta_m\)</span> with the hope that they match the <em>real</em> values <span class="math inline">\(\hat\beta_0, \dots, \hat\beta_m\)</span> and that the linear model <span class="math inline">\(\hat f\)</span> matches the <em>real</em> function <span class="math inline">\(f\)</span>.</li>
+<li>Fitted model: When we have a data set with values for <span class="math inline">\(Y, X_1, \dots, X_m\)</span> we can fit values for the parameters <span class="math inline">\(\hat\beta_0, \dots, \hat\beta_m\)</span> to the data. This is the <em>fitted model</em> <span class="math inline">\(\hat f\)</span>. This is called parameter estimation: We estimate <span class="math inline">\(\hat\beta_0, \dots, \hat\beta_m\)</span> with the hope that they match the <em>real</em> values <span class="math inline">\(\beta_0, \dots, \beta_m\)</span> and that the linear model <span class="math inline">\(\hat f\)</span> matches the <em>real</em> function <span class="math inline">\(f\)</span>.</li>
 <li>Now we could specify further to fit a specific parameterized model with a specific algorithm, and a specific set of hyperparameters, and maybe more …</li>
 </ol>
 <p>Sometimes model means only a certain aspect of all these, for example the <em>formula</em> like <code>sex ~ bill_length_mm + bill_depth_mm + flipper_length_mm + body_mass_g + species + island</code></p>
@@ -1148,12 +1148,11 @@ Prediction female male
 <ul>
 <li>What do the categorical predictors tell us? Which are signigficant?</li>
 <li>What do the numerical predictors tell us? Which are signigficant?</li>
-<li>Why is the coefficient for <code>body_mass_g</code> so small, but highly significant?</li>
 </ul>
 </div>
 </div>
 <div class="fragment">
-<p><strong>Categorical predictors:</strong> We 3 <code>species</code>, 3 <code>islands</code> and 2 <code>sex</code>. So, we see 5 new variables. Species and sex are significant, but not the island.</p>
+<p><strong>Categorical predictors:</strong> We 3 <code>species</code>, 3 <code>island</code> and 2 <code>sex</code>. So, we see 5 new variables. Species and sex are significant, but islands not.</p>
 <p><strong>Numerical predictors:</strong> All 3 are significant.</p>
 </div>
 </section>
@@ -1331,7 +1330,7 @@ where <span class="math inline">\(\hat{y}_i\)</span> is the predicted value and 
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1"></a>peng_test <span class="sc">|&gt;</span> </span>
 <span id="cb77-2"><a href="#cb77-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>body_mass_g, <span class="at">fill =</span> species)) <span class="sc">+</span> </span>
 <span id="cb77-3"><a href="#cb77-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50</span>) <span class="sc">+</span> </span>
-<span id="cb77-4"><a href="#cb77-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb77-4"><a href="#cb77-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <p><img data-src="W10_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
@@ -1343,7 +1342,7 @@ where <span class="math inline">\(\hat{y}_i\)</span> is the predicted value and 
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a>peng_linreg_pred <span class="sc">|&gt;</span> </span>
 <span id="cb78-2"><a href="#cb78-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>.pred, <span class="at">fill =</span> species)) <span class="sc">+</span> </span>
 <span id="cb78-3"><a href="#cb78-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50</span>) <span class="sc">+</span> </span>
-<span id="cb78-4"><a href="#cb78-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb78-4"><a href="#cb78-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <p><img data-src="W10_files/figure-revealjs/unnamed-chunk-41-1.png" width="960"></p>
@@ -1355,7 +1354,7 @@ where <span class="math inline">\(\hat{y}_i\)</span> is the predicted value and 
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1"></a>peng_regtree_pred <span class="sc">|&gt;</span> </span>
 <span id="cb79-2"><a href="#cb79-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>.pred, <span class="at">fill =</span> species)) <span class="sc">+</span> </span>
 <span id="cb79-3"><a href="#cb79-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">50</span>) <span class="sc">+</span> </span>
-<span id="cb79-4"><a href="#cb79-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb79-4"><a href="#cb79-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <p><img data-src="W10_files/figure-revealjs/unnamed-chunk-42-1.png" width="960"></p>
@@ -1426,9 +1425,9 @@ where <span class="math inline">\(\hat{y}_i\)</span> is the predicted value and 
 </div>
 </div>
 </div>
-<p>Where is the prediction better?</p>
+<p>Where is the prediction better? (Lower RMSE, higher R-squared)</p>
 <div class="fragment">
-<p>The prediction is usually (slightly) better for the training data. Why? Because it was used to fit the model. The model is optimized to predict the training data.</p>
+<p>Performance is better for training data (compare values to testing data of the same model). Why? It was used to fit. The model is optimized to predict the training data.</p>
 </div>
 </section>
 <section id="make-a-deeper-tree" class="slide level2 smaller">
