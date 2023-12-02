@@ -529,13 +529,13 @@ f_X(2) = &amp;\text{Pr}(X=2) = \text{Pr}(\{HH\}) &amp; = 0.25\end{align}\]</span
 <span class="math inline">\(\text{Pr}(6) = \text{Pr}(8) = \frac{5}{36}\)</span><br>
 <span class="math inline">\(\text{Pr}(7) = \frac{6}{36}\)</span></p>
 </div><div class="column" style="width:60%;">
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-2_437ffb0e23f5cf912ca6672a74549b32">
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-2_25c8d5762dbb0f11bf531e9755149f11">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">tibble</span>(<span class="at">Value =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">15</span>, </span>
 <span id="cb1-2"><a href="#cb1-2"></a>       <span class="at">pmf=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">5</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>)<span class="sc">/</span><span class="dv">36</span>) <span class="sc">|&gt;</span> </span>
 <span id="cb1-3"><a href="#cb1-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Value,pmf)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb1-4"><a href="#cb1-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-2-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -605,13 +605,13 @@ f_X(2) = &amp;\text{Pr}(X=2) = \text{Pr}(\{HH\}) &amp; = 0.25\end{align}\]</span
 <div class="columns">
 <div class="column" style="width:33%;">
 <p><strong>Discrete</strong></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-3_9a8bd2df8dea06dc14c42a02de679f34">
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-3_e41cde9fc46ce85d36afbb2f06a4efb3">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>penguins <span class="sc">|&gt;</span> </span>
 <span id="cb2-2"><a href="#cb2-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(island)) <span class="sc">+</span> </span>
 <span id="cb2-3"><a href="#cb2-3"></a> <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
 <span id="cb2-4"><a href="#cb2-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-3-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </div>
 </div>
 <p>Technically <code>island</code> is cannot be interpreted as a random variable because its values are not numbers, but we also speak about the <em>distribution</em> of the variables.</p>
@@ -619,57 +619,42 @@ f_X(2) = &amp;\text{Pr}(X=2) = \text{Pr}(\{HH\}) &amp; = 0.25\end{align}\]</span
 <div class="fragment">
 <p><strong>Continuous</strong> in nature<br>
 (technically still discrete)</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-4_ed0facc6accf3d5e5bbb8f187181098b">
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-4_8ad3bed6e815bd9cdaf0f05a432a924a">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>penguins <span class="sc">|&gt;</span> </span>
 <span id="cb3-2"><a href="#cb3-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
 <span id="cb3-3"><a href="#cb3-3"></a> <span class="fu">geom_histogram</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-4-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </div>
 </div>
 <p>Larger bin width</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-5_db4239e2a2f7e0a9d01ba1ebcdfe4acb">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb6-3"><a href="#cb6-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-5_e8e71ba106a759a2586c8b6ab88dd47a">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-5-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:33%;">
 <div class="fragment">
 <p>Smallest bin width</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-6_7e73d75e5cf949c6c56399cd3444eaea">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb8-3"><a href="#cb8-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-6_7039c1725e2eac34e2b1fdc18c9feb86">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb5-3"><a href="#cb5-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-6-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </div>
 </div>
 <p><strong>Density</strong> plot</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-7_a3fd8684074fa6e62dd28446fad3edd6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb10-2"><a href="#cb10-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-7_c70f0116d1d46f69b9d8b42d37462cc5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb6-2"><a href="#cb6-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-7-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -685,31 +670,25 @@ f_X(2) = &amp;\text{Pr}(X=2) = \text{Pr}(\{HH\}) &amp; = 0.25\end{align}\]</span
 <div class="columns">
 <div class="column" style="width:33%;">
 <p>With automatic bandwidth (<code>bw</code>)</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-8_34c7dce1fcc1b969c7dd6fae037edfd2">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a href="#cb12-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb12-3"><a href="#cb12-3"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> </span>
-<span id="cb12-4"><a href="#cb12-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-8_4da71be35c5cb2434725551ea2d5ba5e">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb7-3"><a href="#cb7-3"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> </span>
+<span id="cb7-4"><a href="#cb7-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-8-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:33%;">
 <div class="fragment">
 <p><code>bw = 0.5</code> means kernel has standard deviation 0.5</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-9_d824fd3d29fe5e28f35f3260bd9d265a">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>penguins <span class="sc">|&gt;</span> </span>
-<span id="cb14-2"><a href="#cb14-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb14-3"><a href="#cb14-3"></a> <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb14-4"><a href="#cb14-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-9_51b20ee1161b6d4e545380382e94e8ed">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>penguins <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb8-3"><a href="#cb8-3"></a> <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb8-4"><a href="#cb8-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-9-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -717,13 +696,13 @@ f_X(2) = &amp;\text{Pr}(X=2) = \text{Pr}(\{HH\}) &amp; = 0.25\end{align}\]</span
 <div class="fragment">
 <p>For demonstration:<br>
 2 penguins only</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-10_794aef5fe898bf42ae679d1243ec6e75">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb16-2"><a href="#cb16-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
-<span id="cb16-3"><a href="#cb16-3"></a> <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">170</span>,<span class="dv">230</span>)) <span class="sc">+</span> </span>
-<span id="cb16-4"><a href="#cb16-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-10_aa14f05a096374cef43e1bc6385a59f5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>penguins <span class="sc">|&gt;</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(flipper_length_mm)) <span class="sc">+</span> </span>
+<span id="cb9-3"><a href="#cb9-3"></a> <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">170</span>,<span class="dv">230</span>)) <span class="sc">+</span> </span>
+<span id="cb9-4"><a href="#cb9-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-10-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
 </div>
 </div>
 <p>See the two kernels</p>
@@ -753,16 +732,16 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <p><span class="math display">\[f(k,n,p) = \Pr(k;n,p) = \Pr(X = k) = \binom{n}{k}p^k(1-p)^{n-k}\]</span></p>
 <p>where <span class="math inline">\(k\)</span> is the number of successes, <span class="math inline">\(n\)</span> is the number of Bernoulli trials, and <span class="math inline">\(p\)</span> the success probability.</p>
 <p>Probability to have <em>exactly</em> 3 complications in 62 randomly selected organ donations with complication probability <span class="math inline">\(p=0.1\)</span> is</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-11_6112d35bd29daa61d9769c455f62c084">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="co"># x represents k, and size represents n</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-11_019977b0ed5afc7b7b1cd5a2d0d955ea">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># x represents k, and size represents n</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">dbinom</span>(<span class="at">x =</span> <span class="dv">3</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.07551437</code></pre>
 </div>
 </div>
 <p>The probability to have 3 complications <em>or less</em> can be computed as</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-12_4a75b9c4651c709cfcd2a6b0eac815ef">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">dbinom</span>(<span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">2</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">1</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-12_f757635fee1748183b7c45aef7b416e8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">dbinom</span>(<span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">2</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">1</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">dbinom</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1209787</code></pre>
 </div>
@@ -782,30 +761,30 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <section id="distribution-functions-are-vectorized" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Distribution functions are vectorized!</h2>
 <p>Compute the p-value:</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-13_1aa1a67c5559b0a5cee561d91c1caf88">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-13_ac8088e5f386c6ed13c5e4eaa55f47d3">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.001455578 0.010027317 0.033981465 0.075514366</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">62</span>, <span class="fl">0.1</span>) <span class="sc">|&gt;</span> <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.1209787</code></pre>
 </div>
 </div>
 <p>Plotting the probability mass function</p>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-14_dfef92f6d52d3909ad381ec338216d4c">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-14_b4383a8544100b581ab477c2ba8aa94b">
 <div class="column">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">tibble</span>(<span class="at">k =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">62</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb25-2"><a href="#cb25-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(k, </span>
-<span id="cb25-3"><a href="#cb25-3"></a>                             <span class="at">size =</span> <span class="dv">62</span>, </span>
-<span id="cb25-4"><a href="#cb25-4"></a>                             <span class="at">prob =</span> <span class="fl">0.1</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb25-5"><a href="#cb25-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> </span>
-<span id="cb25-6"><a href="#cb25-6"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
-<span id="cb25-7"><a href="#cb25-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> </span>
-<span id="cb25-8"><a href="#cb25-8"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">tibble</span>(<span class="at">k =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">62</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(k, </span>
+<span id="cb18-3"><a href="#cb18-3"></a>                             <span class="at">size =</span> <span class="dv">62</span>, </span>
+<span id="cb18-4"><a href="#cb18-4"></a>                             <span class="at">prob =</span> <span class="fl">0.1</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb18-5"><a href="#cb18-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> </span>
+<span id="cb18-6"><a href="#cb18-6"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
+<span id="cb18-7"><a href="#cb18-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> </span>
+<span id="cb18-8"><a href="#cb18-8"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-14-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -814,19 +793,19 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <section id="other-plots-of-binomial-mass-function" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Other plots of binomial mass function</h2>
 <p>Changing the sample size <span class="math inline">\(n\)</span> when the success probability <span class="math inline">\(p = 0.1\)</span> and the number of successes <span class="math inline">\(k=3\)</span> is fixed:</p>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-15_aee2d211d1cc70dc2f5b5909d61367a0">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-15_11f2a1d4fec567ec5918de359d41de88">
 <div class="column">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">tibble</span>(<span class="at">samplesize =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">62</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb26-2"><a href="#cb26-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(<span class="dv">3</span>, </span>
-<span id="cb26-3"><a href="#cb26-3"></a>                             <span class="at">size =</span> samplesize, </span>
-<span id="cb26-4"><a href="#cb26-4"></a>                             <span class="at">prob =</span> <span class="fl">0.1</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb26-5"><a href="#cb26-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(samplesize, probability)) <span class="sc">+</span> </span>
-<span id="cb26-6"><a href="#cb26-6"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
-<span id="cb26-7"><a href="#cb26-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span></span>
-<span id="cb26-8"><a href="#cb26-8"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">tibble</span>(<span class="at">samplesize =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">62</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb19-2"><a href="#cb19-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(<span class="dv">3</span>, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>                             <span class="at">size =</span> samplesize, </span>
+<span id="cb19-4"><a href="#cb19-4"></a>                             <span class="at">prob =</span> <span class="fl">0.1</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb19-5"><a href="#cb19-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(samplesize, probability)) <span class="sc">+</span> </span>
+<span id="cb19-6"><a href="#cb19-6"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
+<span id="cb19-7"><a href="#cb19-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">62</span>, <span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-15-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -838,19 +817,19 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <section id="other-plots-of-binomial-mass-function-1" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Other plots of binomial mass function</h2>
 <p>Changing the sample size <span class="math inline">\(p\)</span> when the sample size <span class="math inline">\(n = 62\)</span> and the number of successes <span class="math inline">\(k=3\)</span> is fixed:</p>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-16_c3b893324c1ddaba760f456f40f8fe72">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-16_a8d4631078d4796ed444ebbdc432744f">
 <div class="column">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">tibble</span>(<span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.3</span>,<span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb27-2"><a href="#cb27-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(<span class="dv">3</span>, </span>
-<span id="cb27-3"><a href="#cb27-3"></a>                             <span class="at">size =</span> <span class="dv">62</span>, </span>
-<span id="cb27-4"><a href="#cb27-4"></a>                             <span class="at">prob =</span> probs)) <span class="sc">|&gt;</span> </span>
-<span id="cb27-5"><a href="#cb27-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(probs, probability)) <span class="sc">+</span> </span>
-<span id="cb27-6"><a href="#cb27-6"></a> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb27-7"><a href="#cb27-7"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.3</span>,<span class="fl">0.05</span>)) <span class="sc">+</span> </span>
-<span id="cb27-8"><a href="#cb27-8"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">tibble</span>(<span class="at">probs =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.3</span>,<span class="fl">0.001</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-2"><a href="#cb20-2"></a> <span class="fu">mutate</span>(<span class="at">probability =</span> <span class="fu">dbinom</span>(<span class="dv">3</span>, </span>
+<span id="cb20-3"><a href="#cb20-3"></a>                             <span class="at">size =</span> <span class="dv">62</span>, </span>
+<span id="cb20-4"><a href="#cb20-4"></a>                             <span class="at">prob =</span> probs)) <span class="sc">|&gt;</span> </span>
+<span id="cb20-5"><a href="#cb20-5"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(probs, probability)) <span class="sc">+</span> </span>
+<span id="cb20-6"><a href="#cb20-6"></a> <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="fl">0.3</span>,<span class="fl">0.05</span>)) <span class="sc">+</span> </span>
+<span id="cb20-8"><a href="#cb20-8"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-16-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -879,17 +858,17 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <ul>
 <li>The <strong>mass function</strong> (or <em>density function</em>, more on this later) <code>dbinom</code></li>
 </ul>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-17_c53acbe1d067a78a2f56ea94fe471a6e">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-17_47e1f66a157f8dfc5f457a1cca7b4095">
 <div class="column">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="fu">tibble</span>(k, </span>
-<span id="cb28-3"><a href="#cb28-3"></a>       <span class="at">probability =</span> <span class="fu">dbinom</span>(k, </span>
-<span id="cb28-4"><a href="#cb28-4"></a>                            <span class="at">size =</span> <span class="dv">10</span>, </span>
-<span id="cb28-5"><a href="#cb28-5"></a>                            <span class="at">prob =</span> <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb28-6"><a href="#cb28-6"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="fu">tibble</span>(k, </span>
+<span id="cb21-3"><a href="#cb21-3"></a>       <span class="at">probability =</span> <span class="fu">dbinom</span>(k, </span>
+<span id="cb21-4"><a href="#cb21-4"></a>                            <span class="at">size =</span> <span class="dv">10</span>, </span>
+<span id="cb21-5"><a href="#cb21-5"></a>                            <span class="at">prob =</span> <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb21-6"><a href="#cb21-6"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-17-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -900,19 +879,19 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <ul>
 <li>The <strong>distribution function</strong>, or cumulative probability function <code>pbinom</code></li>
 </ul>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-18_f0c935ed9c15b71182f4720679c4a749">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-18_a3b36fc497918574a5ccdc2278cad63b">
 <div class="column">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a><span class="fu">tibble</span>(k, </span>
-<span id="cb29-3"><a href="#cb29-3"></a>       <span class="at">probability =</span> <span class="fu">pbinom</span>(k, </span>
-<span id="cb29-4"><a href="#cb29-4"></a>                            <span class="at">size =</span> <span class="dv">10</span>, </span>
-<span id="cb29-5"><a href="#cb29-5"></a>                            <span class="at">prob =</span> <span class="fl">0.5</span>))  <span class="sc">|&gt;</span> </span>
-<span id="cb29-6"><a href="#cb29-6"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> </span>
-<span id="cb29-7"><a href="#cb29-7"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
-<span id="cb29-8"><a href="#cb29-8"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb22-2"><a href="#cb22-2"></a><span class="fu">tibble</span>(k, </span>
+<span id="cb22-3"><a href="#cb22-3"></a>       <span class="at">probability =</span> <span class="fu">pbinom</span>(k, </span>
+<span id="cb22-4"><a href="#cb22-4"></a>                            <span class="at">size =</span> <span class="dv">10</span>, </span>
+<span id="cb22-5"><a href="#cb22-5"></a>                            <span class="at">prob =</span> <span class="fl">0.5</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb22-6"><a href="#cb22-6"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, probability)) <span class="sc">+</span> </span>
+<span id="cb22-7"><a href="#cb22-7"></a> <span class="fu">geom_col</span>() <span class="sc">+</span> </span>
+<span id="cb22-8"><a href="#cb22-8"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-18-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -924,18 +903,18 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <ul>
 <li>The <strong>quantile function</strong>, <code>qbinom</code> with argument <span class="math inline">\(p\)</span> representing the fraction of lowest values of <span class="math inline">\(X\)</span> among all values for which we want the <span class="math inline">\(k\)</span> value for.</li>
 </ul>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-19_f8602b2ec27685a3d127318e6b08cd59">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-19_f16efbe11bfdc61eb11fd33cc0e19dd6">
 <div class="column">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
-<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">tibble</span>(<span class="at">p =</span> probs) <span class="sc">|&gt;</span> </span>
-<span id="cb30-3"><a href="#cb30-3"></a> <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">qbinom</span>(p, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb30-4"><a href="#cb30-4"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> </span>
-<span id="cb30-5"><a href="#cb30-5"></a> <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb30-6"><a href="#cb30-6"></a> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
-<span id="cb30-7"><a href="#cb30-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">tibble</span>(<span class="at">p =</span> probs) <span class="sc">|&gt;</span> </span>
+<span id="cb23-3"><a href="#cb23-3"></a> <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">qbinom</span>(p, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb23-4"><a href="#cb23-4"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> </span>
+<span id="cb23-5"><a href="#cb23-5"></a> <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb23-6"><a href="#cb23-6"></a> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-19-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-19-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -948,22 +927,22 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <li><p>The <em>mass function</em> is the <strong>derivative</strong> of the <em>distribution function</em>.<br>
 (The <em>distribution function</em> is the anti-derivative of the <em>mass function</em>.)</p></li>
 </ul>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-20_176b20bf999fd611ea43e0a2d1491926">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">pbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-20_a0b7ba744dabc65a04e3fce292312d1b">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">pbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.03125 0.18750 0.50000 0.81250 0.96875 1.00000</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Next comes its derivative (have to append a 0 before first)</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="fu">pbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> <span class="fu">append</span>(<span class="dv">0</span>, <span class="at">after =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">diff</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># Next comes its derivative (have to append a 0 before first)</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">pbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> <span class="fu">append</span>(<span class="dv">0</span>, <span class="at">after =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> <span class="fu">diff</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.03125 0.15625 0.31250 0.31250 0.15625 0.03125</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.03125 0.15625 0.31250 0.31250 0.15625 0.03125</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># Next comes its anti-derivative</span></span>
-<span id="cb37-2"><a href="#cb37-2"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> <span class="fu">cumsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="co"># Next comes its anti-derivative</span></span>
+<span id="cb30-2"><a href="#cb30-2"></a><span class="fu">dbinom</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>, <span class="at">prob =</span> <span class="fl">0.5</span>) <span class="sc">|&gt;</span> <span class="fu">cumsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.03125 0.18750 0.50000 0.81250 0.96875 1.00000</code></pre>
 </div>
@@ -975,21 +954,21 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <li>The quantile function is the inverse of the distribution function.</li>
 <li>We plot the inverse function by interchanging the <code>x</code> and <code>y</code> aesthetic.</li>
 </ul>
-<div class="cell columns column-output-location" data-hash="W13_cache/html/unnamed-chunk-21_9ff2d0d04b23be38eea566ad8cdf5597">
+<div class="cell columns column-output-location" data-hash="W13_cache/revealjs/unnamed-chunk-21_795bb3d13273d76a4e825cf55115dfca">
 <div class="column">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
-<span id="cb39-2"><a href="#cb39-2"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb39-3"><a href="#cb39-3"></a>q <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">p =</span> probs) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">qbinom</span>(p, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) </span>
-<span id="cb39-4"><a href="#cb39-4"></a>p <span class="ot">&lt;-</span> <span class="fu">tibble</span>(k) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">p =</span> <span class="fu">pbinom</span>(k, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) </span>
-<span id="cb39-5"><a href="#cb39-5"></a>q_plot <span class="ot">&lt;-</span> q <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"qbinom"</span>)</span>
-<span id="cb39-6"><a href="#cb39-6"></a>qinv_plot <span class="ot">&lt;-</span> q <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, p)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"qbinom inverse"</span>)</span>
-<span id="cb39-7"><a href="#cb39-7"></a>p_plot <span class="ot">&lt;-</span> p <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, p)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"pbinom"</span>)</span>
-<span id="cb39-8"><a href="#cb39-8"></a>pinv_plot <span class="ot">&lt;-</span> p <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> <span class="fu">geom_col</span>(<span class="at">orientation =</span> <span class="st">"y"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"pbinom inverse"</span>)</span>
-<span id="cb39-9"><a href="#cb39-9"></a><span class="fu">library</span>(patchwork)</span>
-<span id="cb39-10"><a href="#cb39-10"></a>(q_plot <span class="sc">|</span> p_plot) <span class="sc">/</span> (pinv_plot <span class="sc">|</span> qinv_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="at">by =</span> <span class="fl">0.01</span>)</span>
+<span id="cb32-2"><a href="#cb32-2"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a>q <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">p =</span> probs) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">k =</span> <span class="fu">qbinom</span>(p, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) </span>
+<span id="cb32-4"><a href="#cb32-4"></a>p <span class="ot">&lt;-</span> <span class="fu">tibble</span>(k) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">p =</span> <span class="fu">pbinom</span>(k, <span class="at">size =</span> <span class="dv">10</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)) </span>
+<span id="cb32-5"><a href="#cb32-5"></a>q_plot <span class="ot">&lt;-</span> q <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"qbinom"</span>)</span>
+<span id="cb32-6"><a href="#cb32-6"></a>qinv_plot <span class="ot">&lt;-</span> q <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, p)) <span class="sc">+</span> <span class="fu">geom_line</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"qbinom inverse"</span>)</span>
+<span id="cb32-7"><a href="#cb32-7"></a>p_plot <span class="ot">&lt;-</span> p <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(k, p)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"pbinom"</span>)</span>
+<span id="cb32-8"><a href="#cb32-8"></a>pinv_plot <span class="ot">&lt;-</span> p <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(p, k)) <span class="sc">+</span> <span class="fu">geom_col</span>(<span class="at">orientation =</span> <span class="st">"y"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>)) <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"pbinom inverse"</span>)</span>
+<span id="cb32-9"><a href="#cb32-9"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb32-10"><a href="#cb32-10"></a>(q_plot <span class="sc">|</span> p_plot) <span class="sc">/</span> (pinv_plot <span class="sc">|</span> qinv_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-21-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -999,11 +978,11 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <ul>
 <li>Random binomial numbers are drawn with <code>rbinom</code></li>
 </ul>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-22_c44f98043c2502d6f61a7e5c75dffc3a">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="co"># 10 random binomial numbers for 62 trials with success probability 0.1</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a><span class="fu">rbinom</span>(<span class="dv">10</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-22_a1e48e742194d2cfa52880ee021fae5c">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># 10 random binomial numbers for 62 trials with success probability 0.1</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a><span class="fu">rbinom</span>(<span class="dv">10</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] 3 9 6 7 4 6 6 5 6 2</code></pre>
+<pre><code> [1] 8 7 6 7 6 9 7 4 5 4</code></pre>
 </div>
 </div>
 <ul>
@@ -1013,19 +992,19 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <li>Then we compute the fraction of which have 3 or less complications</li>
 </ul></li>
 </ul>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-23_52ba32693645077a87b7e035316ab447">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
-<span id="cb42-2"><a href="#cb42-2"></a>s <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span>
-<span id="cb42-3"><a href="#cb42-3"></a><span class="fu">sum</span>(s<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-23_24b9b280d4359b927db47b0335e4dd02">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">set.seed</span>(<span class="dv">2022</span>)</span>
+<span id="cb35-2"><a href="#cb35-2"></a>s <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)</span>
+<span id="cb35-3"><a href="#cb35-3"></a><span class="fu">sum</span>(s<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.12038</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="co"># Two other samples</span></span>
-<span id="cb44-2"><a href="#cb44-2"></a><span class="fu">sum</span>(<span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="co"># Two other samples</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="fu">sum</span>(<span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.11918</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">sum</span>(<span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">sum</span>(<span class="fu">rbinom</span>(<span class="dv">100000</span>, <span class="at">size =</span> <span class="dv">62</span>, <span class="at">prob =</span> <span class="fl">0.1</span>)<span class="sc">&lt;=</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">100000</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.12034</code></pre>
 </div>
@@ -1033,41 +1012,6 @@ which each delivers a <em>success</em> with probability <span class="math inline
 </section>
 <section id="empirical-distributions" class="slide level2 smaller">
 <h2>Empirical distributions</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-24_05b0383a8343551befa761b3751b1081">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>ess_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ESS-Data-Wizard-subset-2022-09-17.csv"</span>,</span>
-<span id="cb48-2"><a href="#cb48-2"></a>                <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
-<span id="cb48-3"><a href="#cb48-3"></a>                 <span class="at">name =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb48-4"><a href="#cb48-4"></a>                 <span class="at">essround =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-5"><a href="#cb48-5"></a>                 <span class="at">edition =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-6"><a href="#cb48-6"></a>                 <span class="at">proddate =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb48-7"><a href="#cb48-7"></a>                 <span class="at">idno =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-8"><a href="#cb48-8"></a>                 <span class="at">cntry =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb48-9"><a href="#cb48-9"></a>                 <span class="at">dweight =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-10"><a href="#cb48-10"></a>                 <span class="at">pspwght =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-11"><a href="#cb48-11"></a>                 <span class="at">pweight =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-12"><a href="#cb48-12"></a>                 <span class="at">euftf =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-13"><a href="#cb48-13"></a>                 <span class="at">gincdif =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-14"><a href="#cb48-14"></a>                 <span class="at">lrscale =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-15"><a href="#cb48-15"></a>                 <span class="at">polintr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-16"><a href="#cb48-16"></a>                 <span class="at">stflife =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-17"><a href="#cb48-17"></a>                 <span class="at">trstplc =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-18"><a href="#cb48-18"></a>                 <span class="at">vote =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-19"><a href="#cb48-19"></a>                 <span class="at">imueclt =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-20"><a href="#cb48-20"></a>                 <span class="at">atchctr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-21"><a href="#cb48-21"></a>                 <span class="at">atcherp =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-22"><a href="#cb48-22"></a>                 <span class="at">crmvct =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-23"><a href="#cb48-23"></a>                 <span class="at">pray =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-24"><a href="#cb48-24"></a>                 <span class="at">rlgdgr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-25"><a href="#cb48-25"></a>                 <span class="at">gndr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb48-26"><a href="#cb48-26"></a>                 <span class="at">age =</span> <span class="fu">col_double</span>()</span>
-<span id="cb48-27"><a href="#cb48-27"></a>                ))</span>
-<span id="cb48-28"><a href="#cb48-28"></a>ess <span class="ot">&lt;-</span> ess_raw <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span></span>
-<span id="cb48-29"><a href="#cb48-29"></a> <span class="fu">mutate</span>(<span class="at">atchctr =</span> atchctr <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb48-30"><a href="#cb48-30"></a>        <span class="at">atcherp =</span> atcherp <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb48-31"><a href="#cb48-31"></a>        <span class="at">euftf =</span> euftf <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb48-32"><a href="#cb48-32"></a>        <span class="at">lrscale =</span> lrscale <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb48-33"><a href="#cb48-33"></a>        <span class="at">imueclt =</span> imueclt <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <ul>
 <li><span class="math inline">\(X\)</span>: select a random person from Europe (in 2018, willing to answer survey) and ask its attitude towards the European union from 0 to 10</li>
 </ul>
@@ -1076,10 +1020,10 @@ which each delivers a <em>success</em> with probability <span class="math inline
 <ul>
 <li>What is the distribution of the answer?</li>
 </ul>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-25_bd2ed4b6df8396a4c427fb818d55dc80">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>eu <span class="ot">&lt;-</span> ess <span class="sc">|&gt;</span> <span class="fu">select</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
-<span id="cb49-2"><a href="#cb49-2"></a> <span class="fu">count</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">prob =</span> n<span class="sc">/</span><span class="fu">sum</span>(n)) </span>
-<span id="cb49-3"><a href="#cb49-3"></a>eu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-25_bbdeca28fcda1965c20387c66c97c3f2">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1"></a>eu <span class="ot">&lt;-</span> ess <span class="sc">|&gt;</span> <span class="fu">select</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb41-2"><a href="#cb41-2"></a> <span class="fu">count</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">prob =</span> n<span class="sc">/</span><span class="fu">sum</span>(n)) </span>
+<span id="cb41-3"><a href="#cb41-3"></a>eu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 11 × 3
    euftf     n   prob
@@ -1099,13 +1043,13 @@ which each delivers a <em>success</em> with probability <span class="math inline
 </div>
 </div><div class="column" style="width:60%;">
 <p>Mass function and distribution function</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-26_c8cc132c05e2680b5415991b1228ffc1">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>eu_mass <span class="ot">&lt;-</span> eu <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf, prob)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
-<span id="cb51-2"><a href="#cb51-2"></a>eu_distr <span class="ot">&lt;-</span> eu <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">cumprob =</span> <span class="fu">cumsum</span>(prob)) <span class="sc">|&gt;</span> </span>
-<span id="cb51-3"><a href="#cb51-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf, cumprob)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
-<span id="cb51-4"><a href="#cb51-4"></a>eu_mass <span class="sc">|</span> eu_distr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-26_bf55f898e7a4349d131ff78c2f5a18a8">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a>eu_mass <span class="ot">&lt;-</span> eu <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf, prob)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
+<span id="cb43-2"><a href="#cb43-2"></a>eu_distr <span class="ot">&lt;-</span> eu <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">cumprob =</span> <span class="fu">cumsum</span>(prob)) <span class="sc">|&gt;</span> </span>
+<span id="cb43-3"><a href="#cb43-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf, cumprob)) <span class="sc">+</span> <span class="fu">geom_col</span>() <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">2</span>))</span>
+<span id="cb43-4"><a href="#cb43-4"></a>eu_mass <span class="sc">|</span> eu_distr</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-26-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1113,90 +1057,18 @@ which each delivers a <em>success</em> with probability <span class="math inline
 </section>
 <section id="theoretical-examples" class="slide level2 smaller">
 <h2>Theoretical examples</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-27_686da69e89ba836e0a09d681fe8625b4">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">library</span>(tidymodels)</span>
-<span id="cb52-2"><a href="#cb52-2"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb52-3"><a href="#cb52-3"></a>galton <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"data/galton_data.xlsx"</span>) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">true_value =</span> <span class="dv">1198</span>)</span>
-<span id="cb52-4"><a href="#cb52-4"></a>viertelfest <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/Viertelfest.csv"</span>) <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">true_value =</span> <span class="dv">10788</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 1226 Columns: 3
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (1): Date Time
-dbl (2): Losnummer, Schätzung
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>owid <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/owid-covid-data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 224711 Columns: 67
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr   (4): iso_code, continent, location, tests_units
-dbl  (62): total_cases, new_cases, new_cases_smoothed, total_deaths, new_dea...
-date  (1): date
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a>owid_inds <span class="ot">&lt;-</span> owid <span class="sc">|&gt;</span> </span>
-<span id="cb56-2"><a href="#cb56-2"></a> <span class="co"># Filter for one day and remove rows where continent is NA</span></span>
-<span id="cb56-3"><a href="#cb56-3"></a> <span class="co"># These are rows with data for continents or world regions</span></span>
-<span id="cb56-4"><a href="#cb56-4"></a> <span class="fu">filter</span>(date <span class="sc">==</span> <span class="st">"2022-10-01"</span>, <span class="sc">!</span><span class="fu">is.na</span>(continent)) <span class="sc">|&gt;</span> </span>
-<span id="cb56-5"><a href="#cb56-5"></a> <span class="co"># These are the "Other" variables</span></span>
-<span id="cb56-6"><a href="#cb56-6"></a> <span class="fu">select</span>(iso_code, continent, location, </span>
-<span id="cb56-7"><a href="#cb56-7"></a>        population<span class="sc">:</span>human_development_index) <span class="sc">|&gt;</span></span>
-<span id="cb56-8"><a href="#cb56-8"></a> <span class="co"># We remove the ones with many NA's</span></span>
-<span id="cb56-9"><a href="#cb56-9"></a> <span class="fu">select</span>(<span class="sc">-</span>handwashing_facilities, <span class="sc">-</span>male_smokers, </span>
-<span id="cb56-10"><a href="#cb56-10"></a>        <span class="sc">-</span> female_smokers, <span class="sc">-</span>extreme_poverty) <span class="sc">|&gt;</span> </span>
-<span id="cb56-11"><a href="#cb56-11"></a> <span class="fu">drop_na</span>()</span>
-<span id="cb56-12"><a href="#cb56-12"></a>ess_raw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/ESS-Data-Wizard-subset-2022-09-17.csv"</span>,</span>
-<span id="cb56-13"><a href="#cb56-13"></a>                <span class="at">col_types =</span> <span class="fu">cols</span>(</span>
-<span id="cb56-14"><a href="#cb56-14"></a>                 <span class="at">name =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb56-15"><a href="#cb56-15"></a>                 <span class="at">essround =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-16"><a href="#cb56-16"></a>                 <span class="at">edition =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-17"><a href="#cb56-17"></a>                 <span class="at">proddate =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb56-18"><a href="#cb56-18"></a>                 <span class="at">idno =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-19"><a href="#cb56-19"></a>                 <span class="at">cntry =</span> <span class="fu">col_character</span>(),</span>
-<span id="cb56-20"><a href="#cb56-20"></a>                 <span class="at">dweight =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-21"><a href="#cb56-21"></a>                 <span class="at">pspwght =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-22"><a href="#cb56-22"></a>                 <span class="at">pweight =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-23"><a href="#cb56-23"></a>                 <span class="at">euftf =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-24"><a href="#cb56-24"></a>                 <span class="at">gincdif =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-25"><a href="#cb56-25"></a>                 <span class="at">lrscale =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-26"><a href="#cb56-26"></a>                 <span class="at">polintr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-27"><a href="#cb56-27"></a>                 <span class="at">stflife =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-28"><a href="#cb56-28"></a>                 <span class="at">trstplc =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-29"><a href="#cb56-29"></a>                 <span class="at">vote =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-30"><a href="#cb56-30"></a>                 <span class="at">imueclt =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-31"><a href="#cb56-31"></a>                 <span class="at">atchctr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-32"><a href="#cb56-32"></a>                 <span class="at">atcherp =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-33"><a href="#cb56-33"></a>                 <span class="at">crmvct =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-34"><a href="#cb56-34"></a>                 <span class="at">pray =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-35"><a href="#cb56-35"></a>                 <span class="at">rlgdgr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-36"><a href="#cb56-36"></a>                 <span class="at">gndr =</span> <span class="fu">col_double</span>(),</span>
-<span id="cb56-37"><a href="#cb56-37"></a>                 <span class="at">age =</span> <span class="fu">col_double</span>()</span>
-<span id="cb56-38"><a href="#cb56-38"></a>                ))</span>
-<span id="cb56-39"><a href="#cb56-39"></a>ess <span class="ot">&lt;-</span> ess_raw <span class="sc">|&gt;</span> <span class="fu">filter</span>(essround <span class="sc">==</span> <span class="dv">9</span>) <span class="sc">|&gt;</span></span>
-<span id="cb56-40"><a href="#cb56-40"></a> <span class="fu">mutate</span>(<span class="at">atchctr =</span> atchctr <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb56-41"><a href="#cb56-41"></a>        <span class="at">atcherp =</span> atcherp <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb56-42"><a href="#cb56-42"></a>        <span class="at">euftf =</span> euftf <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb56-43"><a href="#cb56-43"></a>        <span class="at">lrscale =</span> lrscale <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>),</span>
-<span id="cb56-44"><a href="#cb56-44"></a>        <span class="at">imueclt =</span> imueclt <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">77</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">88</span>) <span class="sc">|&gt;</span> <span class="fu">na_if</span>(<span class="dv">99</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div class="columns">
 <div class="column" style="width:48%;">
 <p><strong>Discrete random variable</strong></p>
 <p><em>Atomic event:</em> 20 (unfair) coin flips with HEADS probability 40%.<br>
 <em>Random Variable:</em> Number of HEADS.</p>
 <p><span style="color:blue;"><strong>Binomial</strong> distribution function</span></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-28_411114c2c8c5a7b5c266cab7eca42b76">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb57-2"><a href="#cb57-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pbinom, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.4</span>)) <span class="sc">+</span> </span>
-<span id="cb57-3"><a href="#cb57-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-28_a472e30197ff4fa56f4c90cf55efc594">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb44-2"><a href="#cb44-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pbinom, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.4</span>)) <span class="sc">+</span> </span>
+<span id="cb44-3"><a href="#cb44-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-28-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
@@ -1204,12 +1076,12 @@ date  (1): date
 <p><em>Atomic event:</em> Point on a ruler of 1 meter length. Each point is equally likely.<br>
 <em>Random Variable:</em> The marking on the ruler in meters (number from 0 to 1).</p>
 <p><span style="color:blue;"><em>Uniform</em> distribution function</span></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-29_c324757e0a6ab80f36f02de5fb00d34b">
-<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb58-2"><a href="#cb58-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> punif) <span class="sc">+</span> </span>
-<span id="cb58-3"><a href="#cb58-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">1.5</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-29_18f9d08d75dc751c0cf4aa0c5b4eccde">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb45-2"><a href="#cb45-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> punif) <span class="sc">+</span> </span>
+<span id="cb45-3"><a href="#cb45-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">1.5</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-29-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-29-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1225,252 +1097,12 @@ date  (1): date
 <p><em>Atomic event:</em> 20 (unfair) coin flips with HEADS probability 40%.<br>
 <em>Random Variable:</em> Number of HEADS.</p>
 <p><span style="color:blue;"><strong>Binomial</strong> density function</span></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-30_40cd8a520720242b175dd692f18d1ffc">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb59-2"><a href="#cb59-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dbinom, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.4</span>)) <span class="sc">+</span> </span>
-<span id="cb59-3"><a href="#cb59-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 0.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 0.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 0.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 0.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 1.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 1.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 1.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 1.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 2.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 2.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 2.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 2.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 3.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 3.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 3.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 3.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 4.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 4.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 4.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 4.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 5.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 5.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 5.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 5.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 6.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 6.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 6.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 6.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 7.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 7.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 7.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 7.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 8.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 8.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 8.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 8.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 9.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 9.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 9.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 9.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 10.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 10.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 10.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 10.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 11.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 11.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 11.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 11.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 12.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 12.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 12.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 12.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 13.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 13.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 13.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 13.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 14.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 14.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 14.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 14.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 15.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 15.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 15.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 15.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 16.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 16.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 16.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 16.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 17.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 17.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 17.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 17.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 18.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 18.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 18.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 18.800000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 19.200000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 19.400000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 19.600000</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in fun(x_trans, size = 20, prob = 0.4): non-integer x = 19.800000</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-30_3f5fa50b2377b62962b6cb79e6bb1c47">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb46-2"><a href="#cb46-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dbinom, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> <span class="fl">0.4</span>)) <span class="sc">+</span> </span>
+<span id="cb46-3"><a href="#cb46-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">20</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-30-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
@@ -1478,12 +1110,12 @@ date  (1): date
 <p><em>Atomic event:</em> Point on a ruler of 1 meter length. Each point is equally likely.<br>
 <em>Random Variable:</em> The marking on the ruler in meters (number from 0 to 1).</p>
 <p><span style="color:blue;"><em>Uniform</em> density function</span></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-31_6e326d86eb6c771e62505e066d149e94">
-<div class="sourceCode cell-code" id="cb140"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb140-1"><a href="#cb140-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb140-2"><a href="#cb140-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dunif) <span class="sc">+</span> </span>
-<span id="cb140-3"><a href="#cb140-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">1.5</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-31_f00524af11c16e13410e7b878e120677">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb47-2"><a href="#cb47-2"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dunif) <span class="sc">+</span> </span>
+<span id="cb47-3"><a href="#cb47-3"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">1.5</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-31-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-31-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1497,26 +1129,26 @@ date  (1): date
 <p><strong>Discrete random variable</strong></p>
 <p><em>Atomic event:</em> Ask a European about attitude towards the EU.<br>
 <em>Random Variable:</em> The answer on the scale 0 to 10.</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-32_34c457ee0d49bd9108f28ec67b610620">
-<div class="sourceCode cell-code" id="cb141"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb141-1"><a href="#cb141-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">count</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">freq =</span> n<span class="sc">/</span><span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
-<span id="cb141-2"><a href="#cb141-2"></a> <span class="fu">add_row</span>(<span class="at">euftf =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">freq =</span> <span class="dv">0</span>, <span class="at">.before =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">add_row</span>(<span class="at">euftf =</span> <span class="dv">14</span>, <span class="at">freq =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb141-3"><a href="#cb141-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf,<span class="fu">cumsum</span>(freq))) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span> </span>
-<span id="cb141-4"><a href="#cb141-4"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-32_6581ddb4b820ea53d8b70e2104265124">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>ess <span class="sc">|&gt;</span> <span class="fu">count</span>(euftf) <span class="sc">|&gt;</span> <span class="fu">drop_na</span>() <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">freq =</span> n<span class="sc">/</span><span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a> <span class="fu">add_row</span>(<span class="at">euftf =</span> <span class="sc">-</span><span class="dv">4</span>, <span class="at">freq =</span> <span class="dv">0</span>, <span class="at">.before =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">add_row</span>(<span class="at">euftf =</span> <span class="dv">14</span>, <span class="at">freq =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb48-3"><a href="#cb48-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(euftf,<span class="fu">cumsum</span>(freq))) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span> </span>
+<span id="cb48-4"><a href="#cb48-4"></a> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-32-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
 <p><strong>Continuous random variable</strong></p>
 <p><em>Atomic event:</em> A visitors estimates the weight of the meat of an ox.<br>
 <em>Random Variable:</em> The estimated value converted to pounds.</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-33_78260fe750dc5bbef01f8624d56f9bc4">
-<div class="sourceCode cell-code" id="cb142"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb142-1"><a href="#cb142-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">freq =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">n</span>()) <span class="sc">|&gt;</span>  </span>
-<span id="cb142-2"><a href="#cb142-2"></a> <span class="fu">add_row</span>(<span class="at">Estimate =</span> <span class="dv">800</span>, <span class="at">freq =</span> <span class="dv">0</span>, <span class="at">.before =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">add_row</span>(<span class="at">Estimate =</span> <span class="dv">1600</span>, <span class="at">freq =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
-<span id="cb142-3"><a href="#cb142-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate, <span class="fu">cumsum</span>(freq))) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
-<span id="cb142-4"><a href="#cb142-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-33_aade8d708208ea068c676dd67583f8af">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>galton <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">freq =</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">n</span>()) <span class="sc">|&gt;</span>  </span>
+<span id="cb49-2"><a href="#cb49-2"></a> <span class="fu">add_row</span>(<span class="at">Estimate =</span> <span class="dv">800</span>, <span class="at">freq =</span> <span class="dv">0</span>, <span class="at">.before =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span> <span class="fu">add_row</span>(<span class="at">Estimate =</span> <span class="dv">1600</span>, <span class="at">freq =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate, <span class="fu">cumsum</span>(freq))) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
+<span id="cb49-4"><a href="#cb49-4"></a> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-33-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-33-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1546,25 +1178,25 @@ date  (1): date
 <div class="columns">
 <p>The distribution function of a sample of 50 random numbers from a uniform distribution.</p><div class="column" style="width:48%;">
 <p>Empirical and theoretical distribution function</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-34_ac8987292a6e36f55bb923ec0dbcdef3">
-<div class="sourceCode cell-code" id="cb143"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb143-1"><a href="#cb143-1"></a>unif <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">50</span>) </span>
-<span id="cb143-2"><a href="#cb143-2"></a>unif_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> unif) <span class="sc">%&gt;%</span> </span>
-<span id="cb143-3"><a href="#cb143-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
-<span id="cb143-4"><a href="#cb143-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(unif))<span class="sc">/</span><span class="fu">length</span>(unif)) <span class="co"># cumulative probabilities</span></span>
-<span id="cb143-5"><a href="#cb143-5"></a>unif_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
-<span id="cb143-6"><a href="#cb143-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> punif, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-34_7dc03636d695e67da1f77039a5ed8275">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a>unif <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">50</span>) </span>
+<span id="cb50-2"><a href="#cb50-2"></a>unif_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> unif) <span class="sc">%&gt;%</span> </span>
+<span id="cb50-3"><a href="#cb50-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
+<span id="cb50-4"><a href="#cb50-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(unif))<span class="sc">/</span><span class="fu">length</span>(unif)) <span class="co"># cumulative probabilities</span></span>
+<span id="cb50-5"><a href="#cb50-5"></a>unif_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
+<span id="cb50-6"><a href="#cb50-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> punif, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-34-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
 <p>Empirical pmf approached with a histogram with small binwidth.</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-35_ca65d6a89a76e2dd452db2ef7bd9b0d4">
-<div class="sourceCode cell-code" id="cb144"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb144-1"><a href="#cb144-1"></a>unif_cdf<span class="sc">|&gt;</span> </span>
-<span id="cb144-2"><a href="#cb144-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb144-3"><a href="#cb144-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.005</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-35_970be990e882640dfb7f94e8e617bf77">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>unif_cdf<span class="sc">|&gt;</span> </span>
+<span id="cb51-2"><a href="#cb51-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
+<span id="cb51-3"><a href="#cb51-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.005</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-35-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-35-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1576,25 +1208,25 @@ date  (1): date
 <div class="columns">
 <p>The distribution function of a sample of 50 random numbers from a normal distribution.</p><div class="column" style="width:48%;">
 <p>Empirical and theoretical distribution function</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-36_95df2fdbaa5ca4b02b0c6b3e9134642d">
-<div class="sourceCode cell-code" id="cb145"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb145-1"><a href="#cb145-1"></a>normal <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">50</span>) </span>
-<span id="cb145-2"><a href="#cb145-2"></a>normal_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> normal) <span class="sc">%&gt;%</span> </span>
-<span id="cb145-3"><a href="#cb145-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
-<span id="cb145-4"><a href="#cb145-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(normal))<span class="sc">/</span><span class="fu">length</span>(normal)) <span class="co"># cumulative probabilities</span></span>
-<span id="cb145-5"><a href="#cb145-5"></a>normal_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
-<span id="cb145-6"><a href="#cb145-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-36_418dde5bd48fcc97ee9f0ef9ec74f1a7">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>normal <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">50</span>) </span>
+<span id="cb52-2"><a href="#cb52-2"></a>normal_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> normal) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-3"><a href="#cb52-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
+<span id="cb52-4"><a href="#cb52-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(normal))<span class="sc">/</span><span class="fu">length</span>(normal)) <span class="co"># cumulative probabilities</span></span>
+<span id="cb52-5"><a href="#cb52-5"></a>normal_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
+<span id="cb52-6"><a href="#cb52-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-36-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
 <p>Empirical pmf approached with a histogram with small binwidth.</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-37_af86b8a947dec72fc9d405ede13ba399">
-<div class="sourceCode cell-code" id="cb146"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb146-1"><a href="#cb146-1"></a>normal_cdf <span class="sc">|&gt;</span> </span>
-<span id="cb146-2"><a href="#cb146-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb146-3"><a href="#cb146-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.005</span>)  <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-37_7e354d045ef3b0b5681942ceca0f857d">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>normal_cdf <span class="sc">|&gt;</span> </span>
+<span id="cb53-2"><a href="#cb53-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
+<span id="cb53-3"><a href="#cb53-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.005</span>)  <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-37-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-37-1.png" width="960"></p>
 </div>
 </div>
 <p><span style="color:red;">This type of pmf does not show the characteristics of the distribution well.</span></p>
@@ -1612,24 +1244,24 @@ date  (1): date
 <div class="fragment">
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-38_5e3448f779dd4511e2ec0e142136e4f9">
-<div class="sourceCode cell-code" id="cb147"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb147-1"><a href="#cb147-1"></a>normal <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5000</span>) </span>
-<span id="cb147-2"><a href="#cb147-2"></a>normal_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> normal) <span class="sc">%&gt;%</span> </span>
-<span id="cb147-3"><a href="#cb147-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
-<span id="cb147-4"><a href="#cb147-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(normal))<span class="sc">/</span><span class="fu">length</span>(normal)) <span class="co"># cumulative probabilities</span></span>
-<span id="cb147-5"><a href="#cb147-5"></a>normal_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
-<span id="cb147-6"><a href="#cb147-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>,<span class="dv">4</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-38_f2f0069f7f1efb78c0dce05a39de3a4b">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a>normal <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">5000</span>) </span>
+<span id="cb54-2"><a href="#cb54-2"></a>normal_cdf <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">x =</span> normal) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-3"><a href="#cb54-3"></a>  <span class="fu">arrange</span>(x) <span class="sc">%&gt;%</span> <span class="co"># We sort the data by size</span></span>
+<span id="cb54-4"><a href="#cb54-4"></a>  <span class="fu">mutate</span>(<span class="at">cdf =</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(normal))<span class="sc">/</span><span class="fu">length</span>(normal)) <span class="co"># cumulative probabilities</span></span>
+<span id="cb54-5"><a href="#cb54-5"></a>normal_cdf <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x, <span class="at">y =</span> cdf)) <span class="sc">+</span> <span class="fu">geom_step</span>() <span class="sc">+</span></span>
+<span id="cb54-6"><a href="#cb54-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> pnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">4</span>,<span class="dv">4</span>)) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-38-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
 </div>
 </div>
 </div><div class="column" style="width:48%;">
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-39_1bcc041bba89577e6f29da4d32e9de18">
-<div class="sourceCode cell-code" id="cb148"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb148-1"><a href="#cb148-1"></a>normal_cdf <span class="sc">|&gt;</span> </span>
-<span id="cb148-2"><a href="#cb148-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb148-3"><a href="#cb148-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-39_5472d7cd097e7201cabca530b8befffc">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>normal_cdf <span class="sc">|&gt;</span> </span>
+<span id="cb55-2"><a href="#cb55-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
+<span id="cb55-3"><a href="#cb55-3"></a> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.01</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img data-src="W13_files/figure-html/unnamed-chunk-39-1.png" width="672"></p>
+<p><img data-src="W13_files/figure-revealjs/unnamed-chunk-39-1.png" width="960"></p>
 </div>
 </div>
 </div>
@@ -1659,84 +1291,68 @@ date  (1): date
 </section>
 <section id="normal-distribution-in-r" class="slide level2 smaller">
 <h2>Normal distribution in R</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-40_e6390bff541de2075287b2d053240c2d">
-<div class="sourceCode cell-code" id="cb149"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href="#cb149-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb149-2"><a href="#cb149-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
-<span id="cb149-3"><a href="#cb149-3"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
-<span id="cb149-4"><a href="#cb149-4"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> </span>
-<span id="cb149-5"><a href="#cb149-5"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb149-6"><a href="#cb149-6"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
-ℹ Please use `after_stat(density)` instead.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-40_8c7f3c4e268eb8a90d005676689c7730">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb56-2"><a href="#cb56-2"></a> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> </span>
+<span id="cb56-3"><a href="#cb56-3"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span> </span>
+<span id="cb56-4"><a href="#cb56-4"></a> <span class="fu">geom_density</span>() <span class="sc">+</span> </span>
+<span id="cb56-5"><a href="#cb56-5"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb56-6"><a href="#cb56-6"></a> <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-40-1.png" width="672" class="r-stretch"></section>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
 <section id="lognormal-distribution" class="slide level2 smaller">
 <h2>Lognormal distribution</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-41_d8a0491297a5277e293f28d2aa093601">
-<div class="sourceCode cell-code" id="cb152"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rlnorm</span>(<span class="dv">1000</span>)) <span class="sc">|&gt;</span> </span>
-<span id="cb152-2"><a href="#cb152-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span></span>
-<span id="cb152-3"><a href="#cb152-3"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dlnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb152-4"><a href="#cb152-4"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">10</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 4 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 4 rows containing non-finite values (`stat_density()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-41_f3b687349a3183599a5e03b046f09434">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a><span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rlnorm</span>(<span class="dv">1000</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>) <span class="sc">+</span> <span class="fu">geom_density</span>() <span class="sc">+</span></span>
+<span id="cb57-3"><a href="#cb57-3"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> dlnorm, <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb57-4"><a href="#cb57-4"></a>  <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">10</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-41-1.png" width="672" class="r-stretch"></section>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
 <section id="distribution-parameters" class="slide level2 smaller">
 <h2>Distribution parameters</h2>
 <p>As empirical samples of numbers also theoretical distributions have an <strong>expected value</strong> or <strong>mean</strong> and a <strong>variance</strong> (and a <strong>standard deviation</strong>). In theoretical distributions they often become (related to) parameters of the distribution.</p>
 <p>The normal distribution has the parameters <code>mean</code> and <code>sd</code></p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-42_1dbb1ced4213628cbbdb699c5ecb6c45">
-<div class="sourceCode cell-code" id="cb156"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb156-1"><a href="#cb156-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb156-2"><a href="#cb156-2"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb156-3"><a href="#cb156-3"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">3</span>), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
-<span id="cb156-4"><a href="#cb156-4"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">7</span>, <span class="at">sd =</span> <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb156-5"><a href="#cb156-5"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">6</span>), <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb156-6"><a href="#cb156-6"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">15</span>,<span class="dv">15</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-42_fca0289d4eb40ab88892c987cc932b90">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1"></a><span class="fu">ggplot</span>() <span class="sc">+</span> </span>
+<span id="cb58-2"><a href="#cb58-2"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb58-3"><a href="#cb58-3"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="sc">-</span><span class="dv">3</span>, <span class="at">sd =</span> <span class="dv">3</span>), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb58-4"><a href="#cb58-4"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="dv">7</span>, <span class="at">sd =</span> <span class="fl">0.5</span>), <span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb58-5"><a href="#cb58-5"></a>  <span class="fu">geom_function</span>(<span class="at">fun =</span> <span class="cf">function</span>(x) <span class="fu">dnorm</span>(x, <span class="at">mean =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">sd =</span> <span class="dv">6</span>), <span class="at">color =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
+<span id="cb58-6"><a href="#cb58-6"></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="dv">15</span>,<span class="dv">15</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-42-1.png" width="1920" class="r-stretch"></section>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-42-1.png" width="1920" class="r-stretch"></section>
 <section id="measures-of-samples" class="slide level2 smaller">
 <h2>Measures of samples</h2>
 <p>Here are some examples of mean and standard deviation:</p>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-43_6a13a8fff56dad80c42a25ea31326c46">
-<div class="sourceCode cell-code" id="cb157"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb157-1"><a href="#cb157-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span><span class="dv">5</span>)</span>
-<span id="cb157-2"><a href="#cb157-2"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-43_8313a83beacf7753702320ac3cd07c97">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span><span class="dv">5</span>)</span>
+<span id="cb59-2"><a href="#cb59-2"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.027264</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb159"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb159-1"><a href="#cb159-1"></a><span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 4.907467</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb161"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb161-1"><a href="#cb161-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span><span class="dv">5</span>)</span>
-<span id="cb161-2"><a href="#cb161-2"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="at">mean =</span> <span class="dv">2</span>, <span class="at">sd =</span><span class="dv">5</span>)</span>
+<span id="cb63-2"><a href="#cb63-2"></a><span class="fu">mean</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2.05942</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb163"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb163-1"><a href="#cb163-1"></a><span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1"></a><span class="fu">sd</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5.012979</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb165"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb165-1"><a href="#cb165-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10000</span>)</span>
-<span id="cb165-2"><a href="#cb165-2"></a><span class="fu">mean</span>(x) <span class="co"># This should be 0.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1"></a>x <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">10000</span>)</span>
+<span id="cb67-2"><a href="#cb67-2"></a><span class="fu">mean</span>(x) <span class="co"># This should be 0.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.4998014</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb167"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb167-1"><a href="#cb167-1"></a><span class="fu">sd</span>(x) <span class="co"># This should be 1/sqrt(12) = 0.2886751</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1"></a><span class="fu">sd</span>(x) <span class="co"># This should be 1/sqrt(12) = 0.2886751</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.2898095</code></pre>
 </div>
@@ -1744,16 +1360,16 @@ date  (1): date
 </section>
 <section id="galtons-data" class="slide level2 smaller">
 <h2>Galtons data</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-44_9b4adac0fbe45b730589762a49764f09">
-<div class="sourceCode cell-code" id="cb169"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb169-1"><a href="#cb169-1"></a>gal_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(galton<span class="sc">$</span>Estimate)</span>
-<span id="cb169-2"><a href="#cb169-2"></a>gal_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(galton<span class="sc">$</span>Estimate)</span>
-<span id="cb169-3"><a href="#cb169-3"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> </span>
-<span id="cb169-4"><a href="#cb169-4"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
-<span id="cb169-5"><a href="#cb169-5"></a> <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb169-6"><a href="#cb169-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> gal_mean, <span class="at">sd =</span> gal_sd), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-44_eb9149a2ee1db300bbeb1fcbf13d4cbe">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a>gal_mean <span class="ot">&lt;-</span> <span class="fu">mean</span>(galton<span class="sc">$</span>Estimate)</span>
+<span id="cb71-2"><a href="#cb71-2"></a>gal_sd <span class="ot">&lt;-</span> <span class="fu">sd</span>(galton<span class="sc">$</span>Estimate)</span>
+<span id="cb71-3"><a href="#cb71-3"></a>galton <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(Estimate)) <span class="sc">+</span> </span>
+<span id="cb71-4"><a href="#cb71-4"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="dv">5</span>) <span class="sc">+</span> </span>
+<span id="cb71-5"><a href="#cb71-5"></a> <span class="fu">geom_density</span>(<span class="at">color =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb71-6"><a href="#cb71-6"></a> <span class="fu">geom_function</span>(<span class="at">fun =</span> dnorm, <span class="at">args =</span> <span class="fu">list</span>(<span class="at">mean =</span> gal_mean, <span class="at">sd =</span> gal_sd), <span class="at">color =</span> <span class="st">"red"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">24</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-44-1.png" width="960" class="r-stretch"><p>A normal distribution fits OK.</p>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-44-1.png" width="960" class="r-stretch"><p>A normal distribution fits OK.</p>
 </section>
 <section id="the-zoo-of-distributions" class="slide level2 smaller">
 <h2>The zoo of distributions</h2>
@@ -1800,27 +1416,21 @@ date  (1): date
 </section>
 <section id="test-with-sum-of-uniform-samples" class="slide level2 smaller">
 <h2>Test with sum of uniform samples</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-45_7af24dca9a2178307bf38b0943cb08cc">
-<div class="sourceCode cell-code" id="cb170"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb170-1"><a href="#cb170-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
-<span id="cb170-2"><a href="#cb170-2"></a><span class="fu">tibble</span>(<span class="at">X1 =</span> <span class="fu">runif</span>(n),<span class="at">X2 =</span> <span class="fu">runif</span>(n),<span class="at">X3 =</span> <span class="fu">runif</span>(n),<span class="at">X4 =</span> <span class="fu">runif</span>(n),<span class="at">X5 =</span> <span class="fu">runif</span>(n),</span>
-<span id="cb170-3"><a href="#cb170-3"></a>       <span class="at">X6 =</span> <span class="fu">runif</span>(n),<span class="at">X7 =</span> <span class="fu">runif</span>(n),<span class="at">X8 =</span> <span class="fu">runif</span>(n),<span class="at">X9 =</span> <span class="fu">runif</span>(n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb170-4"><a href="#cb170-4"></a> <span class="fu">mutate</span>(<span class="at">S2 =</span> X1 <span class="sc">+</span> X2,</span>
-<span id="cb170-5"><a href="#cb170-5"></a>        <span class="at">S5 =</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> X3 <span class="sc">+</span> X4 <span class="sc">+</span> X5,</span>
-<span id="cb170-6"><a href="#cb170-6"></a>        <span class="at">S9 =</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> X3 <span class="sc">+</span> X4 <span class="sc">+</span> X5 <span class="sc">+</span> X6 <span class="sc">+</span> X7 <span class="sc">+</span> X8 <span class="sc">+</span> X9 ) <span class="sc">%&gt;%</span> </span>
-<span id="cb170-7"><a href="#cb170-7"></a> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb170-8"><a href="#cb170-8"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb170-9"><a href="#cb170-9"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S2, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb170-10"><a href="#cb170-10"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S5, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb170-11"><a href="#cb170-11"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S9, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span>   <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">9</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-45_3470332a7319c5f8ff9c4046a7622d2b">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb72-2"><a href="#cb72-2"></a><span class="fu">tibble</span>(<span class="at">X1 =</span> <span class="fu">runif</span>(n),<span class="at">X2 =</span> <span class="fu">runif</span>(n),<span class="at">X3 =</span> <span class="fu">runif</span>(n),<span class="at">X4 =</span> <span class="fu">runif</span>(n),<span class="at">X5 =</span> <span class="fu">runif</span>(n),</span>
+<span id="cb72-3"><a href="#cb72-3"></a>       <span class="at">X6 =</span> <span class="fu">runif</span>(n),<span class="at">X7 =</span> <span class="fu">runif</span>(n),<span class="at">X8 =</span> <span class="fu">runif</span>(n),<span class="at">X9 =</span> <span class="fu">runif</span>(n)) <span class="sc">%&gt;%</span> </span>
+<span id="cb72-4"><a href="#cb72-4"></a> <span class="fu">mutate</span>(<span class="at">S2 =</span> X1 <span class="sc">+</span> X2,</span>
+<span id="cb72-5"><a href="#cb72-5"></a>        <span class="at">S5 =</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> X3 <span class="sc">+</span> X4 <span class="sc">+</span> X5,</span>
+<span id="cb72-6"><a href="#cb72-6"></a>        <span class="at">S9 =</span> X1 <span class="sc">+</span> X2 <span class="sc">+</span> X3 <span class="sc">+</span> X4 <span class="sc">+</span> X5 <span class="sc">+</span> X6 <span class="sc">+</span> X7 <span class="sc">+</span> X8 <span class="sc">+</span> X9 ) <span class="sc">%&gt;%</span> </span>
+<span id="cb72-7"><a href="#cb72-7"></a> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb72-8"><a href="#cb72-8"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb72-9"><a href="#cb72-9"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S2, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb72-10"><a href="#cb72-10"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S5, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb72-11"><a href="#cb72-11"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S9, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span>   <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">9</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-45-1.png" width="672" class="r-stretch"></section>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section>
 <section id="sums-of-random-variables-important" class="slide level2 smaller">
 <h2>Sums of random variables important?</h2>
 <p>Why are sums of random variables important?</p>
@@ -1842,34 +1452,22 @@ Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
 </section>
 <section id="test-with-product-of-uniform-samples" class="slide level2 smaller">
 <h2>Test with product of uniform samples</h2>
-<div class="cell" data-hash="W13_cache/html/unnamed-chunk-46_033e227a5dce8d661b5443dcf23d8ef7">
-<div class="sourceCode cell-code" id="cb172"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb172-1"><a href="#cb172-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
-<span id="cb172-2"><a href="#cb172-2"></a>g <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">X1 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X2 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X3 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X4 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X5 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),</span>
-<span id="cb172-3"><a href="#cb172-3"></a>            <span class="at">X6 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X7 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X8 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X9 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n)) <span class="sc">%&gt;%</span> </span>
-<span id="cb172-4"><a href="#cb172-4"></a> <span class="fu">mutate</span>(<span class="at">S2 =</span> X1 <span class="sc">*</span> X2,</span>
-<span id="cb172-5"><a href="#cb172-5"></a>        <span class="at">S5 =</span> X1 <span class="sc">*</span> X2 <span class="sc">*</span> X3 <span class="sc">*</span> X4 <span class="sc">*</span> X5,</span>
-<span id="cb172-6"><a href="#cb172-6"></a>        <span class="at">S9 =</span> X1 <span class="sc">*</span> X2 <span class="sc">*</span> X3 <span class="sc">*</span> X4 <span class="sc">*</span> X5 <span class="sc">*</span> X6 <span class="sc">*</span> X7 <span class="sc">*</span> X8 <span class="sc">*</span> X9 ) <span class="sc">%&gt;%</span> </span>
-<span id="cb172-7"><a href="#cb172-7"></a> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb172-8"><a href="#cb172-8"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb172-9"><a href="#cb172-9"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S2, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb172-10"><a href="#cb172-10"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S5, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
-<span id="cb172-11"><a href="#cb172-11"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S9, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span>   <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">9</span>)) </span>
-<span id="cb172-12"><a href="#cb172-12"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 106 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 221 rows containing non-finite values (`stat_bin()`).</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).
-Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
-</div>
+<div class="cell" data-hash="W13_cache/revealjs/unnamed-chunk-46_a2262682cbec57f3a45bf4ff887eaa57">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb73-2"><a href="#cb73-2"></a>g <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">X1 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X2 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X3 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X4 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X5 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),</span>
+<span id="cb73-3"><a href="#cb73-3"></a>            <span class="at">X6 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X7 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X8 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n),<span class="at">X9 =</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">runif</span>(n)) <span class="sc">%&gt;%</span> </span>
+<span id="cb73-4"><a href="#cb73-4"></a> <span class="fu">mutate</span>(<span class="at">S2 =</span> X1 <span class="sc">*</span> X2,</span>
+<span id="cb73-5"><a href="#cb73-5"></a>        <span class="at">S5 =</span> X1 <span class="sc">*</span> X2 <span class="sc">*</span> X3 <span class="sc">*</span> X4 <span class="sc">*</span> X5,</span>
+<span id="cb73-6"><a href="#cb73-6"></a>        <span class="at">S9 =</span> X1 <span class="sc">*</span> X2 <span class="sc">*</span> X3 <span class="sc">*</span> X4 <span class="sc">*</span> X5 <span class="sc">*</span> X6 <span class="sc">*</span> X7 <span class="sc">*</span> X8 <span class="sc">*</span> X9 ) <span class="sc">%&gt;%</span> </span>
+<span id="cb73-7"><a href="#cb73-7"></a> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb73-8"><a href="#cb73-8"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> X1, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb73-9"><a href="#cb73-9"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S2, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"green"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb73-10"><a href="#cb73-10"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S5, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span> </span>
+<span id="cb73-11"><a href="#cb73-11"></a> <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> S9, <span class="at">y =</span>..density..), <span class="at">binwidth =</span> <span class="fl">0.1</span>, <span class="at">fill =</span> <span class="st">"blue"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span>   <span class="fu">xlim</span>(<span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="dv">9</span>)) </span>
+<span id="cb73-12"><a href="#cb73-12"></a>g</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="W13_files/figure-html/unnamed-chunk-46-1.png" width="672" class="r-stretch"></section>
+<img data-src="W13_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section>
 <section id="different-distributions" class="slide level2 smaller">
 <h2>Different distributions</h2>
 <p>Distributions “live” on different domains. This determines which values for random numbers are theoretically possible.</p>
@@ -2158,6 +1756,44 @@ For many variables there are better or worse candidates for a theoretical distri
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
