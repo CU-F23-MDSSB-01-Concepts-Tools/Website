@@ -2594,14 +2594,21 @@
     "href": "literature.html#mathematics",
     "title": "Learning Resources",
     "section": "4 Mathematics",
-    "text": "4 Mathematics\n\nHow to read math https://www.youtube.com/watch?v=Kp2bYWRQylk"
+    "text": "4 Mathematics\nA video on how to read math https://www.youtube.com/watch?v=Kp2bYWRQylk.\nThere are open access math textbooks from the Open Intro project or partner programs.\nhttps://www.openintro.org/book/math/"
+  },
+  {
+    "objectID": "literature.html#statistical-learning",
+    "href": "literature.html#statistical-learning",
+    "title": "Learning Resources",
+    "section": "5 Statistical Learning",
+    "text": "5 Statistical Learning"
   },
   {
     "objectID": "literature.html#project-based-learning",
     "href": "literature.html#project-based-learning",
     "title": "Learning Resources",
-    "section": "5 Project-based learning",
-    "text": "5 Project-based learning\nhttps://github.com/practical-tutorials/project-based-learning/tree/master"
+    "section": "6 Project-based learning",
+    "text": "6 Project-based learning\nhttps://github.com/practical-tutorials/project-based-learning/tree/master"
   },
   {
     "objectID": "W06.html#sir-model",
