@@ -790,7 +790,7 @@ Low specificity <span class="math inline">\(\to\)</span> More false positives <s
 <h2>Spending our data</h2>
 <p><strong>Problem:</strong></p>
 <ul>
-<li>There are several steps to create a useful model: parameter estimation, model selection, performance assessment, etc.</li>
+<li>There are several steps to create a useful prediction model: parameter estimation, model selection, performance assessment, etc.</li>
 <li>Doing all of this on the entire data we have available can lead to <strong>overfitting</strong>.</li>
 </ul>
 <p><strong>Solution:</strong> We subsets our data for different tasks, as opposed to allocating all data to parameter estimation (as we have done so far).</p>
@@ -816,6 +816,7 @@ Low specificity <span class="math inline">\(\to\)</span> More false positives <s
 <li>Remainder of the data (usually 20%)</li>
 </ul></li>
 </ul>
+<p><span style="color:blue;">Sidenote:</span> Splitting data is very important for the predictive questions, because we want to know how well our model performs on new data. It is not relevant for explanatory questions where we want to interpret coefficients and infer about the underlying population.</p>
 </section>
 <section id="performing-the-split" class="slide level2 smaller">
 <h2>Performing the split</h2>

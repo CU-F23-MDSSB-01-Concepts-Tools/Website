@@ -2643,14 +2643,14 @@
     "href": "W08.html#spending-our-data",
     "title": "W#08: Logistic Regression, Classification Problems, Prediction",
     "section": "Spending our data",
-    "text": "Spending our data\nProblem:\n\nThere are several steps to create a useful model: parameter estimation, model selection, performance assessment, etc.\nDoing all of this on the entire data we have available can lead to overfitting.\n\nSolution: We subsets our data for different tasks, as opposed to allocating all data to parameter estimation (as we have done so far)."
+    "text": "Spending our data\nProblem:\n\nThere are several steps to create a useful prediction model: parameter estimation, model selection, performance assessment, etc.\nDoing all of this on the entire data we have available can lead to overfitting.\n\nSolution: We subsets our data for different tasks, as opposed to allocating all data to parameter estimation (as we have done so far)."
   },
   {
     "objectID": "W08.html#splitting-data-1",
     "href": "W08.html#splitting-data-1",
     "title": "W#08: Logistic Regression, Classification Problems, Prediction",
     "section": "Splitting data",
-    "text": "Splitting data\n\nTraining set:\n\nSandbox for model building\nSpend most of your time using the training set to develop the model\nMajority of the data (usually 80%)\n\nTesting set:\n\nHeld in reserve to determine efficacy of one or two chosen models\nCritical to look at it once, otherwise it becomes part of the modeling process\nRemainder of the data (usually 20%)"
+    "text": "Splitting data\n\nTraining set:\n\nSandbox for model building\nSpend most of your time using the training set to develop the model\nMajority of the data (usually 80%)\n\nTesting set:\n\nHeld in reserve to determine efficacy of one or two chosen models\nCritical to look at it once, otherwise it becomes part of the modeling process\nRemainder of the data (usually 20%)\n\n\nSidenote: Splitting data is very important for the predictive questions, because we want to know how well our model performs on new data. It is not relevant for explanatory questions where we want to interpret coefficients and infer about the underlying population."
   },
   {
     "objectID": "W08.html#performing-the-split",
