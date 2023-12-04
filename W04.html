@@ -782,10 +782,10 @@ and is related to the <em>central limit theorem</em></p>
 <section id="logarithms" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Logarithms</h2>
 <p><strong>Definition:</strong> A <em>logarithm</em> of <span class="math inline">\(a\)</span> for some base <span class="math inline">\(b\)</span> is the value of the exponent which brings <span class="math inline">\(b\)</span> to <span class="math inline">\(a\)</span>: <span class="math inline">\(\log_b(a) = x\)</span> means that <span class="math inline">\(b^x =a\)</span></p>
-<p>Most common:</p>
+<p><strong>Most common:</strong></p>
 <ul>
-<li><span class="math inline">\(\log_{10}\)</span> for logarithmic axes in plots</li>
-<li><span class="math inline">\(\log_{e}\)</span> <em>natural logarithm</em> (also <span class="math inline">\(\log\)</span> or <span class="math inline">\(\ln\)</span>)</li>
+<li><span class="math inline">\(\log_{10}\)</span> useful for plotting data in logarithmic scales because the numbers can be interpreted easiest (number of decimals of the original values)</li>
+<li><span class="math inline">\(\log_{e}\)</span> <em>natural logarithm</em> (also <span class="math inline">\(\log\)</span> or <span class="math inline">\(\ln\)</span>) useful in calculus and statistics because of nice mathematical properties</li>
 </ul>
 <div class="fragment">
 <div class="columns">
@@ -832,7 +832,7 @@ and is related to the <em>central limit theorem</em></p>
 </div>
 </div>
 </section>
-<section id="rules-for-logarithms" class="slide level2" data-background-color="aquamarine">
+<section id="rules-for-logarithms" class="slide level2 smaller" data-background-color="aquamarine">
 <h2>Rules for logarithms</h2>
 <p>Usually only one base is used in the same context, because changing base is easy:</p>
 <p><span class="math inline">\(\log_c(x) = \frac{\log_b(x)}{\log_b(c)} = \frac{\log(x)}{\log(c)}\)</span></p>
@@ -909,7 +909,7 @@ and is related to the <em>central limit theorem</em></p>
 <pre><code>function (x, na.rm = FALSE) 
 sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x), 
     na.rm = na.rm))
-&lt;bytecode: 0x55e54a46fff0&gt;
+&lt;bytecode: 0x55b0c7b79b98&gt;
 &lt;environment: namespace:stats&gt;</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>c <span class="co"># This function is not written in R but is a R primitive</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -922,7 +922,7 @@ sqrt(var(if (is.vector(x) || is.factor(x)) x else as.double(x),
 {
     UseMethod("ggplot")
 }
-&lt;bytecode: 0x55e5495fd690&gt;
+&lt;bytecode: 0x55b0c6cd1ae8&gt;
 &lt;environment: namespace:ggplot2&gt;</code></pre>
 </div>
 </div>
