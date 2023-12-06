@@ -2594,21 +2594,28 @@
     "href": "literature.html#mathematics",
     "title": "Learning Resources",
     "section": "4 Mathematics",
-    "text": "4 Mathematics\nA video on how to read math https://www.youtube.com/watch?v=Kp2bYWRQylk.\nThere are open access math textbooks from the Open Intro project or partner programs.\nhttps://www.openintro.org/book/math/"
+    "text": "4 Mathematics\nA video on how to read math https://www.youtube.com/watch?v=Kp2bYWRQylk. Essential to start reading text including math.\nAs a data scientist it is necessary to be able to delve into mathematical concepts in some depth. It is not necessary to become a mathematician and proof theorems. A lot can be learned when needed using short videos, wikipedia, and practice and play using your favorite programming environment. However, it makes sense to have an accessible text books to look up and learn some topics in a more systematic way.\nThe Open Intro project and their partner programs provide such math textbooks for free (you may need to “buy” the pdf of 0 EUR or a donation of your choice).\n\nStudy Pre-Calculus to refresh your basic math skill on functions including polynomials; root, radical, and power function, and exponential and logarithmic functions.\nGain the basic concepts of Calculus including limits, derivatives, and integrals.\nGain the basic concepts of Linear Algebra and how to read and understand matrix-language. Linear models, PCA and many other data science tools are most systematically understood using matrix language.\n\nFor Probability Theory the open textbook for the course Probability for Data Science is very useful."
   },
   {
-    "objectID": "literature.html#statistical-learning",
-    "href": "literature.html#statistical-learning",
+    "objectID": "literature.html#statistics",
+    "href": "literature.html#statistics",
     "title": "Learning Resources",
-    "section": "5 Statistical Learning",
-    "text": "5 Statistical Learning"
+    "section": "5 Statistics",
+    "text": "5 Statistics\nSome statisticians say that data science is statistics. There is some truth in it. However, data science is more than statistics and statiscics has a certain view point. To get a deeper understanding of it is useful to study data science concepts through the lense of statistics.\nThe Open Intro project also provide good open and free statistics textbooks.\nMany concepts in data science can be described as statistical learning. A core and very accessible resource for it is\nAn Introduction to Statistical Learning which provides a version with code in R as well as in python."
   },
   {
     "objectID": "literature.html#project-based-learning",
     "href": "literature.html#project-based-learning",
     "title": "Learning Resources",
     "section": "6 Project-based learning",
-    "text": "6 Project-based learning\nhttps://github.com/practical-tutorials/project-based-learning/tree/master"
+    "text": "6 Project-based learning\nProject-based learning (especially in programming) means to learn things by reproducing a project (or make your own project in a very similar way). This is a resource for various projects in various languages: https://github.com/practical-tutorials/project-based-learning/tree/master"
+  },
+  {
+    "objectID": "literature.html#the-art-of-data-science",
+    "href": "literature.html#the-art-of-data-science",
+    "title": "Learning Resources",
+    "section": "7 The Art of Data Science",
+    "text": "7 The Art of Data Science\nThe Art of Data Science https://bookdown.org/rdpeng/artofdatascience/ is a great resource for learning about the process of data science and how to communicate about it."
   },
   {
     "objectID": "W06.html#sir-model",
