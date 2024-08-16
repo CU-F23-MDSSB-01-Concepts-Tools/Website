@@ -6,6 +6,10 @@ title: "Data Science Concepts / Data Science Tools"
 ## Developing Syllabus
 This syllabus may change during the course of the semester with some additions and clarifications.   
 All substantial changes will marked here with date. 
+
+[Important Links:]{style='color:red;'}    
+GitHub organization of the course: <https://github.com/CU-F23-MDSSB-01-Concepts-Tools>   
+Organization repository with non-public information and FAQ in Discussions: <https://github.com/CU-F23-MDSSB-01-Concepts-Tools/Organization>
 :::
 
 ## Module Names
@@ -129,7 +133,7 @@ Weight: 100%
 Scope: All intended learning outcomes of the module.  
 *More information of project formats and a rubric for the grading will be provided later.*
 
-Bonus option: Students receive **0.33 points** grade improvements on their project grade (on the numerical grade as specified here https://constructor.university/sites/default/files/2023-02/Grading_Table_2023.pdf) when all assignments are solved by the end of the semester.  (Note, the bonus is not necessary to reach the best grade in the module.)
+Bonus option: Students receive **0.33 points** grade improvements on their project grade (on the numerical grade as specified here <https://constructor.university/sites/default/files/2023-02/Grading_Table_2023.pdf>) when all assignments are solved by the end of the semester.  (Note, the bonus is not necessary to reach the best grade in the module.)
 
 All assignments and the final project must be delivered in personalized repositories in the GitHub organization <https://github.com/CU-F23-MDSSB-01-Concepts-Tools>.
 
@@ -148,7 +152,7 @@ There are no formal requirement about attendance and active participation. Howev
 
 ## Academic Integrity
 All involved parties (professors and lecturers, instructors and students) are expected to abide by the word and spirit of the "Code of Academic Integrity": 
-https://constructor.university/student-life/student-services/university-policies/academic-policies/code-of-academic-integrity. Violations of the Code might be brought to the attention of the Academic Integrity Committee.
+<https://constructor.university/student-life/student-services/university-policies/academic-policies/code-of-academic-integrity>. Violations of the Code might be brought to the attention of the Academic Integrity Committee.
 
 ## Artifical Intelligence (AI) Use Policy
 
@@ -156,9 +160,9 @@ This policy covers any generative AI tool, such as ChatGPT, Elicit, etc. This in
 
 We instructors encouraged to using and exploring AI tools for these purposes: 
 
-  - **Learning by dialog with a chatbot.** AI chatbots can be very helpful to explain you concepts *on your desired level* and get a feeling about how certain topics are treated. You can ask for an easier or more detailed explanation or focus on certain aspects. Note: The capabilities are limited and you likely receive a lot of false information! Using chatbots should remain a small part of your learning process. Rule of thumb: Spend not more than 25% of the learing time with chatting. There is no way around reading textbooks, reading software documentation, learning and understanding concepts, searching for help online, asking instructors or fellow students.
-  - **Have code snippets written.** Tools like GitHub Copilot (free to use for students and teachers in VSCode) are heavily used and currently revolutionize code writting a bit. They can speed up writung your code. However, they do not deliver always correct solutions. There is no way around understanding yourself what a code is doing! Do not spend endless hours asking for new code with new prompts, spend time understanding a language and the functions and objects you are using! Copilots can be a great help to get a skeleton of code and an idea how your solution *might* look, they rarely deliver the complete code, expect that the code does not work, expect that the code seems to works but the results are wrong. You are 100% accountable for the code you produce, with or without the help of a copilot!
-  - **Have a draft text snippet written.** Data science is also about formulating and describing research questions, describing data, documenting code, interpreting results, and deriving conclusion form the results. This is all verbal text and chatbots are good in writing text which often appears as well readable. You can use this inspire you and to polish and improve your texts. However, you are 100% accountable for the text you deliver. You are expected to know what your text is about and to be able to answer questions about what your text means! Text generated purely by chatbots, it often becomes evident that you do not. We consider such cases worse than incomplete but sensible text. Also text written by chatbots is often very generic and less specific. In general, we value more specific text higher than generic text. Large parts of very generic text is considered worse than a shorter more specific text. In extreme case, we may a long very generic text will be considered worse than no text at all
+  - **Learning by dialog with a chatbot.** AI chatbots can be very helpful to explain you concepts *on your desired level* and get a feeling about how certain topics are treated. You can ask for an easier or more detailed explanation or focus on certain aspects. Note: The capabilities are limited and you likely receive a lot of false information! Using chatbots should remain a small part of your learning process. Rule of thumb: Spend not more than 25% of the learning time with chatting. There is no way around reading textbooks, reading software documentation, learning and understanding concepts, searching for help online, asking instructors or fellow students.
+  - **Have code snippets written.** Tools like GitHub Copilot (free to use for students and teachers in VSCode) are heavily used and currently change code-writing. They can speed up writing your code. However, they do not deliver always correct solutions. There is no way around understanding yourself what a code is doing! Do not spend endless hours asking for new code with new prompts, spend time understanding a language and the functions and objects you are using! Copilots can be a great help to get a skeleton of code and an idea how your solution *might* look, they rarely deliver the complete code. Expect that the code does not work, expect that the code seems to works but the results are wrong. You are 100% accountable for the code you produce, with or without the help of a copilot!
+  - **Have a draft text snippet written.** Data science is also about formulating and describing research questions, describing data, documenting code, interpreting results, and deriving conclusion form the results. This is all verbal text and chatbots are good in writing text which often appears well readable. You can use this to inspire yourself and to polish and improve your texts. However, you are 100% accountable for the text you deliver. You are expected to know what your text is about and to be able to answer questions about what your text means! In text generated purely by a chatbot it is often evident that you do not. We consider such cases worse than incomplete but sensible text. Also text written by chatbots is often very generic and less specific. In general, we value more specific text higher than generic text. Large parts of very generic text is considered worse than a shorter more specific text. In extreme case, a long very generic text will be considered worse than no text at all
   - Note: **Philosophical and legal questions around the training and use of chatbots and code copilots are controversially contested and re-examined constantly!** We encourage to engage with such questions and become aware of arguments and debates.
 
 If any part of this AI policy is confusing or uncertain, please reach out to us for a conversation before submitting your work.

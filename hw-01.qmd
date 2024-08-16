@@ -1,10 +1,6 @@
 ---
 title: "Homework 01"
 subtitle: "Meet the toolkit and your Data Science Profile"
-link-citations: yes
-editor: 
-  markdown: 
-    wrap: sentence
 ---
 
 ```{r include = FALSE}

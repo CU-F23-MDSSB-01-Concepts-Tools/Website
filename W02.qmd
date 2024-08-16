@@ -1,5 +1,5 @@
 ---
-title: "W#2 Data Visualization, Data Formats"
+title: "W#02 Data Visualization, Data Formats"
 author: Jan Lorenz
 format: 
   revealjs: 
